@@ -1,0 +1,63 @@
+name: Translate Pagesmith Content
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      # Trigger when English Markdown or Astro files are added/changed
+      - 'src/pages/**/*.md'
+      - 'src/pages/**/*.mdx'
+      - 'src/pages/**/*.astro'
+    paths-ignore:
+      # CRITICAL: Do NOT trigger when the bot pushes German or French files
+      # (This prevents an infinite translation loop that drains your API credits)
+      - 'src/pages/de/**'
+      - 'src/pages/fr/**'
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # We added 'gray-matter' to handle Pagesmith's Markdown formatting safely
+      - name: Install dependencies
+        run: npm install deepl-node gray-matter
+
+      - name: Run translation script
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: node scripts/translate.js
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # 1. Stash EVERYTHING (staged, unstaged, untracked) to create a 100% clean workspace
+          git stash push --include-untracked -m "garbage"
+          
+          # 2. Pull the absolute latest code safely (handles if a marketer published while DeepL was thinking)
+          git pull origin main
+          
+          # 3. Pull the translated Markdown files back out of the stash
+          git checkout stash@{0} -- src/pages/de/ src/pages/fr/ || echo "No translated files to checkout"
+          
+          # 4. Clear the stash
+          git stash drop
+          
+          # 5. Commit and Push only the translated German and French files
+          git add src/pages/de/ src/pages/fr/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(i18n): update localized Pagesmith pages [automated]"
+            git push origin main
+          fi
