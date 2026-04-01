@@ -2,8 +2,7 @@
 
 /**
  * TieBack — Automated Translation Pipeline for Pagesmith (Astro/Markdown)
- * Translates English .md/.mdx files in src/pages/ → de, fr using DeepL API.
- * Preserves Astro frontmatter and TieBack glossary terms.
+ * Translates English .md/.mdx/.astro files using DeepL API with Astro-Shield.
  */
 
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSync } from 'fs';
@@ -16,16 +15,15 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // ── Configuration ──────────────────────────────────────────────────────────────
 
-const TARGET_LANGS = ['de', 'fr']; // Adjusted to match your current Pagesmith rollout
-const SOURCE_DIR = resolve(__dirname, '../src/pages');
+const TARGET_LANGS = ['de', 'fr'];
+// Look in both pages and content directories
+const SOURCE_DIRS = [
+  resolve(__dirname, '../src/pages'),
+  resolve(__dirname, '../src/content')
+];
 
-// DeepL uses upper-case region codes for some targets
-const DEEPL_LANG_MAP = {
-  de: 'de',
-  fr: 'fr',
-};
+const DEEPL_LANG_MAP = { de: 'de', fr: 'fr' };
 
-// Terms that must NEVER be translated (case-sensitive)
 const NO_TRANSLATE_TERMS = [
   'TieBack', 'GS1 Sunrise 2027', 'GS1 Digital Link', 'Digital Product Passport', 
   'SOC 2', 'EU DPP', 'EU ESPR', 'ESPR', 'GDPR', 'CBAM', 'EPCIS', 'GTIN', 'FMCG', 
@@ -35,57 +33,63 @@ const NO_TRANSLATE_TERMS = [
   'DAST', 'RLS', 'OECD', 'EUIPO'
 ];
 
-// Regex to match markdown variables or shortcodes if you use them
-const INTERPOLATION_RE = /\{\{[\w]+\}\}/g;
+// ── Astro Shield Logic ─────────────────────────────────────────────────────────
 
-// ── Helpers ────────────────────────────────────────────────────────────────────
-
-function sanitizeHtml(text) {
-  if (!text) return '';
-  return text
-    .replace(/<br\s*>/gi, '<br/>')
-    .replace(/<hr\s*>/gi, '<hr/>')
-    .replace(/&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[\da-fA-F]+;)/g, '&amp;');
+// Safely split Astro files without crashing on JavaScript frontmatter
+function parseAstro(content) {
+  const match = content.match(/^(---[\s\S]*?---)\n([\s\S]*)$/);
+  if (match) {
+    return { frontmatter: match, body: match };
+  }
+  return { frontmatter: '', body: content };
 }
 
-function protect(text) {
-  if (!text) return '';
-  let result = sanitizeHtml(text);
-
+// Disguises Astro {expressions} so DeepL's HTML parser doesn't crash
+function protectAstroExpressions(text) {
+  const expressions = [];
+  // Find anything inside { } and replace it with a safe <astro-expr> tag
+  let protectedText = text.replace(/\{[\s\S]*?\}/g, (match) => {
+    expressions.push(match);
+    return `<astro-expr id="${expressions.length - 1}"></astro-expr>`;
+  });
+  
+  // Protect TieBack glossary terms
   const sorted = [...NO_TRANSLATE_TERMS].sort((a, b) => b.length - a.length);
   for (const term of sorted) {
-    result = result.replaceAll(term, `<keep>${term}</keep>`);
+    protectedText = protectedText.replaceAll(term, `<keep>${term}</keep>`);
   }
 
-  result = result.replace(INTERPOLATION_RE, (match) => `<keep>${match}</keep>`);
-  return result;
+  return { protectedText, expressions };
 }
 
-function unprotect(text) {
-  if (!text) return '';
-  return text
-    .replace(/<keep>(.*?)<\/keep>/g, '$1')
-    .replace(/&amp;/g, '&');
+// Restores the original Astro {expressions} after translation
+function restoreAstroExpressions(text, expressions) {
+  let restoredText = text.replace(/<keep>(.*?)<\/keep>/g, '$1');
+  
+  for (let i = 0; i < expressions.length; i++) {
+    const regex = new RegExp(`<astro-expr id="${i}"><\\/astro-expr>`, 'g');
+    restoredText = restoredText.replace(regex, expressions[i]);
+  }
+  return restoredText;
 }
 
-/**
- * Recursively find all markdown files in a directory, 
- * explicitly ignoring localized folders to prevent infinite loops.
- */
-function findMarkdownFiles(dir, fileList = []) {
+// ── File Traversal ─────────────────────────────────────────────────────────────
+
+function findTargetFiles(dir, fileList = [], baseDir = dir) {
+  if (!existsSync(dir)) return fileList;
   const files = readdirSync(dir);
 
   for (const file of files) {
     const filePath = join(dir, file);
     const stat = statSync(filePath);
 
-    // Ignore localized folders (e.g., src/pages/de, src/pages/fr)
-    if (stat.isDirectory() && TARGET_LANGS.includes(file) && dir === SOURCE_DIR) {
+    // Ignore localized folders
+    if (stat.isDirectory() && TARGET_LANGS.includes(file) && dir === baseDir) {
       continue;
     }
 
     if (stat.isDirectory()) {
-      findMarkdownFiles(filePath, fileList);
+      findTargetFiles(filePath, fileList, baseDir);
     } else if (file.endsWith('.md') || file.endsWith('.mdx') || file.endsWith('.astro')) {
       fileList.push(filePath);
     }
@@ -93,89 +97,90 @@ function findMarkdownFiles(dir, fileList = []) {
   return fileList;
 }
 
-// ── Main ───────────────────────────────────────────────────────────────────────
+// ── Main Engine ────────────────────────────────────────────────────────────────
 
 async function main() {
   const apiKey = process.env.DEEPL_API_KEY;
   if (!apiKey) {
-    console.error('ERROR: DEEPL_API_KEY environment variable is required.');
+    console.error('ERROR: DEEPL_API_KEY is required.');
     process.exit(1);
   }
 
   const translator = new deepl.Translator(apiKey);
-  const englishFiles = findMarkdownFiles(SOURCE_DIR);
+  
+  let allFiles = [];
+  for (const dir of SOURCE_DIRS) {
+    allFiles = allFiles.concat(findTargetFiles(dir));
+  }
 
-  console.log(`Found ${englishFiles.length} English markdown files to process.`);
+  console.log(`Found ${allFiles.length} files to process.`);
 
-  for (const file of englishFiles) {
-    const relativePath = file.replace(SOURCE_DIR, ''); // e.g., /journal/my-post.md
+  for (const file of allFiles) {
+    // Determine which base directory this file belongs to so we can replicate the folder structure
+    const baseDir = SOURCE_DIRS.find(dir => file.startsWith(dir));
+    const relativePath = file.replace(baseDir, ''); 
+    const isAstro = file.endsWith('.astro');
     const fileContent = readFileSync(file, 'utf-8');
     const sourceStat = statSync(file);
-    
-    // Parse the markdown file to separate Frontmatter from Body Content
-    const parsed = matter(fileContent);
 
     for (const lang of TARGET_LANGS) {
       const targetLangCode = DEEPL_LANG_MAP[lang];
-      const targetPath = join(SOURCE_DIR, lang, relativePath); // e.g., src/pages/de/journal/my-post.md
+      const targetPath = join(baseDir, lang, relativePath); 
       const targetDir = dirname(targetPath);
 
-      // Create directories if they don't exist
-      if (!existsSync(targetDir)) {
-        mkdirSync(targetDir, { recursive: true });
-      }
+      if (!existsSync(targetDir)) mkdirSync(targetDir, { recursive: true });
 
-      // Cost saving: Check if the translated file exists and is newer than the English file
       if (existsSync(targetPath)) {
-        const targetStat = statSync(targetPath);
-        if (targetStat.mtime > sourceStat.mtime) {
-          console.log(`⏭️  Skipping ${lang}${relativePath} (Up to date)`);
-          continue;
+        if (statSync(targetPath).mtime > sourceStat.mtime) {
+          continue; // Up to date
         }
       }
 
       console.log(`🔄 Translating ${relativePath} to ${lang.toUpperCase()}...`);
 
       try {
-        // 1. Translate the Body Content
-        const protectedBody = protect(parsed.content);
-        let translatedBody = '';
-        if (protectedBody.trim()) {
-          const result = await translator.translateText(protectedBody, 'en', targetLangCode, {
-            tagHandling: 'xml',
-            ignoreTags: ['keep'],
-          });
-          translatedBody = unprotect(result.text);
+        let finalFileContent = '';
+
+        if (isAstro) {
+          // Astro File Pipeline
+          const parsed = parseAstro(fileContent);
+          const { protectedText, expressions } = protectAstroExpressions(parsed.body);
+          
+          let translatedBody = '';
+          if (protectedText.trim()) {
+            // Use 'html' tag handling, which is much safer for Astro components than 'xml'
+            const result = await translator.translateText(protectedText, 'en', targetLangCode, {
+              tagHandling: 'html',
+              ignoreTags: ['keep', 'astro-expr'],
+            });
+            translatedBody = restoreAstroExpressions(result.text, expressions);
+          }
+          finalFileContent = `${parsed.frontmatter}\n${translatedBody}`;
+        } else {
+          // Markdown File Pipeline (Safe to use gray-matter)
+          const parsed = matter(fileContent);
+          const { protectedText, expressions } = protectAstroExpressions(parsed.content);
+          
+          let translatedBody = '';
+          if (protectedText.trim()) {
+            const result = await translator.translateText(protectedText, 'en', targetLangCode, {
+              tagHandling: 'html',
+              ignoreTags: ['keep', 'astro-expr'],
+            });
+            translatedBody = restoreAstroExpressions(result.text, expressions);
+          }
+          finalFileContent = matter.stringify(translatedBody, parsed.data);
         }
 
-        // 2. Translate specific SEO Frontmatter fields (Clone the data object so we don't mutate the original)
-        const translatedData = { ...parsed.data };
-        
-        if (translatedData.title) {
-          const res = await translator.translateText(protect(translatedData.title), 'en', targetLangCode, { tagHandling: 'xml', ignoreTags: ['keep'] });
-          translatedData.title = unprotect(res.text);
-        }
-        
-        if (translatedData.description) {
-          const res = await translator.translateText(protect(translatedData.description), 'en', targetLangCode, { tagHandling: 'xml', ignoreTags: ['keep'] });
-          translatedData.description = unprotect(res.text);
-        }
-
-        // 3. Reassemble and Save
-        const newFileContent = matter.stringify(translatedBody, translatedData);
-        writeFileSync(targetPath, newFileContent, 'utf-8');
+        writeFileSync(targetPath, finalFileContent, 'utf-8');
         console.log(`   ✓ Saved: ${lang}${relativePath}`);
 
       } catch (err) {
-        console.error(`   ❌ Failed to translate ${relativePath} to ${lang}:`, err.message);
+        console.error(`   ❌ Failed: ${relativePath} -> ${lang}:`, err.message);
       }
     }
   }
-
-  console.log('\n✅ All Pagesmith translations complete.');
+  console.log('\n✅ Pipeline complete.');
 }
 
-main().catch((err) => {
-  console.error('Translation pipeline crashed:', err);
-  process.exit(1);
-});
+main().catch(console.error);
