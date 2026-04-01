@@ -1,0 +1,1139 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/config/site';
+
+const title = "Luxury & High-Risk Goods — TieBack";
+const description = "Authentication, ownership continuity, and higher-assurance verification for luxury and high-risk categories.";
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- 1. Industry Hero -->
+  <section class="relative pt-32 pb-24 md:pt-52 md:pb-40 overflow-hidden bg-slate-950" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero">
+    <div class="absolute inset-0 opacity-40 transition-transform duration-1000 scale-105" data-reveal="zoom-out" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-img-wrap">
+       <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Luxury watch detail" class="w-full h-full object-cover" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-img" />
+       <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-overlay"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-container">
+      <div class="max-w-4xl mx-auto text-center opacity-0 translate-y-8 transition-all duration-1000" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-content">
+        <div class="inline-flex items-center gap-2 py-1 px-3 mb-8 text-[11px] font-bold tracking-widest text-blue-400 uppercase bg-blue-500/10 backdrop-blur-md border border-blue-500/20 rounded-full" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-badge">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-dot"></span>
+          High-Assurance Identity
+        </div>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 leading-[1.05]" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-title">
+          Luxury & <span class="text-blue-500" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-title-accent">High-Risk Goods</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-desc">
+          TieBack for Luxury & High-Risk Goods. Protect trust and ensure ownership continuity with a living digital identity layer designed for premium categories.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-5" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-actions">
+          <a href="#request-access" class="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-xl shadow-blue-500/20 hover:-translate-y-1" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-cta-1">
+            Request Access
+          </a>
+          <a href="/use-cases/authentication/" class="w-full sm:w-auto px-10 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-cta-2">
+            Explore Authentication
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Why TieBack -->
+  <section class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-container">
+      <div class="grid lg:grid-cols-2 gap-20 items-center" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-grid">
+        <div class="relative opacity-0 -translate-x-12 transition-all duration-1000" data-reveal="fade-right" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-content">
+          <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-100/50 rounded-full blur-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-accent"></div>
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.15] relative" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-title">
+            In luxury, <span class="italic font-serif text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-title-accent">trust</span> is the product.
+          </h2>
+          <div class="mt-12 space-y-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-text-wrap">
+            <p class="text-lg text-slate-600 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-p1">
+              TieBack helps brands make authenticity, ownership, and aftercare feel effortless — while keeping proof verifiable when it matters.
+            </p>
+            <p class="text-lg text-slate-600 leading-relaxed font-medium text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-p2">
+              TieBack gives each product a living digital identity with built-in trust signals and lifecycle continuity — with optional higher-assurance verification for categories where counterfeiting risk is real.
+            </p>
+          </div>
+        </div>
+        <div class="relative group opacity-0 translate-x-12 transition-all duration-1000" data-reveal="fade-left" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img-wrap">
+           <div class="absolute inset-0 bg-blue-600 rounded-[2.5rem] rotate-2 scale-95 opacity-10 group-hover:rotate-1 transition-transform duration-500" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img-accent"></div>
+           <img
+            src="https://images.unsplash.com/photo-1772743227766-091c24a3c87f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTQzNzh8MHwxfHNlYXJjaHw4fHxQcmVtaXVtJTIwbGVhdGhlciUyMGdvb2RzfGVufDB8fHx8MTc3MzM0MDE3OXww&ixlib=rb-4.1.0&q=80&w=1200&auto=format"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            alt="Premium leather goods" class="relative z-10 w-full aspect-[4/3] object-cover rounded-[2.5rem] shadow-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img" crossorigin="anonymous" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Core Pillars -->
+  <section class="py-32 bg-slate-50" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-container">
+      <div class="text-center max-w-3xl mx-auto mb-20" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-header">
+        <h2 class="text-4xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-title">Why TieBack</h2>
+        <p class="text-xl text-slate-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-desc">A structured identity that stays with the item beyond first sale — designed to protect trust without adding friction.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-grid">
+        
+        <!-- Pillar 1: Authenticity -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-100" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-1">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 relative" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-1">
+            <svg class="w-7 h-7 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-1">Authenticity that holds up</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-1">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-1">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-1">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-1">Verification designed for the real world: a fast scan experience, measurable trust signals, and the option to layer higher assurance (e.g., QR paired with NFC) for flagship lines.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-1">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-1">The Gap</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-1">Static verification can be copied, replayed, or redirected. It often lacks resilience against reuse patterns and offers little independent proof when disputes arise.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Ownership -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-300" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-2">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-2">
+            <svg class="w-7 h-7 group-hover:animate-float" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <polyline points="16 11 18 13 22 9"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-2">Ownership & transfer, done properly</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-2">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-2">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-2">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-2">Ownership claim and transfer workflows that keep the brand present in gifting and resale — supporting a calm handover experience and a durable record of custody.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-2">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-2">The Gap</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-2">Ownership is handled outside the product experience. Transfers are manual, fragile, and hard to verify across secondary markets.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Aftercare -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-100" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-3">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-3">
+            <svg class="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-3">Aftercare that feels premium</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-3">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-3">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-3">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-3">A branded passport that can evolve over time: care guidance, warranty and service pathways, authenticity cues, and updated product status.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-3">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-3">The Gap</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-3">Aftercare information becomes fragmented across channels. Owners struggle to find the right path, and service teams spend time re-validating legitimacy.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Visibility -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-300" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-4">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-4">
+            <svg class="w-7 h-7 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+              <path d="M2 12h20"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-4">Visibility in the secondary market</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-4">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-4">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-4">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-4">A structured identity that stays with the item beyond first sale — enabling controlled disclosure, optional provenance cues, and brand-aware experiences for resale buyers.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-4">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-4">The Gap</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-4">Brands lose visibility after first sale. Resale becomes an external world with no continuity, no controlled messaging, and limited ability to support trust.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Large Visual Block -->
+  <section class="py-24 bg-white" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-block">
+     <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-container">
+        <div class="relative h-[600px] rounded-[3rem] overflow-hidden group shadow-2xl bg-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-wrap">
+           <img
+            src="https://images.unsplash.com/photo-1765282946661-1975d58f9bf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTQzNzh8MHwxfHNlYXJjaHw0fHxMVVhVUlklMjBwdXJjaGFzZXxlbnwwfHx8fDE3NzMzNDA3NDR8MA&ixlib=rb-4.1.0&q=80&w=1200&auto=format"
+            sizes="100vw"
+            alt="a person cutting a piece of fabric with a pair of scissors" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-img" crossorigin="anonymous" />
+           <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/30 transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-overlay"></div>
+           <div class="absolute bottom-0 left-0 p-12 md:p-20 text-white max-w-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-content">
+              <h2 class="text-4xl md:text-5xl font-bold mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-title">Identity that elevates the owner experience.</h2>
+              <p class="text-lg text-slate-300 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-desc">From first purchase to gifting and resale, TieBack ensures the product's digital identity remains its most trusted attribute.</p>
+           </div>
+        </div>
+     </div>
+  </section>
+
+  <!-- Relevant Use Cases -->
+  <section class="py-32 bg-slate-50 border-y border-slate-200" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-container">
+      <div class="max-w-6xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-grid-wrap">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-header">
+          <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-h-left">
+            <h2 class="text-4xl font-bold text-slate-900 mb-4" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-title">Relevant Use Cases</h2>
+            <p class="text-slate-600 text-lg" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-desc">How TieBack solves specific challenges for luxury brands.</p>
+          </div>
+          <a href="/use-cases/authentication/" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-link">
+            View All Use Cases <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-grid">
+           <a href="/use-cases/authentication/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-1">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-1">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-1">Authentication & Anti-Counterfeit</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-1">Deploy high-assurance verification that stays resilient against reuse and grey-market patterns.</p>
+           </a>
+           <a href="/use-cases/warranty-aftercare/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-2">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-2">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-2">Ownership, Warranty & Aftercare</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-2">Manage premium service pathways and durable records of custody across the product lifecycle.</p>
+           </a>
+           <a href="/use-cases/resale-circular-economy/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-3">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-3">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-3">Secondary Market Visibility</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-3">Enable brand-aware experiences and controlled provenance for resale buyers and partners.</p>
+           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="request-access" class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta">
+    <script>
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            const delay = el.getAttribute('data-reveal-delay-100') ? 100 : 
+                          el.getAttribute('data-reveal-delay-300') ? 300 : 0;
+            
+            setTimeout(() => {
+              el.classList.remove('opacity-0', 'translate-y-12', 'translate-y-8', '-translate-x-12', 'translate-x-12', 'scale-105');
+              el.classList.add('opacity-100', 'translate-y-0', 'translate-x-0', 'scale-100');
+            }, delay);
+            
+            observer.unobserve(el);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-grad"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-container">
+      <div class="max-w-4xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-content">
+        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-title">Protect your <span class="text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-title-accent">legacy.</span></h2>
+        <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-desc">
+          Join the premium brands building high-assurance digital identities and secure lifecycle continuity on TieBack.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-actions">
+          <button class="w-full sm:w-auto px-12 py-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all duration-300 shadow-2xl shadow-blue-500/20 hover:-translate-y-1" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-btn">
+            Request Early Access
+          </button>
+          <a href="/platform/why-tieback/" class="group text-slate-900 font-bold flex items-center gap-3 transition-colors hover:text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-link">
+            Why TieBack <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+,---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/config/site';
+
+const title = "Luxury & High-Risk Goods — TieBack";
+const description = "Authentication, ownership continuity, and higher-assurance verification for luxury and high-risk categories.";
+---
+,<BaseLayout title={title} description={description}>
+  <!-- 1. Industry Hero -->
+  <section class="relative pt-32 pb-24 md:pt-52 md:pb-40 overflow-hidden bg-slate-950" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero">
+    <div class="absolute inset-0 opacity-40 transition-transform duration-1000 scale-105" data-reveal="zoom-out" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-img-wrap">
+       <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Luxury watch detail" class="w-full h-full object-cover" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-img" />
+       <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-overlay"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-container">
+      <div class="max-w-4xl mx-auto text-center opacity-0 translate-y-8 transition-all duration-1000" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-content">
+        <div class="inline-flex items-center gap-2 py-1 px-3 mb-8 text-[11px] font-bold tracking-widest text-blue-400 uppercase bg-blue-500/10 backdrop-blur-md border border-blue-500/20 rounded-full" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-badge">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-dot"></span>
+          High-Assurance Identity
+        </div>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 leading-[1.05]" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-title">
+          Luxury & <span class="text-blue-500" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-title-accent">High-Risk Goods</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-desc">
+          TieBack for Luxury & High-Risk Goods. Protect trust and ensure ownership continuity with a living digital identity layer designed for premium categories.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-5" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-actions">
+          <a href="#request-access" class="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-xl shadow-blue-500/20 hover:-translate-y-1" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-cta-1">
+            Request Access
+          </a>
+          <a href="/use-cases/authentication/" class="w-full sm:w-auto px-10 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-cta-2">
+            Explore Authentication
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Why TieBack -->
+  <section class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-container">
+      <div class="grid lg:grid-cols-2 gap-20 items-center" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-grid">
+        <div class="relative opacity-0 -translate-x-12 transition-all duration-1000" data-reveal="fade-right" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-content">
+          <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-100/50 rounded-full blur-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-accent"></div>
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.15] relative" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-title">
+            In luxury, <span class="italic font-serif text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-title-accent">trust</span> is the product.
+          </h2>
+          <div class="mt-12 space-y-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-text-wrap">
+            <p class="text-lg text-slate-600 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-p1">
+              TieBack helps brands make authenticity, ownership, and aftercare feel effortless — while keeping proof verifiable when it matters.
+            </p>
+            <p class="text-lg text-slate-600 leading-relaxed font-medium text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-p2">
+              TieBack gives each product a living digital identity with built-in trust signals and lifecycle continuity — with optional higher-assurance verification for categories where counterfeiting risk is real.
+            </p>
+          </div>
+        </div>
+        <div class="relative group opacity-0 translate-x-12 transition-all duration-1000" data-reveal="fade-left" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img-wrap">
+           <div class="absolute inset-0 bg-blue-600 rounded-[2.5rem] rotate-2 scale-95 opacity-10 group-hover:rotate-1 transition-transform duration-500" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img-accent"></div>
+           <img
+            src="https://images.unsplash.com/photo-1772743227766-091c24a3c87f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTQzNzh8MHwxfHNlYXJjaHw4fHxQcmVtaXVtJTIwbGVhdGhlciUyMGdvb2RzfGVufDB8fHx8MTc3MzM0MDE3OXww&ixlib=rb-4.1.0&q=80&w=1200&auto=format"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            alt="Premium leather goods" class="relative z-10 w-full aspect-[4/3] object-cover rounded-[2.5rem] shadow-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img" crossorigin="anonymous" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Core Pillars -->
+  <section class="py-32 bg-slate-50" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-container">
+      <div class="text-center max-w-3xl mx-auto mb-20" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-header">
+        <h2 class="text-4xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-title">Why TieBack</h2>
+        <p class="text-xl text-slate-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-desc">A structured identity that stays with the item beyond first sale — designed to protect trust without adding friction.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-grid">
+        
+        <!-- Pillar 1: Authenticity -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-100" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-1">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 relative" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-1">
+            <svg class="w-7 h-7 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-1">Authenticity that holds up</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-1">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-1">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-1">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-1">Verification designed for the real world: a fast scan experience, measurable trust signals, and the option to layer higher assurance (e.g., QR paired with NFC) for flagship lines.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-1">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-1">The Gap</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-1">Static verification can be copied, replayed, or redirected. It often lacks resilience against reuse patterns and offers little independent proof when disputes arise.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Ownership -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-300" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-2">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-2">
+            <svg class="w-7 h-7 group-hover:animate-float" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <polyline points="16 11 18 13 22 9"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-2">Ownership & transfer, done properly</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-2">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-2">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-2">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-2">Ownership claim and transfer workflows that keep the brand present in gifting and resale — supporting a calm handover experience and a durable record of custody.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-2">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-2">The Gap</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-2">Ownership is handled outside the product experience. Transfers are manual, fragile, and hard to verify across secondary markets.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Aftercare -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-100" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-3">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-3">
+            <svg class="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-3">Aftercare that feels premium</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-3">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-3">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-3">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-3">A branded passport that can evolve over time: care guidance, warranty and service pathways, authenticity cues, and updated product status.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-3">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-3">The Gap</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-3">Aftercare information becomes fragmented across channels. Owners struggle to find the right path, and service teams spend time re-validating legitimacy.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Visibility -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-300" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-4">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-4">
+            <svg class="w-7 h-7 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+              <path d="M2 12h20"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-4">Visibility in the secondary market</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-4">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-4">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-4">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-4">A structured identity that stays with the item beyond first sale — enabling controlled disclosure, optional provenance cues, and brand-aware experiences for resale buyers.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-4">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-4">The Gap</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-4">Brands lose visibility after first sale. Resale becomes an external world with no continuity, no controlled messaging, and limited ability to support trust.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Large Visual Block -->
+  <section class="py-24 bg-white" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-block">
+     <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-container">
+        <div class="relative h-[600px] rounded-[3rem] overflow-hidden group shadow-2xl bg-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-wrap">
+           <img
+            src="https://images.unsplash.com/photo-1765282946661-1975d58f9bf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTQzNzh8MHwxfHNlYXJjaHw0fHxMVVhVUlklMjBwdXJjaGFzZXxlbnwwfHx8fDE3NzMzNDA3NDR8MA&ixlib=rb-4.1.0&q=80&w=1200&auto=format"
+            sizes="100vw"
+            alt="a person cutting a piece of fabric with a pair of scissors" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-img" crossorigin="anonymous" />
+           <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/30 transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-overlay"></div>
+           <div class="absolute bottom-0 left-0 p-12 md:p-20 text-white max-w-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-content">
+              <h2 class="text-4xl md:text-5xl font-bold mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-title">Identity that elevates the owner experience.</h2>
+              <p class="text-lg text-slate-300 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-desc">From first purchase to gifting and resale, TieBack ensures the product's digital identity remains its most trusted attribute.</p>
+           </div>
+        </div>
+     </div>
+  </section>
+
+  <!-- Relevant Use Cases -->
+  <section class="py-32 bg-slate-50 border-y border-slate-200" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-container">
+      <div class="max-w-6xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-grid-wrap">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-header">
+          <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-h-left">
+            <h2 class="text-4xl font-bold text-slate-900 mb-4" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-title">Relevant Use Cases</h2>
+            <p class="text-slate-600 text-lg" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-desc">How TieBack solves specific challenges for luxury brands.</p>
+          </div>
+          <a href="/use-cases/authentication/" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-link">
+            View All Use Cases <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-grid">
+           <a href="/use-cases/authentication/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-1">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-1">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-1">Authentication & Anti-Counterfeit</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-1">Deploy high-assurance verification that stays resilient against reuse and grey-market patterns.</p>
+           </a>
+           <a href="/use-cases/warranty-aftercare/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-2">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-2">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-2">Ownership, Warranty & Aftercare</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-2">Manage premium service pathways and durable records of custody across the product lifecycle.</p>
+           </a>
+           <a href="/use-cases/resale-circular-economy/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-3">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-3">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-3">Secondary Market Visibility</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-3">Enable brand-aware experiences and controlled provenance for resale buyers and partners.</p>
+           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="request-access" class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta">
+    <script>
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            const delay = el.getAttribute('data-reveal-delay-100') ? 100 : 
+                          el.getAttribute('data-reveal-delay-300') ? 300 : 0;
+            
+            setTimeout(() => {
+              el.classList.remove('opacity-0', 'translate-y-12', 'translate-y-8', '-translate-x-12', 'translate-x-12', 'scale-105');
+              el.classList.add('opacity-100', 'translate-y-0', 'translate-x-0', 'scale-100');
+            }, delay);
+            
+            observer.unobserve(el);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-grad"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-container">
+      <div class="max-w-4xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-content">
+        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-title">Protect your <span class="text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-title-accent">legacy.</span></h2>
+        <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-desc">
+          Join the premium brands building high-assurance digital identities and secure lifecycle continuity on TieBack.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-actions">
+          <button class="w-full sm:w-auto px-12 py-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all duration-300 shadow-2xl shadow-blue-500/20 hover:-translate-y-1" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-btn">
+            Request Early Access
+          </button>
+          <a href="/platform/why-tieback/" class="group text-slate-900 font-bold flex items-center gap-3 transition-colors hover:text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-link">
+            Why TieBack <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+---
+import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
+import { SITE } from &#x27;@/config/site&#x27;;
+
+const title = &quot;Luxus- und risikoreiche Waren — TieBack&quot;;
+const description = &quot;Authentifizierung, Eigentumsnachweis und hochsichere Verifizierung für Luxus- und risikoreiche Kategorien.&quot;;
+---
+
+<BaseLayout title=<astro-expr id="3">
+  description={description}
+  &gt;
+  <!-- 1. Industry Hero -->
+  <section class="relative pt-32 pb-24 md:pt-52 md:pb-40 overflow-hidden bg-slate-950" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero">
+    <div class="absolute inset-0 opacity-40 transition-transform duration-1000 scale-105" data-reveal="zoom-out" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-img-wrap">
+       <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Luxury watch detail" class="w-full h-full object-cover" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-img" />
+       <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-overlay"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-container">
+      <div class="max-w-4xl mx-auto text-center opacity-0 translate-y-8 transition-all duration-1000" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-content">
+        <div class="inline-flex items-center gap-2 py-1 px-3 mb-8 text-[11px] font-bold tracking-widest text-blue-400 uppercase bg-blue-500/10 backdrop-blur-md border border-blue-500/20 rounded-full" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-badge">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-dot"></span>
+          Identität mit hoher Sicherheit
+        </div>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 leading-[1.05]" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-title">
+        
+          Luxus- und <span class="text-blue-500" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-title-accent">risikoreiche Waren</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-desc">
+          TieBack
+          für Luxus- und risikoreiche Waren. Schützen Sie das Vertrauen und gewährleisten Sie die Kontinuität des Eigentums mit einer dynamischen digitalen Identitätsschicht, die speziell für Premium-Kategorien entwickelt wurde.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-5" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-actions">
+          <a href="#request-access" class="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-xl shadow-blue-500/20 hover:-translate-y-1" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-cta-1">
+            Zugang beantragen
+          </a>
+          
+          <a href="/use-cases/authentication/" class="w-full sm:w-auto px-10 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-cta-2">
+            Authentifizierung entdecken
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Why TieBack -->
+  <section class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-container">
+      <div class="grid lg:grid-cols-2 gap-20 items-center" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-grid">
+        <div class="relative opacity-0 -translate-x-12 transition-all duration-1000" data-reveal="fade-right" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-content">
+          <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-100/50 rounded-full blur-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-accent"></div>
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.15] relative" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-title">
+            Im Luxussegment ist <span class="italic font-serif text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-title-accent">Vertrauen</span> das Produkt.
+          </h2>
+          <div class="mt-12 space-y-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-text-wrap">
+            <p class="text-lg text-slate-600 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-p1">
+              TieBack
+              hilft Marken dabei, Authentizität, Eigentumsverhältnisse und Nachbetreuung mühelos zu gestalten – und gleichzeitig den Nachweis verifizierbar zu halten, wenn es darauf ankommt.
+            </p>
+            <p class="text-lg text-slate-600 leading-relaxed font-medium text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-p2">
+              TieBack
+              gibt jedem Produkt eine lebendige digitale Identität mit integrierten Vertrauenssignalen und Lebenszyklus-Kontinuität – mit optionaler Verifizierung mit höherer Sicherheit für Kategorien, in denen ein echtes Fälschungsrisiko besteht.
+            </p>
+          </div>
+        </div>
+        <div class="relative group opacity-0 translate-x-12 transition-all duration-1000" data-reveal="fade-left" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img-wrap">
+           <div class="absolute inset-0 bg-blue-600 rounded-[2.5rem] rotate-2 scale-95 opacity-10 group-hover:rotate-1 transition-transform duration-500" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img-accent"></div>
+           <img
+            src="https://images.unsplash.com/photo-1772743227766-091c24a3c87f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTQzNzh8MHwxfHNlYXJjaHw4fHxQcmVtaXVtJTIwbGVhdGhlciUyMGdvb2RzfGVufDB8fHx8MTc3MzM0MDE3OXww&ixlib=rb-4.1.0&q=80&w=1200&auto=format"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            alt="Premium leather goods" class="relative z-10 w-full aspect-[4/3] object-cover rounded-[2.5rem] shadow-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img" crossorigin="anonymous" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Core Pillars -->
+  <section class="py-32 bg-slate-50" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-container">
+      <div class="text-center max-w-3xl mx-auto mb-20" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-header">
+        <h2 class="text-4xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-title">Warum „TieBack“</h2>
+        <p class="text-xl text-slate-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-desc">Eine strukturierte Identität, die den Artikel über den Erstverkauf hinaus begleitet – entwickelt, um Vertrauen zu schützen, ohne Reibungsverluste zu verursachen.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-grid">
+        
+        <!-- Pillar 1: Authenticity -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-100" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-1">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 relative" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-1">
+            <svg class="w-7 h-7 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-1">Authentizität, die Bestand hat</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-1">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-1">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-1">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-1">Verifizierung für die reale Welt: ein schnelles Scan-Erlebnis, messbare Vertrauenssignale und die Option, für Flaggschiff-Kollektionen eine höhere Sicherheitsstufe hinzuzufügen (z. B. „QR“ in Kombination mit „NFC“).</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-1">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-1">Die Lücke</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-1">Statische Verifizierung kann kopiert, wiederholt oder umgeleitet werden. Sie ist oft nicht widerstandsfähig gegen Wiederverwendungsmuster und bietet wenig unabhängigen Nachweis, wenn Streitigkeiten auftreten.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Ownership -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-300" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-2">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-2">
+            <svg class="w-7 h-7 group-hover:animate-float" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <polyline points="16 11 18 13 22 9"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-2">Eigentumsrechte und Übertragung – richtig gemacht</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-2">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-2">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-2">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-2">Workflows für Eigentumsansprüche und -übertragungen, die die Marke bei Geschenken und Weiterverkäufen präsent halten – für eine reibungslose Übergabe und eine dauerhafte Aufbewahrungsnachweis.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-2">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-2">Die Lücke</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-2">Das Eigentumsrecht wird außerhalb des Produkterlebnisses geregelt. Übertragungen erfolgen manuell, sind anfällig und auf Sekundärmärkten schwer zu überprüfen.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Aftercare -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-100" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-3">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-3">
+            <svg class="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-3">Nachbetreuung, die sich hochwertig anfühlt</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-3">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-3">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-3">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-3">Ein Markenpass, der sich im Laufe der Zeit weiterentwickeln kann: Pflegehinweise, Garantie- und Servicewege, Echtheitsmerkmale und aktualisierter Produktstatus.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-3">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-3">Die Lücke</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-3">Informationen zur Nachbetreuung sind über verschiedene Kanäle verstreut. Besitzer haben Schwierigkeiten, den richtigen Weg zu finden, und Serviceteams verbringen Zeit damit, die Legitimität erneut zu überprüfen.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Visibility -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-300" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-4">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-4">
+            <svg class="w-7 h-7 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+              <path d="M2 12h20"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-4">Transparenz auf dem Sekundärmarkt</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-4">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-4">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-4">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-4">Eine strukturierte Identität, die über den Erstverkauf hinaus mit dem Artikel verbunden bleibt – und so eine kontrollierte Offenlegung, optionale Herkunftshinweise und markenbewusste Erlebnisse für Wiederverkäufer ermöglicht.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-4">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-4">Die Lücke</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-4">Marken verlieren nach dem Erstverkauf an Sichtbarkeit. Der Wiederverkauf wird zu einer externen Welt ohne Kontinuität, ohne kontrollierte Kommunikation und mit begrenzten Möglichkeiten, Vertrauen zu fördern.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Large Visual Block -->
+  <section class="py-24 bg-white" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-block">
+     <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-container">
+        <div class="relative h-[600px] rounded-[3rem] overflow-hidden group shadow-2xl bg-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-wrap">
+           <img
+            src="https://images.unsplash.com/photo-1765282946661-1975d58f9bf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTQzNzh8MHwxfHNlYXJjaHw0fHxMVVhVUlklMjBwdXJjaGFzZXxlbnwwfHx8fDE3NzMzNDA3NDR8MA&ixlib=rb-4.1.0&q=80&w=1200&auto=format"
+            sizes="100vw"
+            alt="a person cutting a piece of fabric with a pair of scissors" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-img" crossorigin="anonymous" />
+           <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/30 transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-overlay"></div>
+           <div class="absolute bottom-0 left-0 p-12 md:p-20 text-white max-w-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-content">
+              <h2 class="text-4xl md:text-5xl font-bold mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-title">Eine Identität, die das Besitzererlebnis verbessert.</h2>
+              <p class="text-lg text-slate-300 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-desc">Vom ersten Kauf über das Verschenken bis hin zum Wiederverkauf stellt „TieBack“ sicher, dass die digitale Identität des Produkts sein vertrauenswürdigstes Merkmal bleibt.</p>
+           </div>
+        </div>
+     </div>
+  </section>
+
+  <!-- Relevant Use Cases -->
+  <section class="py-32 bg-slate-50 border-y border-slate-200" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-container">
+      <div class="max-w-6xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-grid-wrap">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-header">
+          <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-h-left">
+            <h2 class="text-4xl font-bold text-slate-900 mb-4" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-title">Relevante Anwendungsfälle</h2>
+            <p class="text-slate-600 text-lg" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-desc">Wie „TieBack“ spezifische Herausforderungen für Luxusmarken löst.</p>
+          </div>
+          <a href="/use-cases/authentication/" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-link">
+          
+            Alle Anwendungsfälle anzeigen<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-grid">
+           <a href="/use-cases/authentication/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-1">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-1">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-1">Authentifizierung und Fälschungsschutz</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-1">Setzen Sie eine hochsichere Verifizierung ein, die gegen Wiederverwendung und Graumarktpraktiken gewappnet ist.</p>
+           </a>
+           <a href="/use-cases/warranty-aftercare/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-2">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-2">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-2">Eigentumsrechte, Garantie &amp; Kundendienst</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-2">Verwalten Sie Premium-Servicepfade und dauerhafte Aufzeichnungen über den Besitzverlauf über den gesamten Produktlebenszyklus hinweg.</p>
+           </a>
+           <a href="/use-cases/resale-circular-economy/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-3">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-3">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-3">Transparenz auf dem Sekundärmarkt</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-3">Ermöglichen Sie markenbewusste Erlebnisse und kontrollierte Herkunftsnachweise für Wiederverkäufer und Partner.</p>
+           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="request-access" class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta">
+    <script>
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            const delay = el.getAttribute('data-reveal-delay-100') ? 100 : 
+                          el.getAttribute('data-reveal-delay-300') ? 300 : 0;
+            
+            setTimeout(() => {
+              el.classList.remove('opacity-0', 'translate-y-12', 'translate-y-8', '-translate-x-12', 'translate-x-12', 'scale-105');
+              el.classList.add('opacity-100', 'translate-y-0', 'translate-x-0', 'scale-100');
+            }, delay);
+            
+            observer.unobserve(el);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-grad"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-container">
+      <div class="max-w-4xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-content">
+        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-title">Schützen Sie Ihr <span class="text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-title-accent">Vermächtnis.</span></h2>
+        <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-desc">
+          Schließen Sie sich den Premium-Marken an, die hochsichere digitale Identitäten aufbauen und die Kontinuität des Lebenszyklus auf TieBack sichern.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-actions">
+          <button class="w-full sm:w-auto px-12 py-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all duration-300 shadow-2xl shadow-blue-500/20 hover:-translate-y-1" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-btn">
+            Frühzugang beantragen
+          </button>
+          <a href="/platform/why-tieback/" class="group text-slate-900 font-bold flex items-center gap-3 transition-colors hover:text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-link">
+          
+            Warum „TieBack
+          “<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+,---
+import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
+import { SITE } from &#x27;@/config/site&#x27;;
+
+const title = &quot;Luxus- und risikoreiche Waren — TieBack&quot;;
+const description = &quot;Authentifizierung, Eigentumsnachweis und Verifizierung mit höherer Sicherheit für Luxus- und risikoreiche Kategorien.&quot;;
+---
+,<BaseLayout title=<astro-expr id="6">
+  description={description}
+  &gt;
+  <!-- 1. Industry Hero -->
+  <section class="relative pt-32 pb-24 md:pt-52 md:pb-40 overflow-hidden bg-slate-950" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero">
+    <div class="absolute inset-0 opacity-40 transition-transform duration-1000 scale-105" data-reveal="zoom-out" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-img-wrap">
+       <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1768062251809-739d987a42fe?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Luxury watch detail" class="w-full h-full object-cover" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-img" />
+       <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-overlay"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-container">
+      <div class="max-w-4xl mx-auto text-center opacity-0 translate-y-8 transition-all duration-1000" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-content">
+        <div class="inline-flex items-center gap-2 py-1 px-3 mb-8 text-[11px] font-bold tracking-widest text-blue-400 uppercase bg-blue-500/10 backdrop-blur-md border border-blue-500/20 rounded-full" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-badge">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-dot"></span>
+          Hochsichere Identität
+        </div>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 leading-[1.05]" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-title">
+        
+          Luxus- und <span class="text-blue-500" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-title-accent">risikoreiche Güter</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-desc">
+          TieBack
+          für Luxus- und risikoreiche Güter. Schützen Sie das Vertrauen und gewährleisten Sie die Kontinuität des Eigentums mit einer dynamischen digitalen Identitätsschicht, die speziell für Premium-Kategorien entwickelt wurde.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-5" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-actions">
+          <a href="#request-access" class="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-xl shadow-blue-500/20 hover:-translate-y-1" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-cta-1">
+            Zugang beantragen
+          </a>
+          
+          <a href="/use-cases/authentication/" class="w-full sm:w-auto px-10 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:hero-cta-2">
+            Authentifizierung entdecken
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Why TieBack -->
+  <section class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-container">
+      <div class="grid lg:grid-cols-2 gap-20 items-center" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-grid">
+        <div class="relative opacity-0 -translate-x-12 transition-all duration-1000" data-reveal="fade-right" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-content">
+          <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-100/50 rounded-full blur-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-accent"></div>
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.15] relative" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-title">
+            Im Luxussegment ist <span class="italic font-serif text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-title-accent">Vertrauen</span> das Produkt.
+          </h2>
+          <div class="mt-12 space-y-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-text-wrap">
+            <p class="text-lg text-slate-600 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-p1">
+              TieBack
+              hilft Marken dabei, Authentizität, Eigentumsverhältnisse und Nachbetreuung mühelos zu gestalten – und gleichzeitig den Nachweis verifizierbar zu halten, wenn es darauf ankommt.
+            </p>
+            <p class="text-lg text-slate-600 leading-relaxed font-medium text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-p2">
+              TieBack
+              gibt jedem Produkt eine lebendige digitale Identität mit integrierten Vertrauenssignalen und Lebenszyklus-Kontinuität – mit optionaler Verifizierung mit höherer Sicherheit für Kategorien, in denen ein echtes Fälschungsrisiko besteht.
+            </p>
+          </div>
+        </div>
+        <div class="relative group opacity-0 translate-x-12 transition-all duration-1000" data-reveal="fade-left" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img-wrap">
+           <div class="absolute inset-0 bg-blue-600 rounded-[2.5rem] rotate-2 scale-95 opacity-10 group-hover:rotate-1 transition-transform duration-500" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img-accent"></div>
+           <img
+            src="https://images.unsplash.com/photo-1772743227766-091c24a3c87f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTQzNzh8MHwxfHNlYXJjaHw4fHxQcmVtaXVtJTIwbGVhdGhlciUyMGdvb2RzfGVufDB8fHx8MTc3MzM0MDE3OXww&ixlib=rb-4.1.0&q=80&w=1200&auto=format"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            alt="Premium leather goods" class="relative z-10 w-full aspect-[4/3] object-cover rounded-[2.5rem] shadow-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:landscape-img" crossorigin="anonymous" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Core Pillars -->
+  <section class="py-32 bg-slate-50" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-container">
+      <div class="text-center max-w-3xl mx-auto mb-20" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-header">
+        <h2 class="text-4xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-title">Warum „TieBack“</h2>
+        <p class="text-xl text-slate-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-desc">Eine strukturierte Identität, die den Artikel über den Erstverkauf hinaus begleitet – entwickelt, um Vertrauen zu schützen, ohne Reibungsverluste zu verursachen.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillars-grid">
+        
+        <!-- Pillar 1: Authenticity -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-100" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-1">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 relative" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-1">
+            <svg class="w-7 h-7 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-1">Authentizität, die Bestand hat</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-1">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-1">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-1">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-1">Verifizierung für die reale Welt: ein schnelles Scan-Erlebnis, messbare Vertrauenssignale und die Option, für Flaggschiff-Kollektionen eine höhere Sicherheitsstufe hinzuzufügen (z. B. „QR“ in Kombination mit „NFC“).</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-1">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-1">Die Lücke</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-1">Statische Verifizierung kann kopiert, wiederholt oder umgeleitet werden. Sie ist oft nicht widerstandsfähig gegen Wiederverwendungsmuster und bietet wenig unabhängigen Nachweis, wenn Streitigkeiten auftreten.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Ownership -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-300" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-2">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-2">
+            <svg class="w-7 h-7 group-hover:animate-float" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <polyline points="16 11 18 13 22 9"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-2">Eigentumsrechte und Übertragung – richtig umgesetzt</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-2">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-2">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-2">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-2">Workflows für Eigentumsansprüche und -übertragungen, die die Marke bei Geschenken und Weiterverkäufen präsent halten – und so für eine reibungslose Übergabe und eine dauerhafte Aufbewahrungsnachweis sorgen.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-2">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-2">Die Lücke</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-2">Das Eigentumsrecht wird außerhalb des Produkterlebnisses geregelt. Übertragungen erfolgen manuell, sind anfällig und auf Sekundärmärkten schwer zu überprüfen.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Aftercare -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-100" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-3">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-3">
+            <svg class="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-3">Nachbetreuung, die sich hochwertig anfühlt</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-3">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-3">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-3">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-3">Ein Markenpass, der sich im Laufe der Zeit weiterentwickeln kann: Pflegehinweise, Garantie- und Servicewege, Echtheitsmerkmale und aktualisierter Produktstatus.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-3">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-3">Die Lücke</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-3">Informationen zur Nachbetreuung sind über verschiedene Kanäle verstreut. Besitzer haben Schwierigkeiten, den richtigen Weg zu finden, und Serviceteams verbringen Zeit damit, die Legitimität erneut zu überprüfen.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Visibility -->
+        <div class="group bg-white p-10 rounded-[2rem] border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full opacity-0 translate-y-12 data-reveal-delay-300" data-reveal="fade-up" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-4">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-icon-4">
+            <svg class="w-7 h-7 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+              <path d="M2 12h20"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-title-4">Transparenz auf dem Sekundärmarkt</h3>
+          
+          <div class="space-y-6 flex-grow" data-ps="src/pages/industries/luxury-high-risk-goods.astro:pillar-content-4">
+            <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-4">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-label-4">TieBack</span>
+              <p class="text-slate-700 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:tieback-text-4">Eine strukturierte Identität, die über den Erstverkauf hinaus mit dem Artikel verbunden bleibt – und so eine kontrollierte Offenlegung, optionale Herkunftshinweise und markenbewusste Erlebnisse für Wiederverkäufer ermöglicht.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-4">
+              <span class="text-slate-600 font-bold text-xs uppercase tracking-widest block mb-2" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-label-4">Die Lücke</span>
+              <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:gap-text-4">Marken verlieren nach dem Erstverkauf an Sichtbarkeit. Der Wiederverkauf wird zu einer externen Welt ohne Kontinuität, ohne kontrollierte Kommunikation und mit begrenzten Möglichkeiten, Vertrauen zu fördern.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Large Visual Block -->
+  <section class="py-24 bg-white" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-block">
+     <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-container">
+        <div class="relative h-[600px] rounded-[3rem] overflow-hidden group shadow-2xl bg-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-wrap">
+           <img
+            src="https://images.unsplash.com/photo-1765282946661-1975d58f9bf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTQzNzh8MHwxfHNlYXJjaHw0fHxMVVhVUlklMjBwdXJjaGFzZXxlbnwwfHx8fDE3NzMzNDA3NDR8MA&ixlib=rb-4.1.0&q=80&w=1200&auto=format"
+            sizes="100vw"
+            alt="a person cutting a piece of fabric with a pair of scissors" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-img" crossorigin="anonymous" />
+           <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/30 transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-overlay"></div>
+           <div class="absolute bottom-0 left-0 p-12 md:p-20 text-white max-w-2xl" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-content">
+              <h2 class="text-4xl md:text-5xl font-bold mb-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-title">Eine Identität, die das Besitzererlebnis verbessert.</h2>
+              <p class="text-lg text-slate-300 leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:visual-desc">Vom ersten Kauf über das Verschenken bis hin zum Wiederverkauf stellt „TieBack“ sicher, dass die digitale Identität des Produkts sein vertrauenswürdigstes Merkmal bleibt.</p>
+           </div>
+        </div>
+     </div>
+  </section>
+
+  <!-- Relevant Use Cases -->
+  <section class="py-32 bg-slate-50 border-y border-slate-200" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases">
+    <div class="container mx-auto px-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-container">
+      <div class="max-w-6xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-grid-wrap">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-header">
+          <div data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-h-left">
+            <h2 class="text-4xl font-bold text-slate-900 mb-4" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-title">Relevante Anwendungsfälle</h2>
+            <p class="text-slate-600 text-lg" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-desc">Wie „TieBack“ spezifische Herausforderungen für Luxusmarken löst.</p>
+          </div>
+          <a href="/use-cases/authentication/" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-link">
+          
+            Alle Anwendungsfälle anzeigen<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8" data-ps="src/pages/industries/luxury-high-risk-goods.astro:use-cases-grid">
+           <a href="/use-cases/authentication/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-1">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-1">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-1">Authentifizierung und Fälschungsschutz</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-1">Setzen Sie eine hochsichere Verifizierung ein, die gegen Wiederverwendung und Graumarktpraktiken gewappnet ist.</p>
+           </a>
+           <a href="/use-cases/warranty-aftercare/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-2">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-2">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-2">Eigentumsrechte, Garantie &amp; Kundendienst</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-2">Verwalten Sie Premium-Servicepfade und dauerhafte Aufzeichnungen über den Besitzverlauf über den gesamten Produktlebenszyklus hinweg.</p>
+           </a>
+           <a href="/use-cases/resale-circular-economy/" class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-3">
+             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-icon-3">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+             </div>
+             <h4 class="text-xl font-bold mb-3 text-slate-900" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-h-3">Transparenz auf dem Sekundärmarkt</h4>
+             <p class="text-slate-600 text-sm leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:uc-p-3">Ermöglichen Sie markenbewusste Erlebnisse und kontrollierte Herkunftsnachweise für Wiederverkäufer und Partner.</p>
+           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="request-access" class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta">
+    <script>
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            const delay = el.getAttribute('data-reveal-delay-100') ? 100 : 
+                          el.getAttribute('data-reveal-delay-300') ? 300 : 0;
+            
+            setTimeout(() => {
+              el.classList.remove('opacity-0', 'translate-y-12', 'translate-y-8', '-translate-x-12', 'translate-x-12', 'scale-105');
+              el.classList.add('opacity-100', 'translate-y-0', 'translate-x-0', 'scale-100');
+            }, delay);
+            
+            observer.unobserve(el);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-grad"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-container">
+      <div class="max-w-4xl mx-auto" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-content">
+        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-title">Schützen Sie Ihr <span class="text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-title-accent">Vermächtnis.</span></h2>
+        <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-desc">
+          Schließen Sie sich den Premium-Marken an, die hochsichere digitale Identitäten aufbauen und die Kontinuität des Lebenszyklus auf TieBack sichern.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-actions">
+          <button class="w-full sm:w-auto px-12 py-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all duration-300 shadow-2xl shadow-blue-500/20 hover:-translate-y-1" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-btn">
+            Frühzugang beantragen
+          </button>
+          <a href="/platform/why-tieback/" class="group text-slate-900 font-bold flex items-center gap-3 transition-colors hover:text-blue-600" data-ps="src/pages/industries/luxury-high-risk-goods.astro:cta-link">
+          
+            WarumTieBack
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,995 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const title = "Compliance Readiness — TieBack";
+const description = "Prepare early without over-enforcing. TieBack gives compliance, legal, and product teams a structured way to model DPP requirements, run readiness checks, and maintain audit-ready evidence.";
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- 1. Use Case Hero -->
+  <section class="relative pt-32 pb-24 md:pt-52 md:pb-40 overflow-hidden bg-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:hero">
+    <!-- Hero Background Image -->
+    <div class="absolute inset-0 z-0" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-bg-img-wrap">
+      <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Compliance Readiness Architectural Background" class="w-full h-full object-cover opacity-30"
+        loading="eager" fetchpriority="high" data-ps="src/pages/use-cases/compliance-readiness.astro:kwsdk0" />
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/50 to-slate-950/80" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-overlay"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-container">
+      <div class="max-w-4xl mx-auto text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-content">
+        <div class="inline-flex items-center gap-2 py-1 px-3 mb-8 text-[11px] font-bold tracking-widest text-blue-400 uppercase bg-white/5 backdrop-blur-md border border-white/10 rounded-full" data-ps="src/pages/use-cases/compliance-readiness.astro:eyebrow">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" data-ps="src/pages/use-cases/compliance-readiness.astro:pulse"></span>
+          Case 04
+        </div>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 leading-[1.05]" data-ps="src/pages/use-cases/compliance-readiness.astro:title">
+          Compliance <span class="text-blue-500" data-ps="src/pages/use-cases/compliance-readiness.astro:title-blue">Readiness</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:subtext">
+          Prepare early without over-enforcing. TieBack gives compliance, legal, and product teams a structured way to model Digital Product Passport requirements, run readiness checks, and maintain audit-ready evidence as rules evolve.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-5" data-ps="src/pages/use-cases/compliance-readiness.astro:buttons">
+          <a href="/request-access" class="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-2xl shadow-blue-900/40 hover:-translate-y-1" data-ps="src/pages/use-cases/compliance-readiness.astro:btn-primary">
+            Request Access
+          </a>
+          <a href="/platform/why-tieback/" class="w-full sm:w-auto px-10 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300" data-ps="src/pages/use-cases/compliance-readiness.astro:btn-secondary">
+            Platform Overview
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. The Compliance Reality -->
+  <section class="py-32 bg-slate-50 border-y border-slate-200/60 relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:reality">
+    <div class="container mx-auto px-6" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-container">
+      <div class="grid lg:grid-cols-2 gap-20 items-center" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-grid">
+        <div class="relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-left">
+          <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-100/50 rounded-full blur-2xl" data-ps="src/pages/use-cases/compliance-readiness.astro:accent-3"></div>
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.15] relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-heading">
+            Designed for programme owners who need <span class="italic font-serif text-blue-700" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-blue">calm control — across markets, categories, and change.</span>
+          </h2>
+          <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-1 gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-list">
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-1">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-1">01</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-1">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-1">Early preparation before mandates</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-2">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-2">02</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-2">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-2">Automatic evidence & auditability</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-3">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-3">03</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-3">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-3">Reduced governance overhead</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-4">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-4">04</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-4">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-4">Alignment as rules evolve</h4>
+                </div>
+             </div>
+          </div>
+        </div>
+        <div class="relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-right">
+          <div class="bg-white p-8 md:p-12 rounded-[2rem] border border-slate-200 shadow-2xl shadow-slate-200/50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-box">
+            <h3 class="text-xs uppercase tracking-widest text-blue-700 font-bold mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-eyebrow">The Compliance Reality</h3>
+            <p class="text-xl text-slate-800 leading-relaxed mb-8 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-quote">
+              Digital Product Passport programmes introduce permanence. Product information must remain structured, current, and inspectable over time — and the burden of proof sits with the organisation.
+            </p>
+            <div class="h-px bg-slate-100 mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-divider"></div>
+            <div class="grid gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullets">
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-1">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-1"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-1">Requirements evolve category by category</p>
+              </div>
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-2">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-2"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-2">Evidence is expected, not optional</p>
+              </div>
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-3">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-3"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-3">Continuity: keeping passports correct over time</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Capabilities Grid -->
+  <section class="py-32 bg-white" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities">
+    <div class="container mx-auto px-6" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities-container">
+      <div class="max-w-3xl mb-20" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities-header">
+        <span class="text-blue-700 font-bold uppercase tracking-wider text-xs block mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-label">Preparation Phase</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-title">Baseline mode.</h2>
+        <p class="text-slate-600 text-xl leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-subtext">Passport structures are available, fields are visible, and teams can align data sources without creating operational disruption.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-grid">
+        <!-- Card 1 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-1">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-1"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-1">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-1">Early Preparation</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-1">Align internal ownership and supplier inputs without premature operational burden.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-1">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Baseline structures at SKU level</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Recommended vs Required fields</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Version history from day one</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-2">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-2"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-2">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-2">Governance & Evidence</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-2">Readiness becomes measurable when evidence is produced automatically by the system.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-2">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Versioned passport history</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> User/role-level traceability</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Exportable audit snapshots</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-3">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-3"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-3">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-3">Auditor Experience</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-3">Dedicated compliance roles so reviewers can inspect history and readiness safely.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-3">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Read-only scoped access</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Validation & safety reviews</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Verified lifecycle events</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Separator Section -->
+  <section class="py-24 bg-slate-950 text-white relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:stability">
+    <div class="absolute inset-0 opacity-40" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-bg">
+      <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Stability and Growth" class="w-full h-full object-cover" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-img" />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-overlay"></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-container">
+      <div class="max-w-5xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-content">
+        <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-title">Stable Operating Model.</h2>
+        <div class="grid lg:grid-cols-2 gap-16 items-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-grid">
+           <div class="bg-white/5 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/10 shadow-2xl" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-box">
+             <div class="flex items-center gap-4 mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-label-wrap">
+               <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-icon-box">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+               </div>
+               <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-label">What stays stable</h4>
+             </div>
+             <ul class="space-y-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-list">
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-1">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-1"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-1">The Identity Model</span>
+               </li>
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-2">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-2"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-2">The Governance Model</span>
+               </li>
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-3">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-3"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-3">The Evidence Model</span>
+               </li>
+             </ul>
+           </div>
+           <div class="flex flex-col justify-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-text">
+             <h3 class="text-2xl font-bold mb-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-h3">Adapting to Change</h3>
+             <p class="text-slate-400 text-lg leading-relaxed mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-p">
+               Delegated acts mature over time. TieBack is designed so your operating model stays stable while field enforcement rules per category and market adapt as requirements evolve.
+             </p>
+             <div class="flex items-center gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-stats">
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:stat-1">
+                  <div class="text-3xl font-bold text-blue-400" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-val-1">Predictable</div>
+                  <div class="text-xs uppercase tracking-widest text-slate-400 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-lbl-1">Governance</div>
+                </div>
+                <div class="w-px h-10 bg-white/10" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-sep"></div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:stat-2">
+                  <div class="text-3xl font-bold text-blue-400" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-val-2">Flexible</div>
+                  <div class="text-xs uppercase tracking-widest text-slate-400 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-lbl-2">Ruleset</div>
+                </div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Final CTA -->
+  <section id="request-access" class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cta">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-grad"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-container">
+      <div class="max-w-4xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-content">
+        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-h">Early preparation <span class="text-blue-700" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-blue">without the burden.</span></h2>
+        <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-p">
+          Clear accountability across teams. Audit-ready evidence without manual work. Confidence that passports remain correct over time.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-buttons">
+          <a href="/request-access" class="w-full sm:w-auto px-12 py-5 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-2xl shadow-blue-200 hover:-translate-y-1 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-primary">
+            Request Access
+          </a>
+          <a href="/use-cases/compliance-enforcement/" class="w-full sm:w-auto px-12 py-5 bg-white border border-slate-200 text-slate-700 font-bold rounded-2xl hover:bg-slate-50 transition-all duration-300 hover:border-slate-300 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-secondary">
+            See Compliance Enforcement
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+,---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const title = "Compliance Readiness — TieBack";
+const description = "Prepare early without over-enforcing. TieBack gives compliance, legal, and product teams a structured way to model DPP requirements, run readiness checks, and maintain audit-ready evidence.";
+---
+,<BaseLayout title={title} description={description}>
+  <!-- 1. Use Case Hero -->
+  <section class="relative pt-32 pb-24 md:pt-52 md:pb-40 overflow-hidden bg-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:hero">
+    <!-- Hero Background Image -->
+    <div class="absolute inset-0 z-0" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-bg-img-wrap">
+      <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Compliance Readiness Architectural Background" class="w-full h-full object-cover opacity-30"
+        loading="eager" fetchpriority="high" data-ps="src/pages/use-cases/compliance-readiness.astro:kwsdk0" />
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/50 to-slate-950/80" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-overlay"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-container">
+      <div class="max-w-4xl mx-auto text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-content">
+        <div class="inline-flex items-center gap-2 py-1 px-3 mb-8 text-[11px] font-bold tracking-widest text-blue-400 uppercase bg-white/5 backdrop-blur-md border border-white/10 rounded-full" data-ps="src/pages/use-cases/compliance-readiness.astro:eyebrow">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" data-ps="src/pages/use-cases/compliance-readiness.astro:pulse"></span>
+          Case 04
+        </div>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 leading-[1.05]" data-ps="src/pages/use-cases/compliance-readiness.astro:title">
+          Compliance <span class="text-blue-500" data-ps="src/pages/use-cases/compliance-readiness.astro:title-blue">Readiness</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:subtext">
+          Prepare early without over-enforcing. TieBack gives compliance, legal, and product teams a structured way to model Digital Product Passport requirements, run readiness checks, and maintain audit-ready evidence as rules evolve.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-5" data-ps="src/pages/use-cases/compliance-readiness.astro:buttons">
+          <a href="/request-access" class="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-2xl shadow-blue-900/40 hover:-translate-y-1" data-ps="src/pages/use-cases/compliance-readiness.astro:btn-primary">
+            Request Access
+          </a>
+          <a href="/platform/why-tieback/" class="w-full sm:w-auto px-10 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300" data-ps="src/pages/use-cases/compliance-readiness.astro:btn-secondary">
+            Platform Overview
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. The Compliance Reality -->
+  <section class="py-32 bg-slate-50 border-y border-slate-200/60 relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:reality">
+    <div class="container mx-auto px-6" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-container">
+      <div class="grid lg:grid-cols-2 gap-20 items-center" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-grid">
+        <div class="relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-left">
+          <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-100/50 rounded-full blur-2xl" data-ps="src/pages/use-cases/compliance-readiness.astro:accent-3"></div>
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.15] relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-heading">
+            Designed for programme owners who need <span class="italic font-serif text-blue-700" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-blue">calm control — across markets, categories, and change.</span>
+          </h2>
+          <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-1 gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-list">
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-1">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-1">01</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-1">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-1">Early preparation before mandates</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-2">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-2">02</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-2">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-2">Automatic evidence & auditability</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-3">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-3">03</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-3">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-3">Reduced governance overhead</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-4">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-4">04</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-4">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-4">Alignment as rules evolve</h4>
+                </div>
+             </div>
+          </div>
+        </div>
+        <div class="relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-right">
+          <div class="bg-white p-8 md:p-12 rounded-[2rem] border border-slate-200 shadow-2xl shadow-slate-200/50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-box">
+            <h3 class="text-xs uppercase tracking-widest text-blue-700 font-bold mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-eyebrow">The Compliance Reality</h3>
+            <p class="text-xl text-slate-800 leading-relaxed mb-8 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-quote">
+              Digital Product Passport programmes introduce permanence. Product information must remain structured, current, and inspectable over time — and the burden of proof sits with the organisation.
+            </p>
+            <div class="h-px bg-slate-100 mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-divider"></div>
+            <div class="grid gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullets">
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-1">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-1"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-1">Requirements evolve category by category</p>
+              </div>
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-2">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-2"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-2">Evidence is expected, not optional</p>
+              </div>
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-3">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-3"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-3">Continuity: keeping passports correct over time</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Capabilities Grid -->
+  <section class="py-32 bg-white" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities">
+    <div class="container mx-auto px-6" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities-container">
+      <div class="max-w-3xl mb-20" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities-header">
+        <span class="text-blue-700 font-bold uppercase tracking-wider text-xs block mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-label">Preparation Phase</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-title">Baseline mode.</h2>
+        <p class="text-slate-600 text-xl leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-subtext">Passport structures are available, fields are visible, and teams can align data sources without creating operational disruption.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-grid">
+        <!-- Card 1 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-1">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-1"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-1">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-1">Early Preparation</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-1">Align internal ownership and supplier inputs without premature operational burden.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-1">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Baseline structures at SKU level</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Recommended vs Required fields</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Version history from day one</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-2">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-2"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-2">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-2">Governance & Evidence</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-2">Readiness becomes measurable when evidence is produced automatically by the system.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-2">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Versioned passport history</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> User/role-level traceability</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Exportable audit snapshots</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-3">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-3"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-3">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-3">Auditor Experience</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-3">Dedicated compliance roles so reviewers can inspect history and readiness safely.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-3">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Read-only scoped access</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Validation & safety reviews</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Verified lifecycle events</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Separator Section -->
+  <section class="py-24 bg-slate-950 text-white relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:stability">
+    <div class="absolute inset-0 opacity-40" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-bg">
+      <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Stability and Growth" class="w-full h-full object-cover" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-img" />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-overlay"></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-container">
+      <div class="max-w-5xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-content">
+        <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-title">Stable Operating Model.</h2>
+        <div class="grid lg:grid-cols-2 gap-16 items-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-grid">
+           <div class="bg-white/5 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/10 shadow-2xl" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-box">
+             <div class="flex items-center gap-4 mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-label-wrap">
+               <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-icon-box">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+               </div>
+               <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-label">What stays stable</h4>
+             </div>
+             <ul class="space-y-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-list">
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-1">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-1"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-1">The Identity Model</span>
+               </li>
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-2">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-2"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-2">The Governance Model</span>
+               </li>
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-3">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-3"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-3">The Evidence Model</span>
+               </li>
+             </ul>
+           </div>
+           <div class="flex flex-col justify-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-text">
+             <h3 class="text-2xl font-bold mb-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-h3">Adapting to Change</h3>
+             <p class="text-slate-400 text-lg leading-relaxed mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-p">
+               Delegated acts mature over time. TieBack is designed so your operating model stays stable while field enforcement rules per category and market adapt as requirements evolve.
+             </p>
+             <div class="flex items-center gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-stats">
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:stat-1">
+                  <div class="text-3xl font-bold text-blue-400" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-val-1">Predictable</div>
+                  <div class="text-xs uppercase tracking-widest text-slate-400 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-lbl-1">Governance</div>
+                </div>
+                <div class="w-px h-10 bg-white/10" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-sep"></div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:stat-2">
+                  <div class="text-3xl font-bold text-blue-400" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-val-2">Flexible</div>
+                  <div class="text-xs uppercase tracking-widest text-slate-400 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-lbl-2">Ruleset</div>
+                </div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Final CTA -->
+  <section id="request-access" class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cta">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-grad"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-container">
+      <div class="max-w-4xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-content">
+        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-h">Early preparation <span class="text-blue-700" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-blue">without the burden.</span></h2>
+        <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-p">
+          Clear accountability across teams. Audit-ready evidence without manual work. Confidence that passports remain correct over time.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-buttons">
+          <a href="/request-access" class="w-full sm:w-auto px-12 py-5 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-2xl shadow-blue-200 hover:-translate-y-1 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-primary">
+            Request Access
+          </a>
+          <a href="/use-cases/compliance-enforcement/" class="w-full sm:w-auto px-12 py-5 bg-white border border-slate-200 text-slate-700 font-bold rounded-2xl hover:bg-slate-50 transition-all duration-300 hover:border-slate-300 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-secondary">
+            See Compliance Enforcement
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+---
+import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
+
+const title = &quot;Préparation à la conformité — TieBack&quot;;
+const description = &quot;Préparez-vous à l&#x27;avance sans excès de zèle. TieBack offre aux équipes chargées de la conformité, des affaires juridiques et des produits une méthode structurée pour modéliser les exigences d&#x27;DPP, effectuer des contrôles de préparation et conserver des preuves prêtes pour l&#x27;audit.&quot;;
+---
+
+<BaseLayout title=<astro-expr id="0">
+  description={description}
+  &gt;
+  <!-- 1. Use Case Hero -->
+  <section class="relative pt-32 pb-24 md:pt-52 md:pb-40 overflow-hidden bg-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:hero">
+    <!-- Hero Background Image -->
+    <div class="absolute inset-0 z-0" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-bg-img-wrap">
+      <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Compliance Readiness Architectural Background" class="w-full h-full object-cover opacity-30"
+        loading="eager" fetchpriority="high" data-ps="src/pages/use-cases/compliance-readiness.astro:kwsdk0" />
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/50 to-slate-950/80" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-overlay"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-container">
+      <div class="max-w-4xl mx-auto text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-content">
+        <div class="inline-flex items-center gap-2 py-1 px-3 mb-8 text-[11px] font-bold tracking-widest text-blue-400 uppercase bg-white/5 backdrop-blur-md border border-white/10 rounded-full" data-ps="src/pages/use-cases/compliance-readiness.astro:eyebrow">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" data-ps="src/pages/use-cases/compliance-readiness.astro:pulse"></span>
+          Cas n° 4
+        </div>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 leading-[1.05]" data-ps="src/pages/use-cases/compliance-readiness.astro:title">
+        
+          <span class="text-blue-500" data-ps="src/pages/use-cases/compliance-readiness.astro:title-blue">Préparation</span>
+        à la conformité
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:subtext">
+          Préparez-vous à l&#x27;avance sans aller trop loin. TieBack offre aux équipes chargées de la conformité, des affaires juridiques et des produits une méthode structurée pour modéliser les exigences de l&#x27;Digital Product Passport, effectuer des contrôles de préparation et conserver des preuves prêtes pour un audit à mesure que les règles évoluent.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-5" data-ps="src/pages/use-cases/compliance-readiness.astro:buttons">
+          <a href="/request-access" class="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-2xl shadow-blue-900/40 hover:-translate-y-1" data-ps="src/pages/use-cases/compliance-readiness.astro:btn-primary">
+            Demander l&#x27;accès
+          </a>
+          
+          <a href="/platform/why-tieback/" class="w-full sm:w-auto px-10 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300" data-ps="src/pages/use-cases/compliance-readiness.astro:btn-secondary">
+            Présentation de la plateforme
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. The Compliance Reality -->
+  <section class="py-32 bg-slate-50 border-y border-slate-200/60 relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:reality">
+    <div class="container mx-auto px-6" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-container">
+      <div class="grid lg:grid-cols-2 gap-20 items-center" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-grid">
+        <div class="relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-left">
+          <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-100/50 rounded-full blur-2xl" data-ps="src/pages/use-cases/compliance-readiness.astro:accent-3"></div>
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.15] relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-heading">
+          
+            Conçu pour les responsables de programmes qui ont besoin <span class="italic font-serif text-blue-700" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-blue">d&#x27;un contrôle serein — sur l&#x27;ensemble des marchés, des catégories et des changements.</span>
+          </h2>
+          <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-1 gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-list">
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-1">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-1">01</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-1">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-1">Préparation en amont des obligations réglementaires</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-2">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-2">02</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-2">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-2">Preuves et vérifiabilité automatiques</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-3">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-3">03</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-3">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-3">Réduction des frais généraux liés à la gouvernance</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-4">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-4">04</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-4">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-4">Alignement à mesure que les règles évoluent</h4>
+                </div>
+             </div>
+          </div>
+        </div>
+        <div class="relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-right">
+          <div class="bg-white p-8 md:p-12 rounded-[2rem] border border-slate-200 shadow-2xl shadow-slate-200/50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-box">
+            <h3 class="text-xs uppercase tracking-widest text-blue-700 font-bold mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-eyebrow">La réalité de la conformité</h3>
+            <p class="text-xl text-slate-800 leading-relaxed mb-8 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-quote">
+              Digital Product Passport
+              Les programmes introduisent une dimension permanente. Les informations sur les produits doivent rester structurées, à jour et vérifiables au fil du temps — et la charge de la preuve incombe à l&#x27;organisation.
+            </p>
+            <div class="h-px bg-slate-100 mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-divider"></div>
+            <div class="grid gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullets">
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-1">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-1"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-1">Les exigences évoluent catégorie par catégorie</p>
+              </div>
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-2">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-2"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-2">Les preuves sont obligatoires, et non facultatives</p>
+              </div>
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-3">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-3"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-3">Continuité : maintenir l&#x27;exactitude des passeports au fil du temps</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Capabilities Grid -->
+  <section class="py-32 bg-white" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities">
+    <div class="container mx-auto px-6" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities-container">
+      <div class="max-w-3xl mb-20" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities-header">
+        <span class="text-blue-700 font-bold uppercase tracking-wider text-xs block mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-label">Phase de préparation</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-title">Mode de référence.</h2>
+        <p class="text-slate-600 text-xl leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-subtext">Les structures des passeports sont disponibles, les champs sont visibles et les équipes peuvent harmoniser les sources de données sans perturber les opérations.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-grid">
+        <!-- Card 1 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-1">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-1"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-1">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-1">Préparation précoce</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-1">Aligner les contributions internes et celles des fournisseurs sans imposer de charge opérationnelle prématurée.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-1">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Structures de référence au niveau de l&#x27;SKU</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Champs recommandés vs champs obligatoires</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Historique des versions dès le premier jour</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-2">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-2"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-2">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-2">Gouvernance et preuves</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-2">L&#x27;état de préparation devient mesurable lorsque le système génère automatiquement des preuves.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-2">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Historique versionné du passeport</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Traçabilité au niveau de l&#x27;utilisateur/du rôle</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Instantanés d&#x27;audit exportables</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-3">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-3"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-3">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-3">Expérience de l&#x27;auditeur</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-3">Rôles dédiés à la conformité permettant aux réviseurs d&#x27;inspecter l&#x27;historique et l&#x27;état de préparation en toute sécurité.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-3">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Accès en lecture seule</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Validation et contrôles de sécurité</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Événements du cycle de vie vérifiés</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Separator Section -->
+  <section class="py-24 bg-slate-950 text-white relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:stability">
+    <div class="absolute inset-0 opacity-40" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-bg">
+      <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Stability and Growth" class="w-full h-full object-cover" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-img" />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-overlay"></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-container">
+      <div class="max-w-5xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-content">
+        <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-title">Modèle opérationnel stable.</h2>
+        <div class="grid lg:grid-cols-2 gap-16 items-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-grid">
+           <div class="bg-white/5 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/10 shadow-2xl" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-box">
+             <div class="flex items-center gap-4 mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-label-wrap">
+               <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-icon-box">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+               </div>
+               <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-label">Ce qui reste stable</h4>
+             </div>
+             <ul class="space-y-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-list">
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-1">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-1"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-1">Le modèle d&#x27;identité</span>
+               </li>
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-2">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-2"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-2">Le modèle de gouvernance</span>
+               </li>
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-3">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-3"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-3">Le modèle de preuves</span>
+               </li>
+             </ul>
+           </div>
+           <div class="flex flex-col justify-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-text">
+             <h3 class="text-2xl font-bold mb-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-h3">S&#x27;adapter au changement</h3>
+             <p class="text-slate-400 text-lg leading-relaxed mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-p">
+               Les actes délégués mûrissent avec le temps. L&#x27;TieBack est conçu pour que votre modèle opérationnel reste stable tandis que les règles d&#x27;application sur le terrain, par catégorie et par marché, s&#x27;adaptent à mesure que les exigences évoluent.
+             </p>
+             <div class="flex items-center gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-stats">
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:stat-1">
+                  <div class="text-3xl font-bold text-blue-400" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-val-1">Prévisible</div>
+                  <div class="text-xs uppercase tracking-widest text-slate-400 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-lbl-1">Gouvernance</div>
+                </div>
+                <div class="w-px h-10 bg-white/10" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-sep"></div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:stat-2">
+                  <div class="text-3xl font-bold text-blue-400" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-val-2">Flexible</div>
+                  <div class="text-xs uppercase tracking-widest text-slate-400 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-lbl-2">Ensemble de règles</div>
+                </div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Final CTA -->
+  <section id="request-access" class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cta">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-grad"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-container">
+      <div class="max-w-4xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-content">
+        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-h">Préparation précoce <span class="text-blue-700" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-blue">sans contrainte.</span></h2>
+        <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-p">
+          Une responsabilité claire entre les équipes. Des preuves prêtes pour l&#x27;audit sans travail manuel. La certitude que les passeports restent corrects au fil du temps.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-buttons">
+          <a href="/request-access" class="w-full sm:w-auto px-12 py-5 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-2xl shadow-blue-200 hover:-translate-y-1 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-primary">
+            Demander l&#x27;accès
+          </a>
+          
+          <a href="/use-cases/compliance-enforcement/" class="w-full sm:w-auto px-12 py-5 bg-white border border-slate-200 text-slate-700 font-bold rounded-2xl hover:bg-slate-50 transition-all duration-300 hover:border-slate-300 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-secondary">
+            Voir la mise en œuvre de la conformité
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+,---
+import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
+
+const title = &quot;Préparation à la conformité — TieBack&quot;;
+const description = &quot;Préparez-vous tôt sans aller trop loin. TieBack offre aux équipes chargées de la conformité, des affaires juridiques et des produits une méthode structurée pour modéliser les exigences en matière d&#x27;, effectuer des contrôles de préparation et conserver des preuves prêtes pour un audit.&quot;;
+---
+,<BaseLayout title=<astro-expr id="2">
+  description={description}
+  &gt;
+  <!-- 1. Use Case Hero -->
+  <section class="relative pt-32 pb-24 md:pt-52 md:pb-40 overflow-hidden bg-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:hero">
+    <!-- Hero Background Image -->
+    <div class="absolute inset-0 z-0" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-bg-img-wrap">
+      <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1634637343552-39a806b0e462?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Compliance Readiness Architectural Background" class="w-full h-full object-cover opacity-30"
+        loading="eager" fetchpriority="high" data-ps="src/pages/use-cases/compliance-readiness.astro:kwsdk0" />
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/50 to-slate-950/80" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-overlay"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-container">
+      <div class="max-w-4xl mx-auto text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:hero-content">
+        <div class="inline-flex items-center gap-2 py-1 px-3 mb-8 text-[11px] font-bold tracking-widest text-blue-400 uppercase bg-white/5 backdrop-blur-md border border-white/10 rounded-full" data-ps="src/pages/use-cases/compliance-readiness.astro:eyebrow">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" data-ps="src/pages/use-cases/compliance-readiness.astro:pulse"></span>
+          Cas n° 4
+        </div>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 leading-[1.05]" data-ps="src/pages/use-cases/compliance-readiness.astro:title">
+        
+          <span class="text-blue-500" data-ps="src/pages/use-cases/compliance-readiness.astro:title-blue">Préparation</span>
+        à la conformité
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:subtext">
+          Préparez-vous à l&#x27;avance sans aller trop loin dans l&#x27;application des règles. L&#x27;TieBack offre aux équipes chargées de la conformité, des affaires juridiques et des produits une méthode structurée pour modéliser les exigences de l&#x27;Digital Product Passport, effectuer des contrôles de préparation et conserver des preuves prêtes pour l&#x27;audit à mesure que les règles évoluent.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-5" data-ps="src/pages/use-cases/compliance-readiness.astro:buttons">
+          <a href="/request-access" class="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-2xl shadow-blue-900/40 hover:-translate-y-1" data-ps="src/pages/use-cases/compliance-readiness.astro:btn-primary">
+            Demander l&#x27;accès
+          </a>
+          
+          <a href="/platform/why-tieback/" class="w-full sm:w-auto px-10 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300" data-ps="src/pages/use-cases/compliance-readiness.astro:btn-secondary">
+            Présentation de la plateforme
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. The Compliance Reality -->
+  <section class="py-32 bg-slate-50 border-y border-slate-200/60 relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:reality">
+    <div class="container mx-auto px-6" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-container">
+      <div class="grid lg:grid-cols-2 gap-20 items-center" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-grid">
+        <div class="relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-left">
+          <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-100/50 rounded-full blur-2xl" data-ps="src/pages/use-cases/compliance-readiness.astro:accent-3"></div>
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.15] relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-heading">
+          
+            Conçu pour les responsables de programmes qui ont besoin <span class="italic font-serif text-blue-700" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-blue">d&#x27;un contrôle serein — sur l&#x27;ensemble des marchés, des catégories et des changements.</span>
+          </h2>
+          <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-1 gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-list">
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-1">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-1">01</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-1">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-1">Préparation en amont des obligations réglementaires</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-2">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-2">02</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-2">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-2">Preuves et vérifiabilité automatiques</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-3">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-3">03</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-3">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-3">Réduction des frais généraux liés à la gouvernance</h4>
+                </div>
+             </div>
+             <div class="flex gap-4 items-center group bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-item-4">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-700 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-icon-4">04</div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:reality-text-4">
+                  <h4 class="font-bold text-slate-900" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-h-4">Alignement à mesure que les règles évoluent</h4>
+                </div>
+             </div>
+          </div>
+        </div>
+        <div class="relative" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-right">
+          <div class="bg-white p-8 md:p-12 rounded-[2rem] border border-slate-200 shadow-2xl shadow-slate-200/50" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-box">
+            <h3 class="text-xs uppercase tracking-widest text-blue-700 font-bold mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-eyebrow">La réalité de la conformité</h3>
+            <p class="text-xl text-slate-800 leading-relaxed mb-8 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-quote">
+              Digital Product Passport
+              Les programmes introduisent une dimension permanente. Les informations sur les produits doivent rester structurées, à jour et vérifiables au fil du temps — et la charge de la preuve incombe à l&#x27;organisation.
+            </p>
+            <div class="h-px bg-slate-100 mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-divider"></div>
+            <div class="grid gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullets">
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-1">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-1"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-1">Les exigences évoluent catégorie par catégorie</p>
+              </div>
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-2">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-2"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-2">Les preuves sont obligatoires, et non facultatives</p>
+              </div>
+              <div class="flex items-start gap-4" data-ps="src/pages/use-cases/compliance-readiness.astro:reality-bullet-3">
+                <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-dot-3"></span>
+                <p class="text-slate-600 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:bullet-text-3">Continuité : maintenir l&#x27;exactitude des passeports au fil du temps</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Capabilities Grid -->
+  <section class="py-32 bg-white" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities">
+    <div class="container mx-auto px-6" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities-container">
+      <div class="max-w-3xl mb-20" data-ps="src/pages/use-cases/compliance-readiness.astro:capabilities-header">
+        <span class="text-blue-700 font-bold uppercase tracking-wider text-xs block mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-label">Phase de préparation</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-title">Mode de référence.</h2>
+        <p class="text-slate-600 text-xl leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-subtext">Les structures des passeports sont disponibles, les champs sont visibles et les équipes peuvent harmoniser les sources de données sans perturber les opérations.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-grid">
+        <!-- Card 1 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-1">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-1"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-1">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-1">Préparation précoce</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-1">Aligner les contributions internes et celles des fournisseurs sans imposer de charge opérationnelle prématurée.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-1">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Structures de référence au niveau de l&#x27;SKU</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Champs recommandés vs champs obligatoires</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-1-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Historique des versions dès le premier jour</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-2">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-2"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-2">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-2">Gouvernance et preuves</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-2">L&#x27;état de préparation devient mesurable lorsque le système génère automatiquement des preuves.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-2">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Historique versionné du passeport</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Traçabilité au niveau de l&#x27;utilisateur/du rôle</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-2-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Instantanés d&#x27;audit exportables</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-3">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full translate-x-16 -translate-y-16 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-card-deco-3"></div>
+          <div class="w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-icon-3">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-h-3">Expérience de l&#x27;auditeur</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-p-3">Rôles dédiés à la conformité permettant aux réviseurs d&#x27;inspecter l&#x27;historique et l&#x27;état de préparation en toute sécurité.</p>
+          <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-list-3">
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-1"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Accès en lecture seule</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-2"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Validation et contrôles de sécurité</li>
+            <li class="flex items-start gap-3" data-ps="src/pages/use-cases/compliance-readiness.astro:cap-li-3-3"><svg class="w-5 h-5 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Événements du cycle de vie vérifiés</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Separator Section -->
+  <section class="py-24 bg-slate-950 text-white relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:stability">
+    <div class="absolute inset-0 opacity-40" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-bg">
+      <img crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1200&q=80"
+        srcset="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&w=1920&q=80 1920w"
+        sizes="100vw"
+        alt="Stability and Growth" class="w-full h-full object-cover" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-img" />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-overlay"></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-container">
+      <div class="max-w-5xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-content">
+        <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-title">Modèle opérationnel stable.</h2>
+        <div class="grid lg:grid-cols-2 gap-16 items-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-grid">
+           <div class="bg-white/5 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/10 shadow-2xl" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-box">
+             <div class="flex items-center gap-4 mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-label-wrap">
+               <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-icon-box">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+               </div>
+               <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-label">Ce qui reste stable</h4>
+             </div>
+             <ul class="space-y-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-list">
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-1">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-1"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-1">Le modèle d&#x27;identité</span>
+               </li>
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-2">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-2"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-2">Le modèle de gouvernance</span>
+               </li>
+               <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-li-3">
+                 <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-dot-3"></div>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-txt-3">Le modèle de preuves</span>
+               </li>
+             </ul>
+           </div>
+           <div class="flex flex-col justify-center" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-text">
+             <h3 class="text-2xl font-bold mb-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-h3">S&#x27;adapter au changement</h3>
+             <p class="text-slate-400 text-lg leading-relaxed mb-8" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-p">
+               Les actes délégués mûrissent avec le temps. L&#x27;TieBack est conçu pour que votre modèle opérationnel reste stable tandis que les règles d&#x27;application sur le terrain, par catégorie et par marché, s&#x27;adaptent à mesure que les exigences évoluent.
+             </p>
+             <div class="flex items-center gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:stability-stats">
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:stat-1">
+                  <div class="text-3xl font-bold text-blue-400" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-val-1">Prévisible</div>
+                  <div class="text-xs uppercase tracking-widest text-slate-400 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-lbl-1">Gouvernance</div>
+                </div>
+                <div class="w-px h-10 bg-white/10" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-sep"></div>
+                <div data-ps="src/pages/use-cases/compliance-readiness.astro:stat-2">
+                  <div class="text-3xl font-bold text-blue-400" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-val-2">Flexible</div>
+                  <div class="text-xs uppercase tracking-widest text-slate-400 font-bold" data-ps="src/pages/use-cases/compliance-readiness.astro:stat-lbl-2">Ensemble de règles</div>
+                </div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Final CTA -->
+  <section id="request-access" class="py-32 bg-white relative overflow-hidden" data-ps="src/pages/use-cases/compliance-readiness.astro:cta">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-grad"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-container">
+      <div class="max-w-4xl mx-auto" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-content">
+        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-h">Préparation précoce <span class="text-blue-700" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-blue">sans contrainte.</span></h2>
+        <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-p">
+          Une responsabilité clairement définie entre les équipes. Des preuves prêtes pour l&#x27;audit sans travail manuel. La certitude que les passeports restent corrects au fil du temps.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-buttons">
+          <a href="/request-access" class="w-full sm:w-auto px-12 py-5 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-2xl shadow-blue-200 hover:-translate-y-1 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-primary">
+            Demander l&#x27;accès
+          </a>
+          
+          <a href="/use-cases/compliance-enforcement/" class="w-full sm:w-auto px-12 py-5 bg-white border border-slate-200 text-slate-700 font-bold rounded-2xl hover:bg-slate-50 transition-all duration-300 hover:border-slate-300 text-center" data-ps="src/pages/use-cases/compliance-readiness.astro:cta-secondary">
+            Voir la mise en œuvre de la conformité
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
