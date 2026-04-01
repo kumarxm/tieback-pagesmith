@@ -35,7 +35,7 @@ jobs:
       - name: Run translation script
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
-        run: node scripts/translate.js
+        run: node Scripts/translate.js
 
       - name: Commit and Push
         run: |
