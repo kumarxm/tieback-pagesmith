@@ -10,11 +10,10 @@ on:
       - 'src/pages/**/*.md'
       - 'src/pages/**/*.mdx'
       - 'src/pages/**/*.astro'
-    paths-ignore:
       # CRITICAL: Do NOT trigger when the bot pushes German or French files
-      # (This prevents an infinite translation loop that drains your API credits)
-      - 'src/pages/de/**'
-      - 'src/pages/fr/**'
+      # (We use the '!' prefix to ignore these paths in the same list)
+      - '!src/pages/de/**'
+      - '!src/pages/fr/**'
 
 jobs:
   translate:
