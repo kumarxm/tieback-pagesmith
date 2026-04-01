@@ -19,31 +19,57 @@ function parseAstro(content) {
 
 function protectAstro(text) {
   const exprs = [];
-  let protectedText = String(text || '').replace(/<script[\s\S]*?<\/script>/gi, m => { exprs.push(m); return `<astro-expr id="${exprs.length-1}"></astro-expr>`; });
+  // Ensure we are working with a string and wrap in a root tag to satisfy DeepL's 'text without parent' rule
+  let protectedText = `<translation-root>${String(text || '')}</translation-root>`;
+  
+  // 1. Hide <script> blocks
+  protectedText = protectedText.replace(/<script[\s\S]*?<\/script>/gi, m => { exprs.push(m); return `<astro-expr id="${exprs.length-1}"></astro-expr>`; });
+  
+  // 2. Hide Astro { expressions }
   protectedText = protectedText.replace(/\{[\s\S]*?\}/g, m => { exprs.push(m); return `<astro-expr id="${exprs.length-1}"></astro-expr>`; });
-  NO_TRANSLATE_TERMS.forEach(t => { protectedText = protectedText.replaceAll(t, `<keep>${t}</keep>`); });
+  
+  // 3. Hide Glossary Terms
+  const sorted = [...NO_TRANSLATE_TERMS].sort((a, b) => b.length - a.length);
+  for (const term of sorted) {
+    protectedText = protectedText.replaceAll(term, `<keep>${term}</keep>`);
+  }
+
   return { protectedText, exprs };
 }
 
 function restoreAstro(text, exprs) {
-  let r = text.replace(/<keep>(.*?)<\/keep>/g, '$1');
-  exprs.forEach((e, i) => { r = r.replace(new RegExp(`<astro-expr id="${i}"><\\/astro-expr>`, 'g'), e); });
+  // Remove the root tag and glossary tags
+  let r = text.replace(/<\/?translation-root>/g, '');
+  r = r.replace(/<keep>(.*?)<\/keep>/g, '$1');
+  
+  exprs.forEach((e, i) => {
+    const regex = new RegExp(`<astro-expr id="${i}"><\\/astro-expr>`, 'g');
+    r = r.replace(regex, e);
+  });
   return r;
 }
 
-// ── Chunking Logic for High-Complexity Pages (FAQ/Slugs) ──
 async function safeTranslate(translator, text, targetLang) {
-  if (text.length < 4000) {
-    const res = await translator.translateText(text, 'en', targetLang, { tagHandling: 'html', ignoreTags: ['keep', 'astro-expr'] });
+  // If the text is massive (like FAQ), DeepL prefers it in smaller bites
+  if (text.length < 5000) {
+    const res = await translator.translateText(text, 'en', targetLang, { 
+        tagHandling: 'html', 
+        ignoreTags: ['keep', 'astro-expr'] 
+    });
     return res.text;
   }
-  // Split long pages by double-newline (paragraphs) to avoid 500 errors
+
   const chunks = text.split('\n\n');
   const translatedChunks = [];
   for (const chunk of chunks) {
     if (chunk.trim()) {
-      const res = await translator.translateText(chunk, 'en', targetLang, { tagHandling: 'html', ignoreTags: ['keep', 'astro-expr'] });
-      translatedChunks.push(res.text);
+      // Wrap chunk in root tag just in case splitting orphaned some text
+      const wrappedChunk = `<translation-root>${chunk}</translation-root>`;
+      const res = await translator.translateText(wrappedChunk, 'en', targetLang, { 
+          tagHandling: 'html', 
+          ignoreTags: ['keep', 'astro-expr'] 
+      });
+      translatedChunks.push(res.text.replace(/<\/?translation-root>/g, ''));
     } else {
       translatedChunks.push('');
     }
@@ -54,6 +80,7 @@ async function safeTranslate(translator, text, targetLang) {
 async function main() {
   const translator = new deepl.Translator(process.env.DEEPL_API_KEY);
   const allFiles = [];
+  
   SOURCE_DIRS.forEach(d => {
     const walk = (dir) => {
       if (!existsSync(dir)) return;
@@ -72,6 +99,7 @@ async function main() {
     const baseDir = SOURCE_DIRS.find(d => file.startsWith(d));
     const rel = file.replace(baseDir, '');
     const content = readFileSync(file, 'utf-8');
+    
     for (const lang of TARGET_LANGS) {
       const targetPath = join(baseDir, lang, rel);
       if (existsSync(targetPath) && statSync(targetPath).mtime > statSync(file).mtime) continue;
@@ -93,8 +121,11 @@ async function main() {
         mkdirSync(dirname(targetPath), { recursive: true });
         writeFileSync(targetPath, final, 'utf-8');
         console.log(`   ✓ Saved: ${lang}${rel}`);
-      } catch (e) { console.error(`   ❌ Failed ${rel}: ${e.message}`); }
+      } catch (e) { 
+        console.error(`   ❌ Failed ${rel} to ${lang}: ${e.message}`); 
+      }
     }
   }
 }
+
 main().catch(console.error);
