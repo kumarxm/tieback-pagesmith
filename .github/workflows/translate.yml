@@ -6,13 +6,11 @@ on:
     branches:
       - main
     paths:
-      # Trigger when English files change in EITHER folder
       - 'src/pages/**/*.astro'
       - 'src/pages/**/*.md'
       - 'src/pages/**/*.mdx'
       - 'src/content/**/*.md'
       - 'src/content/**/*.mdx'
-      # CRITICAL: Do NOT trigger when the bot pushes translations
       - '!src/pages/de/**'
       - '!src/pages/fr/**'
       - '!src/content/de/**'
@@ -34,6 +32,12 @@ jobs:
       - name: Install dependencies
         run: npm install deepl-node gray-matter
 
+      - name: Git Pull Latest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull origin main
+
       - name: Run translation script
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
@@ -41,28 +45,12 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # 1. Stash everything to clear the workspace
-          git stash push --include-untracked -m "garbage"
-          
-          # 2. Pull latest code (in case Pagesmith pushed something else)
-          git pull origin main
-          
-          # 3. Pull translated files back from the stash for both locations
-          git checkout stash@{0} -- src/pages/de/ src/pages/fr/ src/content/de/ src/content/fr/ || echo "Some folders not found, skipping..."
-          
-          # 4. Clear the stash
-          git stash drop
-          
-          # 5. Stage all potential new localized folders
+          # Stage the new folders
           git add src/pages/de/ src/pages/fr/ src/content/de/ src/content/fr/ 2>/dev/null || true
           
-          # 6. Only commit if there is actually something new
           if ! git diff --cached --quiet; then
             git commit -m "chore(i18n): update localized pages and content [automated]"
             git push origin main
           else
-            echo "Nothing new to translate."
+            echo "Nothing new to commit."
           fi
