@@ -1,0 +1,36 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+  title?: string;
+}
+
+const { headings, title = 'Table of Contents' } = Astro.props;
+
+// Filter to h2 and h3 only (h1 is the page title, h4+ too granular)
+const tocHeadings = headings.filter(h => h.depth >= 2 && h.depth <= 3);
+---
+
+{tocHeadings.length > 2 && (
+  <nav class="toc not-prose mb-8 rounded-lg border p-6" style="background: var(--surface); border-color: var(--border);" data-ps="src/components/TableOfContents.astro:o5wlsh">
+    <p class="mb-4 text-lg font-bold" style="color: var(--text);" data-ps="src/components/TableOfContents.astro:4spl90">{title}</p>
+    <ul class="space-y-2 text-sm">
+      {tocHeadings.map((heading, __psIdx) => (
+        <li class={heading.depth === 3 ? 'ml-4' : ''} data-ps={`src/components/TableOfContents.astro:opdb14-${__psIdx}`}>
+          <a
+            href={`#${heading.slug}`}
+            class="block py-1 transition-colors hover:underline"
+            style={`color: ${heading.depth === 2 ? 'var(--text)' : 'var(--text-muted)'};`}
+           data-ps={`src/components/TableOfContents.astro:50yt9t-${__psIdx}`}>
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}

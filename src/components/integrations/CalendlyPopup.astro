@@ -1,0 +1,44 @@
+---
+interface Props {
+  url?: string;
+  text?: string;
+  class?: string;
+}
+
+const defaultUrl = 'https://calendly.com/sam-startwithus/30min';
+const {
+  url = defaultUrl,
+  text = 'Schedule a Meeting',
+  class: className = '',
+} = Astro.props;
+---
+
+{url && (
+  <button
+    type="button"
+    class:list={[
+      'inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2',
+      className,
+    ]}
+    data-calendly-url={url}
+    onclick="Calendly.initPopupWidget({url: this.dataset.calendlyUrl}); return false;"
+  >
+    {text}
+  </button>
+)}
+
+<script>
+  // Load Calendly widget script and CSS
+  if (!document.querySelector('script[src*="calendly.com/assets/external/widget.js"]')) {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.head.appendChild(script);
+  }
+  if (!document.querySelector('link[href*="calendly.com/assets/external/widget.css"]')) {
+    const link = document.createElement('link');
+    link.href = 'https://assets.calendly.com/assets/external/widget.css';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+  }
+</script>

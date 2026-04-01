@@ -1,0 +1,28 @@
+---
+interface Props {
+  url?: string;
+  height?: string;
+  class?: string;
+}
+
+const defaultUrl = 'https://calendly.com/sam-startwithus/30min';
+const { url = defaultUrl, height = '700px', class: className = '' } = Astro.props;
+---
+
+{url && (
+  <div
+    class:list={['calendly-inline-widget', className]}
+    data-url={url}
+    style={`min-width:320px;height:${height};`}
+  />
+)}
+
+<script>
+  // Load Calendly widget script
+  if (!document.querySelector('script[src*="calendly.com/assets/external/widget.js"]')) {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.head.appendChild(script);
+  }
+</script>

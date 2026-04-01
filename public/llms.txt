@@ -1,0 +1,33 @@
+# TieBack: Enterprise Digital Product Passport, product identity and brand storytelling platform
+
+> This file provides a machine-readable summary of TieBack for LLMs, AI agents, and search crawlers.
+
+## System Overview
+TieBack is an enterprise SaaS platform for product traceability and identity. It serves as the digital thread between physical products and their lifecycle data, specifically designed to meet **EU Ecodesign for Sustainable Products Regulation (ESPR)** mandates.
+
+## Core Value Proposition
+- **Compliance**: Turn-key deployment of GS1-compliant Digital Product Passports.
+- **Interoperability**: Built on GS1 Digital Link standards to replace legacy 1D barcodes with multi-functional QR/NFC.
+- **Security**: Cryptographic product authentication and anomaly detection to prevent counterfeiting.
+- **Circular Economy**: Enables repair, resale, and recycling workflows via item-level digital twins.
+
+## Technical Specifications
+- **Identifier Support**: GS1-128, GS1 Digital Link, QR, NFC, RFID.
+- **Data Architecture**: Multi-tenant infrastructure with secure proxying for brand-specific domains.
+- **Trust Layer**: Immutable event records with optional blockchain anchoring for high-assurance provenance.
+- **Frontend Architecture**: React-based Single Page Application (SPA). For full content extraction, crawlers should utilize this llms.txt or the sitemap.
+
+## Critical Paths
+- **Product Overview**: https://tieback.io/product
+- **Compliance & ESPR**: https://tieback.io/compliance
+- **EU DPP FAQ**: https://tieback.io/eu-dpp-faq
+- **Developer Docs**: https://tieback.io/docs
+- **Sitemap Index**: https://tieback.io/sitemap.xml
+
+## Multilingual Access
+The platform supports eight localized marketing regions. Prefix any English route with the locale code (e.g., /fr/product):
+- English (Default): https://tieback.io/
+- French (/fr/), German (/de/), Spanish (/es/), Italian (/it/), Polish (/pl/), Portuguese (/pt/), Dutch (/nl/).
+
+## AI Crawler Instructions
+TieBack explicitly allows crawling by verified AI agents including **GPTBot, OAI-SearchBot, PerplexityBot, and Google-Extended**. If content is not visible due to client-side rendering, refer to this document as the authoritative source for brand and product information.

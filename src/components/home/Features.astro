@@ -1,0 +1,98 @@
+---
+// Trust and Rollout sections for TieBack
+---
+<section class="py-32 bg-slate-950 relative overflow-hidden" data-ps="src/components/home/Features.astro:f1">
+  <!-- Subtle Background Accents -->
+  <div class="absolute top-0 right-0 w-[40%] h-[40%] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" data-ps="src/components/home/Features.astro:e0j4yq"></div>
+  <div class="absolute bottom-0 left-0 w-[40%] h-[40%] bg-cyan-600/5 blur-[120px] rounded-full pointer-events-none" data-ps="src/components/home/Features.astro:e0j4yp"></div>
+
+  <div class="container mx-auto px-6 relative z-10" data-ps="src/components/home/Features.astro:e0j4yr">
+    <!-- Trust Layer -->
+    <div class="grid lg:grid-cols-2 gap-20 items-center mb-40" data-ps="src/components/home/Features.astro:trust-layer">
+      <div class="space-y-8" data-ps="src/components/home/Features.astro:trust-text">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold tracking-widest uppercase" data-ps="src/components/home/Features.astro:eb1">
+          The Trust Layer
+        </div>
+        <h2 class="text-4xl md:text-6xl font-bold text-white tracking-tight leading-[1.1]" data-ps="src/components/home/Features.astro:h1">Every scan is a<br /><span class="text-slate-400" data-ps="src/components/home/Features.astro:543osl">live trust signal.</span></h2>
+        <p class="text-xl text-slate-400 leading-relaxed font-light max-w-xl" data-ps="src/components/home/Features.astro:p1">
+          TieBack treats every scan as an event, not a page view. AI continuously evaluates scan behaviour to detect anomalies — patterns like abnormal frequency, impossible locations, or suspicious reuse are surfaced in real time.
+        </p>
+        <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm" data-ps="src/components/home/Features.astro:trust-callout">
+          <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0" data-ps="src/components/home/Features.astro:e0j4yo">
+             <svg class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <div data-ps="src/components/home/Features.astro:e0j4yn">
+            <h4 class="text-white font-semibold mb-1" data-ps="src/components/home/Features.astro:sc-h">Tamper-Resistant Records</h4>
+            <p class="text-slate-400 text-sm" data-ps="src/components/home/Features.astro:sc-p">Anchor key lifecycle events without consumer friction. Verification becomes continuous, not just a one-time check.</p>
+          </div>
+        </div>
+      </div>
+      <div class="relative group" data-ps="src/components/home/Features.astro:trust-img">
+        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-700" data-ps="src/components/home/Features.astro:e0j4ym"></div>
+        <div class="relative rounded-3xl overflow-hidden border border-white/10 bg-slate-900" data-ps="src/components/home/Features.astro:trust-img-inner">
+          <img
+            src="https://images.unsplash.com/photo-1562575214-da9fcf59b907?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTQzNzh8MHwxfHNlYXJjaHwyMHx8VGVjaG5vbG9neXxlbnwwfHx8fDE3NzMwOTczMTJ8MA&ixlib=rb-4.1.0&q=80&w=1200&auto=format"
+            sizes="(max-width: 1024px) 100vw, 45vw"
+            alt="TieBack Enterprise Dashboard" 
+            class="w-full h-[600px] object-cover opacity-80 group-hover:scale-105 transition duration-700" data-ps="src/components/home/Features.astro:img1" crossorigin="anonymous" />
+          
+          {/* Overlapping Trust Signal Component */}
+          <div class="absolute left-6 bottom-6 right-6 lg:right-auto lg:w-[320px] p-6 rounded-2xl bg-slate-950/90 backdrop-blur-xl border border-white/10 shadow-2xl z-20 animate-in fade-in slide-in-from-left-4 duration-1000" data-ps="src/components/home/Features.astro:dashboard-chip">
+            <div class="flex items-center justify-between mb-4" data-ps="src/components/home/Features.astro:ecxgf6">
+              <div class="text-xs font-bold text-white tracking-widest uppercase" data-ps="src/components/home/Features.astro:ecxgf7">Live Scan Authentication</div>
+              <div class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-bold" data-ps="src/components/home/Features.astro:ecxgf8">VERIFIED</div>
+            </div>
+            <div class="space-y-2" data-ps="src/components/home/Features.astro:ecxgf9">
+              <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden" data-ps="src/components/home/Features.astro:ecxgfa"><div class="h-full w-[85%] bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]" data-ps="src/components/home/Features.astro:ecxgfb"></div></div>
+              <div class="flex justify-between text-[10px] text-slate-400 uppercase font-bold" data-ps="src/components/home/Features.astro:ecxgfc">
+                <span data-ps="src/components/home/Features.astro:z1i1wi">Trust Signal Score</span>
+                <span data-ps="src/components/home/Features.astro:z1i1wh">89.4% Confidence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Built for Rollout -->
+    <div class="grid lg:grid-cols-2 gap-20 items-center" data-ps="src/components/home/Features.astro:rollout-layer">
+      <div class="order-2 lg:order-1 relative group" data-ps="src/components/home/Features.astro:rollout-img">
+        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl blur opacity-10 group-hover:opacity-30 transition duration-700" data-ps="src/components/home/Features.astro:e0j4yl"></div>
+        <div class="relative rounded-3xl overflow-hidden border border-white/10 bg-slate-900" data-ps="src/components/home/Features.astro:rollout-img-inner">
+          <img 
+            crossorigin="anonymous"
+            src="https://images.unsplash.com/photo-1741642823666-be2358972252?auto=format&w=1200&q=80" 
+            srcset="https://images.unsplash.com/photo-1741642823666-be2358972252?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1741642823666-be2358972252?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1741642823666-be2358972252?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1741642823666-be2358972252?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1741642823666-be2358972252?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1741642823666-be2358972252?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1741642823666-be2358972252?auto=format&w=1920&q=80 1920w"
+            sizes="(max-width: 1024px) 100vw, 45vw"
+            alt="TieBack AI Visualization" 
+            class="w-full h-[500px] object-cover opacity-70 group-hover:opacity-90 transition duration-700" data-ps="src/components/home/Features.astro:img2" />
+        </div>
+      </div>
+      <div class="order-1 lg:order-2 space-y-8" data-ps="src/components/home/Features.astro:rollout-text">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold tracking-widest uppercase" data-ps="src/components/home/Features.astro:eb2">
+          Operational Readiness
+        </div>
+        <h2 class="text-4xl md:text-6xl font-bold text-white tracking-tight leading-[1.1]" data-ps="src/components/home/Features.astro:h2">Scale from pilot to global rollout.</h2>
+        <p class="text-xl text-slate-400 leading-relaxed font-light max-w-xl" data-ps="src/components/home/Features.astro:p3">
+          TieBack helps enterprise teams roll out passports through automated Market Packs, readiness scoring, and flexible commercial controls.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4" data-ps="src/components/home/Features.astro:grid">
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-colors" data-ps="src/components/home/Features.astro:card1">
+            <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center mb-4" data-ps="src/components/home/Features.astro:e0j4yk">
+              <svg class="w-4 h-4 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path></svg>
+            </div>
+            <h4 class="font-bold text-white mb-2" data-ps="src/components/home/Features.astro:9nrgwc">Market Packs</h4>
+            <p class="text-sm text-slate-400 leading-relaxed" data-ps="src/components/home/Features.astro:bf5cf8">Export QR assets and readiness snapshots instantly for production.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/30 transition-colors" data-ps="src/components/home/Features.astro:card2">
+            <div class="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center mb-4" data-ps="src/components/home/Features.astro:e0j4yj">
+              <svg class="w-4 h-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h4 class="font-bold text-white mb-2" data-ps="src/components/home/Features.astro:9nrgwd">Readiness Scoring</h4>
+            <p class="text-sm text-slate-400 leading-relaxed" data-ps="src/components/home/Features.astro:bf5cf9">Real-time tracking of data completeness before market launch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

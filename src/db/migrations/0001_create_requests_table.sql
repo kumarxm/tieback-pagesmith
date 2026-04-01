@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS access_requests (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  website TEXT NOT NULL,
+  company TEXT NOT NULL,
+  role TEXT NOT NULL,
+  use_case TEXT NOT NULL,
+  category TEXT NOT NULL,
+  timeline TEXT NOT NULL,
+  message TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

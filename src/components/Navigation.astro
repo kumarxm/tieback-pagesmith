@@ -1,0 +1,202 @@
+---
+// Navigation - working mobile menu + scroll glassmorphism
+import { SITE } from '@/config/site';
+
+export interface Props {
+  logo?: string;
+}
+
+const { logo = SITE.name } = Astro.props;
+---
+
+<header id="navbar" class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800 transition-all duration-300" data-ps="src/components/Navigation.astro:dt8k86">
+  <nav class="py-4" data-ps="src/components/Navigation.astro:m59h3b">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center" data-ps="src/components/Navigation.astro:gqvsdb">
+      <div class="flex items-center gap-4" data-ps="src/components/Navigation.astro:logo-group">
+        <a href="/" class="flex items-center no-underline group" data-ps="src/components/Navigation.astro:kd8n5y">
+          <span class="text-xl font-semibold tracking-[-0.5px] text-white" data-ps="src/components/Navigation.astro:i2om6i">tie<span class="text-[#0080FF] italic" data-ps="src/components/Navigation.astro:i2om6i">back</span></span>
+        </a>
+
+      </div>
+
+      <div class="flex items-center gap-8" data-ps="src/components/Navigation.astro:gqvsdc">
+        <div class="hidden lg:flex gap-6 items-center" data-ps="src/components/Navigation.astro:gqvsdd">
+          
+          <div class="relative group" data-ps="src/components/Navigation.astro:lxl1n0">
+            <button class="flex items-center gap-1 text-slate-300 text-sm font-medium hover:text-white transition-colors py-2" data-ps="src/components/Navigation.astro:4mv7l">
+              Platform
+              <svg class="w-3 h-3 opacity-50 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="absolute left-0 top-full pt-2 hidden group-hover:block" data-ps="src/components/Navigation.astro:lxl1n1">
+              <div class="bg-slate-900 border border-slate-800 rounded-lg shadow-xl py-2 w-56 flex flex-col" data-ps="src/components/Navigation.astro:lxl1n2">
+                <a href="/platform/overview/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjpo">Overview</a>
+                <a href="/architecture/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:nav-architecture">Architecture & Security</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group" data-ps="src/components/Navigation.astro:lxl1n3">
+            <button class="flex items-center gap-1 text-slate-300 text-sm font-medium hover:text-white transition-colors py-2" data-ps="src/components/Navigation.astro:4mv7m">
+              Use Cases
+              <svg class="w-3 h-3 opacity-50 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="absolute left-0 top-full pt-2 hidden group-hover:block" data-ps="src/components/Navigation.astro:gqvsd5">
+              <div class="bg-slate-900 border border-slate-800 rounded-lg shadow-xl py-2 w-64 flex flex-col" data-ps="src/components/Navigation.astro:gqvsd6">
+                <a href="/use-cases/" class="px-4 py-2 text-sm font-semibold text-white bg-slate-800/50 hover:bg-[#0080FF] hover:text-white transition-colors border-b border-slate-800 mb-1" data-ps="src/components/Navigation.astro:view-all">View All Use Cases</a>
+                <a href="/use-cases/eu-dpp/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:new-dpp">EU DPP & Compliance</a>
+                <a href="/use-cases/compliance-readiness/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:nav-compliance-readiness">Compliance Readiness</a>
+                <a href="/use-cases/compliance-enforcement/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:nav-compliance-enforcement">Compliance Enforcement</a>
+                <a href="/use-cases/authentication/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjps">Authentication & Trust</a>
+                <a href="/use-cases/product-safety-recalls/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjpt-recalls">Product Safety & Recalls</a>
+                <a href="/use-cases/warranty-aftercare/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjpu-aftercare">Ownership, Warranty & Aftercare</a>
+                <a href="/use-cases/traceability/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjpt">Traceability & Safety</a>
+                <a href="/use-cases/product-as-a-channel/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjpu-channel">Product as a Channel</a>
+                <a href="/use-cases/resale-circular-economy/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjpv-resale">Resale & Circular Economy</a>
+                <a href="/use-cases/suppliers-upstream-manufacturers/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:new-suppliers">Suppliers & Manufacturers</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group" data-ps="src/components/Navigation.astro:gqvsd7">
+            <button class="flex items-center gap-1 text-slate-300 text-sm font-medium hover:text-white transition-colors py-2" data-ps="src/components/Navigation.astro:4mv7n">
+              Industries
+              <svg class="w-3 h-3 opacity-50 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="absolute left-0 top-full pt-2 hidden group-hover:block" data-ps="src/components/Navigation.astro:gqvsd8">
+              <div class="bg-slate-900 border border-slate-800 rounded-lg shadow-xl py-2 w-56 flex flex-col" data-ps="src/components/Navigation.astro:gqvsd9">
+                <a href="/industries/textiles/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjpu">Textiles & Apparel</a>
+                <a href="/industries/luxury-high-risk-goods/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjqg">Luxury & High-Risk Goods</a>
+                <a href="/industries/fmcg/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjqh">FMCG & Food</a>
+                <a href="/industries/electronics/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjqi">Electronics & Devices</a>
+                <a href="/industries/materials/" class="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" data-ps="src/components/Navigation.astro:7vkjqj">Materials & Suppliers</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="/pricing" class="text-slate-300 text-sm font-medium no-underline hover:text-white transition-colors py-2" data-ps="src/components/Navigation.astro:7vkjqk">Pricing</a>
+          <a href="/demo" class="text-slate-300 text-sm font-medium no-underline hover:text-white transition-colors py-2" data-ps="src/components/Navigation.astro:nav-demo">Demo</a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-4" data-ps="src/components/Navigation.astro:gqvsda">
+          <a href="https://tieback.io/docs" class="text-slate-300 text-sm font-medium no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjql">Docs</a>
+          <a href="/request-access" class="px-4 py-2 text-sm rounded-lg bg-[#0080FF] text-white font-medium hover:bg-[#0070E0] transition-all" data-ps="src/components/Navigation.astro:7vkjqn">Request Access</a>
+        </div>
+
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="lg:hidden p-2 text-slate-400 hover:text-white transition-colors"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+         data-ps="src/components/Navigation.astro:5ds1">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden overflow-y-auto max-h-[calc(100vh-70px)] bg-slate-950 border-t border-slate-800"
+    role="navigation"
+    aria-label="Mobile navigation"
+   data-ps="src/components/Navigation.astro:gqvsde">
+    <nav class="flex flex-col py-6 px-6 gap-4" data-ps="src/components/Navigation.astro:m59h36">
+      <div class="flex flex-col gap-2 border-b border-slate-800 pb-4" data-ps="src/components/Navigation.astro:gqvsdb">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider" data-ps="src/components/Navigation.astro:7xpc9r">Platform</span>
+        <a href="/platform/overview/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjqo">Overview</a>
+        <a href="/architecture/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:nav-architecture-mob">Architecture & Security</a>
+      </div>
+      
+      <div class="flex flex-col gap-2 border-b border-slate-800 pb-4" data-ps="src/components/Navigation.astro:gqvsdc">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider" data-ps="src/components/Navigation.astro:7xpc9q">Use Cases</span>
+        <a href="/use-cases/" class="text-white font-bold py-1 no-underline hover:text-[#0080FF] transition-colors" data-ps="src/components/Navigation.astro:view-all-mob">View All Use Cases</a>
+        <a href="/use-cases/eu-dpp/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:new-dpp-mob">EU DPP & Compliance</a>
+        <a href="/use-cases/compliance-readiness/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:nav-compliance-readiness-mob">Compliance Readiness</a>
+        <a href="/use-cases/compliance-enforcement/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:nav-compliance-enforcement-mob">Compliance Enforcement</a>
+        <a href="/use-cases/authentication/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjrd">Authentication & Trust</a>
+        <a href="/use-cases/product-safety-recalls/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjrd-recalls-mobile">Product Safety & Recalls</a>
+        <a href="/use-cases/warranty-aftercare/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjru-aftercare-mobile">Ownership, Warranty & Aftercare</a>
+        <a href="/use-cases/traceability/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjre">Traceability & Safety</a>
+        <a href="/use-cases/product-as-a-channel/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjre-channel-mobile">Product as a Channel</a>
+        <a href="/use-cases/resale-circular-economy/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjrf-resale-mobile">Resale & Circular Economy</a>
+        <a href="/use-cases/suppliers-upstream-manufacturers/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:new-suppliers-mob">Suppliers & Manufacturers</a>
+      </div>
+
+      <div class="flex flex-col gap-2 border-b border-slate-800 pb-4" data-ps="src/components/Navigation.astro:gqvsdd">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider" data-ps="src/components/Navigation.astro:7xpc9p">Industries</span>
+        <a href="/industries/textiles/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjrf">Textiles & Apparel</a>
+        <a href="/industries/luxury-high-risk-goods/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjrg">Luxury & High-Risk Goods</a>
+        <a href="/industries/fmcg/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjrh">FMCG & Food</a>
+        <a href="/industries/electronics/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjri">Electronics & Devices</a>
+        <a href="/industries/materials/" class="text-slate-300 font-medium py-1 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjrj">Materials & Suppliers</a>
+      </div>
+
+      <a href="/pricing" class="text-slate-300 font-medium py-2 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjrk">Pricing</a>
+      <a href="/demo" class="text-slate-300 font-medium py-2 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:nav-demo-mob">Demo</a>
+      <a href="https://tieback.io/docs" class="text-slate-300 font-medium py-2 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjs6">Docs</a>
+      
+      <div class="flex flex-col gap-3 pt-4" data-ps="src/components/Navigation.astro:gqvsde">
+        <a href="/request-access" class="w-full text-center px-5 py-3 rounded-lg bg-[#0080FF] text-white font-semibold no-underline hover:bg-[#0070E0] transition-colors" data-ps="src/components/Navigation.astro:7vkjs8">Request Access</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script is:inline>
+  const navbar = document.getElementById('navbar');
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIconOpen = document.getElementById('menu-icon-open');
+  const menuIconClose = document.getElementById('menu-icon-close');
+
+  // On scroll, add bg-{color}/90 for desktop glassmorphism
+  // IMPORTANT: must match the header bg-* class above (e.g. bg-white -> md:bg-white/90)
+  function updateNavbar() {
+    if (window.scrollY > 50) {
+      navbar?.classList.add('border-slate-800/80');
+      navbar?.classList.add('bg-slate-950/95');
+    } else {
+      navbar?.classList.remove('border-slate-800/80');
+      navbar?.classList.remove('bg-slate-950/95');
+    }
+  }
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+  updateNavbar();
+
+  function toggleMenu() {
+    const isOpen = !mobileMenu?.classList.contains('hidden');
+    if (isOpen) {
+      mobileMenu?.classList.add('hidden');
+      menuIconOpen?.classList.remove('hidden');
+      menuIconClose?.classList.add('hidden');
+      mobileMenuButton?.setAttribute('aria-expanded', 'false');
+    } else {
+      mobileMenu?.classList.remove('hidden');
+      menuIconOpen?.classList.add('hidden');
+      menuIconClose?.classList.remove('hidden');
+      mobileMenuButton?.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  mobileMenuButton?.addEventListener('click', toggleMenu);
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+      menuIconOpen?.classList.remove('hidden');
+      menuIconClose?.classList.add('hidden');
+      mobileMenuButton?.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !mobileMenu?.classList.contains('hidden')) {
+      toggleMenu();
+    }
+  });
+</script>

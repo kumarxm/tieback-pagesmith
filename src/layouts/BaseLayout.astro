@@ -1,0 +1,148 @@
+---
+import '@/styles/global.css';
+import Navigation from '@/components/Navigation.astro';
+import Footer from '@/components/Footer.astro';
+import SEOHead from '@/components/SEOHead.astro';
+
+
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: string;
+  jsonLd?: Record<string, any>;
+}
+
+const { title, description, image, type, jsonLd } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="fce287a7-54bf-46a1-876d-80272664caca" data-blockingmode="auto" type="text/javascript"></script>
+    <link rel="icon" type="image/svg+xml" href="https://cdn.pagesmith.app/2372d62a/images/favicon.svg" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="https://cdn.pagesmith.app/2372d62a/images/favicon-dark.svg" media="(prefers-color-scheme: dark)" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.pagesmith.app/2372d62a/images/favicon-dark.svg" />
+    <SEOHead
+      title={title}
+      description={description}
+      image={image}
+      type={type}
+      jsonLd={jsonLd}
+    />
+
+    <!-- Mark JS as enabled immediately -->
+    <script is:inline>document.documentElement.classList.add('js');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+    <body data-ps="src/layouts/BaseLayout.astro:4vj8al">
+      <Navigation />
+      <main data-ps="src/layouts/BaseLayout.astro:yuyoow">
+        <slot />
+      </main>
+      <Footer />
+
+      <!-- Animation Styles -->
+      <style is:inline>
+        /* Scroll Reveal - Default: visible (for SEO & no-JS) */
+        .reveal,
+        .reveal-left,
+        .reveal-right,
+        .reveal-scale {
+          transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        /* Only hide when JS is enabled */
+        .js .reveal,
+        .js .reveal-left,
+        .js .reveal-right,
+        .js .reveal-scale {
+          opacity: 0;
+        }
+
+        .js .reveal { transform: translateY(30px); }
+        .js .reveal-left { transform: translateX(-30px); }
+        .js .reveal-right { transform: translateX(30px); }
+        .js .reveal-scale { transform: scale(0.95); }
+
+        /* Revealed state */
+        .js .reveal.active,
+        .js .reveal-left.active,
+        .js .reveal-right.active,
+        .js .reveal-scale.active {
+          opacity: 1;
+          transform: translate(0) scale(1);
+        }
+
+        /* Stagger Delays */
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* Hover Effects */
+        .hover-lift {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .hover-scale {
+          transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+          transform: scale(1.05);
+        }
+
+        .hover-glow {
+          transition: box-shadow 0.3s ease;
+        }
+
+        .hover-glow:hover {
+          box-shadow: 0 0 20px rgba(var(--primary), 0.4);
+        }
+
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+          .reveal,
+          .reveal-left,
+          .reveal-right,
+          .reveal-scale,
+          .hover-lift,
+          .hover-scale,
+          .hover-glow {
+            transition: none !important;
+            opacity: 1 !important;
+            transform: none !important;
+          }
+        }
+      </style>
+
+      <!-- Scroll Reveal Script -->
+      <script is:inline>
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+          }
+        );
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale')
+          .forEach((el) => revealObserver.observe(el));
+      </script>
+    </body>
+  </html>

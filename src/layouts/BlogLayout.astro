@@ -1,0 +1,230 @@
+---
+import '@/styles/global.css';
+import Navigation from '@/components/Navigation.astro';
+import Footer from '@/components/Footer.astro';
+import SEOHead from '@/components/SEOHead.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import { SITE } from '@/config/site';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+const { frontmatter, mdxFilePath = '', headings = [] } = Astro.props as {
+  frontmatter: any;
+  mdxFilePath?: string;
+  headings?: Heading[];
+};
+
+// TOC: enabled by default (matches schema default), can be disabled with toc: false
+const showToc = frontmatter.toc !== false && headings.length > 0;
+
+// Use ogImage if set, otherwise fall back to featured image
+const socialImage = frontmatter.ogImage || frontmatter.image;
+
+// Build JSON-LD structured data based on schemaType or default to Article
+const schemaType = frontmatter.schemaType || 'Article';
+const schemaData = frontmatter.schemaData || {};
+
+// Base JSON-LD structure
+const jsonLd: Record<string, any> = {
+  '@context': 'https://schema.org',
+  '@type': schemaType,
+  name: frontmatter.title,
+  headline: frontmatter.title,
+  description: frontmatter.description,
+  datePublished: frontmatter.pubDate?.toISOString?.(),
+  author: {
+    '@type': 'Person',
+    name: frontmatter.author || SITE.name,
+  },
+  url: new URL(Astro.url.pathname, SITE.url).toString(),
+};
+
+// Add modified date if available
+if (frontmatter.updatedDate) {
+  jsonLd.dateModified = frontmatter.updatedDate.toISOString();
+}
+
+// Add image to schema if available
+if (socialImage) {
+  jsonLd.image = socialImage.startsWith('http')
+    ? socialImage
+    : new URL(socialImage, SITE.url).toString();
+}
+
+// Merge custom schemaData for specific schema types
+if (schemaType === 'Recipe' && schemaData) {
+  // Recipe-specific fields
+  if (schemaData.prepTime) jsonLd.prepTime = `PT${schemaData.prepTime.replace(/\s+/g, '').toUpperCase()}`;
+  if (schemaData.cookTime) jsonLd.cookTime = `PT${schemaData.cookTime.replace(/\s+/g, '').toUpperCase()}`;
+  if (schemaData.totalTime) jsonLd.totalTime = `PT${schemaData.totalTime.replace(/\s+/g, '').toUpperCase()}`;
+  if (schemaData.servings) jsonLd.recipeYield = schemaData.servings;
+  if (schemaData.cuisine) jsonLd.recipeCuisine = schemaData.cuisine;
+  if (schemaData.category) jsonLd.recipeCategory = schemaData.category;
+  if (schemaData.ingredients) jsonLd.recipeIngredient = schemaData.ingredients;
+  if (schemaData.instructions) {
+    jsonLd.recipeInstructions = Array.isArray(schemaData.instructions)
+      ? schemaData.instructions.map((step: string, i: number) => ({
+          '@type': 'HowToStep',
+          position: i + 1,
+          text: step,
+        }))
+      : schemaData.instructions;
+  }
+} else if (schemaType === 'HowTo' && schemaData) {
+  // HowTo-specific fields
+  if (schemaData.totalTime) jsonLd.totalTime = `PT${schemaData.totalTime.replace(/\s+/g, '').toUpperCase()}`;
+  if (schemaData.steps) {
+    jsonLd.step = schemaData.steps.map((step: string, i: number) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      text: step,
+    }));
+  }
+} else if (schemaType === 'FAQ' && schemaData) {
+  // FAQ-specific fields
+  if (schemaData.questions) {
+    jsonLd.mainEntity = schemaData.questions.map((q: { question: string; answer: string }) => ({
+      '@type': 'Question',
+      name: q.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: q.answer,
+      },
+    }));
+  }
+} else if (schemaType === 'Product' && schemaData) {
+  // Product-specific fields
+  if (schemaData.brand) jsonLd.brand = { '@type': 'Brand', name: schemaData.brand };
+  if (schemaData.price) {
+    jsonLd.offers = {
+      '@type': 'Offer',
+      price: schemaData.price,
+      priceCurrency: schemaData.currency || 'USD',
+      availability: schemaData.availability || 'https://schema.org/InStock',
+    };
+  }
+} else if (schemaType === 'Event' && schemaData) {
+  // Event-specific fields
+  if (schemaData.startDate) jsonLd.startDate = schemaData.startDate;
+  if (schemaData.endDate) jsonLd.endDate = schemaData.endDate;
+  if (schemaData.location) {
+    jsonLd.location = {
+      '@type': 'Place',
+      name: schemaData.location,
+      address: schemaData.address,
+    };
+  }
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEOHead
+      title={`${frontmatter.title} – ${SITE.name}`}
+      description={frontmatter.description}
+      image={socialImage}
+      type="article"
+      publishedTime={frontmatter.pubDate?.toISOString?.()}
+      modifiedTime={frontmatter.updatedDate?.toISOString?.()}
+      canonicalUrl={frontmatter.canonicalUrl}
+      jsonLd={jsonLd}
+    />
+  </head>
+  <body class="min-h-screen" style="background: var(--background); color: var(--text);" data-ps="src/layouts/BlogLayout.astro:rqzn4e">
+    <Navigation />
+
+    <article
+      class="container mx-auto max-w-7xl px-4 pb-12"
+      style="padding-top: var(--nav-height);"
+      data-mdx-file={mdxFilePath}
+      data-mdx-type="blog"
+     data-ps="src/layouts/BlogLayout.astro:xkhs7t">
+      <header class="mb-8" data-ps="src/layouts/BlogLayout.astro:fqly22">
+        {frontmatter.featured && (
+          <span class="inline-block mb-4 px-3 py-1 text-xs font-semibold rounded-full" style="background: var(--primary); color: var(--primary-foreground);" data-ps="src/layouts/BlogLayout.astro:9v2262">
+            Featured
+          </span>
+        )}
+        <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight" data-ps="src/layouts/BlogLayout.astro:sihpnr" style="color: var(--text);">
+          {frontmatter.title}
+        </h1>
+        <div class="flex flex-wrap items-center gap-4 text-sm font-medium" style="color: var(--text-muted);" data-ps="src/layouts/BlogLayout.astro:o33ul8">
+          {frontmatter.pubDate && (
+            <time datetime={frontmatter.pubDate.toISOString()}>
+              {frontmatter.pubDate.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </time>
+          )}
+          {frontmatter.updatedDate && (
+            <span class="flex items-center gap-1" data-ps="src/layouts/BlogLayout.astro:9v2263">
+              <span data-ps="src/layouts/BlogLayout.astro:9v2264">Updated:</span>
+              <time datetime={frontmatter.updatedDate.toISOString()}>
+                {frontmatter.updatedDate.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </time>
+            </span>
+          )}
+          {frontmatter.author && <span data-ps="src/layouts/BlogLayout.astro:9v2265">by {frontmatter.author}</span>}
+          {frontmatter.category && (
+            <span class="rounded-full px-3 py-1" style="background: var(--surface); color: var(--text);" data-ps="src/layouts/BlogLayout.astro:9v2266">
+              {frontmatter.category}
+            </span>
+          )}
+          {frontmatter.readingTime && (
+            <span data-ps="src/layouts/BlogLayout.astro:9v2267">{frontmatter.readingTime}</span>
+          )}
+        </div>
+        {frontmatter.series && (
+          <div class="mt-4 p-3 rounded-lg" style="background: var(--surface);" data-ps="src/layouts/BlogLayout.astro:o33ul7">
+            <span style="color: var(--text-muted);" data-ps="src/layouts/BlogLayout.astro:9v2268">Part of series: </span>
+            <span class="font-medium" data-ps="src/layouts/BlogLayout.astro:9v2269">{frontmatter.series}</span>
+            {frontmatter.seriesOrder && (
+              <span style="color: var(--text-muted);" data-ps="src/layouts/BlogLayout.astro:9v226a"> (Part {frontmatter.seriesOrder})</span>
+            )}
+          </div>
+        )}
+      </header>
+
+      {frontmatter.image && (
+        <figure class="mb-8 -mx-4 md:mx-0">
+          <img
+            src={frontmatter.image}
+            alt={frontmatter.imageAlt || frontmatter.title}
+            class="w-full rounded-lg md:rounded-xl object-cover"
+            style="max-height: 500px;" data-ps="src/layouts/BlogLayout.astro:h2r8qk" />
+        </figure>
+      )}
+
+      {showToc && <TableOfContents headings={headings} />}
+
+      <div class="prose prose-base md:prose-lg max-w-none prose-headings:text-white prose-p:text-slate-400 prose-a:text-blue-500 prose-strong:text-white font-sans" data-ps="src/layouts/BlogLayout.astro:o33ul6">
+        <slot />
+      </div>
+
+      {frontmatter.tags && frontmatter.tags.length > 0 && (
+        <footer class="mt-12 pt-8" style="border-top: 1px solid var(--border);" data-ps="src/layouts/BlogLayout.astro:fydg89">
+          <div class="flex flex-wrap gap-2" data-ps="src/layouts/BlogLayout.astro:o33ul5">
+            {frontmatter.tags.map((tag, __psIdx) => (
+              <span class="rounded-md px-3 py-1 text-sm" style="background: var(--surface); color: var(--text-muted);" data-ps={`src/layouts/BlogLayout.astro:dfgz5m-${__psIdx}`}>
+                #{tag}
+              </span>
+            ))}
+          </div>
+        </footer>
+      )}
+    </article>
+
+    <Footer />
+  </body>
+</html>

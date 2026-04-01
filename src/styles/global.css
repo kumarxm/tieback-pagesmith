@@ -1,0 +1,143 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: 'Inter', 'Inter Variable', system-ui, -apple-system, sans-serif;
+  --color-blue-50: #f0f7ff;
+  --color-blue-100: #e0f0ff;
+  --color-blue-200: #b3d9ff;
+  --color-blue-300: #80c2ff;
+  --color-blue-400: #4dabff;
+  --color-blue-500: #1a94ff;
+  --color-blue-600: #0080FF;
+  --color-blue-700: #0066cc;
+  --color-blue-800: #004d99;
+  --color-blue-900: #003366;
+  --color-blue-950: #001a33;
+}
+
+:root {
+  --nav-height: 72px;
+
+  /* Vorbia Dark Theme Palette */
+  --background: hsl(222 47% 4%);
+  --text: hsl(210 40% 98%);
+  --text-muted: hsl(215 20% 65%);
+  --border: hsl(217 33% 17%);
+  --surface: hsl(222 47% 7%);
+
+  /* Brand Accents */
+  --primary: #0080FF;
+  --primary-hover: #0066cc;
+
+  /* Global Dark Mode Force */
+  --accent-bg: var(--background);
+  --accent-text: var(--text);
+  --accent-border: var(--border);
+}
+
+html, body {
+  overflow-x: clip;
+  background-color: var(--background);
+}
+
+html {
+  scroll-padding-top: var(--nav-height);
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text);
+  font-family: 'Inter', 'Inter Variable', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+.prose {
+  --tw-prose-body: var(--text-muted);
+  --tw-prose-headings: var(--text);
+  --tw-prose-links: var(--primary);
+  --tw-prose-bold: var(--text);
+  --tw-prose-hr: var(--border);
+  --tw-prose-quotes: var(--text);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Glassmorphism Utility */
+.glass-card {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.glass-card:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Hero Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translate3d(0, 30px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+.hero-animate {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero-animate-delay-1 { animation-delay: 0.15s; }
+.hero-animate-delay-2 { animation-delay: 0.3s; }
+.hero-animate-delay-3 { animation-delay: 0.45s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* FAQ Hero Animations */
+@keyframes dash {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: -1000; }
+}
+
+@keyframes urgency-pulse {
+  0% { background-color: rgba(0, 128, 255, 0.05); }
+  50% { background-color: rgba(0, 128, 255, 0.12); }
+  100% { background-color: rgba(0, 128, 255, 0.05); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.05); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-dash {
+  stroke-dasharray: 400;
+  animation: dash 20s linear infinite;
+}
+
+.animate-urgency-pulse {
+  animation: urgency-pulse 4s ease-in-out infinite;
+}

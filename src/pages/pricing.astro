@@ -1,0 +1,205 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/config/site';
+
+const title = "Pricing — TieBack";
+const description = "Modular pricing based on activated passports, not scans. No per-scan fees, no per-event fees, no surprise charges.";
+
+const plans = [
+  {
+    name: "Launch",
+    tagline: "Compliance-first Digital Product Passports",
+    description: "Designed for manufacturers and suppliers who need to meet DPP requirements using batch-based production.",
+    features: [
+      "Digital Product Passport creation",
+      "QR / GS1 Digital Link resolver",
+      "Mandatory compliance fields",
+      "Public and regulator-ready passport views",
+      "Batch-based passports at SKU level",
+      "Content Studio (Basic)",
+      "Single market / language",
+      "Email notifications (capped)"
+    ],
+    notIncluded: [
+      "Unit-level serialisation",
+      "Ownership or transfers",
+      "SMS notifications",
+      "Engagement campaigns"
+    ],
+    useCases: "Food & FMCG · Raw textiles and materials · Packaging and industrial goods · B2B manufacturers",
+    cta: "Request access",
+    popular: false
+  },
+  {
+    name: "Growth",
+    tagline: "Storytelling, engagement, and optional serialisation",
+    description: "For brands selling to consumers who want richer experiences, localisation, and selective unit-level passports.",
+    features: [
+      "Everything in Launch",
+      "Batch + Unit Passports",
+      "Content Studio (Expanded)",
+      "Multiple markets and languages",
+      "Campaign-driven scan journeys",
+      "Unit-level serialisation",
+      "Ownership claims and transfers",
+      "Higher email limits + SMS (capped)"
+    ],
+    useCases: "Apparel and footwear · Premium food & beverage · Consumer electronics · Mixed B2B + DTC brands",
+    cta: "Request access",
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    tagline: "Scale, automation, and regulatory confidence",
+    description: "For organisations operating across regions with complex supply chains and governance needs.",
+    features: [
+      "Everything in Growth",
+      "Custom passport weighting",
+      "High-assurance identity options",
+      "Tamper-proof event records",
+      "ERP, MES, and PIM APIs",
+      "Automated batch and unit minting",
+      "SLAs and support guarantees",
+      "Data residency options"
+    ],
+    useCases: "Global FMCG · Pharmaceuticals · Luxury and high-risk categories · Multi-region enterprises",
+    cta: "Contact Sales",
+    popular: false
+  }
+];
+
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 overflow-hidden" data-ps="src/pages/pricing.astro:hero">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_50%_50%,rgba(0,128,255,0.08)_0%,transparent_100%)]" data-ps="src/pages/pricing.astro:9mxef2"></div>
+    <div class="max-w-7xl mx-auto px-6 text-center" data-ps="src/pages/pricing.astro:9mxef3">
+      <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6" data-ps="src/pages/pricing.astro:eyebrow">
+        <span class="text-xs font-bold text-[#0080FF] uppercase tracking-wider" data-ps="src/pages/pricing.astro:xa5v1p">Pricing</span>
+      </div>
+      <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-white mb-6" data-ps="src/pages/pricing.astro:h1">
+        Modular by design.<br />
+        <span class="text-slate-400" data-ps="src/pages/pricing.astro:xa5v1o">Built for real products.</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg text-slate-400 leading-relaxed" data-ps="src/pages/pricing.astro:hero-desc">
+        TieBack pricing is based on activated passports, not scans. No per-scan fees, no per-event fees, no surprise charges.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Grid -->
+  <section class="pb-24" data-ps="src/pages/pricing.astro:plans">
+    <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/pricing.astro:9mxefp">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8" data-ps="src/pages/pricing.astro:9mxefq">
+        {plans.map((plan, __psIdx) => (
+          <div class={`relative flex flex-col p-8 rounded-2xl border ${plan.popular ? 'bg-slate-900 border-[#0080FF] shadow-[0_0_40px_-10px_rgba(0,128,255,0.2)]' : 'bg-slate-900/50 border-slate-800'}`} data-ps={`src/pages/pricing.astro:plan-${plan.name.toLowerCase()}`}>
+            {plan.popular && (
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#0080FF] text-white text-xs font-bold rounded-full uppercase tracking-wider" data-ps={`src/pages/pricing.astro:9mxefr-${__psIdx}`}>
+                Most Popular
+              </div>
+            )}
+            
+            <div class="mb-8" data-ps={`src/pages/pricing.astro:9mxefs-${__psIdx}`}>
+              <h3 class="text-2xl font-bold text-white mb-2" data-ps={`src/pages/pricing.astro:80celv-${__psIdx}`}>{plan.name}</h3>
+              <p class="text-sm font-medium text-[#0080FF] mb-4" data-ps={`src/pages/pricing.astro:8rrv0d-${__psIdx}`}>{plan.tagline}</p>
+              <p class="text-sm text-slate-400 leading-relaxed" data-ps={`src/pages/pricing.astro:8rrv0e-${__psIdx}`}>{plan.description}</p>
+            </div>
+
+            <div class="flex-grow" data-ps={`src/pages/pricing.astro:9mxeft-${__psIdx}`}>
+              <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4" data-ps={`src/pages/pricing.astro:8rrv0f-${__psIdx}`}>Includes:</p>
+              <ul class="space-y-3 mb-8">
+                {plan.features.map((feature, __psIdx) => (
+                  <li class="flex items-start gap-3 text-sm text-slate-300" data-ps={`src/pages/pricing.astro:nfq89l-${__psIdx}`}>
+                    <svg class="w-5 h-5 text-[#0080FF] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    <span data-ps={`src/pages/pricing.astro:xa5v1n-${__psIdx}`}>{feature}</span>
+                  </li>
+                ))}
+                {plan.notIncluded && plan.notIncluded.map((feature, __psIdx) => (
+                  <li class="flex items-start gap-3 text-sm text-slate-400" data-ps={`src/pages/pricing.astro:nfq89m-${__psIdx}`}>
+                    <svg class="w-5 h-5 text-slate-700 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    <span data-ps={`src/pages/pricing.astro:xa5v1m-${__psIdx}`}>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 mt-auto" data-ps={`src/pages/pricing.astro:9mxefu-${__psIdx}`}>
+              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3" data-ps={`src/pages/pricing.astro:8rrv11-${__psIdx}`}>Typical Use Cases:</p>
+              <p class="text-xs text-slate-400 mb-8 leading-relaxed italic" data-ps={`src/pages/pricing.astro:8rrv12-${__psIdx}`}>{plan.useCases}</p>
+              <a 
+                href="/request-access" 
+                class={`block w-full text-center py-3 px-6 rounded-xl font-bold transition-all ${plan.popular ? 'bg-[#0080FF] text-white hover:bg-[#0070E0]' : 'bg-slate-800 text-white hover:bg-slate-700'}`}
+               data-ps={`src/pages/pricing.astro:fvprq0-${__psIdx}`}>
+                {plan.cta}
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Why Different -->
+  <section class="py-24" data-ps="src/pages/pricing.astro:different">
+    <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/pricing.astro:9mxegm">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" data-ps="src/pages/pricing.astro:9mxegn">
+        <div data-ps="src/pages/pricing.astro:9mxego">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-8" data-ps="src/pages/pricing.astro:morbth">Why TieBack Pricing is Different</h2>
+          <div class="space-y-6" data-ps="src/pages/pricing.astro:9mxegp">
+            <div class="flex gap-4 p-6 rounded-2xl bg-slate-900/30 border border-slate-800/50" data-ps="src/pages/pricing.astro:9mxegq">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20" data-ps="src/pages/pricing.astro:9mxegr">
+                <svg class="w-5 h-5 text-[#0080FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+              </div>
+              <div data-ps="src/pages/pricing.astro:9mxegs">
+                <h4 class="text-white font-bold mb-1" data-ps="src/pages/pricing.astro:6o2ilr">Designed for real manufacturing workflows</h4>
+                <p class="text-sm text-slate-400" data-ps="src/pages/pricing.astro:8rrv15">We understand how production actually happens, from batches to individual items.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 p-6 rounded-2xl bg-slate-900/30 border border-slate-800/50" data-ps="src/pages/pricing.astro:9mxegt">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20" data-ps="src/pages/pricing.astro:e246nf">
+                <svg class="w-5 h-5 text-[#0080FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.040L3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622l-.382-3.016z" /></svg>
+              </div>
+              <div data-ps="src/pages/pricing.astro:e246ng">
+                <h4 class="text-white font-bold mb-1" data-ps="src/pages/pricing.astro:6o2ilq">Clear caps, no hidden fees</h4>
+                <p class="text-sm text-slate-400" data-ps="src/pages/pricing.astro:8rrv16">No per-scan fees or per-event fees. Predictable costs that scale with your business.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4" data-ps="src/pages/pricing.astro:e246nh">
+          <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 text-center" data-ps="src/pages/pricing.astro:e246ni">
+            <p class="text-4xl font-bold text-white mb-2" data-ps="src/pages/pricing.astro:8rrv17">0</p>
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest" data-ps="src/pages/pricing.astro:8rrv18">Per-scan Fees</p>
+          </div>
+          <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 text-center" data-ps="src/pages/pricing.astro:e246nj">
+            <p class="text-4xl font-bold text-white mb-2" data-ps="src/pages/pricing.astro:8rrv19">0</p>
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest" data-ps="src/pages/pricing.astro:8rrv1a">Per-event Fees</p>
+          </div>
+          <div class="col-span-2 p-8 rounded-3xl bg-[#0080FF]/10 border border-[#0080FF]/20 text-center" data-ps="src/pages/pricing.astro:e246nk">
+            <p class="text-lg font-bold text-white mb-1 italic" data-ps="src/pages/pricing.astro:8rrv1w">Scales from compliance to consumer engagement</p>
+            <p class="text-xs text-[#0080FF] font-medium uppercase tracking-wider" data-ps="src/pages/pricing.astro:8rrv1x">Modular by design</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24" data-ps="src/pages/pricing.astro:cta">
+    <div class="max-w-4xl mx-auto px-6" data-ps="src/pages/pricing.astro:e246nl">
+      <div class="relative p-12 md:p-16 rounded-[2.5rem] bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 text-center overflow-hidden" data-ps="src/pages/pricing.astro:e246nm">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-[#0080FF] to-transparent" data-ps="src/pages/pricing.astro:e246nn"></div>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-ps="src/pages/pricing.astro:cta-h2">High demand. Limited onboarding.</h2>
+        <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto" data-ps="src/pages/pricing.astro:cta-p">
+          TieBack is currently onboarding customers through a private rollout programme. Pricing varies based on product category, volume, and compliance requirements.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-ps="src/pages/pricing.astro:e246no">
+          <a href="/request-access" class="px-8 py-4 rounded-xl bg-[#0080FF] text-white font-bold hover:bg-[#0070E0] transition-all" data-ps="src/pages/pricing.astro:fvprq1">Request access</a>
+          <a href="/platform/overview/" class="px-8 py-4 rounded-xl bg-slate-800 text-white font-bold hover:bg-slate-700 transition-all" data-ps="src/pages/pricing.astro:fvprq2">Platform overview</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
