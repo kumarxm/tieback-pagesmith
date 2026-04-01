@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
+/**
+ * TieBack — Automated Translation Pipeline for Pagesmith (Astro/Markdown)
+ * Optimized for DeepL stability and Astro component protection.
+ */
+
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSync } from 'fs';
 import { resolve, dirname, join } from 'path';
 import { fileURLToPath } from 'url';
@@ -7,6 +12,8 @@ import * as deepl from 'deepl-node';
 import matter from 'gray-matter';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// ── Configuration ──────────────────────────────────────────────────────────────
 
 const TARGET_LANGS = ['de', 'fr'];
 const SOURCE_DIRS = [
@@ -25,30 +32,53 @@ const NO_TRANSLATE_TERMS = [
   'DAST', 'RLS', 'OECD', 'EUIPO'
 ];
 
+// ── Astro Shield Logic ─────────────────────────────────────────────────────────
+
+/**
+ * Safely splits Astro files. 
+ * Improved regex to capture the exact frontmatter block.
+ */
 function parseAstro(content) {
-  const match = content.match(/^(---[\s\S]*?---)\n([\s\S]*)$/);
-  if (match) return { frontmatter: match, body: match };
+  const match = content.match(/^(---\s*[\s\S]*?---\s*)\n([\s\S]*)$/);
+  if (match) {
+    return { frontmatter: match, body: match };
+  }
   return { frontmatter: '', body: content };
 }
 
+/**
+ * Masks Astro code so DeepL sees them as non-translatable HTML tags.
+ * Added <script> protection to stop the FAQ page from crashing DeepL.
+ */
 function protectAstroExpressions(text) {
   if (typeof text !== 'string') text = String(text || '');
   const expressions = [];
-  let protectedText = text.replace(/\{[\s\S]*?\}/g, (match) => {
+
+  // 1. Hide <script> blocks (like your JSON-LD FAQ data)
+  let protectedText = text.replace(/<script[\s\S]*?<\/script>/gi, (match) => {
+    expressions.push(match);
+    return `<astro-expr id="${expressions.length - 1}"></astro-expr>`;
+  });
+
+  // 2. Hide Astro { expressions }
+  protectedText = protectedText.replace(/\{[\s\S]*?\}/g, (match) => {
     expressions.push(match);
     return `<astro-expr id="${expressions.length - 1}"></astro-expr>`;
   });
   
+  // 3. Hide Glossary Terms
   const sorted = [...NO_TRANSLATE_TERMS].sort((a, b) => b.length - a.length);
   for (const term of sorted) {
     protectedText = protectedText.replaceAll(term, `<keep>${term}</keep>`);
   }
+
   return { protectedText, expressions };
 }
 
 function restoreAstroExpressions(text, expressions) {
   if (typeof text !== 'string') text = String(text || '');
   let restoredText = text.replace(/<keep>(.*?)<\/keep>/g, '$1');
+  
   for (let i = 0; i < expressions.length; i++) {
     const regex = new RegExp(`<astro-expr id="${i}"><\\/astro-expr>`, 'g');
     restoredText = restoredText.replace(regex, expressions[i]);
@@ -56,28 +86,44 @@ function restoreAstroExpressions(text, expressions) {
   return restoredText;
 }
 
+// ── File Helpers ───────────────────────────────────────────────────────────────
+
 function findTargetFiles(dir, fileList = [], baseDir = dir) {
   if (!existsSync(dir)) return fileList;
   const files = readdirSync(dir);
+
   for (const file of files) {
     const filePath = join(dir, file);
     const stat = statSync(filePath);
-    if (stat.isDirectory() && TARGET_LANGS.includes(file) && dir === baseDir) continue;
-    if (stat.isDirectory()) findTargetFiles(filePath, fileList, baseDir);
-    else if (file.endsWith('.md') || file.endsWith('.mdx') || file.endsWith('.astro')) {
+
+    if (stat.isDirectory() && TARGET_LANGS.includes(file) && dir === baseDir) {
+      continue;
+    }
+
+    if (stat.isDirectory()) {
+      findTargetFiles(filePath, fileList, baseDir);
+    } else if (file.endsWith('.md') || file.endsWith('.mdx') || file.endsWith('.astro')) {
       fileList.push(filePath);
     }
   }
   return fileList;
 }
 
+// ── Execution ──────────────────────────────────────────────────────────────────
+
 async function main() {
   const apiKey = process.env.DEEPL_API_KEY;
-  if (!apiKey) process.exit(1);
+  if (!apiKey) {
+    console.error('ERROR: DEEPL_API_KEY environment variable is required.');
+    process.exit(1);
+  }
 
   const translator = new deepl.Translator(apiKey);
+  
   let allFiles = [];
-  for (const dir of SOURCE_DIRS) allFiles = allFiles.concat(findTargetFiles(dir));
+  for (const dir of SOURCE_DIRS) {
+    allFiles = allFiles.concat(findTargetFiles(dir));
+  }
 
   console.log(`Found ${allFiles.length} files to process.`);
 
@@ -94,37 +140,52 @@ async function main() {
       const targetDir = dirname(targetPath);
 
       if (!existsSync(targetDir)) mkdirSync(targetDir, { recursive: true });
-      if (existsSync(targetPath) && statSync(targetPath).mtime > sourceStat.mtime) continue;
+
+      // Cache Check: skip if translation is newer than English source
+      if (existsSync(targetPath)) {
+        const targetStat = statSync(targetPath);
+        if (targetStat.mtime > sourceStat.mtime) {
+          continue;
+        }
+      }
 
       console.log(`🔄 Translating ${relativePath} to ${lang.toUpperCase()}...`);
 
       try {
         let finalFileContent = '';
+
         if (isAstro) {
           const parsed = parseAstro(fileContent);
           const { protectedText, expressions } = protectAstroExpressions(parsed.body);
+          
+          let translatedBody = '';
           if (protectedText.trim()) {
             const result = await translator.translateText(protectedText, 'en', targetLangCode, {
               tagHandling: 'html',
               ignoreTags: ['keep', 'astro-expr'],
             });
-            finalFileContent = `${parsed.frontmatter}\n${restoreAstroExpressions(result.text, expressions)}`;
+            translatedBody = restoreAstroExpressions(result.text, expressions);
           } else {
-            finalFileContent = fileContent;
+            translatedBody = parsed.body;
           }
+          finalFileContent = `${parsed.frontmatter}\n${translatedBody}`;
         } else {
           const parsed = matter(fileContent);
           const { protectedText, expressions } = protectAstroExpressions(parsed.content);
+          
+          let translatedBody = '';
           if (protectedText.trim()) {
             const result = await translator.translateText(protectedText, 'en', targetLangCode, {
               tagHandling: 'html',
               ignoreTags: ['keep', 'astro-expr'],
             });
-            finalFileContent = matter.stringify(restoreAstroExpressions(result.text, expressions), parsed.data);
+            translatedBody = restoreAstroExpressions(result.text, expressions);
           } else {
-            finalFileContent = fileContent;
+            translatedBody = parsed.content;
           }
+          finalFileContent = matter.stringify(translatedBody, parsed.data);
         }
+
         writeFileSync(targetPath, finalFileContent, 'utf-8');
         console.log(`   ✓ Saved: ${lang}${relativePath}`);
       } catch (err) {
