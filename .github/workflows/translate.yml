@@ -6,14 +6,17 @@ on:
     branches:
       - main
     paths:
-      # Trigger when English Markdown or Astro files are added/changed
+      # Trigger when English files change in EITHER folder
+      - 'src/pages/**/*.astro'
       - 'src/pages/**/*.md'
       - 'src/pages/**/*.mdx'
-      - 'src/pages/**/*.astro'
-      # CRITICAL: Do NOT trigger when the bot pushes German or French files
-      # (We use the '!' prefix to ignore these paths in the same list)
+      - 'src/content/**/*.md'
+      - 'src/content/**/*.mdx'
+      # CRITICAL: Do NOT trigger when the bot pushes translations
       - '!src/pages/de/**'
       - '!src/pages/fr/**'
+      - '!src/content/de/**'
+      - '!src/content/fr/**'
 
 jobs:
   translate:
@@ -28,7 +31,6 @@ jobs:
         with:
           node-version: '20'
 
-      # We added 'gray-matter' to handle Pagesmith's Markdown formatting safely
       - name: Install dependencies
         run: npm install deepl-node gray-matter
 
@@ -42,21 +44,25 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 1. Stash EVERYTHING (staged, unstaged, untracked) to create a 100% clean workspace
+          # 1. Stash everything to clear the workspace
           git stash push --include-untracked -m "garbage"
           
-          # 2. Pull the absolute latest code safely (handles if a marketer published while DeepL was thinking)
+          # 2. Pull latest code (in case Pagesmith pushed something else)
           git pull origin main
           
-          # 3. Pull the translated Markdown files back out of the stash
-          git checkout stash@{0} -- src/pages/de/ src/pages/fr/ || echo "No translated files to checkout"
+          # 3. Pull translated files back from the stash for both locations
+          git checkout stash@{0} -- src/pages/de/ src/pages/fr/ src/content/de/ src/content/fr/ || echo "Some folders not found, skipping..."
           
           # 4. Clear the stash
           git stash drop
           
-          # 5. Commit and Push only the translated German and French files
-          git add src/pages/de/ src/pages/fr/
+          # 5. Stage all potential new localized folders
+          git add src/pages/de/ src/pages/fr/ src/content/de/ src/content/fr/ 2>/dev/null || true
+          
+          # 6. Only commit if there is actually something new
           if ! git diff --cached --quiet; then
-            git commit -m "chore(i18n): update localized Pagesmith pages [automated]"
+            git commit -m "chore(i18n): update localized pages and content [automated]"
             git push origin main
+          else
+            echo "Nothing new to translate."
           fi
