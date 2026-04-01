@@ -473,15 +473,15 @@ const description = "Structured aftercare beyond the point of sale. TieBack keep
 </BaseLayout>
 
 ---
-import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
-import { SITE } from &#x27;@/config/site&#x27;;
+import BaseLayout aus &#x27;@/layouts/BaseLayout.astro&#x27;;
+import { SITE } aus &#x27;@/config/site&#x27;;
 
-const title = &quot;Eigentumsverhältnisse, Garantie &amp; Nachbetreuung — TieBack&quot;;
+const title = &quot;Eigentumsverhältnisse, Garantie und Nachbetreuung – TieBack&quot;;
 const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. TieBack sorgt dafür, dass Eigentumsverhältnisse, Anspruchsberechtigung und Servicehistorie mit dem Produkt verknüpft bleiben.&quot;;
----<BaseLayout title=<astro-expr id="1">
-  
+---
 
- description={description}
+<baselayout title="&lt;astro-expr" id="1">
+  Beschreibung={description}
   &gt;
   <!-- 1. Use Case Hero (Enhanced with Depth) -->
   <section class="relative pt-32 pb-24 md:pt-52 md:pb-40 overflow-hidden bg-white" data-ps="src/pages/use-cases/warranty-aftercare.astro:hero">
@@ -489,7 +489,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none" data-ps="src/pages/use-cases/warranty-aftercare.astro:bg-accents">
       <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-50/50 blur-[120px]" data-ps="src/pages/use-cases/warranty-aftercare.astro:accent-1"></div>
       <div class="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] rounded-full bg-slate-50 blur-[100px]" data-ps="src/pages/use-cases/warranty-aftercare.astro:accent-2"></div>
-    </div>
+    </div></section></baselayout>
 
     <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/use-cases/warranty-aftercare.astro:hero-container">
       <div class="max-w-4xl mx-auto text-center" data-ps="src/pages/use-cases/warranty-aftercare.astro:hero-content">
@@ -515,7 +515,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
         </div>
       </div>
     </div>
-  </section>
+  
 
   <!-- 2. The Challenge (Impactful Layout) -->
   <section class="py-32 bg-slate-50 border-y border-slate-200/60 relative overflow-hidden" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-section">
@@ -524,7 +524,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
         <div class="relative" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-left">
           <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-100/50 rounded-full blur-2xl" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-accent"></div>
           <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.15] relative" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-title">
-            Die Nachbetreuung wird zu einem <span class="italic font-serif text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-title-accent">strukturierten Workflow</span>, nicht zu einer Ticket-Spur.
+            Die Nachsorge wird zu einem <span class="italic font-serif text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-title-accent">strukturierten Arbeitsablauf</span> und nicht zu einer reinen Ticket-Verfolgung.
           </h2>
           <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-1 gap-8" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-list">
              <div class="flex gap-6 group bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-item-1">
@@ -533,7 +533,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
                 </div>
                 <div data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-text-1">
                   <h4 class="font-bold text-slate-900 mb-1" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-h-1">Fragmentierte Identität</h4>
-                  <p class="text-slate-600 text-sm" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-p-1">Nachweise sind über Quittungen, E-Mails und Portale verstreut, was zu Reibungsverlusten bei der Validierung führt.</p>
+                  <p class="text-slate-600 text-sm" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-p-1">Die Nachweise sind über Quittungen, E-Mails und Portale verstreut, was zu Problemen bei der Validierung führt.</p>
                 </div>
              </div>
              <div class="flex gap-6 group bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-item-2">
@@ -561,7 +561,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
               </div>
               <div class="flex items-start gap-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:point-2">
                 <span class="w-2 h-2 rounded-full bg-blue-600 mt-2.5 shrink-0" data-ps="src/pages/use-cases/warranty-aftercare.astro:dot-2"></span>
-                <p class="text-slate-600 text-lg" data-ps="src/pages/use-cases/warranty-aftercare.astro:p-2">Die Einrichtung eines klaren Bezugspunkts für Garantie- und Serviceabläufe reduziert manuelles Hin- und Her.</p>
+                <p class="text-slate-600 text-lg" data-ps="src/pages/use-cases/warranty-aftercare.astro:p-2">Die Einrichtung eines klaren Bezugspunkts für Garantie- und Serviceabläufe reduziert den manuellen Hin- und Her-Austausch.</p>
               </div>
             </div>
           </div>
@@ -576,9 +576,9 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
   <section class="py-32 bg-white" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-section">
     <div class="container mx-auto px-6" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-container">
       <div class="max-w-3xl mb-20" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-intro">
-        <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block mb-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-label">Funktionen</span>
+        <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block mb-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-label">Leistungsspektrum</span>
         <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-title">Strukturierte Nachbetreuung über den gesamten Lebenszyklus.</h2>
-        <p class="text-slate-600 text-xl leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-p">TieBack strukturiert die Nachbetreuung als Lebenszyklusreferenz und gewährleistet so Kontinuität bei Eigentümerwechseln und Serviceereignissen.</p>
+        <p class="text-slate-600 text-xl leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-p">TieBack Strukturiert die Nachbetreuung als Lebenszyklusreferenz und gewährleistet Kontinuität bei Eigentümerwechseln und Serviceereignissen.</p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-grid">
@@ -595,7 +595,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
             <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-1-2"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Zeitgestempelte Starts</li>
             <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-1-3"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Verknüpfung der Artikelidentität</li>
           </ul>
-        </div>
+        </div></div></div></section>
 
         <!-- Card 2 -->
         <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-2">
@@ -604,10 +604,10 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
             <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
           </div>
           <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-h-2">Validierungs-Engine</h3>
-          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-p-2">Wenn ein Produkt zur Wartung vorgelegt wird, benötigen die Teams eine schnelle, fundierte Antwort hinsichtlich der Berechtigung und Echtheit.</p>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-p-2">Wenn ein Produkt zur Bearbeitung vorgelegt wird, benötigen die Teams eine schnelle, fundierte Antwort hinsichtlich der Berechtigung und Echtheit.</p>
           <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-list-2">
-            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2-1"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Echtheitsbestätigung</li>
-            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2-2"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Eigentumsbezogene Prüfungen</li>
+            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2-1"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Echtheitsprüfung</li>
+            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2-2"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Eigentümerbezogene Prüfungen</li>
             <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2-3"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Transparenz der Garantie</li>
           </ul>
         </div>
@@ -618,17 +618,17 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
           <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-icon-3">
             <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
           </div>
-          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-h-3">Servicekontinuität</h3>
-          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-p-3">Reparatur- und Serviceereignisse bleiben mit der Produktidentität verknüpft, sodass die Historie mit dem Artikel mitwandert.</p>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-h-3">Kontinuität der Wartung</h3>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-p-3">Reparatur- und Serviceereignisse bleiben mit der Produktidentität verknüpft, sodass die Historie mit dem Artikel weiterverfolgt wird.</p>
           <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-list-3">
             <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-3-1"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Protokollierte Serviceereignisse</li>
             <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-3-2"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Versionierte Historie</li>
-            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-3-3"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Kontinuität über die Zeit</li>
+            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-3-3"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Kontinuität über die Zeit hinweg</li>
           </ul>
         </div>
-      </div>
-    </div>
-  </section>
+      
+    
+  
 
   <!-- Visual Separator Section: The Continuity Model -->
   <section class="py-24 bg-slate-950 text-white relative overflow-hidden" data-ps="src/pages/use-cases/warranty-aftercare.astro:continuity-section">
@@ -649,12 +649,12 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
                <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center" data-ps="src/pages/use-cases/warranty-aftercare.astro:continuity-icon-box">
                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-repeat"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
                </div>
-               <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs" data-ps="src/pages/use-cases/warranty-aftercare.astro:continuity-label">Serviceübergabe</h4>
+               <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs" data-ps="src/pages/use-cases/warranty-aftercare.astro:continuity-label">Übergabe des Service</h4>
              </div>
              <ul class="space-y-6" data-ps="src/pages/use-cases/warranty-aftercare.astro:continuity-list">
                <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-1">
                  <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/warranty-aftercare.astro:dot-1"></div>
-                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/warranty-aftercare.astro:txt-1">Reduzierte Probleme bei der Gewährleistung</span>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/warranty-aftercare.astro:txt-1">Weniger Probleme bei der Gewährleistung</span>
                </li>
                <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2">
                  <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/warranty-aftercare.astro:dot-2"></div>
@@ -693,9 +693,9 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-grad"></div>
     <div class="container mx-auto px-6 relative z-10 text-center" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-container">
       <div class="max-w-4xl mx-auto" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-content">
-        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-h">Ein Produktdatensatz, der <span class="text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-accent">über die Zeit hinweg nützlich</span> bleibt<span class="text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-accent">.</span></h2>
+        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-h">Ein Produktdatensatz, der <span class="text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-accent">langfristig nützlich</span> bleibt<span class="text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-accent">.</span></h2>
         <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-p">
-          Erstellen Sie eine überprüfbare Referenz für Garantie und Service. Schließen Sie sich den Unternehmen an, die ihre Produktnachbetreuungsstrategie auf TieBack verwalten.
+          Erstellen Sie eine nachprüfbare Referenz für Garantie und Service. Schließen Sie sich den Unternehmen an, die ihre Produktnachbetreuungsstrategie auf TieBack verwalten.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-buttons">
           <button class="w-full sm:w-auto px-12 py-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all duration-300 shadow-2xl shadow-blue-200 hover:-translate-y-1" data-ps="src/pages/use-cases/warranty-aftercare.astro:btn-main">
@@ -716,15 +716,15 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
       </div>
     </div>
   </section>
-</BaseLayout>
+
 ,---
 import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
 import { SITE } from &#x27;@/config/site&#x27;;
 
-const title = &quot;Eigentumsverhältnisse, Garantie &amp; Nachbetreuung — TieBack&quot;;
-const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. TieBack verwaltet Eigentumsverhältnisse, Anspruchsberechtigung und Servicehistorie für das Produkt.&quot;;
+const title = &quot;Eigentumsrechte, Garantie und Nachbetreuung – TieBack&quot;;
+const description = &quot;Strukturierte Nachbetreuung über den Kauf hinaus. TieBack sorgt dafür, dass Eigentumsrechte, Anspruchsberechtigung und Servicehistorie mit dem Produkt verknüpft bleiben.&quot;;
 ---
-,<BaseLayout title=<astro-expr id="4">
+,<baselayout title="&lt;astro-expr" id="4">
   description={description}
   &gt;
   <!-- 1. Use Case Hero (Enhanced with Depth) -->
@@ -733,24 +733,24 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none" data-ps="src/pages/use-cases/warranty-aftercare.astro:bg-accents">
       <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-50/50 blur-[120px]" data-ps="src/pages/use-cases/warranty-aftercare.astro:accent-1"></div>
       <div class="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] rounded-full bg-slate-50 blur-[100px]" data-ps="src/pages/use-cases/warranty-aftercare.astro:accent-2"></div>
-    </div>
+    </div></section></baselayout>
 
     <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/use-cases/warranty-aftercare.astro:hero-container">
       <div class="max-w-4xl mx-auto text-center" data-ps="src/pages/use-cases/warranty-aftercare.astro:hero-content">
         <div class="inline-flex items-center gap-2 py-1 px-3 mb-8 text-[11px] font-bold tracking-widest text-blue-600 uppercase bg-blue-50/80 backdrop-blur-sm border border-blue-100 rounded-full" data-ps="src/pages/use-cases/warranty-aftercare.astro:label-box">
           <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" data-ps="src/pages/use-cases/warranty-aftercare.astro:pulse"></span>
-          Nachbetreuung &amp; Service
+          Kundendienst &amp; Service
         </div>
         <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.05]" data-ps="src/pages/use-cases/warranty-aftercare.astro:title">
         
           Eigentumsverhältnisse, Garantie <span class="text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:title-accent">&amp; Nachbetreuung</span>
         </h1>
         <p class="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/use-cases/warranty-aftercare.astro:hero-description">
-          Entwickelt für Produkte, die Service, Garantiecheck oder Supportüberprüfung erfordern. TieBack speichert Eigentumsstatus, Anspruchsberechtigung und Servicehistorie für das Produkt.
+          Entwickelt für Produkte, die Service, eine Garantiecheck oder eine Supportüberprüfung erfordern. „TieBack“ speichert den Eigentumsstatus, die Berechtigung und die Servicehistorie des Produkts.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-5" data-ps="src/pages/use-cases/warranty-aftercare.astro:hero-ctas">
           <a href="#request-access" class="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-xl shadow-blue-200 hover:-translate-y-1" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-primary">
-            Zugang anfordern
+            Zugriff anfordern
           </a>
           
           <a href="/platform/why-tieback/" class="w-full sm:w-auto px-10 py-4 bg-white border border-slate-200 text-slate-700 font-semibold rounded-xl hover:bg-slate-50 transition-all duration-300 hover:border-slate-300" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-secondary">
@@ -759,7 +759,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
         </div>
       </div>
     </div>
-  </section>
+  
 
   <!-- 2. The Challenge (Impactful Layout) -->
   <section class="py-32 bg-slate-50 border-y border-slate-200/60 relative overflow-hidden" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-section">
@@ -768,7 +768,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
         <div class="relative" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-left">
           <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-100/50 rounded-full blur-2xl" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-accent"></div>
           <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.15] relative" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-title">
-            Die Nachbetreuung wird zu einem <span class="italic font-serif text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-title-accent">strukturierten Workflow</span>, nicht zu einer Ticket-Spur.
+            Die Nachsorge wird zu einem <span class="italic font-serif text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-title-accent">strukturierten Arbeitsablauf</span> und nicht zu einer reinen Ticket-Verfolgung.
           </h2>
           <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-1 gap-8" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-list">
              <div class="flex gap-6 group bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-item-1">
@@ -777,7 +777,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
                 </div>
                 <div data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-text-1">
                   <h4 class="font-bold text-slate-900 mb-1" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-h-1">Fragmentierte Identität</h4>
-                  <p class="text-slate-600 text-sm" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-p-1">Nachweise sind über Quittungen, E-Mails und Portale verstreut, was zu Reibungsverlusten bei der Validierung führt.</p>
+                  <p class="text-slate-600 text-sm" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-p-1">Die Nachweise sind über Quittungen, E-Mails und Portale verstreut, was zu Problemen bei der Validierung führt.</p>
                 </div>
              </div>
              <div class="flex gap-6 group bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50" data-ps="src/pages/use-cases/warranty-aftercare.astro:friction-item-2">
@@ -805,7 +805,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
               </div>
               <div class="flex items-start gap-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:point-2">
                 <span class="w-2 h-2 rounded-full bg-blue-600 mt-2.5 shrink-0" data-ps="src/pages/use-cases/warranty-aftercare.astro:dot-2"></span>
-                <p class="text-slate-600 text-lg" data-ps="src/pages/use-cases/warranty-aftercare.astro:p-2">Die Einrichtung eines klaren Bezugspunkts für Garantie- und Serviceabläufe reduziert manuelles Hin- und Her.</p>
+                <p class="text-slate-600 text-lg" data-ps="src/pages/use-cases/warranty-aftercare.astro:p-2">Die Einrichtung eines klaren Bezugspunkts für Garantie- und Serviceabläufe reduziert den manuellen Hin- und Her-Austausch.</p>
               </div>
             </div>
           </div>
@@ -820,9 +820,9 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
   <section class="py-32 bg-white" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-section">
     <div class="container mx-auto px-6" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-container">
       <div class="max-w-3xl mb-20" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-intro">
-        <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block mb-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-label">Funktionen</span>
+        <span class="text-blue-600 font-bold uppercase tracking-wider text-xs block mb-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-label">Leistungsumfang</span>
         <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-title">Strukturierte Nachbetreuung über den gesamten Lebenszyklus.</h2>
-        <p class="text-slate-600 text-xl leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-p">TieBack strukturiert die Nachbetreuung als Lebenszyklusreferenz und gewährleistet so Kontinuität über Eigentumsübergänge und Serviceereignisse hinweg.</p>
+        <p class="text-slate-600 text-xl leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-p">TieBack Strukturiert die Nachbetreuung als Lebenszyklusreferenz und gewährleistet Kontinuität bei Eigentümerwechseln und Serviceereignissen.</p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-ps="src/pages/use-cases/warranty-aftercare.astro:capabilities-grid">
@@ -839,7 +839,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
             <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-1-2"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Zeitgestempelte Starts</li>
             <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-1-3"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Verknüpfung der Artikelidentität</li>
           </ul>
-        </div>
+        </div></div></div></section>
 
         <!-- Card 2 -->
         <div class="group relative bg-white p-10 rounded-3xl border border-slate-200 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/30 overflow-hidden" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-2">
@@ -848,10 +848,10 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
             <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
           </div>
           <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-h-2">Validierungs-Engine</h3>
-          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-p-2">Wenn ein Produkt zur Wartung vorgelegt wird, benötigen die Teams eine schnelle, fundierte Antwort hinsichtlich der Berechtigung und Echtheit.</p>
+          <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-p-2">Wenn ein Produkt zur Bearbeitung vorgelegt wird, benötigen die Teams eine schnelle, fundierte Antwort hinsichtlich der Berechtigung und Echtheit.</p>
           <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-list-2">
-            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2-1"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Echtheitsbestätigung</li>
-            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2-2"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Eigentumsbezogene Prüfungen</li>
+            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2-1"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Echtheitsprüfung</li>
+            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2-2"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Eigentümerbezogene Prüfungen</li>
             <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2-3"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Transparenz der Garantie</li>
           </ul>
         </div>
@@ -862,17 +862,17 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
           <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-icon-3">
             <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
           </div>
-          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-h-3">Servicekontinuität</h3>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-h-3">Kontinuität der Wartung</h3>
           <p class="text-slate-600 mb-8 leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-p-3">Reparatur- und Serviceereignisse bleiben mit der Produktidentität verknüpft, sodass die Historie mit dem Artikel mitwandert.</p>
           <ul class="space-y-4 text-slate-700 font-medium" data-ps="src/pages/use-cases/warranty-aftercare.astro:card-list-3">
             <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-3-1"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Protokollierte Serviceereignisse</li>
             <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-3-2"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Versionierte Historie</li>
-            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-3-3"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Kontinuität über die Zeit</li>
+            <li class="flex items-center gap-3" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-3-3"><svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Kontinuität über die Zeit hinweg</li>
           </ul>
         </div>
-      </div>
-    </div>
-  </section>
+      
+    
+  
 
   <!-- Visual Separator Section: The Continuity Model -->
   <section class="py-24 bg-slate-950 text-white relative overflow-hidden" data-ps="src/pages/use-cases/warranty-aftercare.astro:continuity-section">
@@ -893,12 +893,12 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
                <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center" data-ps="src/pages/use-cases/warranty-aftercare.astro:continuity-icon-box">
                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-repeat"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
                </div>
-               <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs" data-ps="src/pages/use-cases/warranty-aftercare.astro:continuity-label">Serviceübergabe</h4>
+               <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs" data-ps="src/pages/use-cases/warranty-aftercare.astro:continuity-label">Übergabe des Service</h4>
              </div>
              <ul class="space-y-6" data-ps="src/pages/use-cases/warranty-aftercare.astro:continuity-list">
                <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-1">
                  <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/warranty-aftercare.astro:dot-1"></div>
-                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/warranty-aftercare.astro:txt-1">Reduzierte Probleme bei der Gewährleistung</span>
+                 <span class="text-lg font-medium text-slate-200" data-ps="src/pages/use-cases/warranty-aftercare.astro:txt-1">Weniger Probleme bei der Gewährleistung</span>
                </li>
                <li class="flex items-center gap-4 group" data-ps="src/pages/use-cases/warranty-aftercare.astro:li-2">
                  <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" data-ps="src/pages/use-cases/warranty-aftercare.astro:dot-2"></div>
@@ -937,7 +937,7 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-grad"></div>
     <div class="container mx-auto px-6 relative z-10 text-center" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-container">
       <div class="max-w-4xl mx-auto" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-content">
-        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-h">Ein Produktdatensatz, der <span class="text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-accent">über die Zeit hinweg nützlich</span> bleibt<span class="text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-accent">.</span></h2>
+        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tight" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-h">Ein Produktdatensatz, der <span class="text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-accent">langfristig nützlich</span> bleibt<span class="text-blue-600" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-accent">.</span></h2>
         <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed" data-ps="src/pages/use-cases/warranty-aftercare.astro:cta-p">
           Erstellen Sie eine überprüfbare Referenz für Garantie und Service. Schließen Sie sich den Unternehmen an, die ihre Produktnachbetreuungsstrategie auf TieBack verwalten.
         </p>
@@ -960,4 +960,4 @@ const description = &quot;Strukturierte Nachbetreuung über den Verkauf hinaus. 
       </div>
     </div>
   </section>
-</BaseLayout>
+

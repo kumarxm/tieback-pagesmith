@@ -409,13 +409,12 @@ const plans = [
 </BaseLayout>
 
 ---
-import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
-import{ SITE }
-from &#x27;@/config/site&#x27;;
+import BaseLayout depuis &#x27;@/layouts/BaseLayout.astro&#x27;;
+import { SITE } depuis &#x27;@/config/site&#x27;;
 
-const title = &quot;Tarification —TieBack
-&quot;;
-const description = &quot;Tarification modulaire basée sur les passeports activés, et non sur les scans. Pas de frais par scan, pas de frais par événement, pas de frais surprise.&quot;;
+const title = &quot;Tarification — TieBack&quot;;
+const description = &quot;Tarification modulaire basée sur les passeports activés, et non sur les scans. Pas de frais par scan, pas de frais par événement, pas de frais imprévus.&quot;;
+
 
 const plans = [
   {
@@ -484,7 +483,7 @@ const plans = [
 
 ---
 
-<BaseLayout title=<astro-expr id="4">
+<baselayout title="&lt;astro-expr" id="4">
   description={description}
   &gt;
   <!-- Hero Section -->
@@ -504,7 +503,7 @@ const plans = [
         La tarification est basée sur les passeports activés, et non sur les scans. Pas de frais par scan, pas de frais par événement, pas de frais surprise.
       </p>
     </div>
-  </section>
+  </section></baselayout>
 
   <!-- Pricing Grid -->
   <section class="pb-24" data-ps="src/pages/pricing.astro:plans">
@@ -525,7 +524,7 @@ const plans = [
               <h3 class="text-2xl font-bold text-white mb-2" data-ps=<astro-expr id="10">`}&gt;{plan.name}</h3>
               <p class="text-sm font-medium text-[#0080FF] mb-4" data-ps=<astro-expr id="12">`}&gt;{plan.tagline}</p>
               <p class="text-sm text-slate-400 leading-relaxed" data-ps=<astro-expr id="14">`}&gt;{plan.description}</p>
-            </div>
+            </div></div></section>
 
             <div class="flex-grow" data-ps=<astro-expr id="16">`}&gt;
               <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4" data-ps=<astro-expr id="17">`}&gt;Comprend :</p>
@@ -557,11 +556,11 @@ const plans = [
                 {plan.cta}
               </a>
             </div>
-          </div>
+          
         ))}
       
     
-  </section>
+  
 
 
   <!-- Why Different -->
@@ -569,7 +568,7 @@ const plans = [
     <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/pricing.astro:9mxegm">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" data-ps="src/pages/pricing.astro:9mxegn">
         <div data-ps="src/pages/pricing.astro:9mxego">
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-8" data-ps="src/pages/pricing.astro:morbth">Pourquoi les tarifs d&#x27;TieBack sont différents</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-8" data-ps="src/pages/pricing.astro:morbth">Pourquoi les tarifs d&#x27;TieBack, sont-ils différents ?</h2>
           <div class="space-y-6" data-ps="src/pages/pricing.astro:9mxegp">
             <div class="flex gap-4 p-6 rounded-2xl bg-slate-900/30 border border-slate-800/50" data-ps="src/pages/pricing.astro:9mxegq">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20" data-ps="src/pages/pricing.astro:9mxegr">
@@ -614,10 +613,10 @@ const plans = [
     <div class="max-w-4xl mx-auto px-6" data-ps="src/pages/pricing.astro:e246nl">
       <div class="relative p-12 md:p-16 rounded-[2.5rem] bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 text-center overflow-hidden" data-ps="src/pages/pricing.astro:e246nm">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-[#0080FF] to-transparent" data-ps="src/pages/pricing.astro:e246nn"></div>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-ps="src/pages/pricing.astro:cta-h2">Forte demande. Intégration limitée.</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-ps="src/pages/pricing.astro:cta-h2">Forte demande. Capacité d&#x27;accueil limitée.</h2>
         <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto" data-ps="src/pages/pricing.astro:cta-p">
           TieBack
-          L&#x27;intégration des clients se fait actuellement via un programme de déploiement privé. Les tarifs varient en fonction de la catégorie de produit, du volume et des exigences de conformité.
+          procède actuellement à l&#x27;intégration des clients dans le cadre d&#x27;un programme de déploiement privé. Les tarifs varient en fonction de la catégorie de produits, du volume et des exigences de conformité.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center" data-ps="src/pages/pricing.astro:e246no">
           <a href="/request-access" class="px-8 py-4 rounded-xl bg-[#0080FF] text-white font-bold hover:bg-[#0070E0] transition-all" data-ps="src/pages/pricing.astro:fvprq1">Demander l&#x27;accès</a>
@@ -627,16 +626,14 @@ const plans = [
       </div>
     </div>
   </section>
-</BaseLayout>
 
 ,---
 import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
-import{ SITE }
-from &#x27;@/config/site&#x27;;
+import { SITE } from &#x27;@/config/site&#x27;;
 
-const title = &quot;Tarifs —TieBack
-&quot;;
+const title = &quot;Tarification — TieBack&quot;;
 const description = &quot;Tarification modulaire basée sur les passeports activés, et non sur les scans. Pas de frais par scan, pas de frais par événement, pas de frais imprévus.&quot;;
+
 
 const plans = [
   {
@@ -704,7 +701,7 @@ const plans = [
 ];
 
 ---
-,<BaseLayout title=<astro-expr id="35">
+,<baselayout title="&lt;astro-expr" id="35">
   description={description}
   &gt;
   <!-- Hero Section -->
@@ -712,19 +709,19 @@ const plans = [
     <div class="absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_50%_50%,rgba(0,128,255,0.08)_0%,transparent_100%)]" data-ps="src/pages/pricing.astro:9mxef2"></div>
     <div class="max-w-7xl mx-auto px-6 text-center" data-ps="src/pages/pricing.astro:9mxef3">
       <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6" data-ps="src/pages/pricing.astro:eyebrow">
-        <span class="text-xs font-bold text-[#0080FF] uppercase tracking-wider" data-ps="src/pages/pricing.astro:xa5v1p">Tarification</span>
+        <span class="text-xs font-bold text-[#0080FF] uppercase tracking-wider" data-ps="src/pages/pricing.astro:xa5v1p">Tarifs</span>
       </div>
       <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-white mb-6" data-ps="src/pages/pricing.astro:h1">
         Conception modulaire.<br />
         
-        <span class="text-slate-400" data-ps="src/pages/pricing.astro:xa5v1o">Conçu pour les produits réels.</span>
+        <span class="text-slate-400" data-ps="src/pages/pricing.astro:xa5v1o">Conçu pour des produits réels.</span>
       </h1>
       <p class="max-w-2xl mx-auto text-lg text-slate-400 leading-relaxed" data-ps="src/pages/pricing.astro:hero-desc">
         TieBack
         La tarification est basée sur les passeports activés, et non sur les scans. Pas de frais par scan, pas de frais par événement, pas de frais surprise.
       </p>
     </div>
-  </section>
+  </section></baselayout>
 
   <!-- Pricing Grid -->
   <section class="pb-24" data-ps="src/pages/pricing.astro:plans">
@@ -745,7 +742,7 @@ const plans = [
               <h3 class="text-2xl font-bold text-white mb-2" data-ps=<astro-expr id="41">`}&gt;{plan.name}</h3>
               <p class="text-sm font-medium text-[#0080FF] mb-4" data-ps=<astro-expr id="43">`}&gt;{plan.tagline}</p>
               <p class="text-sm text-slate-400 leading-relaxed" data-ps=<astro-expr id="45">`}&gt;{plan.description}</p>
-            </div>
+            </div></div></section>
 
             <div class="flex-grow" data-ps=<astro-expr id="47">`}&gt;
               <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4" data-ps=<astro-expr id="48">`}&gt;Comprend :</p>
@@ -777,11 +774,11 @@ const plans = [
                 {plan.cta}
               </a>
             </div>
-          </div>
+          
         ))}
       
     
-  </section>
+  
 
 
   <!-- Why Different -->
@@ -789,14 +786,14 @@ const plans = [
     <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/pricing.astro:9mxegm">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" data-ps="src/pages/pricing.astro:9mxegn">
         <div data-ps="src/pages/pricing.astro:9mxego">
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-8" data-ps="src/pages/pricing.astro:morbth">Pourquoi les tarifs d&#x27;TieBack sont différents</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-8" data-ps="src/pages/pricing.astro:morbth">Pourquoi les tarifs d&#x27;TieBack, sont-ils différents ?</h2>
           <div class="space-y-6" data-ps="src/pages/pricing.astro:9mxegp">
             <div class="flex gap-4 p-6 rounded-2xl bg-slate-900/30 border border-slate-800/50" data-ps="src/pages/pricing.astro:9mxegq">
               <div class="shrink-0 w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20" data-ps="src/pages/pricing.astro:9mxegr">
                 <svg class="w-5 h-5 text-[#0080FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
               </div>
               <div data-ps="src/pages/pricing.astro:9mxegs">
-                <h4 class="text-white font-bold mb-1" data-ps="src/pages/pricing.astro:6o2ilr">Conçu pour les véritables flux de production</h4>
+                <h4 class="text-white font-bold mb-1" data-ps="src/pages/pricing.astro:6o2ilr">Conçu pour les flux de travail de fabrication réels</h4>
                 <p class="text-sm text-slate-400" data-ps="src/pages/pricing.astro:8rrv15">Nous comprenons comment la production se déroule réellement, des lots aux articles individuels.</p>
               </div>
             </div>
@@ -834,10 +831,10 @@ const plans = [
     <div class="max-w-4xl mx-auto px-6" data-ps="src/pages/pricing.astro:e246nl">
       <div class="relative p-12 md:p-16 rounded-[2.5rem] bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 text-center overflow-hidden" data-ps="src/pages/pricing.astro:e246nm">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-[#0080FF] to-transparent" data-ps="src/pages/pricing.astro:e246nn"></div>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-ps="src/pages/pricing.astro:cta-h2">Forte demande. Intégration limitée.</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-ps="src/pages/pricing.astro:cta-h2">Forte demande. Capacité d&#x27;accueil limitée.</h2>
         <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto" data-ps="src/pages/pricing.astro:cta-p">
           TieBack
-          L&#x27;intégration des clients se fait actuellement via un programme de déploiement privé. Les tarifs varient en fonction de la catégorie de produit, du volume et des exigences de conformité.
+          procède actuellement à l&#x27;intégration des clients dans le cadre d&#x27;un programme de déploiement privé. Les tarifs varient en fonction de la catégorie de produits, du volume et des exigences de conformité.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center" data-ps="src/pages/pricing.astro:e246no">
           <a href="/request-access" class="px-8 py-4 rounded-xl bg-[#0080FF] text-white font-bold hover:bg-[#0070E0] transition-all" data-ps="src/pages/pricing.astro:fvprq1">Demander l&#x27;accès</a>
@@ -847,4 +844,4 @@ const plans = [
       </div>
     </div>
   </section>
-</BaseLayout>
+

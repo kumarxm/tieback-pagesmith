@@ -260,7 +260,8 @@ const db = runtime.env.DB;
 let error = &#x27;&#x27;;
 let success = false;
 
-if (Astro.request.method === &#x27;POST&#x27;){
+
+  if (Astro.request.method === &#x27;POST&#x27;){
   const formData = await Astro.request.formData();
   const email = formData.get('email')?.toString();
   const subject = formData.get('subject')?.toString();
@@ -386,7 +387,8 @@ const db = runtime.env.DB;
 let error = &#x27;&#x27;;
 let success = false;
 
-if (Astro.request.method === &#x27;POST&#x27;){
+
+  if (Astro.request.method === &#x27;POST&#x27;){
   const formData = await Astro.request.formData();
   const email = formData.get('email')?.toString();
   const subject = formData.get('subject')?.toString();

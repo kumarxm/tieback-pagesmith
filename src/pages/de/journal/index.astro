@@ -209,17 +209,17 @@ const jsonLd = {
 </BaseLayout>
 
 ---
-import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
-import { getCollection } from &#x27;astro:content&#x27;;
+import BaseLayout aus &#x27;@/layouts/BaseLayout.astro&#x27;;
+import { getCollection } aus &#x27;astro:content&#x27;;
 
 const posts = (await getCollection(&#x27;blog&#x27;))
   .filter(post =&gt; !post.data.draft)
   .sort((a, b) =&gt; b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const featuredPost = posts.find(post =&gt; post.data.featured) || posts[0];
-const remainingPosts = posts.filter(post =&gt; post.slug !== featuredPost?.slug);
+const remainingPosts = posts.filter(post =&gt; post.slug !== featuredPost.slug);
 
-const categories = [&#x27;All&#x27;, &#x27;Compliance&#x27;, &#x27;Digital Identity&#x27;, &#x27;Engineering&#x27;, &#x27;News&#x27;];
+const categories = [&#x27;Alle&#x27;, &#x27;Compliance&#x27;, &#x27;Digitale Identität&#x27;, &#x27;Technik&#x27;, &#x27;Nachrichten&#x27;];
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -230,23 +230,22 @@ const jsonLd = {
 };
 ---
 
-<BaseLayout title="Journal | TieBack" description="Perspectives on Digital Product Passports, connected supply chains, and the future of physical product identity." jsonLd=<astro-expr id="2">
-&gt;
+<baselayout title="Journal | &lt;keep&gt;TieBack&lt;/keep&gt;" description="Perspectives on Digital Product Passports, connected supply chains, and the future of physical product identity." jsonld="&lt;astro-expr" id="2">&gt;
   <main class="bg-white text-slate-900 pt-32 pb-24" data-ps="src/pages/journal/index.astro:1p6sm1">
     <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/journal/index.astro:7upzwn">
       <!-- Hero -->
       <header class="mb-16" data-ps="src/pages/journal/index.astro:hjyx1z">
         <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-slate-950 mb-6" data-ps="src/pages/journal/index.astro:tserto">Zeitschrift</h1>
         <p class="text-xl text-slate-600 max-w-2xl leading-relaxed" data-ps="src/pages/journal/index.astro:65kvq2">
-          Perspektiven zu „Digital Product Passports“, vernetzten Lieferketten und der Zukunft der physischen Produktidentität.
+          Perspektiven zu digitalen Produktpässen, vernetzten Lieferketten und der Zukunft der physischen Produktidentität.
         </p>
-      </header>
+      </header></div></main></baselayout>
 
-      <!-- Featured Article -->
+
+            <!-- Featured Article -->
       {featuredPost && (
         <section class="mb-20" data-ps="src/pages/journal/index.astro:kkbiog">
           <a href={`/journal/${featuredPost.slug}
-
       /`} class=&quot;group grid md:grid-cols-2 gap-8 lg:gap-12 items-center&quot; data-ps=&quot;src/pages/journal/index.astro:yd0yy&quot;&gt;
             <div class="relative aspect-[16/9] overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm transition-all duration-300 group-hover:shadow-md" data-ps="src/pages/journal/index.astro:7upzwm">
               <img 
@@ -321,21 +320,21 @@ const jsonLd = {
           
         ))}
       </div>
-    </div>
-  </main>
-</BaseLayout>
+    
+  
+
 ,---
-import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
-import { getCollection } from &#x27;astro:content&#x27;;
+import BaseLayout aus &#x27;@/layouts/BaseLayout.astro&#x27;;
+import { getCollection } aus &#x27;astro:content&#x27;;
 
 const posts = (await getCollection(&#x27;blog&#x27;))
   .filter(post =&gt; !post.data.draft)
   .sort((a, b) =&gt; b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const featuredPost = posts.find(post =&gt; post.data.featured) || posts[0];
-const remainingPosts = posts.filter(post =&gt; post.slug !== featuredPost?.slug);
+const remainingPosts = posts.filter(post =&gt; post.slug !== featuredPost.slug);
 
-const categories = [&#x27;All&#x27;, &#x27;Compliance&#x27;, &#x27;Digital Identity&#x27;, &#x27;Engineering&#x27;, &#x27;News&#x27;];
+const categories = [&#x27;Alle&#x27;, &#x27;Compliance&#x27;, &#x27;Digitale Identität&#x27;, &#x27;Technik&#x27;, &#x27;Nachrichten&#x27;];
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -345,23 +344,22 @@ const jsonLd = {
   "url": "https://tieback.io/journal/"
 };
 ---
-,<BaseLayout title="Journal | TieBack" description="Perspectives on Digital Product Passports, connected supply chains, and the future of physical product identity." jsonLd=<astro-expr id="29">
-&gt;
+,<baselayout title="Journal | &lt;keep&gt;TieBack&lt;/keep&gt;" description="Perspectives on Digital Product Passports, connected supply chains, and the future of physical product identity." jsonld="&lt;astro-expr" id="29">&gt;
   <main class="bg-white text-slate-900 pt-32 pb-24" data-ps="src/pages/journal/index.astro:1p6sm1">
     <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/journal/index.astro:7upzwn">
       <!-- Hero -->
       <header class="mb-16" data-ps="src/pages/journal/index.astro:hjyx1z">
         <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-slate-950 mb-6" data-ps="src/pages/journal/index.astro:tserto">Zeitschrift</h1>
         <p class="text-xl text-slate-600 max-w-2xl leading-relaxed" data-ps="src/pages/journal/index.astro:65kvq2">
-          Perspektiven zu „Digital Product Passports“, vernetzten Lieferketten und der Zukunft der physischen Produktidentität.
+          Perspektiven zu digitalen Produktpässen, vernetzten Lieferketten und der Zukunft der physischen Produktidentität.
         </p>
-      </header>
+      </header></div></main></baselayout>
 
-      <!-- Featured Article -->
+
+            <!-- Featured Article -->
       {featuredPost && (
         <section class="mb-20" data-ps="src/pages/journal/index.astro:kkbiog">
           <a href={`/journal/${featuredPost.slug}
-
       /`} class=&quot;group grid md:grid-cols-2 gap-8 lg:gap-12 items-center&quot; data-ps=&quot;src/pages/journal/index.astro:yd0yy&quot;&gt;
             <div class="relative aspect-[16/9] overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm transition-all duration-300 group-hover:shadow-md" data-ps="src/pages/journal/index.astro:7upzwm">
               <img 
@@ -436,6 +434,6 @@ const jsonLd = {
           
         ))}
       </div>
-    </div>
-  </main>
-</BaseLayout>
+    
+  
+

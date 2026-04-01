@@ -230,7 +230,8 @@ const { id } = Astro.params;
 let erreur = &#x27;&#x27;;
 let réussite = false;
 
-if (Astro.request.method === &#x27;POST&#x27;){
+
+  if (Astro.request.method === &#x27;POST&#x27;){
   const formData = await Astro.request.formData();
   const message = formData.get('message')?.toString();
 
@@ -259,6 +260,7 @@ essayez {
 } catch(err) {
   console.error("DB error", err);
 }
+
 
 si (!ticket){
   return Astro.redirect('/404');
@@ -340,7 +342,8 @@ const { id } = Astro.params;
 let erreur = &#x27;&#x27;;
 let réussite = false;
 
-if (Astro.request.method === &#x27;POST&#x27;){
+
+  if (Astro.request.method === &#x27;POST&#x27;){
   const formData = await Astro.request.formData();
   const message = formData.get('message')?.toString();
 
@@ -369,6 +372,7 @@ essayez {
 } catch(err) {
   console.error("DB error", err);
 }
+
 
 if (!ticket){
   return Astro.redirect('/404');
