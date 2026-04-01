@@ -86,7 +86,7 @@ function findMarkdownFiles(dir, fileList = []) {
 
     if (stat.isDirectory()) {
       findMarkdownFiles(filePath, fileList);
-    } else if (file.endsWith('.md') || file.endsWith('.mdx')) {
+    } else if (file.endsWith('.md') || file.endsWith('.mdx') || file.endsWith('.astro')) {
       fileList.push(filePath);
     }
   }
