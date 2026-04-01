@@ -217,20 +217,18 @@ if (!ticket) {
 ---
 export const prerender = false;
 
-import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
+import BaseLayout depuis &#x27;@/layouts/BaseLayout.astro&#x27;;
 
 const runtime = Astro.locals.runtime;
 if (!runtime?.env?.DB){
-  return new Response('Service unavailable', { status: 503 }
-);
+  return new Response('Service unavailable', { status: 503 });
 }
 
 const db = runtime.env.DB;
-const{ id }
-= Astro.params;
+const { id } = Astro.params;
 
-let error = &#x27;&#x27;;
-let success = false;
+let erreur = &#x27;&#x27;;
+let réussite = false;
 
 if (Astro.request.method === &#x27;POST&#x27;){
   const formData = await Astro.request.formData();
@@ -243,38 +241,31 @@ if (Astro.request.method === &#x27;POST&#x27;){
       await db.prepare("UPDATE support_tickets SET updated_at = CURRENT_TIMESTAMP WHERE id = ?").bind(id).run();
       success = true;
     }
-catch(err){
+  catch(err){
       error = 'Failed to post reply.';
     }
-
   }
 }
 
-let ticket: any = null;
-let messages: any[] = [];
+let ticket : any = null ;
+let messages : any[] = [] ;
 
-try{
+essayez {
   ticket = await db.prepare('SELECT * FROM support_tickets WHERE id = ?').bind(id).first();
   if (ticket) {
-    const { results }
-= await db.prepare(&#x27;SELECT * FROM support_messages WHERE ticket_id = ? ORDER BY created_at ASC&#x27;).bind(id).all();
+    const { results } = await db.prepare(&#x27;SELECT * FROM support_messages WHERE ticket_id = ? ORDER BY created_at ASC&#x27;).bind(id).all();
     messages = results;
   }
-} catch(err){
+} catch(err) {
   console.error("DB error", err);
 }
 
-
-if (!ticket){
+si (!ticket){
   return Astro.redirect('/404');
 }
 ---
 
-<BaseLayout title=<astro-expr id="7">
-
-    - Support |TieBack
-
-    `} description=&quot;Détails du ticket&quot;&gt;
+<baselayout title="&lt;astro-expr" id="7"> - Assistance | TieBack`} description=&quot;Détails du ticket&quot;&gt;
   <div class="max-w-4xl mx-auto px-6 py-16" data-ps="src/pages/support/[id].astro:kvyu08">
     <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4" data-ps="src/pages/support/[id].astro:kvyu09">
       <div data-ps="src/pages/support/[id].astro:kvyu0a">
@@ -282,7 +273,7 @@ if (!ticket){
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          Retour à la billetterie
+          Retour aux tickets
         </a>
         <div class="flex items-center gap-4" data-ps="src/pages/support/[id].astro:m8m8yq">
           <h1 class="text-3xl font-bold text-white" data-ps="src/pages/support/[id].astro:bx7srl">{ticket.subject}</h1>
@@ -293,7 +284,7 @@ if (!ticket){
         </div>
         <p class="text-slate-400 mt-2 font-mono text-sm" data-ps="src/pages/support/[id].astro:es4bz7">{ticket.ticket_number}</p>
       </div>
-    </div>
+    </div></div></baselayout>
 
     <div class="space-y-6 mb-8" data-ps="src/pages/support/[id].astro:m8m8yp">
       {messages.map((msg, __psIdx) => (
@@ -314,16 +305,12 @@ if (!ticket){
           <div class="text-slate-300 whitespace-pre-wrap" data-ps=<astro-expr id="23">`}&gt;{msg.message}</div>
         </div>
       ))}
-    </div>
-
     
 
     {ticket.status !== 'Closed' && (
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl" data-ps="src/pages/support/[id].astro:m8m8yj">
         <h3 class="text-lg font-bold text-white mb-4" data-ps="src/pages/support/[id].astro:tr2ese">Reply to Ticket</h3>
-        {error && <div class="bg-red-500/10 border border-red-500/50 text-red-400 px-4 py-3 rounded-lg mb-4" data-ps="src/pages/support/[id].astro:m8m8yi">{error}
-
-    }
+        {error && <div class="bg-red-500/10 border border-red-500/50 text-red-400 px-4 py-3 rounded-lg mb-4" data-ps="src/pages/support/[id].astro:m8m8yi">{error}}
         <form method="POST" class="space-y-4">
           <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."
             class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl focus:ring-2 focus:ring-[#0080FF] focus:border-transparent text-white"></textarea>
@@ -334,29 +321,24 @@ if (!ticket){
             </button>
           </div>
         </form>
-
-    
       
     )}
   
-</BaseLayout>
 ,---
 export const prerender = false;
 
-import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
+import BaseLayout depuis &#x27;@/layouts/BaseLayout.astro&#x27;;
 
 const runtime = Astro.locals.runtime;
 if (!runtime?.env?.DB){
-  return new Response('Service unavailable', { status: 503 }
-);
+  return new Response('Service unavailable', { status: 503 });
 }
 
 const db = runtime.env.DB;
-const{ id }
-= Astro.params;
+const { id } = Astro.params;
 
-let error = &#x27;&#x27;;
-let success = false;
+let erreur = &#x27;&#x27;;
+let réussite = false;
 
 if (Astro.request.method === &#x27;POST&#x27;){
   const formData = await Astro.request.formData();
@@ -369,37 +351,30 @@ if (Astro.request.method === &#x27;POST&#x27;){
       await db.prepare("UPDATE support_tickets SET updated_at = CURRENT_TIMESTAMP WHERE id = ?").bind(id).run();
       success = true;
     }
-catch(err){
+  catch(err){
       error = 'Failed to post reply.';
     }
-
   }
 }
 
-let ticket: any = null;
-let messages: any[] = [];
+let ticket : any = null ;
+let messages : any[] = [] ;
 
-try{
+essayez {
   ticket = await db.prepare('SELECT * FROM support_tickets WHERE id = ?').bind(id).first();
   if (ticket) {
-    const { results }
-= await db.prepare(&#x27;SELECT * FROM support_messages WHERE ticket_id = ? ORDER BY created_at ASC&#x27;).bind(id).all();
+    const { results } = await db.prepare(&#x27;SELECT * FROM support_messages WHERE ticket_id = ? ORDER BY created_at ASC&#x27;).bind(id).all();
     messages = results;
   }
-} catch(err){
+} catch(err) {
   console.error("DB error", err);
 }
-
 
 if (!ticket){
   return Astro.redirect('/404');
 }
 ---
-,<BaseLayout title=<astro-expr id="33">
-
-    - Support |TieBack
-
-    `} description=&quot;Détails du ticket&quot;&gt;
+,<baselayout title="&lt;astro-expr" id="33"> - Assistance | TieBack`} description=&quot;Détails du ticket&quot;&gt;
   <div class="max-w-4xl mx-auto px-6 py-16" data-ps="src/pages/support/[id].astro:kvyu08">
     <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4" data-ps="src/pages/support/[id].astro:kvyu09">
       <div data-ps="src/pages/support/[id].astro:kvyu0a">
@@ -407,7 +382,7 @@ if (!ticket){
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          Retour aux tickets
+          Retour à la billetterie
         </a>
         <div class="flex items-center gap-4" data-ps="src/pages/support/[id].astro:m8m8yq">
           <h1 class="text-3xl font-bold text-white" data-ps="src/pages/support/[id].astro:bx7srl">{ticket.subject}</h1>
@@ -418,7 +393,7 @@ if (!ticket){
         </div>
         <p class="text-slate-400 mt-2 font-mono text-sm" data-ps="src/pages/support/[id].astro:es4bz7">{ticket.ticket_number}</p>
       </div>
-    </div>
+    </div></div></baselayout>
 
     <div class="space-y-6 mb-8" data-ps="src/pages/support/[id].astro:m8m8yp">
       {messages.map((msg, __psIdx) => (
@@ -439,16 +414,12 @@ if (!ticket){
           <div class="text-slate-300 whitespace-pre-wrap" data-ps=<astro-expr id="49">`}&gt;{msg.message}</div>
         </div>
       ))}
-    </div>
-
     
 
     {ticket.status !== 'Closed' && (
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl" data-ps="src/pages/support/[id].astro:m8m8yj">
         <h3 class="text-lg font-bold text-white mb-4" data-ps="src/pages/support/[id].astro:tr2ese">Reply to Ticket</h3>
-        {error && <div class="bg-red-500/10 border border-red-500/50 text-red-400 px-4 py-3 rounded-lg mb-4" data-ps="src/pages/support/[id].astro:m8m8yi">{error}
-
-    }
+        {error && <div class="bg-red-500/10 border border-red-500/50 text-red-400 px-4 py-3 rounded-lg mb-4" data-ps="src/pages/support/[id].astro:m8m8yi">{error}}
         <form method="POST" class="space-y-4">
           <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."
             class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl focus:ring-2 focus:ring-[#0080FF] focus:border-transparent text-white"></textarea>
@@ -459,9 +430,6 @@ if (!ticket){
             </button>
           </div>
         </form>
-
-    
       
     )}
   
-</BaseLayout>

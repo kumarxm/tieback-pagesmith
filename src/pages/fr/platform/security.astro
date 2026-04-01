@@ -455,9 +455,8 @@ const complianceChecklist = [
 </style>
 
 ---
-import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
-import{ SITE }
-from &#x27;@/config/site&#x27;;
+import BaseLayout depuis &#x27;@/layouts/BaseLayout.astro&#x27;;
+import { SITE } depuis &#x27;@/config/site&#x27;;
 
 const architectureFeatures = [
   {
@@ -486,94 +485,49 @@ const architectureFeatures = [
 ];
 
 const complianceChecklist = [
-  « Conforme à la réglementationEU <keep>ESPR</keep>
-(règlement sur l&#x27;écoconception des produits durables) »,
-  « Conformité à la norme de résolutionGS1 Digital Link
-»,
-  « Traitement et localisation des données conformes à la normeGDPR
-»,
-  « Contrôles de sécurité alignés sur la norme SOC2 Type II »,
-  « Données chiffrées au repos et en transit (AES-256/TLS
-e 1.3) »,
+  « Conformité au règlement européen sur l&#x27;écoconception (ESPR) »,
+  « Conformité à la norme GS1 sur la résolution des liens numériques »,
+  « Traitement et localisation des données conformes à la norme GDPR »,
+  « Contrôles de sécurité conformes à la norme SOC2 Type II »,
+  « Chiffrement des données au repos et en transit (AES-256/TLS 1.3) »,
   « Analyse automatisée et continue des vulnérabilités »,
   « Journaux d&#x27;audit complets pour toutes les actions administratives »
 ];
 ---
 
-<BaseLayout 
-  title="Security & Trust | TieBack" 
-  description="Enterprise-grade security and digital identity trust for physical products. Built for EU <keep>ESPR</keep> readiness and global scale."
->
-  <section class="py-32 bg-slate-900 relative overflow-hidden" data-ps="src/pages/platform/security.astro:3bza52">
-    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/platform/security.astro:6mqusr">
-      <div class="flex flex-col lg:flex-row gap-20 items-start" data-ps="src/pages/platform/security.astro:6mqusl">
-        <div class="flex-1 sticky top-32" data-ps="src/pages/platform/security.astro:6mqusq">
-          <h2 class="text-5xl font-bold text-white mb-8 tracking-tight" data-ps="src/pages/platform/security.astro:36mq51">Prêt pour la <span class="text-blue-400" data-ps="src/pages/platform/security.astro:l9dul1">vague</span><br /><span class="text-blue-400" data-ps="src/pages/platform/security.astro:l9dul1">réglementaire.</span></h2>
-          <p class="text-xl text-slate-400 leading-relaxed mb-10" data-ps="src/pages/platform/security.astro:k89gy5">
-            EU <keep>ESPR</keep>
-            Les obligations mondiales en matière d&#x27;Digital Product Passport
-            sont en passe d&#x27;entrer en vigueur.TieBack
-            vous offre la base conforme dont vous avez besoin pour vous lancer en toute confiance.
-          </p>
-          <div class="flex flex-wrap gap-4" data-ps="src/pages/platform/security.astro:badges">
-            <div class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-bold" data-ps="src/pages/platform/security.astro:6mqusk">EU <keep>ESPR</keep> Conforme</div>
-            <div class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-bold" data-ps="src/pages/platform/security.astro:6mqusj">Native à la norme GS1</div>
-            <div class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-bold" data-ps="src/pages/platform/security.astro:6mqusi">GDPR Sécurisé</div>
-          </div>
-        </div>
-        <div class="flex-1 w-full" data-ps="src/pages/platform/security.astro:6mqusp">
-          <div class="grid grid-cols-1 gap-4" data-ps="src/pages/platform/security.astro:checklist">
-            {complianceChecklist.map((item, __psIdx) => (
-              <div class="group flex items-center justify-between p-6 bg-slate-800/50 border border-slate-700/50 rounded-2xl hover:bg-slate-800 hover:border-slate-600 transition-all cursor-default" data-ps={`src/pages/platform/security.astro:6mquso-${__psIdx}`}&gt;
-                <span class="text-slate-300 font-medium text-lg" data-ps=<astro-expr id="25">`}&gt;{item}</span>
-                <div class="w-6 h-6 rounded-full bg-blue-600/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-700 group-hover:text-white transition-all" data-ps=<astro-expr id="27">`}&gt;
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+<baselayout title="Security &amp; Trust | &lt;keep&gt;TieBack&lt;/keep&gt;" description="Enterprise-grade security and digital identity trust for physical products. Built for EU &lt;keep&gt;ESPR&lt;/keep&gt; readiness and global scale.">
+  {/* Hero Section */}
+  <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white overflow-hidden" data-ps="src/pages/platform/security.astro:3bza4e">
+    <div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" data-ps="src/pages/platform/security.astro:hero-bg">
+      <img crossorigin="anonymous" src="https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1200&q=80" srcset="https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1920&q=80 1920w" sizes="100vw" alt="Security abstract background" class="w-full h-full object-cover" data-ps="src/pages/platform/security.astro:yj48j6" />
+    </div>
     
-    {/* Background Pattern */}
-    <div class="absolute inset-0 z-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.15) 1px, transparent 0); background-size: 40px 40px;" data-ps="src/pages/platform/security.astro:grid"></div>
-  </section>
-  <section class="py-32 bg-white overflow-hidden" data-ps="src/pages/platform/security.astro:3bza51">
-    <div class="container mx-auto px-6" data-ps="src/pages/platform/security.astro:7i7n9w">
-      <div class="flex flex-col lg:flex-row items-center gap-20 mb-32" data-ps="src/pages/platform/security.astro:7i7n9x">
-        <div class="flex-1 max-w-xl" data-ps="src/pages/platform/security.astro:7i7naj">
-          <div class="inline-flex items-center gap-2 text-blue-600 font-bold tracking-widest uppercase text-xs mb-6" data-ps="src/pages/platform/security.astro:l9duqd">
-             <span class="w-8 h-px bg-blue-600" data-ps="src/pages/platform/security.astro:l9dul4"></span>
-             Détection des anomalies
-          </div>
-          <h2 class="text-5xl font-bold text-slate-900 mb-8 leading-[1.1]" data-ps="src/pages/platform/security.astro:36mq53">Chaque analyse est un <span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul3">signal</span><br /><span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul3">de confiance.</span></h2>
-          <p class="text-xl text-slate-600 leading-relaxed mb-8" data-ps="src/pages/platform/security.astro:k89gy8">
-            TieBack
-            traite chaque analyse comme un événement riche en données. Notre plateforme d&#x27;AI
-            s évalue en permanence les schémas — sauts de localisation, fréquences anormales ou réutilisation suspecte — pour mettre en évidence les contrefaçons potentielles en temps réel.
-          </p>
-          <ul class="space-y-4" data-ps="src/pages/platform/security.astro:ai-list">
-            {['Geo-velocity validation', 'Impossible scan frequency alerts', 'Cryptographic verification chaining'].map((item, __psIdx) => (
-              <li class="flex items-center gap-3 text-slate-700 font-medium" data-ps={`src/pages/platform/security.astro:2fntiy-${__psIdx}`}&gt;
-                <div class="w-1.5 h-1.5 rounded-full bg-blue-600" data-ps=<astro-expr id="21">`}&gt;</div>
-                {item}
-              
-            ))}
-          </ul>
-        </div>
-        <div class="flex-1 relative group" data-ps="src/pages/platform/security.astro:7i7nak">
-           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTQzNzh8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmR8ZW58MHx8fHwxNzczMzM3MjgyfDA&ixlib=rb-4.1.0&q=80&w=1200&auto=format" sizes="(max-width: 768px) 100vw, 50vw" alt="dashboard" class="w-full h-full object-cover rounded-[2rem] shadow-2xl border border-slate-100 group-hover:scale-[1.02] transition-transform duration-500" loading="eager" fetchpriority="high" data-ps="src/pages/platform/security.astro:yj48j8" crossorigin="anonymous" />
-           <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 max-w-[200px] animate-float" data-ps="src/pages/platform/security.astro:floating-card">
-              <p class="text-xs font-bold text-slate-600 uppercase tracking-wider mb-2" data-ps="src/pages/platform/security.astro:7iydih">Statut en direct</p>
-              <div class="flex items-center gap-2 text-green-700 font-bold" data-ps="src/pages/platform/security.astro:6mqusm">
-                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse" data-ps="src/pages/platform/security.astro:l9dul2"></span>
-                Surveillance active
-              </div>
-           </div>
-        </div>
+    <div class="container mx-auto px-6 text-center max-w-4xl relative z-10" data-ps="src/pages/platform/security.astro:7i7n8w">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-bold mb-8 animate-fade-in" data-ps="src/pages/platform/security.astro:badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+        De niveau entreprise
+      </div>
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-8 balance" data-ps="src/pages/platform/security.astro:bhs72l">
+        Sécurité d&#x27;entreprise. <span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul5">Conçue</span><br />
+        <span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul5">pour la sérénité.</span>
+      </h1>
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/platform/security.astro:k89gyz">
+        TieBack
+        est une plateforme prête à l&#x27;emploi conçue pour garantir la confiance au niveau des éléments. Des espaces de travail de marque isolés aux journaux d&#x27;événements immuables, nous fournissons l&#x27;infrastructure nécessaire à un déploiement mondial.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-ps="src/pages/platform/security.astro:7i7n8x">
+        <a href="#request" class="px-8 py-4 bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-800 transition-all shadow-lg hover:shadow-blue-200 active:scale-95" data-ps="src/pages/platform/security.astro:d4bk9b">
+          Demander l&#x27;accès
+        </a>
+        
+        <a href="#architecture" class="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl border border-slate-200 hover:border-slate-300 transition-all" data-ps="src/pages/platform/security.astro:secondary-cta">
+          Découvrir l&#x27;architecture
+        </a>
       </div>
     </div>
-  </section>
+  </section></baselayout>
+
+  {/* Bento Grid Architecture */}
   <section id="architecture" class="py-24 bg-slate-50 border-y border-slate-200 relative overflow-hidden" data-ps="src/pages/platform/security.astro:3bza4f">
     <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/platform/security.astro:7i7n8y">
       <div class="mb-16 text-center md:text-left max-w-2xl" data-ps="src/pages/platform/security.astro:7i7n8z">
@@ -603,7 +557,7 @@ e 1.3) »,
           </fragment></div>
           <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/platform/security.astro:hv1ndc">{architectureFeatures[1].title}</h3>
           <p class="text-slate-600 leading-relaxed" data-ps="src/pages/platform/security.astro:k89gyb">{architectureFeatures[1].description}</p>
-        </div>
+        </div></div></div></section>
 
         <div class="md:col-span-4 p-10 bg-white border border-slate-200 rounded-3xl flex flex-col group hover:border-blue-400 transition-all hover:shadow-xl hover:shadow-blue-50/50" data-ps="src/pages/platform/security.astro:7i7n9r">
           <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-8 group-hover:bg-blue-700 group-hover:text-white transition-all duration-300" data-ps="src/pages/platform/security.astro:7i7n9s">
@@ -625,66 +579,97 @@ e 1.3) »,
              <img crossorigin="anonymous" src="https://images.unsplash.com/photo-1586126530777-eefae13ebe34?auto=format&w=600&q=80" srcset="https://images.unsplash.com/photo-1586126530777-eefae13ebe34?auto=format&w=200&auto=format&q=80 200w, https://images.unsplash.com/photo-1586126530777-eefae13ebe34?auto=format&w=400&auto=format&q=80 400w, https://images.unsplash.com/photo-1586126530777-eefae13ebe34?auto=format&w=600&auto=format&q=80 600w" sizes="(max-width: 768px) 100vw, 33vw" alt="Security hardware" class="w-full h-48 object-cover rounded-2xl" loading="lazy" data-ps="src/pages/platform/security.astro:yj48j7" />
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white overflow-hidden" data-ps="src/pages/platform/security.astro:3bza4e">
-    <div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" data-ps="src/pages/platform/security.astro:hero-bg">
-      <img crossorigin="anonymous" src="https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1200&q=80" srcset="https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1920&q=80 1920w" sizes="100vw" alt="Security abstract background" class="w-full h-full object-cover" data-ps="src/pages/platform/security.astro:yj48j6" />
-    </div>
+      
     
-    <div class="container mx-auto px-6 text-center max-w-4xl relative z-10" data-ps="src/pages/platform/security.astro:7i7n8w">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-bold mb-8 animate-fade-in" data-ps="src/pages/platform/security.astro:badge">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-        De niveau entreprise
-      </div>
-      <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-8 balance" data-ps="src/pages/platform/security.astro:bhs72l">
-        Sécurité d&#x27;entreprise. <span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul5">Conçue</span><br />
-        <span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul5">pour la sérénité.</span>
-      </h1>
-      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/platform/security.astro:k89gyz">
-        TieBack
-        est une plateforme prête à l&#x27;emploi conçue pour garantir la confiance au niveau des éléments. Des espaces de travail de marque isolés aux journaux d&#x27;événements immuables, nous fournissons l&#x27;infrastructure nécessaire à un déploiement mondial.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-ps="src/pages/platform/security.astro:7i7n8x">
-        <a href="#request" class="px-8 py-4 bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-800 transition-all shadow-lg hover:shadow-blue-200 active:scale-95" data-ps="src/pages/platform/security.astro:d4bk9b">
-          Demander l&#x27;accès
-        </a>
-        
-        <a href="#architecture" class="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl border border-slate-200 hover:border-slate-300 transition-all" data-ps="src/pages/platform/security.astro:secondary-cta">
-          Découvrir l&#x27;architecture
-        </a>
-      </div>
-    </div>
-  </section>
-  {/* Hero Section */}
-  
-
-  {/* Bento Grid Architecture */}
   
 
   {/* AI & Trust Layer */}
-  
+  <section class="py-32 bg-white overflow-hidden" data-ps="src/pages/platform/security.astro:3bza51">
+    <div class="container mx-auto px-6" data-ps="src/pages/platform/security.astro:7i7n9w">
+      <div class="flex flex-col lg:flex-row items-center gap-20 mb-32" data-ps="src/pages/platform/security.astro:7i7n9x">
+        <div class="flex-1 max-w-xl" data-ps="src/pages/platform/security.astro:7i7naj">
+          <div class="inline-flex items-center gap-2 text-blue-600 font-bold tracking-widest uppercase text-xs mb-6" data-ps="src/pages/platform/security.astro:l9duqd">
+             <span class="w-8 h-px bg-blue-600" data-ps="src/pages/platform/security.astro:l9dul4"></span>
+             Détection des anomalies
+          </div>
+          <h2 class="text-5xl font-bold text-slate-900 mb-8 leading-[1.1]" data-ps="src/pages/platform/security.astro:36mq53">Chaque scan est un <span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul3">indicateur</span><br /><span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul3">de confiance.</span></h2>
+          <p class="text-xl text-slate-600 leading-relaxed mb-8" data-ps="src/pages/platform/security.astro:k89gy8">
+            TieBack
+            considère chaque scan comme un événement riche en données. Notre plateforme d&#x27;AI
+            s évalue en permanence les schémas — sauts de localisation, fréquences anormales ou réutilisation suspecte — pour mettre en évidence les contrefaçons potentielles en temps réel.
+          </p>
+          <ul class="space-y-4" data-ps="src/pages/platform/security.astro:ai-list">
+            {['Geo-velocity validation', 'Impossible scan frequency alerts', 'Cryptographic verification chaining'].map((item, __psIdx) => (
+              <li class="flex items-center gap-3 text-slate-700 font-medium" data-ps={`src/pages/platform/security.astro:2fntiy-${__psIdx}`}&gt;
+                <div class="w-1.5 h-1.5 rounded-full bg-blue-600" data-ps=<astro-expr id="21">`}&gt;</div>
+                {item}
+              
+            ))}
+          </ul>
+        </div>
+        <div class="flex-1 relative group" data-ps="src/pages/platform/security.astro:7i7nak">
+           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MTQzNzh8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmR8ZW58MHx8fHwxNzczMzM3MjgyfDA&ixlib=rb-4.1.0&q=80&w=1200&auto=format" sizes="(max-width: 768px) 100vw, 50vw" alt="dashboard" class="w-full h-full object-cover rounded-[2rem] shadow-2xl border border-slate-100 group-hover:scale-[1.02] transition-transform duration-500" loading="eager" fetchpriority="high" data-ps="src/pages/platform/security.astro:yj48j8" crossorigin="anonymous" />
+           <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 max-w-[200px] animate-float" data-ps="src/pages/platform/security.astro:floating-card">
+              <p class="text-xs font-bold text-slate-600 uppercase tracking-wider mb-2" data-ps="src/pages/platform/security.astro:7iydih">Statut en direct</p>
+              <div class="flex items-center gap-2 text-green-700 font-bold" data-ps="src/pages/platform/security.astro:6mqusm">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse" data-ps="src/pages/platform/security.astro:l9dul2"></span>
+                Surveillance active
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   {/* Compliance Standards */}
-  
+  <section class="py-32 bg-slate-900 relative overflow-hidden" data-ps="src/pages/platform/security.astro:3bza52">
+    <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/platform/security.astro:6mqusr">
+      <div class="flex flex-col lg:flex-row gap-20 items-start" data-ps="src/pages/platform/security.astro:6mqusl">
+        <div class="flex-1 sticky top-32" data-ps="src/pages/platform/security.astro:6mqusq">
+          <h2 class="text-5xl font-bold text-white mb-8 tracking-tight" data-ps="src/pages/platform/security.astro:36mq51">Préparez-vous à la <span class="text-blue-400" data-ps="src/pages/platform/security.astro:l9dul1">vague</span><br /><span class="text-blue-400" data-ps="src/pages/platform/security.astro:l9dul1">de réglementations.</span></h2>
+          <p class="text-xl text-slate-400 leading-relaxed mb-10" data-ps="src/pages/platform/security.astro:k89gy5">
+            Les obligations liées à l&#x27;ESPR de l&#x27;UE et au passeport numérique mondial sont en passe d&#x27;entrer en vigueur. TieBack vous offre la base conforme dont vous avez besoin pour vous lancer en toute confiance.
+          </p>
+          <div class="flex flex-wrap gap-4" data-ps="src/pages/platform/security.astro:badges">
+            <div class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-bold" data-ps="src/pages/platform/security.astro:6mqusk">Conforme à l&#x27;ESPR</div>
+            <div class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-bold" data-ps="src/pages/platform/security.astro:6mqusj">GS1 Native standard</div>
+            <div class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-bold" data-ps="src/pages/platform/security.astro:6mqusi">GDPR Sécurisé</div>
+          </div>
+        </div>
+        <div class="flex-1 w-full" data-ps="src/pages/platform/security.astro:6mqusp">
+          <div class="grid grid-cols-1 gap-4" data-ps="src/pages/platform/security.astro:checklist">
+            {complianceChecklist.map((item, __psIdx) => (
+              <div class="group flex items-center justify-between p-6 bg-slate-800/50 border border-slate-700/50 rounded-2xl hover:bg-slate-800 hover:border-slate-600 transition-all cursor-default" data-ps={`src/pages/platform/security.astro:6mquso-${__psIdx}`}&gt;
+                <span class="text-slate-300 font-medium text-lg" data-ps=<astro-expr id="25">`}&gt;{item}</span>
+                <div class="w-6 h-6 rounded-full bg-blue-600/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-700 group-hover:text-white transition-all" data-ps=<astro-expr id="27">`}&gt;
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    
+    {/* Background Pattern */}
+    <div class="absolute inset-0 z-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.15) 1px, transparent 0); background-size: 40px 40px;" data-ps="src/pages/platform/security.astro:grid"></div>
+  </section>
 
   {/* Bottom CTA */}
   <section id="request" class="py-24 bg-white" data-ps="src/pages/platform/security.astro:3bza53">
     <div class="container mx-auto px-6 text-center" data-ps="src/pages/platform/security.astro:6mqusm">
       <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-600 to-blue-800 rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl shadow-blue-200" data-ps="src/pages/platform/security.astro:6mqusl">
         <div class="relative z-10" data-ps="src/pages/platform/security.astro:6mqusk">
-          <h2 class="text-4xl md:text-6xl font-bold mb-8 balance tracking-tight" data-ps="src/pages/platform/security.astro:36mq50">Sécurisez dès aujourd&#x27;hui le cycle de vie de vos produits.</h2>
+          <h2 class="text-4xl md:text-6xl font-bold mb-8 balance tracking-tight" data-ps="src/pages/platform/security.astro:36mq50">Assurez dès aujourd&#x27;hui la sécurité du cycle de vie de vos produits.</h2>
           <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto" data-ps="src/pages/platform/security.astro:k89gy4">
             Rejoignez le groupe d&#x27;entreprises qui définit la prochaine génération de confiance dans les produits physiques et numériques.
           </p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-ps="src/pages/platform/security.astro:cta-buttons">
             <a href="#" class="px-10 py-5 bg-white text-blue-600 font-bold rounded-2xl hover:bg-blue-50 transition-all shadow-xl hover:translate-y-[-2px]" data-ps="src/pages/platform/security.astro:d4bk9a">
-              Demander un accès complet
+              Demandez un accès complet
             </a>
             
             <a href="#" class="text-blue-50 font-bold hover:text-white transition-colors" data-ps="src/pages/platform/security.astro:talk-sales">
-              Parler à des experts en sécurité →
+              Discutez avec des experts en sécurité →
             </a>
           </div>
         </div>
@@ -694,7 +679,7 @@ e 1.3) »,
       </div>
     </div>
   </section>
-</BaseLayout>
+
 
 <style>
   .balance &lt;astro-expr id=&quot;31&quot;&gt;&lt;/astro-expr&gt;
@@ -704,9 +689,8 @@ e 1.3) »,
   .animate-float &lt;astro-expr id=&quot;34&quot;&gt;&lt;/astro-expr&gt;
 </style>
 ,---
-import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
-import{ SITE }
-from &#x27;@/config/site&#x27;;
+import BaseLayout depuis &#x27;@/layouts/BaseLayout.astro&#x27;;
+import { SITE } depuis &#x27;@/config/site&#x27;;
 
 const architectureFeatures = [
   {
@@ -735,23 +719,17 @@ const architectureFeatures = [
 ];
 
 const complianceChecklist = [
-  « Conforme au règlementEU <keep>ESPR</keep>
-(règlement sur l&#x27;écoconception des produits durables) »,
-  « Conformité à la norme de résolutionGS1 Digital Link
-»,
-  « Traitement et localisation des données conformes à la normeGDPR
-»,
-  « Contrôles de sécurité alignés sur la norme SOC2 Type II »,
-  « Données chiffrées au repos et en transit (AES-256/TLS
-e 1.3) »,
+  « Conforme au règlement européen sur l&#x27;ESPR»,
+  « Conforme à la norme GS1» sur la résolution des liens numériques,
+  « Traitement et résidence des données conformes à la norme GDPR»,
+  « Contrôles de sécurité alignés sur la norme SOC2 Type II»,
+  « Données chiffrées au repos et en transit (AES-256/TLS 1.3)»,
   « Analyse automatisée et continue des vulnérabilités »,
   « Journaux d&#x27;audit complets pour toutes les actions administratives »
 ];
 ---
-,<BaseLayout 
-  title="Security & Trust | TieBack" 
-  description="Enterprise-grade security and digital identity trust for physical products. Built for EU <keep>ESPR</keep> readiness and global scale."
->
+,<baselayout title="Security &amp; Trust | &lt;keep&gt;TieBack&lt;/keep&gt;" description="Enterprise-grade security and digital identity trust for physical products. Built for EU &lt;keep&gt;ESPR&lt;/keep&gt; readiness and global scale.">
+  {/* Hero Section */}
   <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white overflow-hidden" data-ps="src/pages/platform/security.astro:3bza4e">
     <div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" data-ps="src/pages/platform/security.astro:hero-bg">
       <img crossorigin="anonymous" src="https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1200&q=80" srcset="https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1664526936810-ec0856d31b92?auto=format&w=1920&q=80 1920w" sizes="100vw" alt="Security abstract background" class="w-full h-full object-cover" data-ps="src/pages/platform/security.astro:yj48j6" />
@@ -760,11 +738,11 @@ e 1.3) »,
     <div class="container mx-auto px-6 text-center max-w-4xl relative z-10" data-ps="src/pages/platform/security.astro:7i7n8w">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-bold mb-8 animate-fade-in" data-ps="src/pages/platform/security.astro:badge">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-        Sécurité d&#x27;entreprise
+        De niveau entreprise
       </div>
       <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-8 balance" data-ps="src/pages/platform/security.astro:bhs72l">
-        Sécurité d&#x27;entreprise. <span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul5">Conçu</span>
-        <br /><span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul5">pour la sérénité.</span>
+        Sécurité d&#x27;entreprise. <span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul5">Conçue</span><br />
+        <span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul5">pour la sérénité.</span>
       </h1>
       <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto" data-ps="src/pages/platform/security.astro:k89gyz">
         TieBack
@@ -780,13 +758,9 @@ e 1.3) »,
         </a>
       </div>
     </div>
-  </section>
-  {/* Hero Section */}
-</BaseLayout>
-<BaseLayout 
-  title="Security & Trust | TieBack" 
-  description="Enterprise-grade security and digital identity trust for physical products. Built for EU <keep>ESPR</keep> readiness and global scale."
->
+  </section></baselayout>
+
+  {/* Bento Grid Architecture */}
   <section id="architecture" class="py-24 bg-slate-50 border-y border-slate-200 relative overflow-hidden" data-ps="src/pages/platform/security.astro:3bza4f">
     <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/platform/security.astro:7i7n8y">
       <div class="mb-16 text-center md:text-left max-w-2xl" data-ps="src/pages/platform/security.astro:7i7n8z">
@@ -816,7 +790,7 @@ e 1.3) »,
           </fragment></div>
           <h3 class="text-2xl font-bold text-slate-900 mb-4" data-ps="src/pages/platform/security.astro:hv1ndc">{architectureFeatures[1].title}</h3>
           <p class="text-slate-600 leading-relaxed" data-ps="src/pages/platform/security.astro:k89gyb">{architectureFeatures[1].description}</p>
-        </div>
+        </div></div></div></section>
 
         <div class="md:col-span-4 p-10 bg-white border border-slate-200 rounded-3xl flex flex-col group hover:border-blue-400 transition-all hover:shadow-xl hover:shadow-blue-50/50" data-ps="src/pages/platform/security.astro:7i7n9r">
           <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-8 group-hover:bg-blue-700 group-hover:text-white transition-all duration-300" data-ps="src/pages/platform/security.astro:7i7n9s">
@@ -838,12 +812,11 @@ e 1.3) »,
              <img crossorigin="anonymous" src="https://images.unsplash.com/photo-1586126530777-eefae13ebe34?auto=format&w=600&q=80" srcset="https://images.unsplash.com/photo-1586126530777-eefae13ebe34?auto=format&w=200&auto=format&q=80 200w, https://images.unsplash.com/photo-1586126530777-eefae13ebe34?auto=format&w=400&auto=format&q=80 400w, https://images.unsplash.com/photo-1586126530777-eefae13ebe34?auto=format&w=600&auto=format&q=80 600w" sizes="(max-width: 768px) 100vw, 33vw" alt="Security hardware" class="w-full h-48 object-cover rounded-2xl" loading="lazy" data-ps="src/pages/platform/security.astro:yj48j7" />
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  {/* Bento Grid Architecture */}
+      
+    
   
+
+  {/* AI & Trust Layer */}
   <section class="py-32 bg-white overflow-hidden" data-ps="src/pages/platform/security.astro:3bza51">
     <div class="container mx-auto px-6" data-ps="src/pages/platform/security.astro:7i7n9w">
       <div class="flex flex-col lg:flex-row items-center gap-20 mb-32" data-ps="src/pages/platform/security.astro:7i7n9x">
@@ -852,10 +825,10 @@ e 1.3) »,
              <span class="w-8 h-px bg-blue-600" data-ps="src/pages/platform/security.astro:l9dul4"></span>
              Détection des anomalies
           </div>
-          <h2 class="text-5xl font-bold text-slate-900 mb-8 leading-[1.1]" data-ps="src/pages/platform/security.astro:36mq53">Chaque analyse est un <span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul3">signal</span><br /><span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul3">de confiance.</span></h2>
+          <h2 class="text-5xl font-bold text-slate-900 mb-8 leading-[1.1]" data-ps="src/pages/platform/security.astro:36mq53">Chaque scan est un <span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul3">indicateur</span><br /><span class="text-blue-600" data-ps="src/pages/platform/security.astro:l9dul3">de confiance.</span></h2>
           <p class="text-xl text-slate-600 leading-relaxed mb-8" data-ps="src/pages/platform/security.astro:k89gy8">
             TieBack
-            traite chaque analyse comme un événement riche en données. Notre plateforme d&#x27;AI
+            considère chaque scan comme un événement riche en données. Notre plateforme d&#x27;AI
             s évalue en permanence les schémas — sauts de localisation, fréquences anormales ou réutilisation suspecte — pour mettre en évidence les contrefaçons potentielles en temps réel.
           </p>
           <ul class="space-y-4" data-ps="src/pages/platform/security.astro:ai-list">
@@ -881,26 +854,18 @@ e 1.3) »,
     </div>
   </section>
 
-  {/* AI & Trust Layer */}
-</BaseLayout>
-<BaseLayout 
-  title="Security & Trust | TieBack" 
-  description="Enterprise-grade security and digital identity trust for physical products. Built for EU <keep>ESPR</keep> readiness and global scale."
->
+  {/* Compliance Standards */}
   <section class="py-32 bg-slate-900 relative overflow-hidden" data-ps="src/pages/platform/security.astro:3bza52">
     <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/platform/security.astro:6mqusr">
       <div class="flex flex-col lg:flex-row gap-20 items-start" data-ps="src/pages/platform/security.astro:6mqusl">
         <div class="flex-1 sticky top-32" data-ps="src/pages/platform/security.astro:6mqusq">
-          <h2 class="text-5xl font-bold text-white mb-8 tracking-tight" data-ps="src/pages/platform/security.astro:36mq51">Prêt pour la <span class="text-blue-400" data-ps="src/pages/platform/security.astro:l9dul1">vague</span><br /><span class="text-blue-400" data-ps="src/pages/platform/security.astro:l9dul1">réglementaire.</span></h2>
+          <h2 class="text-5xl font-bold text-white mb-8 tracking-tight" data-ps="src/pages/platform/security.astro:36mq51">Préparez-vous à la <span class="text-blue-400" data-ps="src/pages/platform/security.astro:l9dul1">vague</span><br /><span class="text-blue-400" data-ps="src/pages/platform/security.astro:l9dul1">de réglementations.</span></h2>
           <p class="text-xl text-slate-400 leading-relaxed mb-10" data-ps="src/pages/platform/security.astro:k89gy5">
-            EU <keep>ESPR</keep>
-            Les obligations mondiales en matière d&#x27;Digital Product Passport
-            sont en passe d&#x27;entrer en vigueur.TieBack
-            vous offre la base conforme dont vous avez besoin pour vous lancer en toute confiance.
+            Les obligations liées à l&#x27;ESPR de l&#x27;UE et au passeport numérique mondial sont en passe d&#x27;entrer en vigueur. TieBack vous offre la base conforme dont vous avez besoin pour vous lancer en toute confiance.
           </p>
           <div class="flex flex-wrap gap-4" data-ps="src/pages/platform/security.astro:badges">
-            <div class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-bold" data-ps="src/pages/platform/security.astro:6mqusk">EU <keep>ESPR</keep> Conforme</div>
-            <div class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-bold" data-ps="src/pages/platform/security.astro:6mqusj">Native à la norme GS1</div>
+            <div class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-bold" data-ps="src/pages/platform/security.astro:6mqusk">Conforme à l&#x27;ESPR</div>
+            <div class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-bold" data-ps="src/pages/platform/security.astro:6mqusj">GS1 Native standard</div>
             <div class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-bold" data-ps="src/pages/platform/security.astro:6mqusi">GDPR Sécurisé</div>
           </div>
         </div>
@@ -922,25 +887,22 @@ e 1.3) »,
     <div class="absolute inset-0 z-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.15) 1px, transparent 0); background-size: 40px 40px;" data-ps="src/pages/platform/security.astro:grid"></div>
   </section>
 
-  {/* Compliance Standards */}
-  
-
   {/* Bottom CTA */}
   <section id="request" class="py-24 bg-white" data-ps="src/pages/platform/security.astro:3bza53">
     <div class="container mx-auto px-6 text-center" data-ps="src/pages/platform/security.astro:6mqusm">
       <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-600 to-blue-800 rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl shadow-blue-200" data-ps="src/pages/platform/security.astro:6mqusl">
         <div class="relative z-10" data-ps="src/pages/platform/security.astro:6mqusk">
-          <h2 class="text-4xl md:text-6xl font-bold mb-8 balance tracking-tight" data-ps="src/pages/platform/security.astro:36mq50">Sécurisez dès aujourd&#x27;hui le cycle de vie de vos produits.</h2>
+          <h2 class="text-4xl md:text-6xl font-bold mb-8 balance tracking-tight" data-ps="src/pages/platform/security.astro:36mq50">Assurez dès aujourd&#x27;hui la sécurité du cycle de vie de vos produits.</h2>
           <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto" data-ps="src/pages/platform/security.astro:k89gy4">
-            Rejoignez le groupe d&#x27;entreprises qui définit la prochaine génération de confiance dans les produits physiques et numériques.
+            Rejoignez le groupe d&#x27;entreprises qui définissent la prochaine génération de confiance dans les produits physiques et numériques.
           </p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-ps="src/pages/platform/security.astro:cta-buttons">
             <a href="#" class="px-10 py-5 bg-white text-blue-600 font-bold rounded-2xl hover:bg-blue-50 transition-all shadow-xl hover:translate-y-[-2px]" data-ps="src/pages/platform/security.astro:d4bk9a">
-              Demander un accès complet
+              Demandez un accès complet
             </a>
             
             <a href="#" class="text-blue-50 font-bold hover:text-white transition-colors" data-ps="src/pages/platform/security.astro:talk-sales">
-              Parler à des experts en sécurité →
+              Discutez avec des experts en sécurité →
             </a>
           </div>
         </div>
@@ -950,7 +912,7 @@ e 1.3) »,
       </div>
     </div>
   </section>
-</BaseLayout>
+
 
 <style>
   .balance &lt;astro-expr id=&quot;66&quot;&gt;&lt;/astro-expr&gt;
