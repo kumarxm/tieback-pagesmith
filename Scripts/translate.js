@@ -12,21 +12,48 @@ const SOURCE_DIRS = [resolve(__dirname, '../src/pages'), resolve(__dirname, '../
 const DEEPL_LANG_MAP = { de: 'de', fr: 'fr' };
 const NO_TRANSLATE_TERMS = ['TieBack', 'GS1', 'DPP', 'ESPR', 'GDPR', 'CBAM', 'EPCIS', 'GTIN', 'B2B', 'AI', 'FAQ'];
 
+/**
+ * Decodes HTML entities (like &#x27;) back into plain characters
+ */
+function decodeHtmlEntities(text) {
+  return text
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&#x27;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
+}
+
+/**
+ * Strict splitting of Astro files to ensure frontmatter is NEVER translated.
+ */
 function parseAstro(content) {
-  const match = content.match(/^(---\s*[\s\S]*?---\s*)\n([\s\S]*)$/);
-  return match ? { frontmatter: match, body: match } : { frontmatter: '', body: content };
+  const parts = content.split('---');
+  if (parts.length >= 3) {
+    // parts is usually empty, parts is the frontmatter, parts[2+] is the body
+    const frontmatter = `---${parts}---`;
+    const body = parts.slice(2).join('---');
+    return { frontmatter, body };
+  }
+  return { frontmatter: '', body: content };
 }
 
 function protectAstro(text) {
   const exprs = [];
-  // Ensure we are working with a string and wrap in a root tag to satisfy DeepL's 'text without parent' rule
   let protectedText = `<translation-root>${String(text || '')}</translation-root>`;
   
-  // 1. Hide <script> blocks
-  protectedText = protectedText.replace(/<script[\s\S]*?<\/script>/gi, m => { exprs.push(m); return `<astro-expr id="${exprs.length-1}"></astro-expr>`; });
+  // 1. Hide <script> and <style> blocks entirely
+  protectedText = protectedText.replace(/<(script|style)[\s\S]*?<\/\1>/gi, m => { 
+    exprs.push(m); 
+    return `<astro-expr id="${exprs.length-1}"></astro-expr>`; 
+  });
   
   // 2. Hide Astro { expressions }
-  protectedText = protectedText.replace(/\{[\s\S]*?\}/g, m => { exprs.push(m); return `<astro-expr id="${exprs.length-1}"></astro-expr>`; });
+  protectedText = protectedText.replace(/\{[\s\S]*?\}/g, m => { 
+    exprs.push(m); 
+    return `<astro-expr id="${exprs.length-1}"></astro-expr>`; 
+  });
   
   // 3. Hide Glossary Terms
   const sorted = [...NO_TRANSLATE_TERMS].sort((a, b) => b.length - a.length);
@@ -38,19 +65,25 @@ function protectAstro(text) {
 }
 
 function restoreAstro(text, exprs) {
-  // Remove the root tag and glossary tags
+  // 1. Remove the root wrapper
   let r = text.replace(/<\/?translation-root>/g, '');
+  
+  // 2. IMPORTANT: Decode HTML entities returned by DeepL before restoring code
+  r = decodeHtmlEntities(r);
+
+  // 3. Remove glossary protection
   r = r.replace(/<keep>(.*?)<\/keep>/g, '$1');
   
+  // 4. Restore expressions (using flexible regex to account for any DeepL-added spaces)
   exprs.forEach((e, i) => {
-    const regex = new RegExp(`<astro-expr id="${i}"><\\/astro-expr>`, 'g');
+    const regex = new RegExp(`<astro-expr\\s+id=["']?${i}["']?\\s*><\\/astro-expr>`, 'gi');
     r = r.replace(regex, e);
   });
   return r;
 }
 
 async function safeTranslate(translator, text, targetLang) {
-  // If the text is massive (like FAQ), DeepL prefers it in smaller bites
+  // If the text is massive, translate in chunks
   if (text.length < 5000) {
     const res = await translator.translateText(text, 'en', targetLang, { 
         tagHandling: 'html', 
@@ -63,9 +96,8 @@ async function safeTranslate(translator, text, targetLang) {
   const translatedChunks = [];
   for (const chunk of chunks) {
     if (chunk.trim()) {
-      // Wrap chunk in root tag just in case splitting orphaned some text
-      const wrappedChunk = `<translation-root>${chunk}</translation-root>`;
-      const res = await translator.translateText(wrappedChunk, 'en', targetLang, { 
+      const wrapped = `<translation-root>${chunk}</translation-root>`;
+      const res = await translator.translateText(wrapped, 'en', targetLang, { 
           tagHandling: 'html', 
           ignoreTags: ['keep', 'astro-expr'] 
       });
@@ -111,6 +143,7 @@ async function main() {
           const { frontmatter, body } = parseAstro(content);
           const { protectedText, exprs } = protectAstro(body);
           const translatedBody = await safeTranslate(translator, protectedText, DEEPL_LANG_MAP[lang]);
+          // Combine the UNTOUCHED frontmatter with the restored body
           final = `${frontmatter}\n${restoreAstro(translatedBody, exprs)}`;
         } else {
           const p = matter(content);
