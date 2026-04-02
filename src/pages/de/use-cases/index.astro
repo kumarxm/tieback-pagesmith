@@ -1,4 +1,4 @@
----,
+---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const useCases = [
@@ -53,61 +53,8 @@ const useCases = [
     url: '/use-cases/suppliers-upstream-manufacturers/'
   }
 ];
-,
+---
 
-<BaseLayout
-  title="All Use Cases | TieBack"
-  description="Explore how TieBack solves complex compliance and supply chain challenges across industries."
->
-  <!-- Hero Section -->
-  <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-950" data-ps="src/pages/use-cases/index.astro:ygdblj">
-    <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 z-0" data-ps="src/pages/use-cases/index.astro:77u98t">
-      <img crossorigin="anonymous"
-        src="https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1200&q=80"
-        srcset="https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1920&q=80 1920w"
-        sizes="100vw"
-        alt="Network background"
-        class="w-full h-full object-cover opacity-20"
-        loading="eager" fetchpriority="high" data-ps="src/pages/use-cases/index.astro:d5ywv9" />
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/40" data-ps="src/pages/use-cases/index.astro:77u98s"></div>
-    </div>
-
-    <!-- Content -->
-    <div class="relative z-10 max-w-7xl mx-auto px-6" data-ps="src/pages/use-cases/index.astro:77u98r">
-      <div class="max-w-3xl" data-ps="src/pages/use-cases/index.astro:77u98q">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0080FF]/10 text-[#0080FF] text-sm font-semibold tracking-wide border border-[#0080FF]/20 mb-6" data-ps="src/pages/use-cases/index.astro:77u98p">
-          Explore Use Cases
-        </div>
-        <h1 class="text-4xl lg:text-6xl font-bold tracking-tight text-white mb-6" data-ps="src/pages/use-cases/index.astro:2b5i26">
-          Solve Complex <br/>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400" data-ps="src/pages/use-cases/index.astro:3xd31y">Supply Chain Challenges</span>
-        </h1>
-        <p class="text-lg text-slate-300 leading-relaxed mb-10 max-w-2xl" data-ps="src/pages/use-cases/index.astro:tmjfgv">
-          From EU DPP readiness to product authentication and circular economy enablement, TieBack gives you the structured framework to run compliance and drive growth.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Use Cases Grid -->
-  <section class="py-24 bg-slate-950 relative border-t border-slate-900" data-ps="src/pages/use-cases/index.astro:ygdbli">
-    <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/use-cases/index.astro:77u98o">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-ps="src/pages/use-cases/index.astro:77u98n">
-        {useCases.map(useCase => (
-          <a href={useCase.url} class="group bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:bg-slate-800/80 hover:border-slate-700 transition-all flex flex-col h-full" data-ps="src/pages/use-cases/index.astro:milir3">
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#0080FF] transition-colors" data-ps="src/pages/use-cases/index.astro:r1occz">{useCase.title}</h3>
-            <p class="text-slate-400 leading-relaxed mb-8 flex-grow" data-ps="src/pages/use-cases/index.astro:tmjfgu">{useCase.description}</p>
-            <div class="flex items-center text-[#0080FF] text-sm font-semibold" data-ps="src/pages/use-cases/index.astro:77u98m">
-              Explore use case
-              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-</BaseLayout>---
 
 
 <BaseLayout
@@ -154,15 +101,14 @@ const useCases = [
     <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/use-cases/index.astro:77u98o">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-ps="src/pages/use-cases/index.astro:77u98n">
         {useCases.map(useCase => (
-          <a href={useCase.url}
-        class="group bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:bg-slate-800/80 hover:border-slate-700 transition-all flex flex-col h-full" data-ps="src/pages/use-cases/index.astro:milir3">
+          <a href={useCase.url} class="group bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:bg-slate-800/80 hover:border-slate-700 transition-all flex flex-col h-full" data-ps="src/pages/use-cases/index.astro:milir3">
             <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#0080FF] transition-colors" data-ps="src/pages/use-cases/index.astro:r1occz">{useCase.title}</h3>
             <p class="text-slate-400 leading-relaxed mb-8 flex-grow" data-ps="src/pages/use-cases/index.astro:tmjfgu">{useCase.description}</p>
             <div class="flex items-center text-[#0080FF] text-sm font-semibold" data-ps="src/pages/use-cases/index.astro:77u98m">
-              Anwendungsfälle entdecken
+              Explore use case
               <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </div>
-          
+          </a>
         ))}
       </div>
     </div>

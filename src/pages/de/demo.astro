@@ -1,70 +1,14 @@
----,
+---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CalendlyEmbed from '@/components/integrations/CalendlyEmbed.astro';
 
 const title = "Book a Demo | TieBack";
 const description = "Schedule a personalized demo of the TieBack platform and discover how our EU DPP and compliance solutions can benefit your business.";
-,
-
-<BaseLayout title={title} description={description}>
-  <section class="relative pt-32 pb-24 overflow-hidden bg-slate-950" data-ps="src/pages/demo.astro:sbn3g5">
-    <!-- Background Accents -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none" data-ps="src/pages/demo.astro:6omkh0">
-      <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#0080FF]/10 blur-[120px] rounded-full" data-ps="src/pages/demo.astro:6omkh1"></div>
-      <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#0080FF]/5 blur-[120px] rounded-full" data-ps="src/pages/demo.astro:6omkh2"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 relative z-10" data-ps="src/pages/demo.astro:ftnevy">
-      <div class="max-w-3xl mx-auto text-center mb-16 reveal" data-ps="src/pages/demo.astro:ftnevx">
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight" data-ps="src/pages/demo.astro:4uaxeu">
-          Experience <span class="text-[#0080FF]" data-ps="src/pages/demo.astro:toubab">TieBack</span> in Action
-        </h1>
-        <p class="text-xl text-slate-400 leading-relaxed" data-ps="src/pages/demo.astro:yye3ek">
-          Schedule a 1-on-1 walkthrough with our product experts. See how we can help you streamline compliance, 
-          secure your supply chain, and launch your Digital Product Passports.
-        </p>
-      </div>
-
-      <div class="bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-4 md:p-8 reveal reveal-delay-1 shadow-2xl min-h-[700px]" data-ps="src/pages/demo.astro:ftnevw">
-        <CalendlyEmbed height="800px" />
-      </div>
-
-      <div class="mt-16 grid md:grid-cols-3 gap-8 reveal reveal-delay-2" data-ps="src/pages/demo.astro:ftnevv">
-        <div class="p-6 bg-slate-900/30 border border-slate-800/50 rounded-xl" data-ps="src/pages/demo.astro:ftnevu">
-          <div class="w-10 h-10 bg-[#0080FF]/10 rounded-lg flex items-center justify-center mb-4" data-ps="src/pages/demo.astro:ftnevt">
-            <svg class="w-6 h-6 text-[#0080FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2" data-ps="src/pages/demo.astro:y74ru1">Custom Walkthrough</h3>
-          <p class="text-slate-400 text-sm" data-ps="src/pages/demo.astro:yye3ej">See how TieBack fits your specific industry and technical requirements.</p>
-        </div>
-        <div class="p-6 bg-slate-900/30 border border-slate-800/50 rounded-xl" data-ps="src/pages/demo.astro:ftnevs">
-          <div class="w-10 h-10 bg-[#0080FF]/10 rounded-lg flex items-center justify-center mb-4" data-ps="src/pages/demo.astro:ftnevr">
-            <svg class="w-6 h-6 text-[#0080FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2" data-ps="src/pages/demo.astro:y74ru0">Q&A with Experts</h3>
-          <p class="text-slate-400 text-sm" data-ps="src/pages/demo.astro:yye3dx">Get answers to your technical compliance and implementation questions.</p>
-        </div>
-        <div class="p-6 bg-slate-900/30 border border-slate-800/50 rounded-xl" data-ps="src/pages/demo.astro:ftnevq">
-          <div class="w-10 h-10 bg-[#0080FF]/10 rounded-lg flex items-center justify-center mb-4" data-ps="src/pages/demo.astro:ftnevp">
-            <svg class="w-6 h-6 text-[#0080FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2" data-ps="src/pages/demo.astro:y74rtz">Platform Strategy</h3>
-          <p class="text-slate-400 text-sm" data-ps="src/pages/demo.astro:yye3dw">Discuss the best roadmap for integrating Digital Product Passports into your brand.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</BaseLayout>
 ---
 
 
-<BaseLayout title=<astro-expr id="0"> Beschreibung= {description}>
+
+<BaseLayout title={title} description={description}>
   <section class="relative pt-32 pb-24 overflow-hidden bg-slate-950" data-ps="src/pages/demo.astro:sbn3g5">
     <!-- Background Accents -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none" data-ps="src/pages/demo.astro:6omkh0">
@@ -95,7 +39,7 @@ const description = "Schedule a personalized demo of the TieBack platform and di
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-white mb-2" data-ps="src/pages/demo.astro:y74ru1">Individuelle Vorführung</h3>
-          <p class="text-slate-400 text-sm" data-ps="src/pages/demo.astro:yye3ej">Erfahren Sie, wie TieBack zu Ihren spezifischen Branchen- und technischen Anforderungen passt.</p>
+          <p class="text-slate-400 text-sm" data-ps="src/pages/demo.astro:yye3ej">Erfahren Sie, wie „TieBack“ zu Ihren spezifischen Branchen- und technischen Anforderungen passt.</p>
         </div>
         <div class="p-6 bg-slate-900/30 border border-slate-800/50 rounded-xl" data-ps="src/pages/demo.astro:ftnevs">
           <div class="w-10 h-10 bg-[#0080FF]/10 rounded-lg flex items-center justify-center mb-4" data-ps="src/pages/demo.astro:ftnevr">
@@ -119,3 +63,4 @@ const description = "Schedule a personalized demo of the TieBack platform and di
     </div>
   </section>
 </BaseLayout>
+

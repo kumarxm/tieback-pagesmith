@@ -1,4 +1,4 @@
----,
+---
 export const prerender = false;
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -46,7 +46,9 @@ try {
 if (!ticket) {
   return Astro.redirect('/404');
 }
-,
+---
+
+
 
 <BaseLayout title={`${ticket.ticket_number} - Support | TieBack`} description="Ticket Details">
   <div class="max-w-4xl mx-auto px-6 py-16" data-ps="src/pages/support/[id].astro:kvyu08">
@@ -56,7 +58,7 @@ if (!ticket) {
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          Back to Tickets
+          Retour à la billetterie
         </a>
         <div class="flex items-center gap-4" data-ps="src/pages/support/[id].astro:m8m8yq">
           <h1 class="text-3xl font-bold text-white" data-ps="src/pages/support/[id].astro:bx7srl">{ticket.subject}</h1>
@@ -106,66 +108,4 @@ if (!ticket) {
       </div>
     )}
   </div>
-</BaseLayout>---
-
-
-<BaseLayout title=<astro-expr id="0"> - Assistance | TieBack`} description="Détails du ticket">
-  <div class="max-w-4xl mx-auto px-6 py-16" data-ps="src/pages/support/[id].astro:kvyu08">
-    <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4" data-ps="src/pages/support/[id].astro:kvyu09">
-      <div data-ps="src/pages/support/[id].astro:kvyu0a">
-        <a href="/support" class="text-slate-400 hover:text-white flex items-center gap-2 text-sm font-medium mb-4 transition-colors" data-ps="src/pages/support/[id].astro:lw28ox">
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          Retour aux tickets
-        </a>
-        <div class="flex items-center gap-4" data-ps="src/pages/support/[id].astro:m8m8yq">
-          <h1 class="text-3xl font-bold text-white" data-ps="src/pages/support/[id].astro:bx7srl">{ticket.subject}</h1>
-          <span class=<astro-expr id="2">
-          `} data-ps="src/pages/support/[id].astro:ho2cee">
-            {ticket.status}
-          </span>
-        </div>
-        <p class="text-slate-400 mt-2 font-mono text-sm" data-ps="src/pages/support/[id].astro:es4bz7">{ticket.ticket_number}</p>
-      </div>
-    </div>
-
-    <div class="space-y-6 mb-8" data-ps="src/pages/support/[id].astro:m8m8yp">
-      {messages.map((msg, __psIdx) => (
-        <div class={`p-6 rounded-2xl border ${msg.sender === 'User' ? 'bg-slate-900 border-slate-800' : 'bg-blue-900/10 border-blue-900/30'}
-      `} data-ps={`src/pages/support/[id].astro:m8m8yo-${__psIdx}
-      `}>
-          <div class="flex items-center justify-between mb-4" data-ps=<astro-expr id="7">`}>
-            <div class="flex items-center gap-3" data-ps=<astro-expr id="8">`}>
-              <div class=<astro-expr id="9">
-              `} data-ps={`src/pages/support/[id].astro:m8m8yl-${__psIdx}
-              `}>
-                {msg.sender === 'User' ? 'U' : 'TB'}
-              </div>
-              <span class="font-medium text-white" data-ps=<astro-expr id="12">`}>{msg.sender === 'User' ? 'You' : 'TieBack Support'}</span>
-            </div>
-            <span class="text-sm text-slate-500" data-ps=<astro-expr id="14">`}>{new Date(msg.created_at).toLocaleString()}</span>
-          </div>
-          <div class="text-slate-300 whitespace-pre-wrap" data-ps=<astro-expr id="16">`}>{msg.message}</div>
-        </div>
-      ))}
-    </div>
-
-    {ticket.status !== 'Closed' && (
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl" data-ps="src/pages/support/[id].astro:m8m8yj">
-        <h3 class="text-lg font-bold text-white mb-4" data-ps="src/pages/support/[id].astro:tr2ese">Reply to Ticket</h3>
-        {error && <div class="bg-red-500/10 border border-red-500/50 text-red-400 px-4 py-3 rounded-lg mb-4" data-ps="src/pages/support/[id].astro:m8m8yi">{error}}
-        <form method="POST" class="space-y-4">
-          <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."
-            class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl focus:ring-2 focus:ring-[#0080FF] focus:border-transparent text-white"></textarea>
-          <div class="flex justify-end" data-ps="src/pages/support/[id].astro:m8m8yh">
-            <button type="submit"
-              class="px-6 py-2 bg-[#0080FF] hover:bg-[#0070E0] text-white rounded-xl font-medium transition-colors" data-ps="src/pages/support/[id].astro:oamt0j">
-              Envoyer une réponse
-            </button>
-          </div>
-        </form>
-      
-    )}
-  
 </BaseLayout>

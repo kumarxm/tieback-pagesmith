@@ -1,4 +1,4 @@
----,
+---
 export const prerender = false;
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -39,90 +39,11 @@ if (Astro.request.method === 'POST') {
     }
   }
 }
-,
+---
 
-<BaseLayout title="Support | TieBack" description="Contact TieBack Support">
-  <div class="max-w-7xl mx-auto px-6 py-16" data-ps="src/pages/support/index.astro:526urk">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12" data-ps="src/pages/support/index.astro:526url">
-      <div class="lg:col-span-2 space-y-12" data-ps="src/pages/support/index.astro:526urm">
-        <section class="bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-xl" data-ps="src/pages/support/index.astro:me8vdd">
-          <h1 class="text-2xl font-bold text-white mb-6" data-ps="src/pages/support/index.astro:jjvppc">Contact Support</h1>
-          
-          {error && <div class="bg-red-500/10 border border-red-500/50 text-red-400 px-4 py-3 rounded-lg mb-6" data-ps="src/pages/support/index.astro:526urn">{error}</div>}
-          {success && <div class="bg-green-500/10 border border-green-500/50 text-green-400 px-4 py-3 rounded-lg mb-6" data-ps="src/pages/support/index.astro:526uro">Your ticket has been submitted successfully!</div>}
-          
-          <form method="POST" class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-ps="src/pages/support/index.astro:526urp">
-              <div data-ps="src/pages/support/index.astro:526urq">
-                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address *</label>
-                <input type="email" id="email" name="email" required
-                  class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl focus:ring-2 focus:ring-[#0080FF] focus:border-transparent text-white" />
-              </div>
-              <div data-ps="src/pages/support/index.astro:526urr">
-                <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject *</label>
-                <input type="text" id="subject" name="subject" required
-                  class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl focus:ring-2 focus:ring-[#0080FF] focus:border-transparent text-white" />
-              </div>
-            </div>
-            <div data-ps="src/pages/support/index.astro:526urs">
-              <label for="message" class="block text-sm font-medium text-slate-300 mb-2">How can we help? *</label>
-              <textarea id="message" name="message" rows="5" required
-                class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl focus:ring-2 focus:ring-[#0080FF] focus:border-transparent text-white"></textarea>
-            </div>
-            <button type="submit"
-              class="w-full md:w-auto px-8 py-3 bg-[#0080FF] hover:bg-[#0070E0] text-white rounded-xl font-medium transition-colors" data-ps="src/pages/support/index.astro:x0fy74">
-              Submit Ticket
-            </button>
-          </form>
-        </section>
-      </div>
 
-      <div class="lg:col-span-1" data-ps="src/pages/support/index.astro:pd8mlb">
-         <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 sticky top-32 shadow-xl" data-ps="src/pages/support/index.astro:pd8mlc">
-            <h3 class="text-xl font-bold text-white mb-6" data-ps="src/pages/support/index.astro:m4ehum">We're here for you</h3>
-            
-            <div class="space-y-6" data-ps="src/pages/support/index.astro:pd8mld">
-              <div class="flex items-start gap-4" data-ps="src/pages/support/index.astro:pd8mle">
-                <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 border border-slate-700" data-ps="src/pages/support/index.astro:pd8mlf">
-                  <svg class="w-5 h-5 text-[#0080FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div data-ps="src/pages/support/index.astro:pd8mlg">
-                  <p class="text-sm text-slate-400 mb-1" data-ps="src/pages/support/index.astro:orqn8h">Email Support</p>
-                  <a href="mailto:support@tieback.io" class="text-white font-medium hover:text-[#0080FF] transition-colors" data-ps="src/pages/support/index.astro:hnsqja">support@tieback.io</a>
-                </div>
-              </div>
 
-              <div class="flex items-start gap-4" data-ps="src/pages/support/index.astro:pd8mlh">
-                <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 border border-slate-700" data-ps="src/pages/support/index.astro:pd8mli">
-                  <svg class="w-5 h-5 text-[#0080FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div data-ps="src/pages/support/index.astro:pd8mlj">
-                  <p class="text-sm text-slate-400 mb-1" data-ps="src/pages/support/index.astro:orqn8g">Response Time</p>
-                  <p class="text-white font-medium" data-ps="src/pages/support/index.astro:orqn8f">Personal reply within 24 hours</p>
-                </div>
-              </div>
-            </div>
 
-            <div class="mt-8 bg-slate-950/50 rounded-xl p-6 border border-slate-800" data-ps="src/pages/support/index.astro:pd8mlk">
-               <h4 class="font-medium text-white mb-3 flex items-center gap-2" data-ps="src/pages/support/index.astro:7fzkn1">
-                 <svg class="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                 </svg>
-                 Our promise
-               </h4>
-               <p class="text-sm text-slate-400 leading-relaxed" data-ps="src/pages/support/index.astro:orqn8e">
-                 Every message is read and answered by a real person from our team. We want you to succeed with tieback.io
-               </p>
-            </div>
-         </div>
-      </div>
-    </div>
-  </div>
-</BaseLayout>---
 
 
 <baselayout title="Support | TieBack" description="Contact TieBack Support">
@@ -132,7 +53,7 @@ if (Astro.request.method === 'POST') {
         <section class="bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-xl" data-ps="src/pages/support/index.astro:me8vdd">
           <h1 class="text-2xl font-bold text-white mb-6" data-ps="src/pages/support/index.astro:jjvppc">Support kontaktieren</h1>
           
-          {error && <div class="bg-red-500/10 border border-red-500/50 text-red-400 px-4 py-3 rounded-lg mb-6" data-ps="src/pages/support/index.astro:526urn">{error}</section></div>}
+          {error && <div class="bg-red-500/10 border border-red-500/50 text-red-400 px-4 py-3 rounded-lg mb-6" data-ps="src/pages/support/index.astro:526urn">{error}</div>}
           {success && <div class="bg-green-500/10 border border-green-500/50 text-green-400 px-4 py-3 rounded-lg mb-6" data-ps="src/pages/support/index.astro:526uro">Your ticket has been submitted successfully!</div>}
           
           <form method="POST" class="space-y-6">
@@ -158,8 +79,10 @@ if (Astro.request.method === 'POST') {
               Ticket absenden
             </button>
           </form>
-        
-      </div></div></baselayout>
+        </section>
+      </div>
+</div></div></baselayout>
+
 
       <div class="lg:col-span-1" data-ps="src/pages/support/index.astro:pd8mlb">
          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 sticky top-32 shadow-xl" data-ps="src/pages/support/index.astro:pd8mlc">
@@ -176,7 +99,9 @@ if (Astro.request.method === 'POST') {
                   <p class="text-sm text-slate-400 mb-1" data-ps="src/pages/support/index.astro:orqn8h">E-Mail-Support</p>
                   <a href="mailto:support@tieback.io" class="text-white font-medium hover:text-[#0080FF] transition-colors" data-ps="src/pages/support/index.astro:hnsqja">support@tieback.io</a>
                 </div>
-              </div></div></div></div>
+              </div>
+</div></div></div>
+
 
               <div class="flex items-start gap-4" data-ps="src/pages/support/index.astro:pd8mlh">
                 <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 border border-slate-700" data-ps="src/pages/support/index.astro:pd8mli">
@@ -190,6 +115,8 @@ if (Astro.request.method === 'POST') {
                 </div>
               </div>
             
+
+
 
             <div class="mt-8 bg-slate-950/50 rounded-xl p-6 border border-slate-800" data-ps="src/pages/support/index.astro:pd8mlk">
                <h4 class="font-medium text-white mb-3 flex items-center gap-2" data-ps="src/pages/support/index.astro:7fzkn1">
@@ -206,3 +133,5 @@ if (Astro.request.method === 'POST') {
       
     
   
+
+

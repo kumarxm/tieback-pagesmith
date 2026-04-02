@@ -1,4 +1,4 @@
----,
+---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { SITE } from '@/config/site';
 
@@ -171,9 +171,14 @@ const faqLd = {
     }
   ]
 };
-,
+---
 
-<BaseLayout title={title} description={description} jsonLd={faqLd}>
+
+
+
+
+
+<baselayout title="{title}" description="{description}" jsonld="{faqLd}">
   <!-- Hero Section -->
   <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-950" data-ps="src/pages/faq.astro:hero">
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none" data-ps="src/pages/faq.astro:aapkz8">
@@ -200,44 +205,53 @@ const faqLd = {
           </svg>
         </div>
       </div>
+</div></section></baselayout>
+
 
       <!-- Urgency Glow Pulse -->
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#0080FF05_0%,transparent_70%)] animate-urgency-pulse" data-ps="src/pages/faq.astro:2mg1we"></div>
       
       <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay" data-ps="src/pages/faq.astro:aapkz5"></div>
-    </div>
+    
+
+
 
     <div class="max-w-7xl mx-auto px-6 relative z-10" data-ps="src/pages/faq.astro:aapkyj">
-      <div class="max-w-4xl" data-reveal data-ps="src/pages/faq.astro:aapkyi">
+      <div class="max-w-4xl" data-reveal="" data-ps="src/pages/faq.astro:aapkyi">
         <div class="inline-flex items-center gap-4 mb-6" data-ps="src/pages/faq.astro:urgency-badge">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0080FF]/10 border border-[#0080FF]/20 text-[#0080FF] text-xs font-bold uppercase tracking-wider" data-ps="src/pages/faq.astro:2mg1wd">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-            Knowledge Base
+            Wissensdatenbank
           </div>
           <div class="flex items-center gap-2 text-xs font-bold text-amber-500 uppercase tracking-widest animate-pulse" data-ps="src/pages/faq.astro:2mg1wc">
             <span class="relative flex h-2 w-2" data-ps="src/pages/faq.astro:bw9w9n">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" data-ps="src/pages/faq.astro:dd3y6b"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500" data-ps="src/pages/faq.astro:dd3y6c"></span>
             </span>
-            ESPR Timeline Active
+            ESPR
+            Zeitleiste Aktiv
           </div>
         </div>
         <h1 class="text-4xl md:text-7xl font-bold tracking-tight text-white mb-8 leading-[1.1]" data-ps="src/pages/faq.astro:ksdz0f">
-          EU Digital Product Passport <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0080FF] to-indigo-400" data-ps="src/pages/faq.astro:bw9wd5">(EU DPP)</span> FAQ
+        
+          EU-<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0080FF] to-indigo-400" data-ps="src/pages/faq.astro:bw9wd5">DPP (EU )</span>
+        FAQ
         </h1>
         <p class="text-xl md:text-2xl text-slate-400 mb-10 leading-relaxed max-w-3xl" data-ps="src/pages/faq.astro:3y712g">
-          Digital Product Passport programmes are becoming an operating requirement. This FAQ answers the questions teams ask most — from compliance basics to operational rollout.
+          Programme zum Digital Product Passport werden zunehmend zu einer betrieblichen Anforderung. Dieser Leitfaden beantwortet die häufigsten Fragen von Teams – von den Grundlagen der Compliance bis zur operativen Einführung.
         </p>
         
         <div class="flex flex-wrap gap-5 items-center mb-16" data-ps="src/pages/faq.astro:aapkyg">
           <a href="/request-access" class="px-8 py-4 rounded-xl bg-[#0080FF] text-white font-bold hover:bg-[#0070E0] hover:scale-[1.02] transition-all shadow-xl shadow-[#0080FF]/25 flex items-center gap-2" data-ps="src/pages/faq.astro:b24xrg">
-            Request access
+            Zugang anfordern
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
           <span class="text-slate-500 text-sm font-medium border-l border-slate-800 pl-5" data-ps="src/pages/faq.astro:bw9wd4">
-            Access released in carefully <br class="hidden sm:block"/> selected cohorts.
+            Zugang wird in sorgfältig<br class="hidden sm:block"/>ausgewählten Gruppen freigegeben.
           </span>
         </div>
+</div></div>
+
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" data-ps="src/pages/faq.astro:aapkyf">
           {[
@@ -252,9 +266,11 @@ const faqLd = {
             </a>
           ))}
         </div>
-      </div>
-    </div>
-  </section>
+      
+    
+  
+
+
 
   <!-- Anxiety Section (Polished) -->
   <section class="py-24 bg-slate-900 border-y border-slate-800/50 relative" data-ps="src/pages/faq.astro:tnsbap">
@@ -262,10 +278,12 @@ const faqLd = {
       <div class="grid lg:grid-cols-2 gap-16 items-center" data-ps="src/pages/faq.astro:aapkyd">
         <div data-reveal="left" data-ps="src/pages/faq.astro:aapkyc">
           <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight" data-ps="src/pages/faq.astro:63z1s7">
-            EU DPP, <span class="text-[#0080FF]" data-ps="src/pages/faq.astro:bw9wch">without the anxiety.</span>
+          
+            EU-DPP
+          – <span class="text-[#0080FF]" data-ps="src/pages/faq.astro:bw9wch">ganz ohne Stress.</span>
           </h2>
           <p class="text-lg text-slate-400 mb-8 leading-relaxed max-w-xl" data-ps="src/pages/faq.astro:3y712h">
-            Regulation changes. Teams don't need more chaos. TieBack is designed so compliance stays structured, updateable, and auditable — without creating extra operational burden.
+            Die Vorschriften ändern sich. Teams brauchen kein zusätzliches Chaos. TieBack ist so konzipiert, dass die Compliance strukturiert, aktualisierbar und überprüfbar bleibt – ohne zusätzlichen betrieblichen Aufwand.
           </p>
           <div class="h-1 w-20 bg-gradient-to-r from-[#0080FF] to-transparent rounded-full" data-ps="src/pages/faq.astro:aapkyb"></div>
         </div>
@@ -302,14 +320,16 @@ const faqLd = {
     </div>
   </section>
 
+
+
   <!-- Most Asked Questions (Polished List) -->
   <section class="py-24 bg-white relative overflow-hidden" id="questions" data-ps="src/pages/faq.astro:tnsbaq">
     <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" data-ps="src/pages/faq.astro:aapkxl"></div>
     
     <div class="max-w-4xl mx-auto px-6" data-ps="src/pages/faq.astro:aapkxk">
       <div class="text-center mb-20" data-reveal data-ps="src/pages/faq.astro:aapkxj">
-        <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6" data-ps="src/pages/faq.astro:63z1s8">Most Asked Questions</h2>
-        <p class="text-slate-500 text-lg" data-ps="src/pages/faq.astro:3y712j">Detailed answers for manufacturers, retailers, and compliance teams.</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6" data-ps="src/pages/faq.astro:63z1s8">Häufig gestellte Fragen</h2>
+        <p class="text-slate-500 text-lg" data-ps="src/pages/faq.astro:3y712j">Ausführliche Antworten für Hersteller, Einzelhändler und Compliance-Teams.</p>
       </div>
       
       <div class="space-y-6" data-reveal data-ps="src/pages/faq.astro:aapkxi">
@@ -334,6 +354,8 @@ const faqLd = {
     </div>
   </section>
 
+
+
   <!-- CTA Section (Redesigned) -->
   <section class="py-32 relative overflow-hidden bg-slate-950" data-ps="src/pages/faq.astro:tnsbar">
     <div class="absolute inset-0 z-0 opacity-20" data-ps="src/pages/faq.astro:2mg1wk">
@@ -341,7 +363,7 @@ const faqLd = {
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,#0080FF15_0,transparent_70%)]" data-ps="src/pages/faq.astro:2mg1wi"></div>
     </div>
     
-    <div class="max-w-5xl mx-auto px-6 relative z-10 text-center" data-reveal data-ps="src/pages/faq.astro:2mg1wh">
+    <div class="max-w-5xl mx-auto px-6 relative z-10 text-center" data-reveal="" data-ps="src/pages/faq.astro:2mg1wh">
       <div class="mb-10 inline-block" data-ps="src/pages/faq.astro:2mg1wg">
         <div class="flex -space-x-3 justify-center mb-6" data-ps="src/pages/faq.astro:2mg1wf">
           {[1, 2, 3, 4].map(i => (
@@ -355,298 +377,7 @@ const faqLd = {
         </div>
       </div>
       
-      <h2 class="text-4xl md:text-6xl font-bold text-white mb-8" data-ps="src/pages/faq.astro:63z1su">Ready to start?</h2>
-      <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed" data-ps="src/pages/faq.astro:3y712k">
-        If EU DPP compliance is on your roadmap, request access and we'll guide onboarding from first setup through launch readiness.
-      </p>
-      
-      <div class="flex flex-col sm:flex-row justify-center gap-4" data-ps="src/pages/faq.astro:2mg1wc">
-        <a href="/request-access" class="px-10 py-5 bg-[#0080FF] text-white rounded-xl font-bold text-xl hover:bg-[#0070E0] hover:scale-105 transition-all shadow-2xl shadow-[#0080FF]/40" data-ps="src/pages/faq.astro:b24xri">
-          Request Access Now
-        </a>
-
-      </div>
-      <p class="mt-8 text-slate-500 text-sm font-medium" data-ps="src/pages/faq.astro:91d2je">Limited onboarding slots available for Q2 2026</p>
-    </div>
-  </section>
-
-  <script>
-    // FAQ Accordion Logic
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-      const button = item.querySelector('button');
-      const answer = item.querySelector('.faq-answer');
-      const icon = item.querySelector('svg');
-
-      button?.addEventListener('click', () => {
-        const isOpen = button.getAttribute('aria-expanded') === 'true';
-        
-        // Close others
-        faqItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            otherItem.querySelector('button')?.setAttribute('aria-expanded', 'false');
-            (otherItem.querySelector('.faq-answer') as HTMLElement).style.maxHeight = '0';
-            otherItem.querySelector('svg')?.classList.remove('rotate-180');
-          }
-        });
-
-        // Toggle current
-        button.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
-        (answer as HTMLElement).style.maxHeight = !isOpen ? `${(answer as HTMLElement).scrollHeight}px` : '0';
-        icon?.classList.toggle('rotate-180', !isOpen);
-      });
-    });
-
-    // Reveal Animation
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal-visible');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('[data-reveal]').forEach(el => {
-      el.classList.add('reveal-hidden');
-      observer.observe(el);
-    });
-  </script>
-
-  <style>
-    .reveal-hidden {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-    .reveal-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    [data-reveal="left"] { transform: translateX(-30px); }
-    [data-reveal="right"] { transform: translateX(30px); }
-    
-    .reveal-visible[data-reveal="left"],
-    .reveal-visible[data-reveal="right"] {
-      transform: translateX(0);
-    }
-
-    @keyframes pulse-slow {
-      0%, 100% { opacity: 0.1; transform: scale(1); }
-      50% { opacity: 0.2; transform: scale(1.1); }
-    }
-    .animate-pulse-slow {
-      animation: pulse-slow 8s infinite ease-in-out;
-    }
-  </style>
-</BaseLayout>
----
-
-
-<baselayout title="<astro-expr" id="2">
-  Beschreibung={description}
-  jsonLd={faqLd}
-  >
-  <!-- Hero Section -->
-  <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-950" data-ps="src/pages/faq.astro:hero">
-    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none" data-ps="src/pages/faq.astro:aapkz8">
-      <!-- Dynamic Moving Background -->
-      <div class="absolute inset-0 bg-slate-950" data-ps="src/pages/faq.astro:2mg1wj">
-        <div class="absolute top-0 -left-1/4 w-full h-full bg-[radial-gradient(circle_at_center,#0080FF20_0%,transparent_50%)] animate-pulse-slow mix-blend-screen overflow-hidden" data-ps="src/pages/faq.astro:2mg1wi"></div>
-        <div class="absolute bottom-0 -right-1/4 w-full h-full bg-[radial-gradient(circle_at_center,#6366f115_0%,transparent_50%)] animate-pulse-slow mix-blend-screen overflow-hidden" style="animation-delay: 3s;" data-ps="src/pages/faq.astro:2mg1wh"></div>
-      </div>
-      
-      <!-- Abstract Moving Graphic -->
-      <div class="absolute inset-0 opacity-20 overflow-hidden" data-ps="src/pages/faq.astro:2mg1wg">
-        <div class="absolute top-0 left-0 w-full h-full" data-ps="src/pages/faq.astro:2mg1wf">
-          <svg width="100%" height="100%" viewBox="0 0 1000 1000" preserveAspectRatio="none" class="animate-pulse-slow">
-            <defs>
-              <linearGradient id="grad-line" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#0080FF" stop-opacity="0" />
-                <stop offset="50%" stop-color="#0080FF" stop-opacity="0.5" />
-                <stop offset="100%" stop-color="#0080FF" stop-opacity="0" />
-              </linearGradient>
-            </defs>
-            <path d="M 0 200 Q 250 150 500 200 T 1000 200" stroke="url(#grad-line)" stroke-width="1" fill="none" class="animate-dash" style="animation-duration: 20s" />
-            <path d="M 0 500 Q 250 450 500 500 T 1000 500" stroke="url(#grad-line)" stroke-width="1" fill="none" class="animate-dash" style="animation-duration: 15s; animation-delay: -5s;" />
-            <path d="M 0 800 Q 250 750 500 800 T 1000 800" stroke="url(#grad-line)" stroke-width="1" fill="none" class="animate-dash" style="animation-duration: 25s; animation-delay: -10s;" />
-          </svg>
-        </div>
-      </div></div></section></baselayout>
-
-      <!-- Urgency Glow Pulse -->
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#0080FF05_0%,transparent_70%)] animate-urgency-pulse" data-ps="src/pages/faq.astro:2mg1we"></div>
-      
-      <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay" data-ps="src/pages/faq.astro:aapkz5"></div>
-    
-
-    <div class="max-w-7xl mx-auto px-6 relative z-10" data-ps="src/pages/faq.astro:aapkyj">
-      <div class="max-w-4xl" data-reveal="" data-ps="src/pages/faq.astro:aapkyi">
-        <div class="inline-flex items-center gap-4 mb-6" data-ps="src/pages/faq.astro:urgency-badge">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0080FF]/10 border border-[#0080FF]/20 text-[#0080FF] text-xs font-bold uppercase tracking-wider" data-ps="src/pages/faq.astro:2mg1wd">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-            Wissensdatenbank
-          </div>
-          <div class="flex items-center gap-2 text-xs font-bold text-amber-500 uppercase tracking-widest animate-pulse" data-ps="src/pages/faq.astro:2mg1wc">
-            <span class="relative flex h-2 w-2" data-ps="src/pages/faq.astro:bw9w9n">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" data-ps="src/pages/faq.astro:dd3y6b"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500" data-ps="src/pages/faq.astro:dd3y6c"></span>
-            </span>
-            ESPR
-            Zeitleiste Aktiv
-          </div>
-        </div>
-        <h1 class="text-4xl md:text-7xl font-bold tracking-tight text-white mb-8 leading-[1.1]" data-ps="src/pages/faq.astro:ksdz0f">
-        
-          EU-<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0080FF] to-indigo-400" data-ps="src/pages/faq.astro:bw9wd5">DPP (EU )</span>
-        FAQ
-        </h1>
-        <p class="text-xl md:text-2xl text-slate-400 mb-10 leading-relaxed max-w-3xl" data-ps="src/pages/faq.astro:3y712g">
-          Programme zum Digital Product Passport werden zunehmend zu einer betrieblichen Anforderung. Dieser Leitfaden beantwortet die häufigsten Fragen von Teams – von den Grundlagen der Compliance bis zur operativen Einführung.
-        </p>
-        
-        <div class="flex flex-wrap gap-5 items-center mb-16" data-ps="src/pages/faq.astro:aapkyg">
-          <a href="/request-access" class="px-8 py-4 rounded-xl bg-[#0080FF] text-white font-bold hover:bg-[#0070E0] hover:scale-[1.02] transition-all shadow-xl shadow-[#0080FF]/25 flex items-center gap-2" data-ps="src/pages/faq.astro:b24xrg">
-            Zugang anfordern
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <span class="text-slate-500 text-sm font-medium border-l border-slate-800 pl-5" data-ps="src/pages/faq.astro:bw9wd4">
-            Zugang wird in sorgfältig<br class="hidden sm:block"/>ausgewählten Gruppen freigegeben.
-          </span>
-        </div></div></div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" data-ps="src/pages/faq.astro:aapkyf">
-          {[
-            { label: "DPP Overview", href: "/use-cases/eu-dpp" }
-          ,
-            { label: "Compliance Approach", href: "/use-cases/eu-dpp" }
-          ,
-            { label: "Industry Solutions", href: "/industries/textiles" }
-          ,
-            { label: "The TieBack Advantage", href: "/platform/why-tieback" }
-          ].map(link => (
-            <a href=<astro-expr id="9">
-              class="group p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all flex items-center justify-between" data-ps="src/pages/faq.astro:b24xrh">
-              <span class="text-slate-300 group-hover:text-white font-medium text-sm transition-colors" data-ps="src/pages/faq.astro:bw9wd3">{link.label}</span>
-              <svg class="w-4 h-4 text-[#0080FF] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </a>
-          ))}
-        </div>
-      
-    
-  
-
-  <!-- Anxiety Section (Polished) -->
-  <section class="py-24 bg-slate-900 border-y border-slate-800/50 relative" data-ps="src/pages/faq.astro:tnsbap">
-    <div class="max-w-7xl mx-auto px-6 relative z-10" data-ps="src/pages/faq.astro:aapkye">
-      <div class="grid lg:grid-cols-2 gap-16 items-center" data-ps="src/pages/faq.astro:aapkyd">
-        <div data-reveal="left" data-ps="src/pages/faq.astro:aapkyc">
-          <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight" data-ps="src/pages/faq.astro:63z1s7">
-          
-            EU-DPP
-          – <span class="text-[#0080FF]" data-ps="src/pages/faq.astro:bw9wch">ganz ohne Stress.</span>
-          </h2>
-          <p class="text-lg text-slate-400 mb-8 leading-relaxed max-w-xl" data-ps="src/pages/faq.astro:3y712h">
-            Die Vorschriften ändern sich. Teams brauchen kein zusätzliches Chaos. TieBack ist so konzipiert, dass die Compliance strukturiert, aktualisierbar und überprüfbar bleibt – ohne zusätzlichen betrieblichen Aufwand.
-          </p>
-          <div class="h-1 w-20 bg-gradient-to-r from-[#0080FF] to-transparent rounded-full" data-ps="src/pages/faq.astro:aapkyb"></div>
-        </div>
-        <div class="grid gap-6" data-reveal="right" data-ps="src/pages/faq.astro:aapkya">
-          {[
-            { 
-              num: "01", 
-              text: "Know what's required (and what isn't) for your category",
-              icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-            }
-          ,
-            { 
-              num: "02", 
-              text: "Prepare early without over-enforcing",
-              icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-            }
-          ,
-            { 
-              num: "03", 
-              text: "Prove compliance through built-in evidence and read-only audit access",
-              icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-            }
-          ].map(step => (
-            <div class="group p-8 rounded-2xl bg-slate-800/30 border border-white/5 hover:border-[#0080FF]/30 transition-all duration-500 relative overflow-hidden" data-ps="src/pages/faq.astro:aapkxo">
-              <div class="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity" data-ps="src/pages/faq.astro:aapkxn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="<astro-expr" id="14">/></path></svg>
-              </div>
-              <div class="flex gap-6 items-start relative z-10" data-ps="src/pages/faq.astro:aapkxm">
-                <span class="text-[#0080FF] text-xl font-mono font-bold" data-ps="src/pages/faq.astro:bw9wcg">{step.num}</span>
-                <p class="text-slate-200 font-medium text-lg leading-snug" data-ps="src/pages/faq.astro:3y712i">{step.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Most Asked Questions (Polished List) -->
-  <section class="py-24 bg-white relative overflow-hidden" id="questions" data-ps="src/pages/faq.astro:tnsbaq">
-    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" data-ps="src/pages/faq.astro:aapkxl"></div>
-    
-    <div class="max-w-4xl mx-auto px-6" data-ps="src/pages/faq.astro:aapkxk">
-      <div class="text-center mb-20" data-reveal data-ps="src/pages/faq.astro:aapkxj">
-        <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6" data-ps="src/pages/faq.astro:63z1s8">Häufig gestellte Fragen</h2>
-        <p class="text-slate-500 text-lg" data-ps="src/pages/faq.astro:3y712j">Ausführliche Antworten für Hersteller, Einzelhändler und Compliance-Teams.</p>
-      </div>
-      
-      <div class="space-y-6" data-reveal data-ps="src/pages/faq.astro:aapkxi">
-        {faqLd.mainEntity.map((faq, index) => (
-          <div class="faq-item border border-slate-100 rounded-2xl bg-slate-50/30 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300" data-ps={`src/pages/faq.astro:aapkxh-${index}`}>
-            <button class="w-full text-left px-8 py-7 flex items-center justify-between gap-4 group" aria-expanded="false" data-ps=<astro-expr id="18">`}>
-              <span class="text-xl font-bold text-slate-800 group-hover:text-[#0080FF] transition-colors leading-tight" data-ps=<astro-expr id="19">`}>
-                {faq.name}
-              </span>
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-100 group-hover:bg-[#0080FF] transition-all flex items-center justify-center" data-ps=<astro-expr id="21">`}>
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400 group-hover:text-white transition-all transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-              </div>
-            </button>
-            <div class="faq-answer px-8 overflow-hidden max-h-0 transition-all duration-500 ease-in-out" data-ps=<astro-expr id="22">`}>
-              <div class="pb-8 pt-2 text-slate-600 leading-relaxed text-lg prose prose-slate max-w-none" data-ps=<astro-expr id="23">`}>
-                {faq.acceptedAnswer.text}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    
-  </section>
-
-  <!-- CTA Section (Redesigned) -->
-  <section class="py-32 relative overflow-hidden bg-slate-950" data-ps="src/pages/faq.astro:tnsbar">
-    <div class="absolute inset-0 z-0 opacity-20" data-ps="src/pages/faq.astro:2mg1wk">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#0080FF]/10 to-transparent" data-ps="src/pages/faq.astro:2mg1wj"></div>
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,#0080FF15_0,transparent_70%)]" data-ps="src/pages/faq.astro:2mg1wi"></div>
-    </div>
-    
-    <div class="max-w-5xl mx-auto px-6 relative z-10 text-center" data-reveal data-ps="src/pages/faq.astro:2mg1wh">
-      <div class="mb-10 inline-block" data-ps="src/pages/faq.astro:2mg1wg">
-        <div class="flex -space-x-3 justify-center mb-6" data-ps="src/pages/faq.astro:2mg1wf">
-          {[1, 2, 3, 4].map(i => (
-            <div class="w-12 h-12 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center overflow-hidden" data-ps="src/pages/faq.astro:2mg1we">
-              <img src={`https://i.pravatar.cc/100?img=${i+10}
-          `} alt="Teammitglied" class="w-full h-full object-cover grayscale opacity-80" data-ps="src/pages/faq.astro:csypas" />
-            </div>
-          ))}
-          <div class="w-12 h-12 rounded-full border-2 border-slate-900 bg-[#0080FF] flex items-center justify-center text-white text-xs font-bold" data-ps="src/pages/faq.astro:2mg1wd">
-            +12
-          </div>
-        </div>
-      </div>
-      
-      <h2 class="text-4xl md:text-6xl font-bold text-white mb-8" data-ps="src/pages/faq.astro:63z1su">Sind Sie bereit loszulegen?</h2>
+      <h2 class="text-4xl md:text-6xl font-bold text-white mb-8" data-ps="src/pages/faq.astro:63z1su">Sind Sie bereit, loszulegen?</h2>
       <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed" data-ps="src/pages/faq.astro:3y712k">
         Wenn die Einhaltung der EU-DPP-Vorschriften auf Ihrer Roadmap steht, beantragen Sie den Zugang und wir begleiten Sie vom ersten Setup bis zur Startbereitschaft.
       </p>
@@ -654,12 +385,16 @@ const faqLd = {
       <div class="flex flex-col sm:flex-row justify-center gap-4" data-ps="src/pages/faq.astro:2mg1wc">
         <a href="/request-access" class="px-10 py-5 bg-[#0080FF] text-white rounded-xl font-bold text-xl hover:bg-[#0070E0] hover:scale-105 transition-all shadow-2xl shadow-[#0080FF]/40" data-ps="src/pages/faq.astro:b24xri">
           Jetzt Zugang beantragen
-        </a></div></section>
+        </a>
+</div></div></section>
+
 
       
       <p class="mt-8 text-slate-500 text-sm font-medium" data-ps="src/pages/faq.astro:91d2je">Für das zweite Quartal 2026 stehen nur begrenzt Plätze für das Onboarding zur Verfügung</p>
     
   
+
+
 
   <script>
     // FAQ Accordion Logic
@@ -709,6 +444,8 @@ const faqLd = {
     });
   </script>
 
+
+
   <style>
     .reveal-hidden {
       opacity: 0;
@@ -736,4 +473,8 @@ const faqLd = {
       animation: pulse-slow 8s infinite ease-in-out;
     }
   </style>
+
+
+
+
 

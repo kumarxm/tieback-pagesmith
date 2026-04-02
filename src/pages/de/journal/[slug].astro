@@ -1,4 +1,4 @@
----,
+---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
@@ -31,115 +31,14 @@ const jsonLd = {
   "image": post.data.image,
   "url": `https://tieback.io/journal/${post.slug}/`
 };
-,
-
-<BaseLayout title={`${post.data.title} | TieBack Journal`} description={post.data.description} jsonLd={jsonLd}>
-  <article class="bg-white text-[#242424] pt-28 pb-20 font-sans selection:bg-blue-200 selection:text-blue-900" data-ps="src/pages/journal/[slug].astro:cl4ce0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6" data-ps="src/pages/journal/[slug].astro:mjgj81">
-      <!-- Article Header -->
-      <header class="max-w-5xl mx-auto mb-12" data-ps="src/pages/journal/[slug].astro:benkwr">
-        <div class="mb-6" data-ps="src/pages/journal/[slug].astro:doxskn">
-          <span class="text-gray-500 text-sm font-medium tracking-wide" data-ps="src/pages/journal/[slug].astro:b0jb0b">
-            {post.data.category || 'Article'}
-          </span>
-        </div>
-        <h1 class="text-[2rem] sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-[#121212] mb-8 leading-[1.15]" data-ps="src/pages/journal/[slug].astro:j2ae5a">
-          {post.data.title}
-        </h1>
-        <div class="flex items-center gap-4 border-b border-gray-100 pb-8 mb-8" data-ps="src/pages/journal/[slug].astro:mjgj80">
-          <img 
-            src="https://cdn.pagesmith.app/2372d62a/images/tieback/IMG_1526-1536.webp" 
-            alt="Sam, Founder" 
-            class="w-12 h-12 rounded-full object-cover border border-gray-100" 
-            data-ps="src/pages/journal/[slug].astro:sam-author-img" 
-          />
-          <div class="text-left" data-ps="src/pages/journal/[slug].astro:mjgj7y">
-            <div class="font-medium text-[#242424]" data-ps="src/pages/journal/[slug].astro:uiihpm">Sam, Founder</div>
-            <div class="text-sm text-gray-500 flex items-center gap-2" data-ps="src/pages/journal/[slug].astro:uiihpl">
-              <time datetime={new Date().toISOString()}>
-                {new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-              </time>
-              <span data-ps="src/pages/journal/[slug].astro:b0jb0a">·</span>
-              <span data-ps="src/pages/journal/[slug].astro:b0jb09">8 min read</span>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <!-- Featured Image -->
-      {post.data.image && (
-        <div class="max-w-5xl mx-auto mb-14 overflow-hidden" data-ps="src/pages/journal/[slug].astro:uiihpk">
-          <img src={post.data.image} alt={post.data.title} class="w-full aspect-[16/9] object-cover rounded-none md:rounded-lg" data-ps="src/pages/journal/[slug].astro:p1pnjl" />
-        </div>
-      )}
-
-      <!-- Typography Body -->
-      <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 relative" data-ps="src/pages/journal/[slug].astro:uiihpj-wrapper">
-        <!-- Sticky Share Sidebar -->
-        <aside class="lg:w-16 lg:sticky lg:top-32 h-fit flex lg:flex-col items-center gap-4 py-4 border-y lg:border-y-0 lg:border-r border-gray-100" data-ps="src/pages/journal/[slug].astro:share-sidebar">
-          <div class="hidden lg:block text-[10px] font-bold text-gray-600 uppercase tracking-widest mb-2" data-ps="src/pages/journal/[slug].astro:share-label">Share</div>
-          
-          <a 
-            href={`https://www.linkedin.com/sharing/share-offsite/?url=https://tieback.io/journal/${post.slug}/`}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="p-2.5 text-gray-600 hover:text-[#0077b5] hover:bg-blue-50 rounded-full transition-all duration-200"
-            aria-label="Share on LinkedIn"
-            data-ps="src/pages/journal/[slug].astro:share-linkedin"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-
-          <a 
-            href={`https://twitter.com/intent/tweet?url=https://tieback.io/journal/${post.slug}/&text=${encodeURIComponent(post.data.title)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="p-2.5 text-gray-600 hover:text-black hover:bg-gray-50 rounded-full transition-all duration-200"
-            aria-label="Share on Twitter"
-            data-ps="src/pages/journal/[slug].astro:share-twitter"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-          </a>
-
-          <button 
-            onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');"
-            class="p-2.5 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-200"
-            aria-label="Copy Link"
-            data-ps="src/pages/journal/[slug].astro:share-copy"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-          </button>
-        </aside>
-
-        <!-- Main Content -->
-        <div class="flex-1 prose max-w-none prose-base md:prose-lg font-sans prose-p:text-[#242424] prose-p:leading-[1.8] prose-headings:font-sans prose-headings:text-[#121212] prose-headings:font-bold prose-headings:tracking-tight prose-a:text-[#121212] prose-a:underline prose-a:decoration-gray-300 hover:prose-a:decoration-[#121212] prose-blockquote:border-l-[#121212] prose-blockquote:text-[#242424] prose-blockquote:font-medium prose-blockquote:not-italic prose-li:text-[#242424] prose-strong:text-[#121212] prose-img:rounded-md" data-ps="src/pages/journal/[slug].astro:uiihpj">
-          <Content />
-        </div>
-      </div>
-
-
-
-      <!-- Related Articles -->
-      <div class="max-w-5xl mx-auto mt-24 border-t border-gray-200 pt-12 font-sans" data-ps="src/pages/journal/[slug].astro:uiihpf">
-        <div class="grid sm:grid-cols-2 gap-8" data-ps="src/pages/journal/[slug].astro:uiihpe">
-          {relatedPosts.map(p => (
-            <a href={`/journal/${p.slug}/`} class="group block" data-ps="src/pages/journal/[slug].astro:n512ni">
-              <div class="aspect-[1.91/1] overflow-hidden bg-gray-100 mb-4 rounded-lg" data-ps="src/pages/journal/[slug].astro:uiihpd">
-                <img src={p.data.image || "https://images.pexels.com/photos/11825324/pexels-photo-11825324.jpeg?auto=compress&cs=tinysrgb&w=800"} alt={p.data.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-ps="src/pages/journal/[slug].astro:p1pnjk" />
-              </div>
-              <h5 class="text-base font-bold text-[#121212] group-hover:text-blue-600 transition-colors mb-2 leading-snug" data-ps="src/pages/journal/[slug].astro:6qu112">{p.data.title}</h5>
-              <p class="text-sm text-gray-600 line-clamp-2" data-ps="src/pages/journal/[slug].astro:g135xr">{p.data.description}</p>
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  </article>
-</BaseLayout>
 ---
 
 
-<baselayout title="<astro-expr" id="0"> | TieBack Journal`} description= {post.data.description} jsonLd= {jsonLd}>
+
+
+
+
+<baselayout title="{`${post.data.title} | TieBack Journal`}" description="{post.data.description}" jsonld="{jsonLd}">
   <article class="bg-white text-[#242424] pt-28 pb-20 font-sans selection:bg-blue-200 selection:text-blue-900" data-ps="src/pages/journal/[slug].astro:cl4ce0">
     <div class="max-w-7xl mx-auto px-4 sm:px-6" data-ps="src/pages/journal/[slug].astro:mjgj81">
       <!-- Article Header -->
@@ -162,7 +61,7 @@ const jsonLd = {
           <div class="text-left" data-ps="src/pages/journal/[slug].astro:mjgj7y">
             <div class="font-medium text-[#242424]" data-ps="src/pages/journal/[slug].astro:uiihpm">Sam, Gründer</div>
             <div class="text-sm text-gray-500 flex items-center gap-2" data-ps="src/pages/journal/[slug].astro:uiihpl">
-              <time datetime=<astro-expr id="5">>
+              <time datetime={new Date().toISOString()}>
                 {new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
               </time>
               <span data-ps="src/pages/journal/[slug].astro:b0jb0a">·</span>
@@ -171,47 +70,50 @@ const jsonLd = {
             </div>
           </div>
         </div>
-      </header></div></article></baselayout>
+      </header>
+</div></article></baselayout>
 
 
-            <!-- Featured Image -->
+      <!-- Featured Image -->
       {post.data.image && (
         <div class="max-w-5xl mx-auto mb-14 overflow-hidden" data-ps="src/pages/journal/[slug].astro:uiihpk">
-          <img src={post.data.image}
-      alt={post.data.title}
-      class="w-full aspect-[16/9] object-cover rounded-none md:rounded-lg" data-ps="src/pages/journal/[slug].astro:p1pnjl" />
-        
+          <img src={post.data.image} alt={post.data.title} class="w-full aspect-[16/9] object-cover rounded-none md:rounded-lg" data-ps="src/pages/journal/[slug].astro:p1pnjl" />
+        </div>
       )}
+
+
 
       <!-- Typography Body -->
       <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 relative" data-ps="src/pages/journal/[slug].astro:uiihpj-wrapper">
         <!-- Sticky Share Sidebar -->
         <aside class="lg:w-16 lg:sticky lg:top-32 h-fit flex lg:flex-col items-center gap-4 py-4 border-y lg:border-y-0 lg:border-r border-gray-100" data-ps="src/pages/journal/[slug].astro:share-sidebar">
           <div class="hidden lg:block text-[10px] font-bold text-gray-600 uppercase tracking-widest mb-2" data-ps="src/pages/journal/[slug].astro:share-label">Teilen</div>
+          
           <a 
-            href=<astro-expr id="9">
-          /`}
+            href={`https://www.linkedin.com/sharing/share-offsite/?url=https://tieback.io/journal/${post.slug}/`}
             target="_blank"
             rel="noopener noreferrer"
             class="p-2.5 text-gray-600 hover:text-[#0077b5] hover:bg-blue-50 rounded-full transition-all duration-200"
-            aria-label="Auf LinkedIn teilen"
+            aria-label="Share on LinkedIn"
             data-ps="src/pages/journal/[slug].astro:share-linkedin"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-          </a></aside></div>
+          </a>
+</aside></div>
+
 
           <a 
-            href=<astro-expr id="10">
-          /&text;=${encodeURIComponent(post.data.title)}
-          `}
+            href={`https://twitter.com/intent/tweet?url=https://tieback.io/journal/${post.slug}/&text=${encodeURIComponent(post.data.title)}`}
             target="_blank"
             rel="noopener noreferrer"
             class="p-2.5 text-gray-600 hover:text-black hover:bg-gray-50 rounded-full transition-all duration-200"
-            aria-label="Auf Twitter teilen"
+            aria-label="Share on Twitter"
             data-ps="src/pages/journal/[slug].astro:share-twitter"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
           </a>
+
+
 
           <button 
             onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');"
@@ -223,6 +125,8 @@ const jsonLd = {
           </button>
         
 
+
+
         <!-- Main Content -->
         <div class="flex-1 prose max-w-none prose-base md:prose-lg font-sans prose-p:text-[#242424] prose-p:leading-[1.8] prose-headings:font-sans prose-headings:text-[#121212] prose-headings:font-bold prose-headings:tracking-tight prose-a:text-[#121212] prose-a:underline prose-a:decoration-gray-300 hover:prose-a:decoration-[#121212] prose-blockquote:border-l-[#121212] prose-blockquote:text-[#242424] prose-blockquote:font-medium prose-blockquote:not-italic prose-li:text-[#242424] prose-strong:text-[#121212] prose-img:rounded-md" data-ps="src/pages/journal/[slug].astro:uiihpj">
           <Content />
@@ -231,21 +135,26 @@ const jsonLd = {
 
 
 
+
+
       <!-- Related Articles -->
       <div class="max-w-5xl mx-auto mt-24 border-t border-gray-200 pt-12 font-sans" data-ps="src/pages/journal/[slug].astro:uiihpf">
         <div class="grid sm:grid-cols-2 gap-8" data-ps="src/pages/journal/[slug].astro:uiihpe">
           {relatedPosts.map(p => (
-            <a href={`/journal/${p.slug}
-          /`} class="group block" data-ps="src/pages/journal/[slug].astro:n512ni">
+            <a href={`/journal/${p.slug}/`} class="group block" data-ps="src/pages/journal/[slug].astro:n512ni">
               <div class="aspect-[1.91/1] overflow-hidden bg-gray-100 mb-4 rounded-lg" data-ps="src/pages/journal/[slug].astro:uiihpd">
-                <img src=<astro-expr id="13"> alt= {p.data.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-ps="src/pages/journal/[slug].astro:p1pnjk" />
+                <img src={p.data.image || "https://images.pexels.com/photos/11825324/pexels-photo-11825324.jpeg?auto=compress&cs=tinysrgb&w=800"} alt={p.data.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-ps="src/pages/journal/[slug].astro:p1pnjk" />
               </div>
               <h5 class="text-base font-bold text-[#121212] group-hover:text-blue-600 transition-colors mb-2 leading-snug" data-ps="src/pages/journal/[slug].astro:6qu112">{p.data.title}</h5>
               <p class="text-sm text-gray-600 line-clamp-2" data-ps="src/pages/journal/[slug].astro:g135xr">{p.data.description}</p>
-            
+            </a>
           ))}
         </div>
       </div>
     
   
+
+
+
+
 
