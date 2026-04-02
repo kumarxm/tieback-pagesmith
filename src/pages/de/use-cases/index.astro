@@ -1,4 +1,4 @@
----
+---,
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const useCases = [
@@ -53,7 +53,7 @@ const useCases = [
     url: '/use-cases/suppliers-upstream-manufacturers/'
   }
 ];
----
+,
 
 <BaseLayout
   title="All Use Cases | TieBack"
@@ -107,63 +107,10 @@ const useCases = [
       </div>
     </div>
   </section>
-</BaseLayout>,---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+</BaseLayout>---
 
-const useCases = [
-  {
-    title: 'EU DPP & Compliance',
-    description: 'End-to-end Digital Product Passport management for regulatory compliance.',
-    url: '/use-cases/eu-dpp/'
-  },
-  {
-    title: 'Compliance Readiness',
-    description: 'Prepare early without over-enforcing. Model DPP requirements and run readiness checks.',
-    url: '/use-cases/compliance-readiness/'
-  },
-  {
-    title: 'Compliance Enforcement',
-    description: 'Enforce structured data standards across your entire supply chain and operations.',
-    url: '/use-cases/compliance-enforcement/'
-  },
-  {
-    title: 'Authentication & Trust',
-    description: 'Secure physical products with item-level authentication and anti-counterfeiting measures.',
-    url: '/use-cases/authentication/'
-  },
-  {
-    title: 'Product Safety & Recalls',
-    description: 'Targeted recall management, precise safety alerts, and post-purchase traceability.',
-    url: '/use-cases/product-safety-recalls/'
-  },
-  {
-    title: 'Ownership, Warranty & Aftercare',
-    description: 'Digital warranties, transferrable ownership, and automated post-sales support.',
-    url: '/use-cases/warranty-aftercare/'
-  },
-  {
-    title: 'Traceability & Safety',
-    description: 'End-to-end tracking of product journey from origin to consumer.',
-    url: '/use-cases/traceability/'
-  },
-  {
-    title: 'Product as a Channel',
-    description: 'Turn physical items into digital touchpoints for direct-to-consumer engagement.',
-    url: '/use-cases/product-as-a-channel/'
-  },
-  {
-    title: 'Resale & Circular Economy',
-    description: 'Enable verified second-life markets and structured recycling programs.',
-    url: '/use-cases/resale-circular-economy/'
-  },
-  {
-    title: 'Suppliers & Manufacturers',
-    description: 'Map multi-tier supply chains and securely gather upstream manufacturing data.',
-    url: '/use-cases/suppliers-upstream-manufacturers/'
-  }
-];
----
-,<BaseLayout
+
+<BaseLayout
   title="All Use Cases | TieBack"
   description="Explore how TieBack solves complex compliance and supply chain challenges across industries."
 >
@@ -185,14 +132,18 @@ const useCases = [
     <div class="relative z-10 max-w-7xl mx-auto px-6" data-ps="src/pages/use-cases/index.astro:77u98r">
       <div class="max-w-3xl" data-ps="src/pages/use-cases/index.astro:77u98q">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0080FF]/10 text-[#0080FF] text-sm font-semibold tracking-wide border border-[#0080FF]/20 mb-6" data-ps="src/pages/use-cases/index.astro:77u98p">
-          Explore Use Cases
+          Anwendungsfälle entdecken
         </div>
         <h1 class="text-4xl lg:text-6xl font-bold tracking-tight text-white mb-6" data-ps="src/pages/use-cases/index.astro:2b5i26">
-          Solve Complex <br/>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400" data-ps="src/pages/use-cases/index.astro:3xd31y">Supply Chain Challenges</span>
+          
+          Komplexe
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400" data-ps="src/pages/use-cases/index.astro:3xd31y">Herausforderungen</span><br/>
+          
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400" data-ps="src/pages/use-cases/index.astro:3xd31y">in der Lieferkette</span>
+          lösen
         </h1>
         <p class="text-lg text-slate-300 leading-relaxed mb-10 max-w-2xl" data-ps="src/pages/use-cases/index.astro:tmjfgv">
-          From EU DPP readiness to product authentication and circular economy enablement, TieBack gives you the structured framework to run compliance and drive growth.
+          Von der Vorbereitung auf die EU-DPP-Verordnung über die Produktauthentifizierung bis hin zur Förderung der Kreislaufwirtschaft bietet Ihnen „TieBack“ einen strukturierten Rahmen, um Compliance sicherzustellen und Wachstum voranzutreiben.
         </p>
       </div>
     </div>
@@ -203,257 +154,17 @@ const useCases = [
     <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/use-cases/index.astro:77u98o">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-ps="src/pages/use-cases/index.astro:77u98n">
         {useCases.map(useCase => (
-          <a href={useCase.url} class="group bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:bg-slate-800/80 hover:border-slate-700 transition-all flex flex-col h-full" data-ps="src/pages/use-cases/index.astro:milir3">
+          <a href={useCase.url}
+        class="group bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:bg-slate-800/80 hover:border-slate-700 transition-all flex flex-col h-full" data-ps="src/pages/use-cases/index.astro:milir3">
             <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#0080FF] transition-colors" data-ps="src/pages/use-cases/index.astro:r1occz">{useCase.title}</h3>
             <p class="text-slate-400 leading-relaxed mb-8 flex-grow" data-ps="src/pages/use-cases/index.astro:tmjfgu">{useCase.description}</p>
             <div class="flex items-center text-[#0080FF] text-sm font-semibold" data-ps="src/pages/use-cases/index.astro:77u98m">
-              Explore use case
+              Anwendungsfälle entdecken
               <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </div>
-          </a>
+          
         ))}
       </div>
     </div>
   </section>
 </BaseLayout>
----
-import BaseLayout aus &#x27;@/layouts/BaseLayout.astro&#x27;;
-
-
-const useCases = [
-  {
-    title: 'EU DPP & Compliance',
-    description: 'End-to-end Digital Product Passport management for regulatory compliance.',
-    url: '/use-cases/eu-dpp/'
-  }
-,
-  {
-    title: 'Compliance Readiness',
-    description: 'Prepare early without over-enforcing. Model DPP requirements and run readiness checks.',
-    url: '/use-cases/compliance-readiness/'
-  }
-,
-  {
-    title: 'Compliance Enforcement',
-    description: 'Enforce structured data standards across your entire supply chain and operations.',
-    url: '/use-cases/compliance-enforcement/'
-  }
-,
-  {
-    title: 'Authentication & Trust',
-    description: 'Secure physical products with item-level authentication and anti-counterfeiting measures.',
-    url: '/use-cases/authentication/'
-  }
-,
-  {
-    title: 'Product Safety & Recalls',
-    description: 'Targeted recall management, precise safety alerts, and post-purchase traceability.',
-    url: '/use-cases/product-safety-recalls/'
-  }
-,
-  {
-    title: 'Ownership, Warranty & Aftercare',
-    description: 'Digital warranties, transferrable ownership, and automated post-sales support.',
-    url: '/use-cases/warranty-aftercare/'
-  }
-,
-  {
-    title: 'Traceability & Safety',
-    description: 'End-to-end tracking of product journey from origin to consumer.',
-    url: '/use-cases/traceability/'
-  }
-,
-  {
-    title: 'Product as a Channel',
-    description: 'Turn physical items into digital touchpoints for direct-to-consumer engagement.',
-    url: '/use-cases/product-as-a-channel/'
-  }
-,
-  {
-    title: 'Resale & Circular Economy',
-    description: 'Enable verified second-life markets and structured recycling programs.',
-    url: '/use-cases/resale-circular-economy/'
-  }
-,
-  {
-    title: 'Suppliers & Manufacturers',
-    description: 'Map multi-tier supply chains and securely gather upstream manufacturing data.',
-    url: '/use-cases/suppliers-upstream-manufacturers/'
-  }
-];
----
-
-<baselayout title="All Use Cases | &lt;keep&gt;TieBack&lt;/keep&gt;" description="Explore how &lt;keep&gt;TieBack&lt;/keep&gt; solves complex compliance and supply chain challenges across industries.">
-  <!-- Hero Section -->
-  <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-950" data-ps="src/pages/use-cases/index.astro:ygdblj">
-    <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 z-0" data-ps="src/pages/use-cases/index.astro:77u98t">
-      <img crossorigin="anonymous"
-        src="https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1200&q=80"
-        srcset="https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1920&q=80 1920w"
-        sizes="100vw"
-        alt="Network background"
-        class="w-full h-full object-cover opacity-20"
-        loading="eager" fetchpriority="high" data-ps="src/pages/use-cases/index.astro:d5ywv9" />
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/40" data-ps="src/pages/use-cases/index.astro:77u98s"></div>
-    </div></section></baselayout>
-
-    <!-- Content -->
-    <div class="relative z-10 max-w-7xl mx-auto px-6" data-ps="src/pages/use-cases/index.astro:77u98r">
-      <div class="max-w-3xl" data-ps="src/pages/use-cases/index.astro:77u98q">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0080FF]/10 text-[#0080FF] text-sm font-semibold tracking-wide border border-[#0080FF]/20 mb-6" data-ps="src/pages/use-cases/index.astro:77u98p">
-          Anwendungsfälle entdecken
-        </div>
-        <h1 class="text-4xl lg:text-6xl font-bold tracking-tight text-white mb-6" data-ps="src/pages/use-cases/index.astro:2b5i26">
-          
-          Komplexe
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400" data-ps="src/pages/use-cases/index.astro:3xd31y">Herausforderungen</span><br/>
-          
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400" data-ps="src/pages/use-cases/index.astro:3xd31y">in der Lieferkette</span>
-          lösen
-        </h1>
-        <p class="text-lg text-slate-300 leading-relaxed mb-10 max-w-2xl" data-ps="src/pages/use-cases/index.astro:tmjfgv">
-          Von der Vorbereitung auf die EU-DPP-Verordnung über die Produktauthentifizierung bis hin zur Förderung der Kreislaufwirtschaft – „TieBack“ bietet Ihnen ein strukturiertes Rahmenwerk, um Compliance sicherzustellen und Wachstum voranzutreiben.
-        </p>
-      </div>
-    </div>
-  
-
-  <!-- Use Cases Grid -->
-  <section class="py-24 bg-slate-950 relative border-t border-slate-900" data-ps="src/pages/use-cases/index.astro:ygdbli">
-    <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/use-cases/index.astro:77u98o">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-ps="src/pages/use-cases/index.astro:77u98n">
-        {useCases.map(useCase => (
-          <a href={useCase.url}
-        class=&quot;group bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:bg-slate-800/80 hover:border-slate-700 transition-all flex flex-col h-full&quot; data-ps=&quot;src/pages/use-cases/index.astro:milir3&quot;&gt;
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#0080FF] transition-colors" data-ps="src/pages/use-cases/index.astro:r1occz">{useCase.title}</h3>
-            <p class="text-slate-400 leading-relaxed mb-8 flex-grow" data-ps="src/pages/use-cases/index.astro:tmjfgu">{useCase.description}</p>
-            <div class="flex items-center text-[#0080FF] text-sm font-semibold" data-ps="src/pages/use-cases/index.astro:77u98m">
-              Anwendungsfall erkunden
-              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </div>
-          
-        ))}
-      </div>
-    </div>
-  </section>
-,---
-import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
-
-
-const useCases = [
-  {
-    title: 'EU DPP & Compliance',
-    description: 'End-to-end Digital Product Passport management for regulatory compliance.',
-    url: '/use-cases/eu-dpp/'
-  }
-,
-  {
-    title: 'Compliance Readiness',
-    description: 'Prepare early without over-enforcing. Model DPP requirements and run readiness checks.',
-    url: '/use-cases/compliance-readiness/'
-  }
-,
-  {
-    title: 'Compliance Enforcement',
-    description: 'Enforce structured data standards across your entire supply chain and operations.',
-    url: '/use-cases/compliance-enforcement/'
-  }
-,
-  {
-    title: 'Authentication & Trust',
-    description: 'Secure physical products with item-level authentication and anti-counterfeiting measures.',
-    url: '/use-cases/authentication/'
-  }
-,
-  {
-    title: 'Product Safety & Recalls',
-    description: 'Targeted recall management, precise safety alerts, and post-purchase traceability.',
-    url: '/use-cases/product-safety-recalls/'
-  }
-,
-  {
-    title: 'Ownership, Warranty & Aftercare',
-    description: 'Digital warranties, transferrable ownership, and automated post-sales support.',
-    url: '/use-cases/warranty-aftercare/'
-  }
-,
-  {
-    title: 'Traceability & Safety',
-    description: 'End-to-end tracking of product journey from origin to consumer.',
-    url: '/use-cases/traceability/'
-  }
-,
-  {
-    title: 'Product as a Channel',
-    description: 'Turn physical items into digital touchpoints for direct-to-consumer engagement.',
-    url: '/use-cases/product-as-a-channel/'
-  }
-,
-  {
-    title: 'Resale & Circular Economy',
-    description: 'Enable verified second-life markets and structured recycling programs.',
-    url: '/use-cases/resale-circular-economy/'
-  }
-,
-  {
-    title: 'Suppliers & Manufacturers',
-    description: 'Map multi-tier supply chains and securely gather upstream manufacturing data.',
-    url: '/use-cases/suppliers-upstream-manufacturers/'
-  }
-];
----
-,<baselayout title="All Use Cases | &lt;keep&gt;TieBack&lt;/keep&gt;" description="Explore how &lt;keep&gt;TieBack&lt;/keep&gt; solves complex compliance and supply chain challenges across industries.">
-  <!-- Hero Section -->
-  <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-950" data-ps="src/pages/use-cases/index.astro:ygdblj">
-    <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 z-0" data-ps="src/pages/use-cases/index.astro:77u98t">
-      <img crossorigin="anonymous"
-        src="https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1200&q=80"
-        srcset="https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1675044794023-2c70962f4899?auto=format&w=1920&q=80 1920w"
-        sizes="100vw"
-        alt="Network background"
-        class="w-full h-full object-cover opacity-20"
-        loading="eager" fetchpriority="high" data-ps="src/pages/use-cases/index.astro:d5ywv9" />
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/40" data-ps="src/pages/use-cases/index.astro:77u98s"></div>
-    </div></section></baselayout>
-
-    <!-- Content -->
-    <div class="relative z-10 max-w-7xl mx-auto px-6" data-ps="src/pages/use-cases/index.astro:77u98r">
-      <div class="max-w-3xl" data-ps="src/pages/use-cases/index.astro:77u98q">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0080FF]/10 text-[#0080FF] text-sm font-semibold tracking-wide border border-[#0080FF]/20 mb-6" data-ps="src/pages/use-cases/index.astro:77u98p">
-          Anwendungsfälle entdecken
-        </div>
-        <h1 class="text-4xl lg:text-6xl font-bold tracking-tight text-white mb-6" data-ps="src/pages/use-cases/index.astro:2b5i26">
-          
-          Komplexe
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400" data-ps="src/pages/use-cases/index.astro:3xd31y">Herausforderungen</span><br/>
-          
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400" data-ps="src/pages/use-cases/index.astro:3xd31y">in der Lieferkette</span>
-          lösen
-        </h1>
-        <p class="text-lg text-slate-300 leading-relaxed mb-10 max-w-2xl" data-ps="src/pages/use-cases/index.astro:tmjfgv">
-          Von der Vorbereitung auf die EU-DPP-Verordnung über die Produktauthentifizierung bis hin zur Förderung der Kreislaufwirtschaft – „TieBack“ bietet Ihnen einen strukturierten Rahmen, um Compliance sicherzustellen und Wachstum voranzutreiben.
-        </p>
-      </div>
-    </div>
-  
-
-  <!-- Use Cases Grid -->
-  <section class="py-24 bg-slate-950 relative border-t border-slate-900" data-ps="src/pages/use-cases/index.astro:ygdbli">
-    <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/use-cases/index.astro:77u98o">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-ps="src/pages/use-cases/index.astro:77u98n">
-        {useCases.map(useCase => (
-          <a href={useCase.url}
-        class=&quot;group bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:bg-slate-800/80 hover:border-slate-700 transition-all flex flex-col h-full&quot; data-ps=&quot;src/pages/use-cases/index.astro:milir3&quot;&gt;
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#0080FF] transition-colors" data-ps="src/pages/use-cases/index.astro:r1occz">{useCase.title}</h3>
-            <p class="text-slate-400 leading-relaxed mb-8 flex-grow" data-ps="src/pages/use-cases/index.astro:tmjfgu">{useCase.description}</p>
-            <div class="flex items-center text-[#0080FF] text-sm font-semibold" data-ps="src/pages/use-cases/index.astro:77u98m">
-              Anwendungsfall erkunden
-              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </div>
-          
-        ))}
-      </div>
-    </div>
-  </section>

@@ -1,4 +1,4 @@
----
+---,
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const jsonLd = {
@@ -11,7 +11,7 @@ const jsonLd = {
     "name": "TieBack"
   }
 };
----
+,
 
 <BaseLayout 
   title="Privacy Policy | TieBack" 
@@ -342,371 +342,14 @@ const jsonLd = {
     </div>
   </main>
 </BaseLayout>
-,---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Privacy Policy",
-  "description": "Privacy Policy for Startwitus Limited, trading as TieBack.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "TieBack"
-  }
-};
 ---
-,<BaseLayout 
-  title="Privacy Policy | TieBack" 
-  description="This Privacy Policy explains how Startwitus Limited, trading as TieBack, collects, uses, shares, stores, and protects personal data."
-  jsonLd={jsonLd}
+
+
+<baselayout title="Privacy Policy | TieBack" description="This Privacy Policy explains how Startwitus Limited, trading as TieBack, collects, uses, shares, stores, and protects personal data." jsonld="<astro-expr" id="0">
 >
   <main class="pt-32 pb-24" data-ps="src/pages/privacy-policy.astro:50tyf8">
     <div class="container mx-auto px-6 max-w-4xl" data-ps="src/pages/privacy-policy.astro:pffnzp">
       <div class="prose prose-invert prose-emerald max-w-none" data-ps="src/pages/privacy-policy.astro:pffnzq">
-        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white" data-ps="src/pages/privacy-policy.astro:yc2gat">Privacy Policy</h1>
-        
-        <p class="text-slate-400 mb-8" data-ps="src/pages/privacy-policy.astro:y33jtl">
-          <strong>Last updated:</strong> 16 March 2026
-        </p>
-
-        <p class="text-lg text-slate-300 leading-relaxed mb-8" data-ps="src/pages/privacy-policy.astro:y33jtm">
-          This Privacy Policy explains how Startwitus Limited, trading as TieBack, a company incorporated in England, UK with registered number 16316535 and registered office at 3rd Floor, 86-90 Paul Street, London, England, United Kingdom, EC2A 4NE (“TieBack”, “we”, “us”, or “our”), collects, uses, shares, stores, and protects personal data when you use:
-        </p>
-
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-8">
-          <li data-ps="src/pages/privacy-policy.astro:rls5ha">the website at <a href="https://tieback.io" class="text-emerald-400 hover:text-emerald-300 transition-colors" data-ps="src/pages/privacy-policy.astro:tu2lfs">https://tieback.io</a> and any related subdomains, pages, and portals;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5hb">the TieBack platform, dashboards, APIs, and documentation;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5hc">product passport pages and consumer-facing product identity experiences delivered through TieBack for our business customers; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5hy">any related support, communications, and services.</li>
-        </ul>
-
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jtn">
-          This Policy is intended primarily for a business-to-business service model. TieBack contracts with companies, not individual consumers. However, some parts of the Services involve the processing of personal data about individuals, including website visitors, users of customer-configured passport features, and people who interact with digital product passport pages.
-        </p>
-
-        <hr class="border-slate-800 my-12" />
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fu">1. Who we are</h2>
-        
-        <p class="font-bold text-slate-200 mb-4" data-ps="src/pages/privacy-policy.astro:y33jto">Data controller / processor overview</p>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jua">TieBack may act as either:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:rls5hz">an independent data controller; or</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i0">a processor (or service provider) acting on behalf of a TieBack business customer,</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jub">depending on the context.</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9232">A. Where TieBack acts as controller</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juc">We generally act as an independent controller for:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:rls5i1">our public website and business contact forms;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i2">account administration for our business customers and their authorised users;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i3">procurement, support, billing, security, and operational communications;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i4">platform security, fraud prevention, abuse detection, and service analytics; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i5">limited scan and telemetry data we use to protect the integrity of the Services and verify product identity interactions.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9231">B. Where a brand / customer acts as controller</h3>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jud">
-          Where a TieBack business customer uses our Services to present product passport content, verify product interactions, operate ownership features, or manage customer-facing lifecycle workflows, that business customer will generally be the controller for the personal data processed through those workflows. In those cases, TieBack acts as a processor or service provider on the customer’s behalf, except where we use limited technical telemetry for our own security and fraud-prevention purposes.
-        </p>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jue">
-          If you are unsure whether TieBack or a brand is the relevant controller for a particular interaction, you can contact us using the details below and we will help direct your request.
-        </p>
-
-        <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-6 mb-12" data-ps="src/pages/privacy-policy.astro:pffnzr">
-          <p class="font-bold text-white mb-2" data-ps="src/pages/privacy-policy.astro:y33juf">Contact details:</p>
-          <ul class="space-y-1 text-slate-300">
-            <li data-ps="src/pages/privacy-policy.astro:rls5i6"><strong>Email:</strong> <a href="mailto:privacy@tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lfr">privacy@tieback.io</a></li>
-            <li data-ps="src/pages/privacy-policy.astro:rls5i7"><strong>Website:</strong> <a href="https://tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lfq">https://tieback.io</a></li>
-          </ul>
-        </div>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43ft">2. What personal data we collect</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jug">The categories of personal data we may collect depend on how the Services are used.</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922f">A. Website and business contact data</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juh">When you visit our website or contact us, we may collect:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:rls5it">name;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iu">work email address;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iv">company name;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iw">job title;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5ix">phone number;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iy">enquiry details;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iz">support or procurement correspondence; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5j0">basic technical data such as IP address, browser type, device type, referring URL, and access timestamps.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922e">B. Platform account and authorised user data</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jui">For customer organisations and their authorised users, we may collect:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:rls5j1">account login and profile information;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5j2">organisation and role information;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j3">access logs, authentication events, and security events;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j2">support requests and administrative actions; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j1">usage data relating to the operation of the platform.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922d">C. Product passport scan and verification telemetry</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juj">When an individual views a product passport page or interacts with a product identity endpoint, we may collect technical interaction data such as:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j0">IP address;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iz">device identifiers or device fingerprints;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iy">browser and operating system details;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ix">approximate location derived from IP;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iw">timestamps;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iv">scan / view frequency and interaction history;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iu">referrer data where available; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i8">anti-fraud, anti-abuse, and product-verification signals.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv5">
-          We use this data for fraud prevention, product identity verification, website/service usage analysis, and platform security. We may also make relevant scan and verification data available to the relevant brand customer for those same purposes.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922c">D. Ownership, wallet, and retention features</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jv6">Where a user chooses to use an ownership feature, retain a product passport, or save a passport to a digital or smart wallet, we may collect additional personal data such as:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i7">email address;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i6">phone number;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i5">device-linked identifiers;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i4">wallet-associated data or wallet pass identifiers;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i3">ownership or claim status information; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i2">any other information the user voluntarily submits to enable that feature.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv7">
-          We store this data securely and retain it for as long as the relevant user retains that passport or feature association, unless the data is deleted earlier in accordance with customer configuration, legal requirements, or a valid deletion request.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922b">E. Data we receive from our business customers</h3>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jv8">
-          Our customers may provide us with product-, user-, or workflow-related data so that we can operate the Services for them. In those cases, the customer is generally responsible for determining what personal data is collected and why, and TieBack processes that data on the customer’s behalf unless otherwise stated.
-        </p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fs">3. How we collect personal data</h2>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jv9">We may collect personal data:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-12">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i1">directly from you when you contact us, request access, create or use an account, or use an ownership or wallet feature;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i0">automatically when you use our website, platform, or product passport pages;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hz">from our customers when they configure and use our Services;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hd">from devices and browsers that interact with product identity pages; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hc">from service providers, integrations, or third parties where permitted by law and necessary to operate the Services.</li>
-        </ul>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fr">4. Purposes of processing and lawful bases</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jva">We process personal data for the following purposes and rely on one or more lawful bases under UK GDPR and, where applicable, EU GDPR:</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922a">A. To provide and operate the Services</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jvb">Including:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hb">providing access to the platform and documentation;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ha">serving product passport pages;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h9">supporting product identity and verification workflows;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h8">enabling ownership, aftercare, and lifecycle features where configured; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h7">maintaining accounts and customer administration.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jvc">
-          <strong>Lawful basis:</strong> performance of a contract; and/or legitimate interests in operating and improving our business-to-business services.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9229">B. To secure the Services and prevent fraud or abuse</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jvd">Including:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h6">platform security;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h5">rate limiting, abuse detection, and anomaly detection;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h4">preventing misuse of product identity endpoints;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gi">product identity verification and anti-fraud analysis; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gh">investigating incidents.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jve">
-          <strong>Lawful basis:</strong> legitimate interests in securing the Services, preventing fraud, and protecting our customers, users, and systems.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9228">C. To support product identity verification and customer-configured workflows</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jw0">Including:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gg">making scan and verification telemetry available to the relevant brand customer;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gf">supporting customer-configured fraud prevention, trust, and lifecycle processes;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ge">enabling customer-configured ownership or retention flows.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw1">
-          <strong>Lawful basis:</strong> legitimate interests of TieBack and the relevant customer; and/or performance of a contract; and/or consent where a feature is optional and the user actively chooses to provide information to enable it.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9227">D. To communicate with customers and prospective customers</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jw2">Including:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gd">responding to enquiries;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gc">managing procurement, onboarding, and support;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gb">sending service-related communications; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ga">handling billing and account administration.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw3">
-          <strong>Lawful basis:</strong> performance of a contract; legitimate interests in managing customer relationships; and consent where required for specific marketing communications.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9226">E. To comply with legal obligations</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jw4">Including:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8g9">responding to lawful requests;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fn">maintaining records;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fm">enforcing rights; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fl">complying with tax, accounting, sanctions, export control, or regulatory requirements.</li>
-        </ul>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw5">
-          <strong>Lawful basis:</strong> compliance with a legal obligation; and/or legitimate interests in protecting our rights and legal position.
-        </p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fq">5. How we share personal data</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw6">We do not sell personal data.</p>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw7">We may share personal data with:</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922d">A. Relevant brand customers</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juc">Where scan, verification, ownership, or lifecycle features are used on behalf of a customer, we may share relevant data with that customer for:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i3">fraud prevention;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i2">product identity verification;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i1">customer-configured ownership and lifecycle workflows;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i0">support and operational analysis; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hz">related legitimate product and brand management purposes.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922c">B. Service providers and subprocessors</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jud">Including providers of:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hd">hosting and infrastructure;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hc">security and monitoring;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hb">email and communications;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ha">customer support;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h9">analytics;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h8">wallet/pass delivery or related infrastructure; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h7">professional services.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jue">These providers process personal data under contract and only as necessary for the relevant services.</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922b">C. Professional advisers and authorities</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juf">We may share data with lawyers, auditors, insurers, regulators, law enforcement, courts, or other authorities where necessary to:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h6">comply with law;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h5">respond to legal process;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h4">establish, exercise, or defend legal claims; or</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gi">protect the rights, safety, or security of TieBack, our customers, users, or others.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922a">D. Corporate transactions</h3>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jug">If TieBack is involved in a merger, acquisition, financing, reorganisation, or sale of all or part of its business, personal data may be disclosed as part of that transaction, subject to appropriate confidentiality and legal safeguards.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fu">6. Retention</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33juh">We keep personal data only for as long as necessary for the purposes described in this Policy, unless a longer retention period is required by law or necessary to protect legal rights.</p>
-        <p class="font-bold text-slate-200 mb-4" data-ps="src/pages/privacy-policy.astro:y33jui">Our current baseline retention approach is:</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9229">A. Scan / verification telemetry</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juj">Personal data collected when an individual views a product passport or verification page — including IP data, device-related identifiers, and similar telemetry — is retained for up to 2 years and then deleted or irreversibly anonymised, unless:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gh">a shorter period is required by law;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gg">a longer retention period is needed for a specific security investigation, dispute, or legal hold; or</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gf">the customer’s lawful instructions require otherwise where TieBack is acting as processor.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9228">B. Ownership / wallet feature data</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jv5">Where users choose to use an ownership feature, retain a passport, or save a passport to a wallet, the associated personal data is retained for as long as the user retains that passport or feature association, unless:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ge">the user deletes it;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gd">the relevant customer instructs deletion;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gc">the account or service is closed; or</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gb">legal retention obligations apply.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9227">C. Business contact and account data</h3>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv6">Business contact, support, onboarding, account, and contractual data is retained for as long as reasonably necessary to manage the relationship and comply with legal, accounting, audit, and dispute-resolution obligations.</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9226">D. Backups and logs</h3>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jv7">Residual copies may remain in backups and logs for a limited period in line with our backup and disaster recovery practices, after which they are deleted or overwritten in the normal course.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43ft">7. International transfers</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv8">We may process or store personal data in the UK, the EEA, or other countries where we or our service providers operate.</p>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jv9">Where personal data is transferred outside the UK or EEA in circumstances that require safeguards, we rely on appropriate transfer mechanisms, such as adequacy regulations or adequacy decisions; or standard contractual clauses, the UK International Data Transfer Agreement (IDTA), or the UK Addendum, as applicable.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fs">8. Security</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jva">We use technical and organisational measures designed to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorised disclosure, or access.</p>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jvb">These measures may include, as appropriate:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-12">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ga">access controls and least-privilege permissions;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8g9">logging and monitoring;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fn">encryption in transit and at rest;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fm">secure development and deployment practices;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fl">retention controls; and</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fk">incident response procedures.</li>
-        </ul>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fr">9. Your rights</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jvc">Where TieBack acts as a controller, individuals may have rights under applicable data protection law, including the right to:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fj">be informed; access personal data; rectify inaccurate data; erase data in certain circumstances; restrict processing in certain circumstances; object to processing based on legitimate interests; data portability, where applicable; and withdraw consent, where consent is the lawful basis.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jvd">If you want to exercise these rights, contact us at <a href="mailto:privacy@tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lfm">privacy@tieback.io</a>.</p>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jve">Where TieBack acts only as a processor on behalf of a brand customer, you should normally direct your request to that brand/customer as controller. TieBack will assist the customer in responding where required by contract or law.</p>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw0">You also have the right to complain to the UK Information Commissioner’s Office (ICO), or to the relevant supervisory authority in your jurisdiction if applicable.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fq">10. Cookies and similar technologies</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw1">We may use cookies and similar technologies on our website and Services. These may include:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fi">strictly necessary cookies; functionality cookies; analytics cookies; and other technologies used to secure, operate, and improve the Services.</li>
-        </ul>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw2">Where required by law, we will ask for consent before placing non-essential cookies or similar technologies. For more information, please see our Cookie Policy.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fp">11. Children</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw3">The Services are intended for business use and are not directed to children. We do not knowingly collect personal data from children except where data is provided through customer-configured workflows and the relevant customer is responsible for the legal basis and notices required for that processing.</p>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw4">If you believe that personal data relating to a child has been collected unlawfully through the Services, please contact us.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fo">12. Third-party links and services</h2>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw5">Our website, product passport pages, or documentation may contain links to third-party websites, tools, or services. We are not responsible for the privacy practices of those third parties, and we encourage you to review their privacy notices.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fn">13. Changes to this Policy</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw6">We may update this Privacy Policy from time to time to reflect changes in:</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fh">the Services; our processing activities; legal requirements; or our business operations.</li>
-        </ul>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw7">We will post the updated version on the website and update the “Last updated” date. Where required by law, we will provide additional notice.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fm">14. Contact us</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw8">If you have questions about this Privacy Policy or our handling of personal data, contact:</p>
-        <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-6 mb-12" data-ps="src/pages/privacy-policy.astro:pffnzr">
-          <p class="font-bold text-white mb-2" data-ps="src/pages/privacy-policy.astro:y33jw9">Startwitus Limited trading as TieBack</p>
-          <p class="text-slate-300" data-ps="src/pages/privacy-policy.astro:y33jwv">3rd Floor, 86-90 Paul Street</p>
-          <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jww">London, England, United Kingdom, EC2A 4NE</p>
-          <ul class="space-y-1 text-slate-300">
-            <li data-ps="src/pages/privacy-policy.astro:cuv8fg"><strong>Email:</strong> <a href="mailto:privacy@tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lf0">privacy@tieback.io</a></li>
-            <li data-ps="src/pages/privacy-policy.astro:cuv8ff"><strong>Website:</strong> <a href="https://tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lez">https://tieback.io</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </main>
-</BaseLayout>
-
----
-import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
-
-
-const jsonLd ={
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Privacy Policy",
-  "description": "Privacy Policy for Startwitus Limited, trading as TieBack.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "TieBack"
-  }
-};
----
-
-<baselayout title="Privacy Policy | &lt;keep&gt;TieBack&lt;/keep&gt;" description="This Privacy Policy explains how Startwitus Limited, trading as &lt;keep&gt;TieBack&lt;/keep&gt;, collects, uses, shares, stores, and protects personal data." jsonld="&lt;astro-expr" id="1">
-&gt;
-  <main class="pt-32 pb-24" data-ps="src/pages/privacy-policy.astro:50tyf8">
-    <div class="container mx-auto px-6 max-w-4xl" data-ps="src/pages/privacy-policy.astro:pffnzp">
-      <div class="prose prose-invert prose-emerald max-w-none" data-ps="src/pages/privacy-policy.astro:pffnzq">
         <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white" data-ps="src/pages/privacy-policy.astro:yc2gat">Politique de confidentialité</h1>
         
         <p class="text-slate-400 mb-8" data-ps="src/pages/privacy-policy.astro:y33jtl">
@@ -715,18 +358,18 @@ const jsonLd ={
         </p></div></div></main></baselayout>
 
         <p class="text-lg text-slate-300 leading-relaxed mb-8" data-ps="src/pages/privacy-policy.astro:y33jtm">
-          La présente politique de confidentialité explique comment Startwitus Limited, opérant sous le nom de TieBack, société constituée en Angleterre (Royaume-Uni) sous le numéro d&#x27;enregistrement 16316535 et dont le siège social est situé au 3e étage, 86-90 Paul Street, Londres, Angleterre, Royaume-Uni, EC2A 4NE (« TieBack », « nous », « notre » ou « nos »), collecte, utilise, partage, stocke et protège les données à caractère personnel lorsque vous utilisez :
+          La présente politique de confidentialité explique comment Startwitus Limited, opérant sous le nom de TieBack, société constituée en Angleterre (Royaume-Uni) sous le numéro d'enregistrement 16316535 et dont le siège social est situé au 3e étage, 86-90 Paul Street, Londres, Angleterre, Royaume-Uni, EC2A 4NE (« TieBack », « nous », « notre » ou « nos »), collecte, utilise, partage, stocke et protège les données à caractère personnel lorsque vous utilisez :
         </p>
 
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-8">
           <li data-ps="src/pages/privacy-policy.astro:rls5ha">le site web <a href="https://tieback.io" class="text-emerald-400 hover:text-emerald-300 transition-colors" data-ps="src/pages/privacy-policy.astro:tu2lfs">https://tieback.io</a> ainsi que tous les sous-domaines, pages et portails associés ;</li>
           <li data-ps="src/pages/privacy-policy.astro:rls5hb">la plateforme TieBack, les tableaux de bord, les API et la documentation ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5hc">les pages de passeport produit et les expériences d&#x27;identification des produits destinées aux consommateurs, fournies via TieBack pour nos clients professionnels ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5hy">toutes les prestations d&#x27;assistance, communications et services associés.</li>
+          <li data-ps="src/pages/privacy-policy.astro:rls5hc">les pages de passeport produit et les expériences d'identification des produits destinées aux consommateurs, fournies via TieBack pour nos clients professionnels ; et</li>
+          <li data-ps="src/pages/privacy-policy.astro:rls5hy">toutes les prestations d'assistance, communications et services associés.</li>
         </ul>
 
         <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jtn">
-          La présente politique s&#x27;applique principalement à un modèle de services interentreprises. TieBack conclut des contrats avec des entreprises, et non avec des particuliers. Toutefois, certaines parties des Services impliquent le traitement de données à caractère personnel concernant des personnes physiques, notamment les visiteurs du site web, les utilisateurs de fonctionnalités de passeport personnalisées et les personnes qui interagissent avec les pages de passeport des produits numériques.
+          La présente politique s'applique principalement à un modèle de services interentreprises. TieBack conclut des contrats avec des entreprises, et non avec des particuliers. Toutefois, certaines parties des Services impliquent le traitement de données à caractère personnel concernant des personnes physiques, notamment les visiteurs du site web, les utilisateurs de fonctionnalités de passeport personnalisées et les personnes qui interagissent avec les pages de passeport des produits numériques.
         </p>
 
         <hr class="border-slate-800 my-12" />
@@ -737,7 +380,7 @@ const jsonLd ={
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jua">TieBack peut agir soit en tant que :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
           <li data-ps="src/pages/privacy-policy.astro:rls5hz">un responsable du traitement indépendant ; ou</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i0">un sous-traitant (ou prestataire de services) agissant pour le compte d&#x27;un client professionnel d&#x27;TieBack,</li>
+          <li data-ps="src/pages/privacy-policy.astro:rls5i0">un sous-traitant (ou prestataire de services) agissant pour le compte d'un client professionnel d'TieBack,</li>
         </ul>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jub">selon le contexte.</p>
 
@@ -746,14 +389,14 @@ const jsonLd ={
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
           <li data-ps="src/pages/privacy-policy.astro:rls5i1">notre site web public et nos formulaires de contact professionnels ;</li>
           <li data-ps="src/pages/privacy-policy.astro:rls5i2">la gestion des comptes de nos clients professionnels et de leurs utilisateurs autorisés ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i3">les achats, l&#x27;assistance, la facturation, la sécurité et les communications opérationnelles ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i4">la sécurité de la plateforme, la prévention de la fraude, la détection des abus et l&#x27;analyse des services ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i5">les données limitées issues de l&#x27;analyse et de la télémétrie que nous utilisons pour protéger l&#x27;intégrité des Services et vérifier les interactions liées à l&#x27;identité des produits.</li>
+          <li data-ps="src/pages/privacy-policy.astro:rls5i3">les achats, l'assistance, la facturation, la sécurité et les communications opérationnelles ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:rls5i4">la sécurité de la plateforme, la prévention de la fraude, la détection des abus et l'analyse des services ; et</li>
+          <li data-ps="src/pages/privacy-policy.astro:rls5i5">les données limitées issues de l'analyse et de la télémétrie que nous utilisons pour protéger l'intégrité des Services et vérifier les interactions liées à l'identité des produits.</li>
         </ul>
 
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9231">B. Lorsqu&#x27;une marque ou un client agit en tant que responsable du traitement</h3>
+        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9231">B. Lorsqu'une marque ou un client agit en tant que responsable du traitement</h3>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jud">
-          Lorsqu&#x27;un client professionnel d&#x27;TieBack utilise nos Services pour présenter le contenu du passeport produit, vérifier les interactions avec les produits, exploiter des fonctionnalités de propriété ou gérer des flux de travail liés au cycle de vie destinés aux clients, ce client professionnel est généralement le responsable du traitement des données à caractère personnel traitées dans le cadre de ces flux de travail. Dans ces cas, TieBack agit en tant que sous-traitant ou prestataire de services pour le compte du client, sauf lorsque nous utilisons une télémétrie technique limitée à des fins de sécurité et de prévention de la fraude.
+          Lorsqu'un client professionnel d'TieBack utilise nos Services pour présenter le contenu du passeport produit, vérifier les interactions avec les produits, gérer les fonctionnalités de propriété ou gérer les flux de travail liés au cycle de vie des clients, ce client professionnel est généralement le responsable du traitement des données à caractère personnel traitées dans le cadre de ces flux de travail. Dans ces cas, TieBack agit en tant que sous-traitant ou prestataire de services pour le compte du client, sauf lorsque nous utilisons une télémétrie technique limitée à des fins de sécurité et de prévention de la fraude.
         </p>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jue">
           Si vous ne savez pas si TieBack ou une marque est le responsable du traitement concerné pour une interaction particulière, vous pouvez nous contacter en utilisant les coordonnées ci-dessous et nous vous aiderons à orienter votre demande.
@@ -770,57 +413,57 @@ const jsonLd ={
         <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43ft">2. Quelles données à caractère personnel collectons-nous ?</h2>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jug">Les catégories de données à caractère personnel que nous pouvons collecter dépendent de la manière dont les Services sont utilisés.</p>
 
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922f">A. Données relatives au site web et aux coordonnées de l&#x27;entreprise</h3>
+        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922f">A. Données relatives au site web et aux coordonnées de l'entreprise</h3>
         <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juh">Lorsque vous visitez notre site web ou que vous nous contactez, nous pouvons recueillir :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
           <li data-ps="src/pages/privacy-policy.astro:rls5it">nom ;</li>
           <li data-ps="src/pages/privacy-policy.astro:rls5iu">adresse e-mail professionnelle ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iv">le nom de l&#x27;entreprise ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:rls5iv">le nom de l'entreprise ;</li>
           <li data-ps="src/pages/privacy-policy.astro:rls5iw">fonction ;</li>
           <li data-ps="src/pages/privacy-policy.astro:rls5ix">numéro de téléphone ;</li>
           <li data-ps="src/pages/privacy-policy.astro:rls5iy">détails de la demande ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iz">correspondance relative à l&#x27;assistance ou aux achats ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5j0">données techniques de base telles que l&#x27;adresse IP, le type de navigateur, le type d&#x27;appareil, l&#x27;URL de référence et les horodatages d&#x27;accès.</li>
+          <li data-ps="src/pages/privacy-policy.astro:rls5iz">correspondance relative à l'assistance ou aux achats ; et</li>
+          <li data-ps="src/pages/privacy-policy.astro:rls5j0">données techniques de base telles que l'adresse IP, le type de navigateur, le type d'appareil, l'URL de référence et les horodatages d'accès.</li>
         </ul>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922e">B. Données relatives au compte de la plateforme et aux utilisateurs autorisés</h3>
         <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jui">Pour les organisations clientes et leurs utilisateurs autorisés, nous pouvons collecter :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
           <li data-ps="src/pages/privacy-policy.astro:rls5j1">les informations de connexion au compte et les informations de profil ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5j2">des informations sur l&#x27;organisation et les rôles ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j3">les journaux d&#x27;accès, les événements d&#x27;authentification et les événements de sécurité ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j2">les demandes d&#x27;assistance et les actions administratives ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j1">des données d&#x27;utilisation relatives au fonctionnement de la plateforme.</li>
+          <li data-ps="src/pages/privacy-policy.astro:rls5j2">des informations sur l'organisation et les rôles ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8j3">les journaux d'accès, les événements d'authentification et les événements de sécurité ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8j2">les demandes d'assistance et les actions administratives ; et</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8j1">des données d'utilisation relatives au fonctionnement de la plateforme.</li>
         </ul>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922d">C. Télémétrie relative à la numérisation et à la vérification du passeport produit</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juj">Lorsqu&#x27;un utilisateur consulte une page du passeport produit ou interagit avec un point de terminaison d&#x27;identité de produit, nous pouvons collecter des données techniques d&#x27;interaction telles que :</p>
+        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juj">Lorsqu'un utilisateur consulte une page du passeport produit ou interagit avec un point de terminaison d'identité de produit, nous pouvons collecter des données techniques d'interaction telles que :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j0">l&#x27;adresse IP ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iz">les identifiants ou empreintes numériques de l&#x27;appareil ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iy">les détails du navigateur et du système d&#x27;exploitation ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ix">la localisation approximative dérivée de l&#x27;adresse IP ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8j0">l'adresse IP ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8iz">les identifiants ou empreintes numériques de l'appareil ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8iy">les détails du navigateur et du système d'exploitation ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8ix">la localisation approximative dérivée de l'adresse IP ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8iw">horodatages ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8iv">fréquence de consultation et historique des interactions ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iu">les données de référence, lorsqu&#x27;elles sont disponibles ; et</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8iu">les données de référence, lorsqu'elles sont disponibles ; et</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8i8">signaux de lutte contre la fraude, les abus et de vérification des produits.</li>
         </ul>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv5">
-          Nous utilisons ces données à des fins de prévention de la fraude, de vérification de l&#x27;identité des produits, d&#x27;analyse de l&#x27;utilisation du site web/du service et de sécurité de la plateforme. Nous pouvons également mettre les données de consultation et de vérification pertinentes à la disposition du client de la marque concernée aux mêmes fins.
+          Nous utilisons ces données à des fins de prévention de la fraude, de vérification de l'identité des produits, d'analyse de l'utilisation du site web/du service et de sécurité de la plateforme. Nous pouvons également mettre les données de consultation et de vérification pertinentes à la disposition du client de la marque concernée aux mêmes fins.
         </p>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922c">D. Fonctionnalités relatives à la propriété, au portefeuille et à la conservation</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jv6">Lorsqu&#x27;un utilisateur choisit d&#x27;utiliser une fonctionnalité de propriété, de conserver un passeport produit ou d&#x27;enregistrer un passeport dans un portefeuille numérique ou intelligent, nous pouvons collecter des données personnelles supplémentaires telles que :</p>
+        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jv6">Lorsqu'un utilisateur choisit d'utiliser une fonctionnalité de propriété, de conserver un passeport produit ou d'enregistrer un passeport dans un portefeuille numérique ou intelligent, nous pouvons collecter des données personnelles supplémentaires telles que :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
           <li data-ps="src/pages/privacy-policy.astro:cuv8i7">adresse e-mail ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8i6">numéro de téléphone ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i5">identifiants liés à l&#x27;appareil ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8i5">identifiants liés à l'appareil ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8i4">les données associées au portefeuille ou les identifiants de passe du portefeuille ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8i3">des informations sur le statut de propriété ou de revendication ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i2">toute autre information que l&#x27;utilisateur fournit volontairement pour activer cette fonctionnalité.</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8i2">toute autre information que l'utilisateur fournit volontairement pour activer cette fonctionnalité.</li>
         </ul>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv7">
-          Nous stockons ces données en toute sécurité et les conservons aussi longtemps que l&#x27;utilisateur concerné conserve ce passeport ou cette association de fonctionnalité, à moins que les données ne soient supprimées plus tôt conformément à la configuration du client, aux exigences légales ou à une demande de suppression valide.
+          Nous stockons ces données en toute sécurité et les conservons aussi longtemps que l'utilisateur concerné conserve ce passeport ou cette association de fonctionnalité, à moins que les données ne soient supprimées plus tôt conformément à la configuration du client, aux exigences légales ou à une demande de suppression valide.
         </p>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922b">E. Données que nous recevons de nos clients professionnels</h3>
@@ -833,26 +476,26 @@ const jsonLd ={
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-12">
           <li data-ps="src/pages/privacy-policy.astro:cuv8i1">directement auprès de vous lorsque vous nous contactez, demandez un accès, créez ou utilisez un compte, ou utilisez une fonctionnalité de propriété ou de portefeuille ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8i0">automatiquement lorsque vous utilisez notre site web, notre plateforme ou les pages de passeport de nos produits ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hz">auprès de nos clients lorsqu&#x27;ils configurent et utilisent nos Services ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hd">auprès des appareils et navigateurs qui interagissent avec les pages d&#x27;identité des produits ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hc">auprès de prestataires de services, d&#x27;intégrations ou de tiers lorsque la loi l&#x27;autorise et que cela est nécessaire au fonctionnement des Services.</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8hz">auprès de nos clients lorsqu'ils configurent et utilisent nos Services ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8hd">auprès des appareils et navigateurs qui interagissent avec les pages d'identité des produits ; et</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8hc">auprès de prestataires de services, d'intégrations ou de tiers lorsque la loi l'autorise et que cela est nécessaire au fonctionnement des Services.</li>
         </ul>
 
         <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fr">4. Finalités du traitement et bases légales</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jva">Nous traitons les données à caractère personnel aux fins suivantes et nous nous appuyons sur une ou plusieurs bases légales en vertu de la loi britannique de 2018 sur la protection des données (GDPR) et, le cas échéant, du règlement général sur la protection des données de l&#x27;UE (GDPR) :</p>
+        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jva">Nous traitons les données à caractère personnel aux fins suivantes et nous nous appuyons sur une ou plusieurs bases légales en vertu de la loi britannique de 2018 sur la protection des données (GDPR) et, le cas échéant, du règlement général sur la protection des données de l'UE (GDPR) :</p>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922a">A. Fournir et exploiter les Services</h3>
         <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jvb">Notamment :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hb">fournir l&#x27;accès à la plateforme et à la documentation ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8hb">fournir l'accès à la plateforme et à la documentation ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8ha">la mise à disposition des pages du passeport produit ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h9">la prise en charge des workflows d&#x27;identification et de vérification des produits ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h8">activer les fonctionnalités de propriété, de suivi et de cycle de vie lorsqu&#x27;elles sont configurées ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h7">la gestion des comptes et l&#x27;administration des clients.</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8h9">la prise en charge des workflows d'identification et de vérification des produits ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8h8">activer les fonctionnalités de propriété, de suivi et de cycle de vie lorsqu'elles sont configurées ; et</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8h7">la gestion des comptes et l'administration des clients.</li>
         </ul>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jvc">
           <strong>Base juridique :</strong>
-          exécution d&#x27;un contrat ; et/ou intérêts légitimes liés à l&#x27;exploitation et à l&#x27;amélioration de nos services interentreprises.
+          exécution d'un contrat ; et/ou intérêts légitimes liés à l'exploitation et à l'amélioration de nos services interentreprises.
         </p>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9229">B. Pour garantir la sécurité des Services et prévenir la fraude ou les abus</h3>
@@ -860,16 +503,16 @@ const jsonLd ={
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
           <li data-ps="src/pages/privacy-policy.astro:cuv8h6">la sécurité de la plateforme ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8h5">la limitation du débit, la détection des abus et la détection des anomalies ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h4">la prévention de l&#x27;utilisation abusive des points de terminaison d&#x27;identité des produits ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gi">la vérification de l&#x27;identité des produits et l&#x27;analyse anti-fraude ; et</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8h4">la prévention de l'utilisation abusive des points de terminaison d'identité des produits ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8gi">la vérification de l'identité des produits et l'analyse anti-fraude ; et</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8gh">enquêtes sur les incidents.</li>
         </ul>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jve">
-          <strong>Base légale :</strong>
+          <strong>Base juridique :</strong>
           intérêts légitimes visant à sécuriser les Services, à prévenir la fraude et à protéger nos clients, nos utilisateurs et nos systèmes.
         </p>
 
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9228">C. Pour faciliter la vérification de l&#x27;identité des produits et les flux de travail personnalisés par le client</h3>
+        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9228">C. Pour faciliter la vérification de l'identité des produits et les flux de travail personnalisés par le client</h3>
         <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jw0">Notamment :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
           <li data-ps="src/pages/privacy-policy.astro:cuv8gg">mettre à la disposition du client de la marque concernée les données de télémétrie relatives à la numérisation et à la vérification ;</li>
@@ -878,21 +521,21 @@ const jsonLd ={
         </ul>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw1">
           <strong>Base juridique :</strong>
-          intérêts légitimes d&#x27;TieBack
-          . et du client concerné ; et/ou exécution d&#x27;un contrat ; et/ou consentement lorsqu&#x27;une fonctionnalité est facultative et que l&#x27;utilisateur choisit activement de fournir des informations pour l&#x27;activer.
+          intérêts légitimes d'TieBack
+          . et du client concerné ; et/ou exécution d'un contrat ; et/ou consentement lorsqu'une fonctionnalité est facultative et que l'utilisateur choisit activement de fournir des informations pour l'activer.
         </p>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9227">D. Pour communiquer avec nos clients et nos prospects</h3>
         <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jw2">Notamment :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
           <li data-ps="src/pages/privacy-policy.astro:cuv8gd">répondre aux demandes de renseignements ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gc">gérer les achats, l&#x27;intégration et l&#x27;assistance ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8gc">gérer les achats, l'intégration et l'assistance ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8gb">envoyer des communications liées aux services ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ga">gérer la facturation et l&#x27;administration des comptes.</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8ga">gérer la facturation et l'administration des comptes.</li>
         </ul>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw3">
-          <strong>Base juridique :</strong>
-          exécution d&#x27;un contrat ; intérêts légitimes dans la gestion des relations clients ; et consentement lorsque cela est requis pour des communications marketing spécifiques.
+          <strong>Base légale :</strong>
+          exécution d'un contrat ; intérêts légitimes dans la gestion des relations clients ; et consentement lorsque cela est requis pour des communications marketing spécifiques.
         </p>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9226">E. Pour respecter les obligations légales</h3>
@@ -905,7 +548,7 @@ const jsonLd ={
         </ul>
         <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw5">
           <strong>Base légale :</strong>
-          respect d&#x27;une obligation légale ; et/ou intérêts légitimes visant à protéger nos droits et notre position juridique.
+          respect d'une obligation légale ; et/ou intérêts légitimes visant à protéger nos droits et notre position juridique.
         </p>
 
         <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fq">5. Comment nous partageons les données à caractère personnel</h2>
@@ -913,12 +556,12 @@ const jsonLd ={
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw7">Nous pouvons partager des données personnelles avec :</p>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922d">A. Clients concernés</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juc">Lorsque des fonctionnalités de scan, de vérification, de propriété ou de cycle de vie sont utilisées pour le compte d&#x27;un client, nous pouvons partager les données pertinentes avec ce client à des fins de :</p>
+        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juc">Lorsque des fonctionnalités de scan, de vérification, de propriété ou de cycle de vie sont utilisées pour le compte d'un client, nous pouvons partager les données pertinentes avec ce client à des fins de :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
           <li data-ps="src/pages/privacy-policy.astro:cuv8i3">prévenir la fraude ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i2">la vérification de l&#x27;identité du produit ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8i2">la vérification de l'identité du produit ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8i1">des workflows de propriété et de cycle de vie configurés par le client ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i0">le support et l&#x27;analyse opérationnelle ; et</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8i0">le support et l'analyse opérationnelle ; et</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8hz">des fins légitimes liées à la gestion des produits et des marques.</li>
         </ul>
 
@@ -929,22 +572,22 @@ const jsonLd ={
           <li data-ps="src/pages/privacy-policy.astro:cuv8hc">sécurité et surveillance ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8hb">messagerie électronique et communications ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8ha">service client ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h9">d&#x27;analyse ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8h9">d'analyse ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8h8">livraison de portefeuilles/pass ou infrastructure associée ; et</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8h7">services professionnels.</li>
         </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jue">Ces prestataires traitent les données à caractère personnel dans le cadre d&#x27;un contrat et uniquement dans la mesure nécessaire à la fourniture des services concernés.</p>
+        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jue">Ces prestataires traitent les données à caractère personnel dans le cadre d'un contrat et uniquement dans la mesure nécessaire à la fourniture des services concernés.</p>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922b">C. Conseillers professionnels et autorités</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juf">Nous pouvons partager des données avec des avocats, des auditeurs, des assureurs, des organismes de réglementation, les forces de l&#x27;ordre, les tribunaux ou d&#x27;autres autorités lorsque cela est nécessaire pour :</p>
+        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juf">Nous pouvons partager des données avec des avocats, des auditeurs, des assureurs, des organismes de réglementation, les forces de l'ordre, les tribunaux ou d'autres autorités lorsque cela est nécessaire pour :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
           <li data-ps="src/pages/privacy-policy.astro:cuv8h6">respecter la loi ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8h5">répondre à une procédure judiciaire ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8h4">établir, exercer ou défendre des droits en justice ; ou</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gi">protéger les droits, la sécurité ou la sûreté d&#x27;TieBack, de nos clients, de nos utilisateurs ou d&#x27;autres personnes.</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8gi">protéger les droits, la sûreté ou la sécurité d'TieBack, de nos clients, de nos utilisateurs ou d'autres personnes.</li>
         </ul>
 
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922a">D. Opérations sur le capital</h3>
+        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922a">D. Opérations d'entreprise</h3>
         <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jug">Si TieBack est impliqué dans une fusion, une acquisition, un financement, une restructuration ou la cession de tout ou partie de ses activités, des données à caractère personnel peuvent être divulguées dans le cadre de cette opération, sous réserve de garanties appropriées en matière de confidentialité et de protection juridique.</p>
 
         <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fu">6. Conservation</h2>
@@ -952,385 +595,37 @@ const jsonLd ={
         <p class="font-bold text-slate-200 mb-4" data-ps="src/pages/privacy-policy.astro:y33jui">Notre approche actuelle en matière de conservation des données est la suivante :</p>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9229">A. Données de télémétrie relatives à la lecture et à la vérification</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juj">Les données à caractère personnel collectées lorsqu&#x27;une personne consulte la fiche produit ou la page de vérification — y compris les données IP, les identifiants liés à l&#x27;appareil et les données de télémétrie similaires — sont conservées pendant une durée maximale de 2 ans, puis supprimées ou anonymisées de manière irréversible, sauf si :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gh">une période plus courte est requise par la loi ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gg">une période de conservation plus longue est nécessaire dans le cadre d&#x27;une enquête de sécurité spécifique, d&#x27;un litige ou d&#x27;une conservation à des fins juridiques ; ou</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gf">les instructions légitimes du client en disposent autrement lorsque l&#x27;TieBacke agit en tant que sous-traitant.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9228">B. Données relatives à la fonctionnalité de propriété / de portefeuille</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jv5">Lorsque les utilisateurs choisissent d&#x27;utiliser une fonctionnalité de propriété, de conserver un passeport ou d&#x27;enregistrer un passeport dans un portefeuille, les données personnelles associées sont conservées aussi longtemps que l&#x27;utilisateur conserve ce passeport ou cette association de fonctionnalités, sauf si :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ge">l&#x27;utilisateur ne les supprime pas ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gd">le client concerné demande la suppression ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gc">le compte ou le service est fermé ; ou</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gb">des obligations légales de conservation s&#x27;appliquent.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9227">C. Coordonnées professionnelles et données relatives au compte</h3>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv6">Les données relatives aux contacts professionnels, à l&#x27;assistance, à l&#x27;intégration, aux comptes et aux contrats sont conservées aussi longtemps que cela est raisonnablement nécessaire pour gérer la relation et respecter les obligations légales, comptables, d&#x27;audit et de résolution des litiges.</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9226">D. Sauvegardes et journaux</h3>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jv7">Des copies résiduelles peuvent subsister dans les sauvegardes et les journaux pendant une période limitée, conformément à nos pratiques en matière de sauvegarde et de reprise après sinistre, après quoi elles sont supprimées ou écrasées dans le cadre de nos procédures habituelles.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43ft">7. Transferts internationaux</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv8">Nous pouvons traiter ou stocker des données à caractère personnel au Royaume-Uni, dans l&#x27;EEE ou dans d&#x27;autres pays où nous ou nos prestataires de services exerçons nos activités.</p>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jv9">Lorsque des données à caractère personnel sont transférées en dehors du Royaume-Uni ou de l&#x27;EEE dans des circonstances nécessitant des garanties, nous nous appuyons sur des mécanismes de transfert appropriés, tels que des réglementations ou des décisions d&#x27;adéquation ; ou des clauses contractuelles types, l&#x27;accord britannique sur les transferts internationaux de données (IDTA) ou l&#x27;addendum britannique, selon le cas.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fs">8. Sécurité</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jva">Nous mettons en œuvre des mesures techniques et organisationnelles destinées à protéger les données à caractère personnel contre toute destruction, perte, altération, divulgation ou accès accidentels ou illicites.</p>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jvb">Ces mesures peuvent inclure, selon le cas :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-12">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ga">des contrôles d&#x27;accès et des autorisations basées sur le principe du moindre privilège ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8g9">la journalisation et la surveillance ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fn">le chiffrement en transit et au repos ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fm">des pratiques de développement et de déploiement sécurisées ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fl">des contrôles de conservation ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fk">procédures de réponse aux incidents.</li>
-        </ul>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fr">9. Vos droits</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jvc">Lorsque TieBack agit en tant que responsable du traitement, les personnes concernées peuvent bénéficier de droits en vertu de la législation applicable en matière de protection des données, notamment le droit :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fj">être informées ; accéder à leurs données à caractère personnel ; rectifier des données inexactes ; effacer des données dans certaines circonstances ; limiter le traitement dans certaines circonstances ; s&#x27;opposer au traitement fondé sur des intérêts légitimes ; bénéficier de la portabilité des données, le cas échéant ; et retirer leur consentement, lorsque celui-ci constitue la base légale.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jvd">Si vous souhaitez exercer ces droits, contactez-nous à l&#x27;adresse <a href="mailto:privacy@tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lfm">privacy@tieback.io</a>.</p>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jve">Lorsque TieBack agit uniquement en tant que sous-traitant pour le compte d&#x27;un client de marque, vous devez normalement adresser votre demande à cette marque/ce client en tant que responsable du traitement. TieBack aidera le client à répondre lorsque cela est requis par contrat ou par la loi.</p>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw0">Vous avez également le droit de déposer une plainte auprès du Bureau du commissaire à l&#x27;information du Royaume-Uni (ICO) ou auprès de l&#x27;autorité de contrôle compétente de votre juridiction, le cas échéant.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fq">10. Cookies et technologies similaires</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw1">Nous pouvons utiliser des cookies et des technologies similaires sur notre site web et nos Services. Il peut s&#x27;agir notamment :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fi">des cookies strictement nécessaires ; des cookies de fonctionnalité ; des cookies d&#x27;analyse ; et d&#x27;autres technologies utilisées pour sécuriser, exploiter et améliorer les Services.</li>
-        </ul>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw2">Lorsque la loi l&#x27;exige, nous vous demanderons votre consentement avant de placer des cookies non essentiels ou des technologies similaires. Pour plus d&#x27;informations, veuillez consulter notre Politique en matière de cookies.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fp">11. Enfants</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw3">Les Services sont destinés à un usage professionnel et ne s&#x27;adressent pas aux enfants. Nous ne collectons pas sciemment de données à caractère personnel auprès d&#x27;enfants, sauf lorsque ces données sont fournies par le biais de flux de travail configurés par le client et que ce dernier est responsable de la base juridique et des notifications requises pour ce traitement.</p>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw4">Si vous pensez que des données à caractère personnel concernant un enfant ont été collectées de manière illicite par le biais des Services, veuillez nous contacter.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fo">12. Liens et services tiers</h2>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw5">Notre site web, les pages de fiches techniques de nos produits ou notre documentation peuvent contenir des liens vers des sites web, des outils ou des services tiers. Nous ne sommes pas responsables des pratiques de ces tiers en matière de confidentialité, et nous vous invitons à consulter leurs politiques de confidentialité.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fn">13. Modifications de la présente politique</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw6">Nous pouvons mettre à jour la présente Politique de confidentialité de temps à autre afin de refléter les changements concernant :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fh">des Services ; de nos activités de traitement ; des exigences légales ; ou de nos opérations commerciales.</li>
-        </ul>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw7">Nous publierons la version mise à jour sur le site web et mettrons à jour la date de « Dernière mise à jour ». Lorsque la loi l&#x27;exige, nous vous en informerons par un avis supplémentaire.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fm">14. Contactez-nous</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw8">Si vous avez des questions concernant la présente politique de confidentialité ou notre traitement des données à caractère personnel, veuillez contacter :</p>
-        <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-6 mb-12" data-ps="src/pages/privacy-policy.astro:pffnzr">
-          <p class="font-bold text-white mb-2" data-ps="src/pages/privacy-policy.astro:y33jw9">Startwitus Limited, opérant sous le nom d&#x27;TieBack</p>
-          <p class="text-slate-300" data-ps="src/pages/privacy-policy.astro:y33jwv">3e étage, 86-90 Paul Street</p>
-          <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jww">Londres, Angleterre, Royaume-Uni, EC2A 4NE</p>
-          <ul class="space-y-1 text-slate-300">
-            <li data-ps="src/pages/privacy-policy.astro:cuv8fg"><strong>E-mail :</strong> <a href="mailto:privacy@tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lf0">privacy@tieback.io</a></li>
-            <li data-ps="src/pages/privacy-policy.astro:cuv8ff"><strong>Site web :</strong> <a href="https://tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lez">https://tieback.io</a></li>
-          </ul>
-        </div>
-      
-    
-  
-
-,---
-import BaseLayout from &#x27;@/layouts/BaseLayout.astro&#x27;;
-
-
-const jsonLd ={
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Privacy Policy",
-  "description": "Privacy Policy for Startwitus Limited, trading as TieBack.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "TieBack"
-  }
-};
----
-,<baselayout title="Privacy Policy | &lt;keep&gt;TieBack&lt;/keep&gt;" description="This Privacy Policy explains how Startwitus Limited, trading as &lt;keep&gt;TieBack&lt;/keep&gt;, collects, uses, shares, stores, and protects personal data." jsonld="&lt;astro-expr" id="3">
-&gt;
-  <main class="pt-32 pb-24" data-ps="src/pages/privacy-policy.astro:50tyf8">
-    <div class="container mx-auto px-6 max-w-4xl" data-ps="src/pages/privacy-policy.astro:pffnzp">
-      <div class="prose prose-invert prose-emerald max-w-none" data-ps="src/pages/privacy-policy.astro:pffnzq">
-        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white" data-ps="src/pages/privacy-policy.astro:yc2gat">Politique de confidentialité</h1>
-        
-        <p class="text-slate-400 mb-8" data-ps="src/pages/privacy-policy.astro:y33jtl">
-          <strong>Dernière mise à jour :</strong>
-          16 mars 2026
-        </p></div></div></main></baselayout>
-
-        <p class="text-lg text-slate-300 leading-relaxed mb-8" data-ps="src/pages/privacy-policy.astro:y33jtm">
-          La présente politique de confidentialité explique comment Startwitus Limited, opérant sous le nom de TieBack, société constituée en Angleterre (Royaume-Uni) sous le numéro d&#x27;enregistrement 16316535 et dont le siège social est situé au 3e étage, 86-90 Paul Street, Londres, Angleterre, Royaume-Uni, EC2A 4NE (« TieBack », « nous », « notre » ou « nos »), collecte, utilise, partage, stocke et protège les données à caractère personnel lorsque vous utilisez :
-        </p>
-
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-8">
-          <li data-ps="src/pages/privacy-policy.astro:rls5ha">le site web <a href="https://tieback.io" class="text-emerald-400 hover:text-emerald-300 transition-colors" data-ps="src/pages/privacy-policy.astro:tu2lfs">https://tieback.io</a> ainsi que tous les sous-domaines, pages et portails associés ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5hb">la plateforme TieBack, les tableaux de bord, les API et la documentation ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5hc">les pages de passeport produit et les expériences d&#x27;identification des produits destinées aux consommateurs, fournies via TieBack pour nos clients professionnels ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5hy">toutes les prestations d&#x27;assistance, communications et services associés.</li>
-        </ul>
-
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jtn">
-          La présente politique s&#x27;applique principalement à un modèle de services interentreprises. TieBack conclut des contrats avec des entreprises, et non avec des particuliers. Toutefois, certaines parties des Services impliquent le traitement de données à caractère personnel concernant des personnes physiques, notamment les visiteurs du site web, les utilisateurs de fonctionnalités de passeport personnalisées et les personnes qui interagissent avec les pages de passeport des produits numériques.
-        </p>
-
-        <hr class="border-slate-800 my-12" />
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fu">1. Qui sommes-nous ?</h2>
-        
-        <p class="font-bold text-slate-200 mb-4" data-ps="src/pages/privacy-policy.astro:y33jto">Présentation du responsable du traitement / du sous-traitant</p>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jua">TieBack peut agir soit en tant que :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:rls5hz">un responsable du traitement indépendant ; ou</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i0">un sous-traitant (ou prestataire de services) agissant pour le compte d&#x27;un client professionnel d&#x27;TieBack,</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jub">selon le contexte.</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9232">A. Lorsque TieBack agit en tant que responsable du traitement</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juc">Nous agissons généralement en tant que responsable du traitement indépendant pour :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:rls5i1">notre site web public et nos formulaires de contact professionnels ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i2">la gestion des comptes de nos clients professionnels et de leurs utilisateurs autorisés ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i3">les achats, l&#x27;assistance, la facturation, la sécurité et les communications opérationnelles ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i4">la sécurité de la plateforme, la prévention de la fraude, la détection des abus et l&#x27;analyse des services ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5i5">les données limitées issues de l&#x27;analyse et de la télémétrie que nous utilisons pour protéger l&#x27;intégrité des Services et vérifier les interactions liées à l&#x27;identité des produits.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9231">B. Lorsqu&#x27;une marque ou un client agit en tant que responsable du traitement</h3>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jud">
-          Lorsqu&#x27;un client professionnel d&#x27;TieBack utilise nos Services pour présenter le contenu du passeport produit, vérifier les interactions avec les produits, gérer les fonctionnalités liées à la propriété ou gérer les flux de travail du cycle de vie destinés aux clients, ce client professionnel est généralement le responsable du traitement des données à caractère personnel traitées dans le cadre de ces flux de travail. Dans ces cas, TieBack agit en tant que sous-traitant ou prestataire de services pour le compte du client, sauf lorsque nous utilisons une télémétrie technique limitée à des fins de sécurité et de prévention de la fraude.
-        </p>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jue">
-          Si vous ne savez pas si TieBack ou une marque est le responsable du traitement concerné pour une interaction particulière, vous pouvez nous contacter en utilisant les coordonnées ci-dessous et nous vous aiderons à orienter votre demande.
-        </p>
-
-        <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-6 mb-12" data-ps="src/pages/privacy-policy.astro:pffnzr">
-          <p class="font-bold text-white mb-2" data-ps="src/pages/privacy-policy.astro:y33juf">Coordonnées :</p>
-          <ul class="space-y-1 text-slate-300">
-            <li data-ps="src/pages/privacy-policy.astro:rls5i6"><strong>E-mail :</strong> <a href="mailto:privacy@tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lfr">privacy@tieback.io</a></li>
-            <li data-ps="src/pages/privacy-policy.astro:rls5i7"><strong>Site web :</strong> <a href="https://tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lfq">https://tieback.io</a></li>
-          </ul>
-        </div>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43ft">2. Quelles données à caractère personnel collectons-nous ?</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jug">Les catégories de données à caractère personnel que nous pouvons collecter dépendent de la manière dont les Services sont utilisés.</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922f">A. Données relatives au site web et aux coordonnées de l&#x27;entreprise</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juh">Lorsque vous visitez notre site web ou que vous nous contactez, nous pouvons recueillir :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:rls5it">nom ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iu">adresse e-mail professionnelle ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iv">le nom de l&#x27;entreprise ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iw">fonction ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5ix">numéro de téléphone ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iy">détails de la demande ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5iz">correspondance relative à l&#x27;assistance ou aux achats ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5j0">données techniques de base telles que l&#x27;adresse IP, le type de navigateur, le type d&#x27;appareil, l&#x27;URL de référence et les horodatages d&#x27;accès.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922e">B. Données relatives au compte de la plateforme et aux utilisateurs autorisés</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jui">Pour les organisations clientes et leurs utilisateurs autorisés, nous pouvons collecter :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:rls5j1">les informations de connexion au compte et les informations de profil ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:rls5j2">des informations sur l&#x27;organisation et les rôles ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j3">les journaux d&#x27;accès, les événements d&#x27;authentification et les événements de sécurité ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j2">les demandes d&#x27;assistance et les actions administratives ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j1">des données d&#x27;utilisation relatives au fonctionnement de la plateforme.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922d">C. Télémétrie relative à la numérisation et à la vérification du passeport produit</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juj">Lorsqu&#x27;un utilisateur consulte une page du passeport produit ou interagit avec un point de terminaison d&#x27;identité de produit, nous pouvons collecter des données techniques d&#x27;interaction telles que :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8j0">l&#x27;adresse IP ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iz">les identifiants ou empreintes de l&#x27;appareil ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iy">les détails du navigateur et du système d&#x27;exploitation ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ix">la localisation approximative dérivée de l&#x27;adresse IP ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iw">horodatages ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iv">fréquence de consultation et historique des interactions ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8iu">les données de référence, lorsqu&#x27;elles sont disponibles ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i8">signaux de lutte contre la fraude, les abus et de vérification des produits.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv5">
-          Nous utilisons ces données à des fins de prévention de la fraude, de vérification de l&#x27;identité des produits, d&#x27;analyse de l&#x27;utilisation du site web/du service et de sécurité de la plateforme. Nous pouvons également mettre les données de consultation et de vérification pertinentes à la disposition du client de la marque concernée aux mêmes fins.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922c">D. Fonctionnalités relatives à la propriété, au portefeuille et à la conservation</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jv6">Lorsqu&#x27;un utilisateur choisit d&#x27;utiliser une fonctionnalité de propriété, de conserver un passeport produit ou d&#x27;enregistrer un passeport dans un portefeuille numérique ou intelligent, nous pouvons collecter des données personnelles supplémentaires telles que :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i7">adresse e-mail ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i6">numéro de téléphone ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i5">identifiants liés à l&#x27;appareil ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i4">les données associées au portefeuille ou les identifiants de passe du portefeuille ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i3">des informations sur le statut de propriété ou de revendication ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i2">toute autre information que l&#x27;utilisateur fournit volontairement pour activer cette fonctionnalité.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv7">
-          Nous stockons ces données en toute sécurité et les conservons aussi longtemps que l&#x27;utilisateur concerné conserve ce passeport ou cette association de fonctionnalité, à moins que les données ne soient supprimées plus tôt conformément à la configuration du client, aux exigences légales ou à une demande de suppression valide.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922b">E. Données que nous recevons de nos clients professionnels</h3>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jv8">
-          Nos clients peuvent nous fournir des données relatives aux produits, aux utilisateurs ou aux flux de travail afin que nous puissions exploiter les Services pour leur compte. Dans ces cas, le client est généralement chargé de déterminer quelles données à caractère personnel sont collectées et à quelles fins, et TieBack traite ces données pour le compte du client, sauf indication contraire.
-        </p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fs">3. Comment nous collectons les données à caractère personnel</h2>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jv9">Nous pouvons collecter des données à caractère personnel :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-12">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i1">directement auprès de vous lorsque vous nous contactez, demandez un accès, créez ou utilisez un compte, ou utilisez une fonctionnalité de propriété ou de portefeuille ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i0">automatiquement lorsque vous utilisez notre site web, notre plateforme ou les pages de passeport de nos produits ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hz">auprès de nos clients lorsqu&#x27;ils configurent et utilisent nos Services ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hd">auprès des appareils et navigateurs qui interagissent avec les pages d&#x27;identité des produits ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hc">auprès de prestataires de services, d&#x27;intégrations ou de tiers lorsque la loi l&#x27;autorise et que cela est nécessaire au fonctionnement des Services.</li>
-        </ul>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fr">4. Finalités du traitement et bases légales</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jva">Nous traitons les données à caractère personnel aux fins suivantes et nous nous appuyons sur une ou plusieurs bases légales en vertu de la loi britannique de 2018 sur la protection des données (GDPR) et, le cas échéant, du règlement général sur la protection des données de l&#x27;UE (GDPR) :</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922a">A. Fournir et exploiter les Services</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jvb">Notamment :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hb">fournir l&#x27;accès à la plateforme et à la documentation ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ha">la mise à disposition des pages du passeport produit ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h9">la prise en charge des workflows d&#x27;identification et de vérification des produits ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h8">activer les fonctionnalités de propriété, de suivi et de cycle de vie lorsqu&#x27;elles sont configurées ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h7">la gestion des comptes et l&#x27;administration des clients.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jvc">
-          <strong>Base juridique :</strong>
-          exécution d&#x27;un contrat ; et/ou intérêts légitimes liés à l&#x27;exploitation et à l&#x27;amélioration de nos services interentreprises.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9229">B. Pour garantir la sécurité des Services et prévenir la fraude ou les abus</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jvd">Notamment :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h6">la sécurité de la plateforme ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h5">la limitation du débit, la détection des abus et la détection des anomalies ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h4">la prévention de l&#x27;utilisation abusive des points de terminaison d&#x27;identité des produits ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gi">la vérification de l&#x27;identité des produits et l&#x27;analyse anti-fraude ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gh">enquêtes sur les incidents.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jve">
-          <strong>Base juridique :</strong>
-          intérêts légitimes visant à sécuriser les Services, à prévenir la fraude et à protéger nos clients, nos utilisateurs et nos systèmes.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9228">C. Pour faciliter la vérification de l&#x27;identité des produits et les flux de travail personnalisés par le client</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jw0">Notamment :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gg">mettre à la disposition du client de la marque concernée les données de télémétrie relatives à la numérisation et à la vérification ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gf">prendre en charge les processus de prévention de la fraude, de confiance et de cycle de vie configurés par le client ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ge">permettre la mise en place de flux de propriété ou de conservation configurés par le client.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw1">
-          <strong>Base juridique :</strong>
-          intérêts légitimes d&#x27;TieBack
-          . et du client concerné ; et/ou exécution d&#x27;un contrat ; et/ou consentement lorsqu&#x27;une fonctionnalité est facultative et que l&#x27;utilisateur choisit activement de fournir des informations pour l&#x27;activer.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9227">D. Pour communiquer avec nos clients et nos prospects</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jw2">Notamment :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gd">répondre aux demandes de renseignements ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gc">gérer les achats, l&#x27;intégration et l&#x27;assistance ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gb">envoyer des communications liées aux services ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ga">gérer la facturation et l&#x27;administration des comptes.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw3">
-          <strong>Base juridique :</strong>
-          exécution d&#x27;un contrat ; intérêts légitimes dans la gestion des relations clients ; et consentement lorsque cela est requis pour des communications marketing spécifiques.
-        </p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9226">E. Pour respecter les obligations légales</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jw4">Notamment :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-4">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8g9">répondre aux demandes légitimes ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fn">conserver des archives ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fm">faire valoir nos droits ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fl">se conformer aux exigences fiscales, comptables, en matière de sanctions, de contrôle des exportations ou réglementaires.</li>
-        </ul>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw5">
-          <strong>Base légale :</strong>
-          respect d&#x27;une obligation légale ; et/ou intérêts légitimes visant à protéger nos droits et notre position juridique.
-        </p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fq">5. Comment nous partageons les données à caractère personnel</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw6">Nous ne vendons pas de données personnelles.</p>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw7">Nous pouvons partager des données personnelles avec :</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922d">A. Clients concernés</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juc">Lorsque des fonctionnalités de scan, de vérification, de propriété ou de cycle de vie sont utilisées pour le compte d&#x27;un client, nous pouvons partager les données pertinentes avec ce client à des fins de :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i3">prévenir la fraude ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i2">la vérification de l&#x27;identité du produit ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i1">des workflows de propriété et de cycle de vie configurés par le client ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8i0">le support et l&#x27;analyse opérationnelle ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hz">des fins légitimes liées à la gestion des produits et des marques.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922c">B. Prestataires de services et sous-traitants</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jud">Y compris les prestataires de :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hd">hébergement et infrastructure ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hc">sécurité et surveillance ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8hb">messagerie électronique et communications ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ha">service client ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h9">d&#x27;analyse ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h8">livraison de portefeuilles/pass ou infrastructure associée ; et</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h7">services professionnels.</li>
-        </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jue">Ces prestataires traitent les données à caractère personnel dans le cadre d&#x27;un contrat et uniquement dans la mesure nécessaire à la fourniture des services concernés.</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922b">C. Conseillers professionnels et autorités</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juf">Nous pouvons partager des données avec des avocats, des auditeurs, des assureurs, des organismes de réglementation, les forces de l&#x27;ordre, les tribunaux ou d&#x27;autres autorités lorsque cela est nécessaire pour :</p>
-        <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h6">respecter la loi ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h5">répondre à une procédure judiciaire ;</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8h4">établir, exercer ou défendre des droits en justice ; ou</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gi">protéger les droits, la sûreté ou la sécurité d&#x27;TieBack, de nos clients, de nos utilisateurs ou d&#x27;autres personnes.</li>
-        </ul>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa922a">D. Opérations d&#x27;entreprise</h3>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jug">Si TieBack est impliqué dans une fusion, une acquisition, un financement, une restructuration ou la cession de tout ou partie de ses activités, des données à caractère personnel peuvent être divulguées dans le cadre de cette opération, sous réserve de garanties appropriées en matière de confidentialité et de protection juridique.</p>
-
-        <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fu">6. Conservation</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33juh">Nous conservons les données à caractère personnel uniquement pendant la durée nécessaire aux fins décrites dans la présente Politique, sauf si une période de conservation plus longue est requise par la loi ou nécessaire pour protéger des droits légaux.</p>
-        <p class="font-bold text-slate-200 mb-4" data-ps="src/pages/privacy-policy.astro:y33jui">Notre approche actuelle en matière de conservation des données est la suivante :</p>
-
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9229">A. Données de télémétrie relatives à la lecture et à la vérification</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juj">Les données à caractère personnel collectées lorsqu&#x27;une personne consulte la fiche produit ou la page de vérification — y compris les données IP, les identifiants liés à l&#x27;appareil et les données de télémétrie similaires — sont conservées pendant une durée maximale de 2 ans, puis supprimées ou anonymisées de manière irréversible, sauf si :</p>
+        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33juj">Les données à caractère personnel collectées lorsqu'une personne consulte la fiche produit ou la page de vérification — y compris les données IP, les identifiants liés à l'appareil et les données de télémétrie similaires — sont conservées pendant une durée maximale de 2 ans, puis supprimées ou anonymisées de manière irréversible, sauf si :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
           <li data-ps="src/pages/privacy-policy.astro:cuv8gh">une période plus courte est requise par la loi ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8gg">une période de conservation plus longue est nécessaire pour une enquête de sécurité spécifique, un litige ou une conservation à des fins juridiques ; ou</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gf">les instructions légitimes du client en disposent autrement lorsque l&#x27;TieBacke agit en tant que sous-traitant.</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8gf">les instructions légitimes du client en disposent autrement lorsque l'TieBacke agit en tant que sous-traitant.</li>
         </ul>
 
-        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9228">B. Données relatives à la fonctionnalité de propriété / portefeuille</h3>
-        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jv5">Lorsque les utilisateurs choisissent d&#x27;utiliser une fonctionnalité de propriété, de conserver un passeport ou d&#x27;enregistrer un passeport dans un portefeuille, les données personnelles associées sont conservées aussi longtemps que l&#x27;utilisateur conserve ce passeport ou cette association de fonctionnalités, sauf si :</p>
+        <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9228">B. Données relatives à la fonctionnalité de propriété / de portefeuille</h3>
+        <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jv5">Lorsque les utilisateurs choisissent d'utiliser une fonctionnalité de propriété, de conserver un passeport ou d'enregistrer un passeport dans un portefeuille, les données personnelles associées sont conservées aussi longtemps que l'utilisateur conserve ce passeport ou cette association de fonctionnalités, sauf si :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ge">l&#x27;utilisateur ne les supprime pas ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8ge">l'utilisateur ne les supprime pas ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8gd">le client concerné demande la suppression ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8gc">le compte ou le service est fermé ; ou</li>
-          <li data-ps="src/pages/privacy-policy.astro:cuv8gb">des obligations légales de conservation s&#x27;appliquent.</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8gb">des obligations légales de conservation s'appliquent.</li>
         </ul>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9227">C. Coordonnées professionnelles et données relatives au compte</h3>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv6">Les données relatives aux contacts professionnels, à l&#x27;assistance, à l&#x27;intégration, aux comptes et aux contrats sont conservées aussi longtemps que cela est raisonnablement nécessaire pour gérer la relation et respecter les obligations légales, comptables, d&#x27;audit et de résolution des litiges.</p>
+        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv6">Les données relatives aux contacts professionnels, à l'assistance, à l'intégration, aux comptes et aux contrats sont conservées aussi longtemps que cela est raisonnablement nécessaire pour gérer la relation et respecter les obligations légales, comptables, d'audit et de résolution des litiges.</p>
 
         <h3 class="text-xl font-bold text-white mt-8 mb-4" data-ps="src/pages/privacy-policy.astro:sa9226">D. Sauvegardes et journaux</h3>
         <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jv7">Des copies résiduelles peuvent subsister dans les sauvegardes et les journaux pendant une période limitée, conformément à nos pratiques en matière de sauvegarde et de reprise après sinistre, après quoi elles sont supprimées ou écrasées dans le cadre de nos procédures habituelles.</p>
 
         <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43ft">7. Transferts internationaux</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv8">Nous pouvons traiter ou stocker des données à caractère personnel au Royaume-Uni, dans l&#x27;EEE ou dans d&#x27;autres pays où nous ou nos prestataires de services exerçons nos activités.</p>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jv9">Lorsque des données à caractère personnel sont transférées en dehors du Royaume-Uni ou de l&#x27;EEE dans des circonstances nécessitant des garanties, nous nous appuyons sur des mécanismes de transfert appropriés, tels que des réglementations ou des décisions d&#x27;adéquation ; ou des clauses contractuelles types, l&#x27;accord britannique sur les transferts internationaux de données (IDTA) ou l&#x27;addendum britannique, selon le cas.</p>
+        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jv8">Nous pouvons traiter ou stocker des données à caractère personnel au Royaume-Uni, dans l'EEE ou dans d'autres pays où nous ou nos prestataires de services exerçons nos activités.</p>
+        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jv9">Lorsque des données à caractère personnel sont transférées en dehors du Royaume-Uni ou de l'EEE dans des circonstances nécessitant des garanties, nous nous appuyons sur des mécanismes de transfert appropriés, tels que des réglementations ou des décisions d'adéquation ; ou des clauses contractuelles types, l'accord britannique sur les transferts internationaux de données (IDTA) ou l'addendum britannique, selon le cas.</p>
 
         <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fs">8. Sécurité</h2>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jva">Nous mettons en œuvre des mesures techniques et organisationnelles destinées à protéger les données à caractère personnel contre toute destruction, perte, altération, divulgation ou accès accidentels ou illicites.</p>
         <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jvb">Ces mesures peuvent inclure, selon le cas :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-12">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8ga">des contrôles d&#x27;accès et des autorisations basées sur le principe du moindre privilège ;</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8ga">des contrôles d'accès et des autorisations basées sur le principe du moindre privilège ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8g9">la journalisation et la surveillance ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8fn">le chiffrement en transit et au repos ;</li>
           <li data-ps="src/pages/privacy-policy.astro:cuv8fm">des pratiques de développement et de déploiement sécurisées ;</li>
@@ -1341,21 +636,21 @@ const jsonLd ={
         <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fr">9. Vos droits</h2>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jvc">Lorsque TieBack agit en tant que responsable du traitement, les personnes concernées peuvent bénéficier de droits en vertu de la législation applicable en matière de protection des données, notamment le droit :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fj">être informées ; accéder à leurs données à caractère personnel ; rectifier des données inexactes ; effacer des données dans certaines circonstances ; limiter le traitement dans certaines circonstances ; s&#x27;opposer au traitement fondé sur des intérêts légitimes ; bénéficier de la portabilité des données, le cas échéant ; et retirer leur consentement, lorsque celui-ci constitue la base légale.</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8fj">être informées ; accéder à leurs données à caractère personnel ; rectifier les données inexactes ; effacer les données dans certaines circonstances ; limiter le traitement dans certaines circonstances ; s'opposer au traitement fondé sur des intérêts légitimes ; bénéficier de la portabilité des données, le cas échéant ; et retirer leur consentement, lorsque celui-ci constitue la base légale.</li>
         </ul>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jvd">Si vous souhaitez exercer ces droits, contactez-nous à l&#x27;adresse <a href="mailto:privacy@tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lfm">privacy@tieback.io</a>.</p>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jve">Lorsque TieBack agit uniquement en tant que sous-traitant pour le compte d&#x27;un client de marque, vous devez normalement adresser votre demande à cette marque/ce client en tant que responsable du traitement. TieBack aidera le client à répondre lorsque cela est requis par contrat ou par la loi.</p>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw0">Vous avez également le droit de déposer une plainte auprès du Bureau du commissaire à l&#x27;information du Royaume-Uni (ICO) ou auprès de l&#x27;autorité de contrôle compétente de votre juridiction, le cas échéant.</p>
+        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jvd">Si vous souhaitez exercer ces droits, contactez-nous à l'adresse <a href="mailto:privacy@tieback.io" class="text-emerald-400" data-ps="src/pages/privacy-policy.astro:tu2lfm">privacy@tieback.io</a>.</p>
+        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jve">Lorsque TieBack agit uniquement en tant que sous-traitant pour le compte d'un client de marque, vous devez normalement adresser votre demande à cette marque/ce client en tant que responsable du traitement. TieBack aidera le client à répondre lorsque cela est requis par contrat ou par la loi.</p>
+        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw0">Vous avez également le droit de déposer une plainte auprès du Bureau du commissaire à l'information du Royaume-Uni (ICO) ou auprès de l'autorité de contrôle compétente de votre juridiction, le cas échéant.</p>
 
         <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fq">10. Cookies et technologies similaires</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw1">Nous pouvons utiliser des cookies et des technologies similaires sur notre site web et nos Services. Il peut s&#x27;agir notamment :</p>
+        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw1">Nous pouvons utiliser des cookies et des technologies similaires sur notre site web et nos Services. Il peut s'agir notamment :</p>
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
-          <li data-ps="src/pages/privacy-policy.astro:cuv8fi">des cookies strictement nécessaires ; des cookies de fonctionnalité ; des cookies d&#x27;analyse ; et d&#x27;autres technologies utilisées pour sécuriser, exploiter et améliorer les Services.</li>
+          <li data-ps="src/pages/privacy-policy.astro:cuv8fi">des cookies strictement nécessaires ; des cookies de fonctionnalité ; des cookies d'analyse ; et d'autres technologies utilisées pour sécuriser, exploiter et améliorer les Services.</li>
         </ul>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw2">Lorsque la loi l&#x27;exige, nous vous demanderons votre consentement avant de placer des cookies non essentiels ou des technologies similaires. Pour plus d&#x27;informations, veuillez consulter notre Politique en matière de cookies.</p>
+        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw2">Lorsque la loi l'exige, nous vous demanderons votre consentement avant de placer des cookies non essentiels ou des technologies similaires. Pour plus d'informations, veuillez consulter notre Politique en matière de cookies.</p>
 
         <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fp">11. Enfants</h2>
-        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw3">Les Services sont destinés à un usage professionnel et ne s&#x27;adressent pas aux enfants. Nous ne collectons pas sciemment de données à caractère personnel auprès d&#x27;enfants, sauf lorsque ces données sont fournies par le biais de flux de travail configurés par le client et que ce dernier est responsable de la base juridique et des notifications requises pour ce traitement.</p>
+        <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw3">Les Services sont destinés à un usage professionnel et ne s'adressent pas aux enfants. Nous ne collectons pas sciemment de données à caractère personnel auprès d'enfants, sauf lorsque ces données sont fournies par le biais de flux de travail configurés par le client et que ce dernier est responsable de la base juridique et des notifications requises pour ce traitement.</p>
         <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw4">Si vous pensez que des données à caractère personnel concernant un enfant ont été collectées de manière illicite par le biais des Services, veuillez nous contacter.</p>
 
         <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fo">12. Liens et services tiers</h2>
@@ -1366,12 +661,12 @@ const jsonLd ={
         <ul class="list-disc pl-6 text-slate-300 space-y-2 mb-6">
           <li data-ps="src/pages/privacy-policy.astro:cuv8fh">des Services ; de nos activités de traitement ; des exigences légales ; ou de nos opérations commerciales.</li>
         </ul>
-        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw7">Nous publierons la version mise à jour sur le site web et mettrons à jour la date de « Dernière mise à jour ». Lorsque la loi l&#x27;exige, nous vous en informerons par un avis supplémentaire.</p>
+        <p class="text-slate-300 mb-12" data-ps="src/pages/privacy-policy.astro:y33jw7">Nous publierons la version mise à jour sur le site web et mettrons à jour la date de « Dernière mise à jour ». Lorsque la loi l'exige, nous vous en informerons par un avis supplémentaire.</p>
 
         <h2 class="text-2xl font-bold text-white mt-12 mb-6" data-ps="src/pages/privacy-policy.astro:yt43fm">14. Contactez-nous</h2>
         <p class="text-slate-300 mb-6" data-ps="src/pages/privacy-policy.astro:y33jw8">Si vous avez des questions concernant la présente politique de confidentialité ou notre traitement des données à caractère personnel, veuillez contacter :</p>
         <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-6 mb-12" data-ps="src/pages/privacy-policy.astro:pffnzr">
-          <p class="font-bold text-white mb-2" data-ps="src/pages/privacy-policy.astro:y33jw9">Startwitus Limited, opérant sous le nom d&#x27;TieBack</p>
+          <p class="font-bold text-white mb-2" data-ps="src/pages/privacy-policy.astro:y33jw9">Startwitus Limited, opérant sous le nom d'TieBack</p>
           <p class="text-slate-300" data-ps="src/pages/privacy-policy.astro:y33jwv">3e étage, 86-90 Paul Street</p>
           <p class="text-slate-300 mb-4" data-ps="src/pages/privacy-policy.astro:y33jww">Londres, Angleterre, Royaume-Uni, EC2A 4NE</p>
           <ul class="space-y-1 text-slate-300">
