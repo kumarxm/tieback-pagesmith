@@ -10,7 +10,7 @@ const description = "When mandates activate, compliance becomes operational. Tie
 
 
 
-<baselayout title="{title}" description="{description}">
+<BaseLayout title={title} description={description}>
   <!-- 1. Use Case Hero -->
   <section class="relative pt-32 pb-24 md:pt-52 md:pb-40 overflow-hidden bg-slate-950" data-ps="src/pages/use-cases/compliance-enforcement.astro:hero">
     <!-- Hero Background Image -->
@@ -24,7 +24,7 @@ const description = "When mandates activate, compliance becomes operational. Tie
         loading="eager" fetchpriority="high" data-ps="src/pages/use-cases/compliance-enforcement.astro:hero-img" />
       <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950" data-ps="src/pages/use-cases/compliance-enforcement.astro:hero-overlay"></div>
     </div>
-</section></baselayout>
+</section></BaseLayout>
 
 
     <div class="container mx-auto px-6 relative z-10" data-ps="src/pages/use-cases/compliance-enforcement.astro:hero-container">

@@ -38,7 +38,7 @@ const jsonLd = {
 
 
 
-<baselayout title="{`${post.data.title} | TieBack Journal`}" description="{post.data.description}" jsonld="{jsonLd}">
+<BaseLayout title={`${post.data.title} | TieBack Journal`} description={post.data.description} jsonLd={jsonLd}>
   <article class="bg-white text-[#242424] pt-28 pb-20 font-sans selection:bg-blue-200 selection:text-blue-900" data-ps="src/pages/journal/[slug].astro:cl4ce0">
     <div class="max-w-7xl mx-auto px-4 sm:px-6" data-ps="src/pages/journal/[slug].astro:mjgj81">
       <!-- Article Header -->
@@ -71,7 +71,7 @@ const jsonLd = {
           </div>
         </div>
       </header>
-</div></article></baselayout>
+</div></article></BaseLayout>
 
 
       <!-- Featured Image -->
