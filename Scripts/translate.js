@@ -2,7 +2,7 @@
 
 /**
  * TieBack — Automated Translation Pipeline for Pagesmith (Astro/Markdown)
- * Uses Brace-Counting & Plain-Text Placeholders for 100% Astro Compilation Safety.
+ * Equipped with Astro Syntax Memory & Quote Stripping.
  */
 
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSync } from 'fs';
@@ -27,10 +27,6 @@ function decodeHtmlEntities(text) {
     .replace(/&amp;/g, '&');
 }
 
-/**
- * Bulletproof Frontmatter isolation. 
- * Extracts exactly the top block between the first two '---' markers.
- */
 function parseAstro(content) {
   if (content.startsWith('---')) {
     const endIdx = content.indexOf('---', 3);
@@ -44,16 +40,30 @@ function parseAstro(content) {
 }
 
 /**
- * Uses brace-counting to safely hide Astro expressions without breaking HTML attributes.
+ * MEMORY BANK: Memorizes exact casing of Components and CamelCase Props
  */
+function extractCaseSensitiveNames(body) {
+  const components = new Set();
+  const props = new Set();
+  
+  // Memorize Capitalized Components (e.g., BaseLayout, Hero)
+  const tagMatches = body.match(/<\/?([A-Z][a-zA-Z0-9]+)/g);
+  if (tagMatches) tagMatches.forEach(m => components.add(m.replace(/<\/?/, '')));
+  
+  // Memorize camelCase Props (e.g., jsonLd)
+  const propMatches = body.match(/\b([a-z]+[A-Z][a-zA-Z0-9]*)=/g);
+  if (propMatches) propMatches.forEach(m => props.add(m.slice(0, -1)));
+  
+  return { components: Array.from(components), props: Array.from(props) };
+}
+
 function protectAstro(text) {
   const exprs = [];
   let protectedText = String(text || '');
 
   // 1. Hide <script> and <style> blocks
   protectedText = protectedText.replace(/<(script|style)[\s\S]*?<\/\1>/gi, m => { 
-    exprs.push(m); 
-    return `___ASTROEXPR${exprs.length-1}___`; 
+    exprs.push(m); return `___ASTROEXPR${exprs.length-1}___`; 
   });
 
   // 2. Brace-Counting for { expressions }
@@ -74,8 +84,7 @@ function protectAstro(text) {
         exprs.push(currentExpr);
         result += `___ASTROEXPR${exprs.length - 1}___`;
       } else if (depth < 0) {
-        depth = 0; 
-        result += '}';
+        depth = 0; result += '}';
       }
     } else {
       if (depth > 0) currentExpr += char;
@@ -90,22 +99,35 @@ function protectAstro(text) {
     protectedText = protectedText.replaceAll(term, `<keep>${term}</keep>`);
   }
 
-  // Wrap in a root tag to satisfy DeepL's 'text without parent' HTML rule
   return { protectedText: `<translation-root>\n${protectedText}\n</translation-root>`, exprs };
 }
 
-function restoreAstro(text, exprs) {
-  // 1. Remove Root Tags & Decode HTML limits
+function restoreAstro(text, exprs, memory) {
   let r = text.replace(/<\/?translation-root>/g, '');
   r = decodeHtmlEntities(r);
 
-  // 2. Restore Glossary terms
+  // CRITICAL FIX: Strip DeepL's quotes around Astro variables ( title="___ASTROEXPR___" -> title=___ASTROEXPR___ )
+  r = r.replace(/=(["'])(___\s*ASTROEXPR\d+\s*___)\1/gi, '=$2');
+
   r = r.replace(/<keep>(.*?)<\/keep>/g, '$1');
 
-  // 3. Restore Astro Expressions (handles slight spacing added by DeepL)
+  // Restore Astro Expressions
   exprs.forEach((e, i) => {
     const regex = new RegExp(`___\\s*ASTROEXPR${i}\\s*___`, 'gi');
     r = r.replace(regex, e);
+  });
+
+  // RESTORE MEMORY: Fix lowercase Components ( <baselayout> -> <BaseLayout> )
+  memory.components.forEach(comp => {
+    const lower = comp.toLowerCase();
+    r = r.replace(new RegExp(`<${lower}\\b`, 'gi'), `<${comp}`);
+    r = r.replace(new RegExp(`<\\/${lower}>`, 'gi'), `</${comp}>`);
+  });
+
+  // RESTORE MEMORY: Fix lowercase Props ( jsonld= -> jsonLd= )
+  memory.props.forEach(prop => {
+    const lower = prop.toLowerCase();
+    r = r.replace(new RegExp(`\\b${lower}=`, 'gi'), `${prop}=`);
   });
   
   return r;
@@ -113,22 +135,15 @@ function restoreAstro(text, exprs) {
 
 async function safeTranslate(translator, text, targetLang) {
   if (text.length < 5000) {
-    const res = await translator.translateText(text, 'en', targetLang, { 
-        tagHandling: 'html', 
-        ignoreTags: ['keep'] // astro-expr is no longer needed here!
-    });
+    const res = await translator.translateText(text, 'en', targetLang, { tagHandling: 'html', ignoreTags: ['keep'] });
     return res.text;
   }
-
   const chunks = text.split('\n\n');
   const translatedChunks = [];
   for (const chunk of chunks) {
     if (chunk.trim()) {
       const wrapped = `<translation-root>\n${chunk}\n</translation-root>`;
-      const res = await translator.translateText(wrapped, 'en', targetLang, { 
-          tagHandling: 'html', 
-          ignoreTags: ['keep'] 
-      });
+      const res = await translator.translateText(wrapped, 'en', targetLang, { tagHandling: 'html', ignoreTags: ['keep'] });
       translatedChunks.push(res.text.replace(/<\/?translation-root>/g, ''));
     } else {
       translatedChunks.push('');
@@ -162,7 +177,6 @@ async function main() {
     
     for (const lang of TARGET_LANGS) {
       const targetPath = join(baseDir, lang, rel);
-      // Skip if translated file already exists and is newer than the source file
       if (existsSync(targetPath) && statSync(targetPath).mtime > statSync(file).mtime) continue;
       
       console.log(`🔄 Translating ${rel} to ${lang.toUpperCase()}...`);
@@ -170,14 +184,16 @@ async function main() {
         let final = '';
         if (file.endsWith('.astro')) {
           const { frontmatter, body } = parseAstro(content);
+          const memory = extractCaseSensitiveNames(body);
           const { protectedText, exprs } = protectAstro(body);
           const translatedBody = await safeTranslate(translator, protectedText, DEEPL_LANG_MAP[lang]);
-          final = `${frontmatter}\n${restoreAstro(translatedBody, exprs)}`;
+          final = `${frontmatter}\n${restoreAstro(translatedBody, exprs, memory)}`;
         } else {
           const p = matter(content);
+          const memory = extractCaseSensitiveNames(p.content);
           const { protectedText, exprs } = protectAstro(p.content);
           const translatedBody = await safeTranslate(translator, protectedText, DEEPL_LANG_MAP[lang]);
-          final = matter.stringify(restoreAstro(translatedBody, exprs), p.data);
+          final = matter.stringify(restoreAstro(translatedBody, exprs, memory), p.data);
         }
         mkdirSync(dirname(targetPath), { recursive: true });
         writeFileSync(targetPath, final, 'utf-8');
